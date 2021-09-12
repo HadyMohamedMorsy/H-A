@@ -29,6 +29,30 @@
         </div>
     </form>
 </div>
+<div class="sign-username Sign-dissapered">
+    <form class="sign-user" action="" method="POST">
+        <div class="cancel sign-cancel">
+            <i class="fas fa-times"></i>
+        </div>
+        <h2>Sign Up</h2>
+        <div class="form-group">
+            <input type="text" name="Input_Username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <input type="text" name="Input_Last_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <input type="password" name="Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <input type="password" name="New_Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Same Password">
+        </div>
+        <div class="form-group">
+            <input type="text" name="Country" class="form-control" id="exampleInputPassword1" placeholder="Country">
+        </div>
+        <button type="submit" name="BTN_Register" class="btn form-control Sign-user">Register</button>
+    </form>
+</div>
 
 <div class="bob-search bob-search-remove">
     <div class="cancel_search-cancel">
@@ -73,6 +97,7 @@
     </div>
     <div class="icones-items items-Desktop">
         <a href="#" class="login">Login</a>
+        <a href="#" class="Sign">Sign Up</a>
         <a href="#" class="search-nav"><i class="fas fa-search"></i></a>
         <a href="#"><i class="far fa-heart"></i></a>
         <a href="#"><i class="fas fa-cart-plus"></i></a>

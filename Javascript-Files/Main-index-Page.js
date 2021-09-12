@@ -10,7 +10,7 @@ $(document).ready(function(){
     //  we will edit it when we create arabic page
     $(".menu-burger" ).on( "click", function(){
 
-        $('.left-menu').addClass("translate");
+        $('.left-menu').addClass("return-left-menu");
 
         $('.background-when-menu').addClass("background");
 
@@ -18,7 +18,7 @@ $(document).ready(function(){
 
     $(".cancel").on("click", function(){
         
-        $('.left-menu').removeClass("translate");
+        $('.left-menu').removeClass("return-left-menu");
 
         $('.background-when-menu').removeClass("background");
 
@@ -32,15 +32,30 @@ $(document).ready(function(){
 
     });
 
+    $('.Sign').on("click", function(e){
+        
+        e.preventDefault();
+
+        $('.sign-username').removeClass('Sign-dissapered');
+
+
+    });
+
     $('.login-cancel').on("click",function(){
 
         $('.Login-username').addClass('Login-dissapered');
+
+    });
+
+    $('.sign-cancel').on("click",function(){
+
+        $('.sign-username').addClass('Sign-dissapered');
 
     })
 
     $('.Login-menu-burger').on("click",function(){
 
-        $('.left-menu').removeClass("translate");
+        $('.left-menu').removeClass("return-left-menu");
 
         $('.background-when-menu').removeClass("background");
 

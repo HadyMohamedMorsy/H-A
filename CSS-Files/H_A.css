@@ -23,35 +23,36 @@ body {
 
 .background {
   background-color: #d5d4d3;
+  position: fixed;
   width: 100%;
   height: 100%;
-  position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   right: 0;
   z-index: 1; }
 
 .Login-username {
+  position: fixed;
   width: 100%;
   height: 100%;
-  position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   right: 0;
-  z-index: 2;
+  z-index: 6;
   background-color: rgba(204, 203, 203, 0.5); }
   .Login-username .Login-user {
     position: absolute;
-    top: 30%;
     left: 50%;
     transform: translate(-50%, -30%);
     width: 50%;
     margin: 0 auto;
     box-shadow: 0 40px 60px 0 #00000033;
     background: #fff;
-    padding: 40px 70px; }
+    padding: 40px 70px;
+    z-index: 5;
+    top: 30%; }
     .Login-username .Login-user .login-cancel {
       position: absolute;
       top: 30px;
@@ -98,6 +99,62 @@ body {
     .Login-username .Login-user .regester a {
       color: #282828; }
 
+.sign-username {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 6;
+  background-color: rgba(204, 203, 203, 0.5); }
+  .sign-username .sign-user {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 40px 60px 0 #00000033;
+    background: #fff;
+    padding: 40px 70px;
+    z-index: 5;
+    top: 35%; }
+    .sign-username .sign-user .sign-cancel {
+      position: absolute;
+      top: 30px;
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+      border-radius: 50%;
+      cursor: pointer;
+      right: 63px; }
+    .sign-username .sign-user .form-group input {
+      border: 2px solid #ddd;
+      line-height: 1.6;
+      font-size: 19px;
+      padding: .75rem;
+      background-color: #fff;
+      margin-top: 20px;
+      margin-bottom: 24px; }
+    .sign-username .sign-user h2 {
+      margin-bottom: 20px;
+      padding: 2vh 0;
+      text-align: center;
+      font-size: 2.1rem; }
+    .sign-username .sign-user .Sign-user {
+      background-color: #282828;
+      color: #fff;
+      padding: 25px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 18px; }
+
 input:-internal-autofill-selected {
   background-color: #fff !important; }
 
@@ -106,6 +163,9 @@ input:-internal-autofill-selected {
     width: 90% !important;
     padding: 40px 10px; } }
 .Login-dissapered {
+  display: none; }
+
+.Sign-dissapered {
   display: none; }
 
 .bob-search {
@@ -166,7 +226,7 @@ input:-internal-autofill-selected {
   z-index: 3; }
 
 .bob-search-remove {
-  top: -70%; }
+  top: -200%; }
 
 .with-search-remove {
   display: none; }
@@ -307,7 +367,8 @@ input:-internal-autofill-selected {
     align-items: center;
     background-color: #f5f5f5;
     border-radius: 50%;
-    cursor: pointer; }
+    cursor: pointer;
+    right: 63px; }
   .left-menu .content-left-menu {
     padding-top: 85px;
     padding-bottom: 85px; }
@@ -347,7 +408,7 @@ input:-internal-autofill-selected {
 .Login-menu-burger {
   cursor: pointer; }
 
-.translate {
+.return-left-menu {
   left: 0%; }
 
 .last-navbar-menu-burger li {
