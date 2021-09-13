@@ -98,6 +98,7 @@
     <div class="icones-items items-Desktop">
         <a href="#" class="login">Login</a>
         <a href="#" class="Sign">Sign Up</a>
+        <a href="Admin-system.php"><i class="fas fa-user-cog"></i></a>
         <a href="#" class="search-nav"><i class="fas fa-search"></i></a>
         <a href="#"><i class="far fa-heart"></i></a>
         <a href="#"><i class="fas fa-cart-plus"></i></a>

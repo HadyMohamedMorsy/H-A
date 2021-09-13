@@ -1,7 +1,6 @@
 body {
   font-family: 'Jost', sans-serif;
-  font-weight: 400;
-  height: 2000px; }
+  font-weight: 400; }
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -444,5 +443,59 @@ input:-internal-autofill-selected {
 
 .carousel-control-next {
   right: 2%; }
+
+.container-hady {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #f3f7fd; }
+  .container-hady aside {
+    flex-basis: 20%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; }
+    .container-hady aside .image-useres {
+      width: 100%;
+      background-color: #fef3e5;
+      height: 300px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .container-hady aside .image-useres .image-user-content {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px dashed orange;
+        position: relative;
+        margin-bottom: 20px; }
+        .container-hady aside .image-useres .image-user-content img {
+          width: 100%;
+          height: 100%;
+          vertical-align: middle;
+          position: absolute;
+          border-radius: 50%; }
+    .container-hady aside ul {
+      display: flex;
+      margin: 0;
+      padding: 0; }
+    .container-hady aside .list-of-dashbored {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      .container-hady aside .list-of-dashbored li {
+        padding: 1rem 1rem 1rem 3rem; }
+        .container-hady aside .list-of-dashbored li a {
+          text-decoration: none;
+          color: #282828;
+          font-size: 18px; }
+          .container-hady aside .list-of-dashbored li a svg {
+            margin-right: 30px; }
+  .container-hady .right-admin {
+    flex-basis: 80%;
+    padding: 0 20px; }
 
 /*# sourceMappingURL=H_A.css.map */
