@@ -29,6 +29,7 @@
         </div>
     </form>
 </div>
+
 <div class="sign-username Sign-dissapered">
     <form class="sign-user" action="" method="POST">
         <div class="cancel sign-cancel">
@@ -36,7 +37,13 @@
         </div>
         <h2>Sign Up</h2>
         <div class="form-group">
-            <input type="text" name="Input_Username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+            <input type="text" name="Input_Username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <input type="text" name="Input_Second_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Second Name">
         </div>
         <div class="form-group">
             <input type="text" name="Input_Last_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name">
@@ -45,10 +52,10 @@
             <input type="password" name="Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="form-group">
-            <input type="password" name="New_Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Same Password">
+            <input type="password" name="Input_Re_Password" class="form-control" id="exampleInputPassword1" placeholder="Re Password">
         </div>
         <div class="form-group">
-            <input type="text" name="Country" class="form-control" id="exampleInputPassword1" placeholder="Country">
+            <input type="text" name="Input_Country" class="form-control" id="exampleInputPassword1" placeholder="Country">
         </div>
         <button type="submit" name="BTN_Register" class="btn form-control Sign-user">Register</button>
     </form>
@@ -79,7 +86,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>
@@ -96,9 +103,19 @@
         <img src="IMG/brand-logo.png" alt="brand-logo" />
     </div>
     <div class="icones-items items-Desktop">
-        <a href="#" class="login">Login</a>
-        <a href="#" class="Sign">Sign Up</a>
-        <a href="Admin-system.php"><i class="fas fa-user-cog"></i></a>
+        <?php
+            if (!isset($_SESSION['HA_U_ID'])) {
+                echo '
+                    <a href="#" class="login">Login</a>
+                    <a href="#" class="Sign">Sign Up</a>
+                ';
+            }else {
+                echo'
+                <a href="Admin-system.php"><i class="fas fa-user-cog"></i></a>
+                <a href="Logout.php"><i class="fas fa-sign-out-alt"></i></a>
+                ';
+            }
+        ?>
         <a href="#" class="search-nav"><i class="fas fa-search"></i></a>
         <a href="#"><i class="far fa-heart"></i></a>
         <a href="#"><i class="fas fa-cart-plus"></i></a>
