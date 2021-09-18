@@ -20,6 +20,16 @@ body {
   background: #555;
   padding: 12px; }
 
+.label {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff; }
+
+#upload-photo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+
 .background {
   background-color: #d5d4d3;
   position: fixed;
@@ -229,6 +239,273 @@ input:-internal-autofill-selected {
 
 .with-search-remove {
   display: none; }
+
+.Delete-user {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(192, 192, 192, 0.6); }
+  .Delete-user .Delete-user-question {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: #fff;
+    padding: 30px 15px;
+    width: 400px;
+    border-radius: 10px; }
+    .Delete-user .Delete-user-question h4 {
+      padding-bottom: 30px; }
+    .Delete-user .Delete-user-question .btn {
+      width: 100px; }
+
+.Delete-clients {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(192, 192, 192, 0.6); }
+  .Delete-clients .Delete-clients-question {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: #fff;
+    padding: 30px 15px;
+    width: 400px;
+    border-radius: 10px; }
+    .Delete-clients .Delete-clients-question h4 {
+      padding-bottom: 30px; }
+    .Delete-clients .Delete-clients-question .btn {
+      width: 100px; }
+
+.remove-Delete {
+  display: none; }
+
+.View-User {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(192, 192, 192, 0.6);
+  z-index: 1; }
+  .View-User .View-cancel {
+    position: absolute;
+    top: 30px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 63px; }
+  .View-User .View-User-Details {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: #fff;
+    padding: 16px;
+    width: 700px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2; }
+    .View-User .View-User-Details .Image-View {
+      flex-basis: 50%; }
+      .View-User .View-User-Details .Image-View img {
+        width: 100%; }
+    .View-User .View-User-Details .Deatils-View {
+      flex-basis: 50%; }
+      .View-User .View-User-Details .Deatils-View ul {
+        list-style: none; }
+        .View-User .View-User-Details .Deatils-View ul li {
+          padding: 15px 0px;
+          font-size: 20px;
+          margin-right: 10px; }
+          .View-User .View-User-Details .Deatils-View ul li span {
+            font-size: 16px;
+            font-weight: 300; }
+
+.View-clients {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(192, 192, 192, 0.6);
+  z-index: 1; }
+  .View-clients .View-cancel {
+    position: absolute;
+    top: 30px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 63px; }
+  .View-clients .View-clients-Details {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: #fff;
+    padding: 16px;
+    width: 700px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2; }
+    .View-clients .View-clients-Details .Image-View {
+      flex-basis: 50%; }
+      .View-clients .View-clients-Details .Image-View img {
+        width: 100%; }
+    .View-clients .View-clients-Details .Deatils-View {
+      flex-basis: 50%; }
+      .View-clients .View-clients-Details .Deatils-View ul {
+        list-style: none; }
+        .View-clients .View-clients-Details .Deatils-View ul li {
+          padding: 15px 0px;
+          font-size: 20px;
+          margin-right: 10px; }
+          .View-clients .View-clients-Details .Deatils-View ul li span {
+            font-size: 16px;
+            font-weight: 300; }
+
+.Edit-username {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(204, 203, 203, 0.5); }
+  .Edit-username .Edit-user {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 40px 60px 0 #00000033;
+    background: #fff;
+    padding: 40px 70px;
+    z-index: 5;
+    top: 35%; }
+    .Edit-username .Edit-user .Edit-cancel {
+      position: absolute;
+      top: 30px;
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+      border-radius: 50%;
+      cursor: pointer;
+      right: 63px; }
+    .Edit-username .Edit-user .form-group input {
+      border: 2px solid #ddd;
+      line-height: 1.6;
+      font-size: 19px;
+      padding: .75rem;
+      background-color: #fff;
+      margin-top: 20px;
+      margin-bottom: 24px; }
+    .Edit-username .Edit-user h2 {
+      margin-bottom: 20px;
+      padding: 2vh 0;
+      text-align: center;
+      font-size: 2.1rem; }
+    .Edit-username .Edit-user .Edit-Prfile-user {
+      background-color: #282828;
+      color: #fff;
+      padding: 25px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 18px; }
+
+.Edit-clients {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(204, 203, 203, 0.5); }
+  .Edit-clients .Edit-clients {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 40px 60px 0 #00000033;
+    background: #fff;
+    padding: 40px 70px;
+    z-index: 5;
+    top: 35%; }
+    .Edit-clients .Edit-clients .Edit-cancel {
+      position: absolute;
+      top: 30px;
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+      border-radius: 50%;
+      cursor: pointer;
+      right: 63px; }
+    .Edit-clients .Edit-clients .form-group input {
+      border: 2px solid #ddd;
+      line-height: 1.6;
+      font-size: 19px;
+      padding: .75rem;
+      background-color: #fff;
+      margin-top: 20px;
+      margin-bottom: 24px; }
+    .Edit-clients .Edit-clients h2 {
+      margin-bottom: 20px;
+      padding: 2vh 0;
+      text-align: center;
+      font-size: 2.1rem; }
+    .Edit-clients .Edit-clients .Edit-Prfile-clients {
+      background-color: #282828;
+      color: #fff;
+      padding: 25px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 18px; }
+
+.Trash {
+  color: red; }
+
+.View {
+  color: #FFC107; }
 
 .navbar {
   padding: 0px 40px;
@@ -583,8 +860,106 @@ input:-internal-autofill-selected {
             .container-hady .right-Edit .contact-personal .right-con > div .right-con-form > div {
               padding: 0px 15px;
               flex-basis: 50%; }
+  .container-hady .right-All-users {
+    flex-basis: 80%;
+    background-color: #f5f5f5;
+    padding: 20px; }
+  .container-hady .right-add-projects {
+    flex-basis: 80%;
+    background-color: #f5f5f5;
+    padding: 20px; }
+    .container-hady .right-add-projects .add-Product-from {
+      background-color: #fff;
+      padding: 180px 16px; }
+      .container-hady .right-add-projects .add-Product-from h5 {
+        padding-bottom: 40px; }
+      .container-hady .right-add-projects .add-Product-from .Form-Add-Product {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .container-hady .right-add-projects .add-Product-from .Form-Add-Product .form-group {
+          flex-basis: 50%;
+          padding-left: 15px;
+          padding-right: 15px; }
+    .container-hady .right-add-projects .Add-Products {
+      background-color: #282828;
+      color: #fff;
+      outline: none;
+      border-radius: 10px;
+      border: none;
+      padding: 0px 30px;
+      margin-right: 15px; }
+  .container-hady .right-catagroy {
+    flex-basis: 80%;
+    background-color: #f5f5f5;
+    padding: 20px; }
+    .container-hady .right-catagroy .add-catgroy-from {
+      background-color: #fff;
+      padding: 180px 16px; }
+      .container-hady .right-catagroy .add-catgroy-from h5 {
+        padding-bottom: 40px; }
+      .container-hady .right-catagroy .add-catgroy-from .Form-Add-catgroy {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .container-hady .right-catagroy .add-catgroy-from .Form-Add-catgroy .form-group {
+          flex-basis: 50%;
+          padding-left: 15px;
+          padding-right: 15px; }
+    .container-hady .right-catagroy .Add-catgroys {
+      background-color: #282828;
+      color: #fff;
+      outline: none;
+      border-radius: 10px;
+      border: none;
+      padding: 0px 30px;
+      margin-right: 15px; }
+  .container-hady .right-All-Clients {
+    flex-basis: 80%;
+    background-color: #f5f5f5;
+    padding: 20px; }
+  .container-hady .right-All-Employeres {
+    flex-basis: 80%;
+    background-color: #f5f5f5;
+    padding: 20px; }
 
 .none-Dashbored {
   display: none !important; }
+
+.t-body td:first-child img {
+  width: 50px; }
+
+.t-body td:first-child {
+  text-align: center; }
+
+tfoot tr th:first-child img {
+  width: 50px; }
+
+tfoot tr th:first-child {
+  text-align: center; }
+
+.t-body td a {
+  margin-left: 10px; }
+
+.t-body th:first-child img {
+  width: 50px; }
+
+.t-body th:first-child {
+  text-align: center; }
+
+.header-pages-Product {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: url(".././IMG/21.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px; }
+
+.Secound-Section {
+  padding-top: 50px; }
+  .Secound-Section .row .Products img {
+    width: 100%; }
 
 /*# sourceMappingURL=H_A.css.map */

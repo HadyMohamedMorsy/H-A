@@ -40,22 +40,26 @@
             <input type="text" name="Input_Username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
         </div>
         <div class="form-group">
-            <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+            <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
         </div>
         <div class="form-group">
-            <input type="text" name="Input_Second_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Second Name">
+                <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Postion">
         </div>
         <div class="form-group">
-            <input type="text" name="Input_Last_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name">
+                <input type="text" name="Input_Last_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Office">
         </div>
         <div class="form-group">
             <input type="password" name="Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="form-group">
-            <input type="password" name="Input_Re_Password" class="form-control" id="exampleInputPassword1" placeholder="Re Password">
+            <input type="text" name="Input_Country" class="form-control" id="exampleInputPassword1" placeholder="RE Password">
         </div>
         <div class="form-group">
-            <input type="text" name="Input_Country" class="form-control" id="exampleInputPassword1" placeholder="Country">
+                <input type="Text" name="Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Age">
+        </div>
+        <div class="form-group">
+                <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
+                <input type="file" name="photo" id="upload-photo" />
         </div>
         <button type="submit" name="BTN_Register" class="btn form-control Sign-user">Register</button>
     </form>
@@ -92,7 +96,7 @@
                 <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Shop</a>
+                <a class="nav-link" href="ptoduct.php">Shop</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact Us</a>
@@ -190,22 +194,3 @@
     </div>
 </div>
 <!-- nav -->
-<div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false" data-interval="false">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="IMG/ezgif.com-gif-maker.jpg" class="d-block w-100" alt="ezgif.com-gif-maker.jpg">
-
-        </div>
-        <div class="carousel-item">
-            <img src="IMG/ezgif.com-gif-maker (1).jpg" class="d-block w-100" alt="ezgif.com-gif-maker (1).jpg">
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControlsNoTouching" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControlsNoTouching" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>

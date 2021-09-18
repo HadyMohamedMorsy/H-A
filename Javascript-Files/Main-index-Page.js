@@ -87,29 +87,10 @@ $(document).ready(function(){
         $('.with-search').removeClass("with-search-remove");
 
     });
-    $('.Dashbored').on("click",function(e){
-
-        e.preventDefault();
-
-        $('.right-Edit').removeClass("none-Dashbored");
-
-        $('.Edit-profile').addClass("none-Dashbored");
 
 
-
-    });
-
-    $('.Edit-profile').on("click",function(e){
-
-        e.preventDefault();
-
-        $('.right-Edit').removeClass("none-Dashbored");
-
-        $('.right-Edit').addClass("none-Dashbored");
-
-
-    });
 });
+
 
 
 
