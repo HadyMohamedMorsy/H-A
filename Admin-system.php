@@ -23,6 +23,8 @@
 <body>
 
     <!-- Start The Header -->
+<div class="container-hady">
+
     <?php include("./Website-Structure/Dashbored-header.php"); ?>
     <!-- End The Header-->
 
@@ -30,8 +32,10 @@
 
     <!-- Start The Footer -->
     <?php include ("Website-Structure/Footer.php"); ?>
-    <!-- End The Footer-->
 
+    <!-- End The Footer-->
+    
+</div>
     <!-- Start The Links Files -->
     <?php include ("Links javascript Dashbored.php"); ?>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->

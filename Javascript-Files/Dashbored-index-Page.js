@@ -1,16 +1,6 @@
 
 $(document).ready(function(){
 
-    $(".list-of-dashbored li a").on("click",function(e){
-
-        e.preventDefault();
-    
-        $('.Dasbored-content').addClass('none-Dashbored');
-    
-        $($(this).data('right')).removeClass('none-Dashbored');
-    
-    });
-
     $('#Seller').DataTable();
 
     $('.last-Action a').on("click",function(e){
