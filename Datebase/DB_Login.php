@@ -35,6 +35,8 @@
                 $_SESSION['HA_U_Second_Name']       = $Row_Login['HA_U_Second_Name'];
                 $_SESSION['HA_U_Last_Name']         = $Row_Login['HA_U_Last_Name'];
                 $_SESSION['User_First_Three_Names'] = $Row_Login['HA_U_First_Name'] . ' ' . $Row_Login['HA_U_Second_Name'] . ' ' . $Row_Login['HA_U_Last_Name'] ;
+                $_SESSION['HA_U_User_Type']         = $Row_Login['HA_U_User_Type'];
+                $_SESSION['HA_P_Permission_Seller_Manager']     = $Row_Login['HA_P_Permission_Seller_Manager'];
                 echo '<script> alert("Login Succsess \r\nWelcome '.$_SESSION['User_First_Three_Names'].'")</script>';
                 // echo $_SESSION['User_First_Three_Names'];
                 // header('Location: index.php'); 

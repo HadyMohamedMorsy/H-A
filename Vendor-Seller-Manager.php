@@ -1,8 +1,11 @@
 <?php
     include('Datebase/Config.php');
-    include('Datebase/DB_Login.php');
-    include('Datebase/DB-Sign-Up.php');
-
+    include('Datebase/DB-Vendor-Seller-Manger.php');
+?>
+<?php
+    if ($_SESSION['HA_P_Permission_Seller_Manager'] !== 'Available') {
+        header('Location: index.php');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +23,7 @@
     <?php include ("Website-Structure/Dashbored-header.php"); ?>
     <!-- End The Header-->
 
-    <?php include ("./Website-Structure/Useres-body.php"); ?>
+    <?php include ("./Website-Structure/Vendor-Seller-Manager-Body.php"); ?>
 
     <!-- Start The Footer -->
 </div>
