@@ -43,10 +43,22 @@
             <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
         </div>
         <div class="form-group">
-                <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Postion">
-        </div>
-        <div class="form-group">
-                <input type="text" name="Input_Last_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Office">
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option selected>Country...</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                   <option value="Argentina"> Argentina</option>
+                   <option value="Armenia"> Armenia</option>
+                   <option value="Australia"> Australia</option>
+                   <option value="Austria"> Austria</option>
+                   <option value="Austrian Empire"> Austrian Empire*</option>
+                   <option value="Austrian Empire"> Egypt</option>
+                   <option value="Azerbaijan"> Azerbaijan</option>
+                </select>
         </div>
         <div class="form-group">
             <input type="password" name="Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
@@ -60,6 +72,15 @@
         <div class="form-group">
                 <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
                 <input type="file" name="photo" id="upload-photo" />
+        </div>
+        <p class="p-regester">You will register ? </p>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="seller">
+            <label class="form-check-label" for="inlineRadio1">seller</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Client">
+            <label class="form-check-label" for="inlineRadio2">Client</label>
         </div>
         <button type="submit" name="BTN_Register" class="btn form-control Sign-user">Register</button>
     </form>

@@ -104,7 +104,8 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 18px; }
+      margin-bottom: 18px;
+      margin-top: 18px; }
     .Login-username .Login-user .regester a {
       color: #282828; }
 
@@ -128,7 +129,7 @@ body {
     background: #fff;
     padding: 40px 70px;
     z-index: 5;
-    top: 35%; }
+    top: 30%; }
     .sign-username .sign-user .sign-cancel {
       position: absolute;
       top: 30px;
@@ -162,7 +163,12 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 18px; }
+      margin-bottom: 18px;
+      margin-top: 18px; }
+  .sign-username .form-check-label {
+    font-size: 20px; }
+  .sign-username .p-regester {
+    font-size: 20px; }
 
 input:-internal-autofill-selected {
   background-color: #fff !important; }
@@ -444,7 +450,8 @@ input:-internal-autofill-selected {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 18px; }
+      margin-bottom: 18px;
+      margin-top: 18px; }
 
 .Edit-clients {
   position: fixed;
@@ -499,7 +506,8 @@ input:-internal-autofill-selected {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 18px; }
+      margin-bottom: 18px;
+      margin-top: 18px; }
 
 .Trash {
   color: red; }

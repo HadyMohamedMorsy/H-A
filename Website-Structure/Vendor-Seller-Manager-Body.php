@@ -8,6 +8,8 @@
                 <th>Join Date</th>
                 <th>Sales</th>
                 <th>Views</th>
+                <th>Count of Products</th>
+                <th>Count of Caragroy</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -24,6 +26,8 @@
                             <td>'.$Rows['HA_U_Date_Created'].'</td>
                             <td>$ '.number_format($Rows['HA_U_Sales']).'</td>
                             <td>'.number_format($Rows['HA_P_Views']).'</td>
+                            <td>30</td>
+                            <td>30</td>
                             <td class="last-Action" style="text-align: center;">
                                 <a href="#" class="Trash" data-users=".Delete-user"> <i class="fas fa-trash-alt"></i> </a>
                                 <a href="#" class="Edit" data-users=".Edit-username"> <i class="far fa-edit"></i> </a>
@@ -43,6 +47,8 @@
                 <th>Join Date</th>
                 <th>Sales</th>
                 <th>Views</th>
+                <th>Count of Products</th>
+                <th>Count of Caragroy</th>
                 <th>Action</th>
             </tr>
         </tfoot>
@@ -75,9 +81,9 @@
         </div>
     </div>
 
-<!-- 
-    <div class="Edit-clients remove-Delete">
-        <form class="Edit-clients" action="" method="POST">
+
+    <div class="Edit-username remove-Delete">
+        <form class="Edit-user" action="" method="POST">
             <div class="cancel-Dashbored Edit-cancel">
                 <i class="fas fa-times"></i>
             </div>
@@ -104,7 +110,7 @@
                 <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
                 <input type="file" name="photo" id="upload-photo" />
             </div>
-            <button type="submit" name="BTN_Register" class="btn form-control Edit-Prfile-clients">Edit</button>
+            <button type="submit" name="BTN_Register" class="btn form-control Edit-Prfile-user">Edit</button>
         </form>
-    </div> -->
+    </div>
 </div>

@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
-    $('#Seller').DataTable();
+
 
     $('.last-Action a').on("click",function(e){
 
@@ -18,6 +18,16 @@ $(document).ready(function(){
         e.preventDefault();
 
         $($(this).data('clients')).removeClass('remove-Delete');
+
+    });
+    
+    $('#Seller').DataTable();
+
+    $('.last-Action a').on("click",function(e){
+
+        e.preventDefault();
+
+        $($(this).data('users')).removeClass('remove-Delete');
 
     });
 

@@ -54,7 +54,7 @@
             @include button;
         }
         @include formHome;
-        top : 35%;
+        top : 30%;
         .form-group{
             input{
                 @include inputfornhome;
@@ -66,6 +66,12 @@
         .Sign-user{
             @include submitHome;
         }
+    }
+    .form-check-label{
+        font-size: 20px;
+    }
+    .p-regester{
+        font-size: 20px;
     }
 }
 input:-internal-autofill-selected{
