@@ -1,0 +1,21 @@
+.carousel-control-next-icon{
+    background-image: url('../IMG/right.svg');
+}
+.carousel-control-prev-icon{
+    background-image: url('../IMG/left.svg');
+}
+.carousel-control-prev, .carousel-control-next{
+    opacity: 1;
+}
+.carousel-control-prev{
+    justify-content: flex-start;
+}
+.carousel-control-next{
+    justify-content: flex-end;
+}
+.carousel-control-prev{
+    left: 2%;
+}
+.carousel-control-next{
+    right: 2%;
+}
