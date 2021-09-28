@@ -5,11 +5,11 @@
                 <th>ID</th>
                 <th>Img</th>
                 <th>Username</th>
+                <th>Full Name</th>
+                <th>Status</th>
                 <th>Join Date</th>
                 <th>Sales</th>
-                <th>Views</th>
-                <th>Count of Products</th>
-                <th>Count of Caragroy</th>
+                <th>Last Login</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -23,11 +23,11 @@
                             <td>'.$Rows['HA_U_ID'].'</td>
                             <td><img src="IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']/image.jpg" alt="Img" style="width:50px"/></td>
                             <td>'.$Rows['HA_U_Username'] .'</td>
+                            <td>'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
+                            <td>'.$Rows['HA_U_User_Status'].'</td>
                             <td>'.$Rows['HA_U_Date_Created'].'</td>
                             <td>$ '.number_format($Rows['HA_U_Sales']).'</td>
-                            <td>'.number_format($Rows['HA_P_Views']).'</td>
-                            <td>30</td>
-                            <td>30</td>
+                            <td>'.$Rows['HA_U_Last_Login'].'</td>
                             <td class="last-Action" style="text-align: center;">
                                 <a href="#" class="Trash" data-users=".Delete-user"> <i class="fas fa-trash-alt"></i> </a>
                                 <a href="#" class="Edit" data-users=".Edit-username"> <i class="far fa-edit"></i> </a>
@@ -44,11 +44,11 @@
                 <th>ID</th>
                 <th>Img</th>
                 <th>Username</th>
+                <th>Full Name</th>
+                <th>Status</th>
                 <th>Join Date</th>
                 <th>Sales</th>
                 <th>Views</th>
-                <th>Count of Products</th>
-                <th>Count of Caragroy</th>
                 <th>Action</th>
             </tr>
         </tfoot>

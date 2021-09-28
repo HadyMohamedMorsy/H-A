@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2021 at 10:03 PM
+-- Generation Time: Sep 28, 2021 at 10:20 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -69,12 +69,12 @@ CREATE TABLE `ha_users` (
 INSERT INTO `ha_users` (`HA_U_ID`, `HA_U_Username`, `HA_U_Password`, `HA_U_User_Status`, `HA_U_Last_Login`, `HA_U_First_Name`, `HA_U_Second_Name`, `HA_U_Last_Name`, `HA_U_Country`, `HA_U_Email`, `HA_U_User_Type`, `HA_P_Views`, `HA_U_Sales`, `HA_U_Purchase`, `HA_U_Date_Created`, `HA_U_Time_Created`, `HA_P_Permission_Seller_Manager`, `HA_P_Permission_Clients_Manager`, `HA_P_Permission_Employee_Manager`) VALUES
 (1, 'HadyMM', '123', 'Active', '2021/09/28 04:12:05 PM', 'Hady', 'Muhammed', 'Morsy', 'Egypt', 'HadyMM@Gmail.com', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM', 'Available', 'Available', 'Available'),
 (2, 'AbdulBasetRS', '123', 'Active', '2021/09/28 09:52:12 PM', 'AbdulBaset', 'Reda', 'Sayed', 'Egypt', 'AbdulBasetRS@Gmail.com', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM', 'Available', 'Available', 'Available'),
-(3, 'FatmaMM', '123', 'Active', '', 'Fatma', 'Muhammed', 'Morsy', 'Egypt', 'FatmaMM@Gmail.com', 'Seller', '3051', '5400', '', '2021/09/15', '08:43:13 PM', 'Unavailable', 'Unavailable', 'Unavailable'),
-(4, 'SayedMM', '123', 'Pending', '', 'Sayed', 'Muhammed', 'Morsy', 'Egypt', 'SayedMM@Gmail.com', 'Client', '', '', '', '2021/09/15', '08:43:13 PM', 'Unavailable', 'Unavailable', 'Unavailable'),
-(5, 'MuhammedMM', '123', 'Active', '', 'Muhammed', 'Muhammed', 'Morsy', 'Egypt', 'MuhammedMM@Gmail.com', 'Client', '', '', '', '2021/09/15', '08:43:13 PM', 'Unavailable', 'Unavailable', 'Unavailable'),
-(6, 'RedaSH', '123', 'Suspended', '', 'Reda', 'Sayed', 'Hussien', 'Egypt', 'RedaSH@Gmail.com', 'Client', '', '', '', '2021/09/15', '08:43:13 PM', 'Unavailable', 'Unavailable', 'Unavailable'),
-(7, 'MahmoudME', '123', 'Active', '', 'Mahmoud', 'Mosad', 'El-Adawy', 'Egypt', 'MahmoudME@Gmail.com', 'Client', '', '', '1200', '2021/09/15', '08:45:58 PM', 'Unavailable', 'Unavailable', 'Unavailable'),
-(8, 'MariamMM', '123', 'Active', '', 'Mariam', 'Muhammed', 'Morsy', 'Egypt', 'MariamMM@Gmail.com', 'Seller', '1516457', '78500', '', '2021/09/18', '08:43:13 PM', 'Unavailable', 'Unavailable', 'Unavailable');
+(3, 'FatmaMM', '123', 'Active', '2021/09/28 04:12:05 PM', 'Fatma', 'Muhammed', 'Morsy', 'Egypt', 'FatmaMM@Gmail.com', 'Seller', '3051', '5400', '', '2021/09/15', '08:43:13 PM', 'Unavailable', 'Unavailable', 'Unavailable'),
+(4, 'SayedMM', '123', 'Pending', '2021/09/28 04:12:05 PM', 'Sayed', 'Muhammed', 'Morsy', 'Egypt', 'SayedMM@Gmail.com', 'Client', '', '', '', '2021/09/15', '08:43:13 PM', 'Unavailable', 'Unavailable', 'Unavailable'),
+(5, 'MuhammedMM', '123', 'Active', '2021/09/28 04:12:05 PM', 'Muhammed', 'Muhammed', 'Morsy', 'Egypt', 'MuhammedMM@Gmail.com', 'Client', '', '', '', '2021/09/15', '08:43:13 PM', 'Unavailable', 'Unavailable', 'Unavailable'),
+(6, 'RedaSH', '123', 'Suspended', '2021/09/28 04:12:05 PM', 'Reda', 'Sayed', 'Hussien', 'Egypt', 'RedaSH@Gmail.com', 'Client', '', '', '', '2021/09/15', '08:43:13 PM', 'Unavailable', 'Unavailable', 'Unavailable'),
+(7, 'MahmoudME', '123', 'Active', '2021/09/28 04:12:05 PM', 'Mahmoud', 'Mosad', 'El-Adawy', 'Egypt', 'MahmoudME@Gmail.com', 'Client', '', '', '1200', '2021/09/15', '08:45:58 PM', 'Unavailable', 'Unavailable', 'Unavailable'),
+(8, 'MariamMM', '123', 'Active', '2021/09/28 04:12:05 PM', 'Mariam', 'Muhammed', 'Morsy', 'Egypt', 'MariamMM@Gmail.com', 'Seller', '1516457', '78500', '', '2021/09/18', '08:43:13 PM', 'Unavailable', 'Unavailable', 'Unavailable');
 
 --
 -- Indexes for dumped tables
