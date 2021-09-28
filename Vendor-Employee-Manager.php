@@ -1,8 +1,6 @@
 <?php
     include('Datebase/Config.php');
-    include('Datebase/DB_Login.php');
-    include('Datebase/DB-Sign-Up.php');
-
+    include('Datebase/DB-Vendor-Employee-Manger.php');
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +18,7 @@
     <?php include ("Website-Structure/Dashbored-header.php"); ?>
     <!-- End The Header-->
 
-    <?php include ("Website-Structure/Employer-Body.php"); ?>
+    <?php include ("Website-Structure/Vendor-Employee-Manager-Body.php"); ?>
 
     <!-- Start The Footer -->
 </div>

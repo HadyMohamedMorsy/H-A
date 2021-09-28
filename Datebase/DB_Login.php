@@ -1,4 +1,7 @@
 <?php
+    $Current_Date = date('Y/m/d');
+    $Current_Time = date('h:i:s A');
+    $Current_Date_And_Time = $Current_Date . ' ' . $Current_Time;
     $Alert_Message = array();
     if (isset($_POST['BTN_Login'])) {
         $Input_Username = $_POST['Input_Username'];
@@ -37,7 +40,13 @@
                 $_SESSION['User_First_Three_Names'] = $Row_Login['HA_U_First_Name'] . ' ' . $Row_Login['HA_U_Second_Name'] . ' ' . $Row_Login['HA_U_Last_Name'] ;
                 $_SESSION['HA_U_User_Type']         = $Row_Login['HA_U_User_Type'];
                 $_SESSION['HA_P_Permission_Seller_Manager']     = $Row_Login['HA_P_Permission_Seller_Manager'];
-                echo '<script> alert("Login Succsess \r\nWelcome '.$_SESSION['User_First_Three_Names'].'")</script>';
+                $_SESSION['HA_P_Permission_Clients_Manager']    = $Row_Login['HA_P_Permission_Clients_Manager'];
+                $_SESSION['HA_P_Permission_Employee_Manager']   = $Row_Login['HA_P_Permission_Employee_Manager'];
+                $SQL_Update_Last_Login = 'UPDATE ha_users SET HA_U_Last_Login = "'.$Current_Date_And_Time.'" WHERE HA_U_ID = "'.$_SESSION['HA_U_ID'].'"';
+                if (mysqli_query($Connection,$SQL_Update_Last_Login)) {
+                    header("Refresh: 0;");
+                }
+                //echo '<script> alert("Login Succsess \r\nWelcome '.$_SESSION['User_First_Three_Names'].'")</script>';
                 // echo $_SESSION['User_First_Three_Names'];
                 // header('Location: index.php'); 
                 // echo '<pre>';

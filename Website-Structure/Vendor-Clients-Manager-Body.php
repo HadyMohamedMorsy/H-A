@@ -1,70 +1,52 @@
 <div class="right-All-Clients Dasbored-content">
-<table id="example" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
+<table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;" >
+        <thead >
+            <tr >
+                <th>ID</th>
                 <th>Img</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-                <th>Actiones</th>
+                <th>Username</th>
+                <th>Full Name</th>
+                <th>Status</th>
+                <th>Join Date</th>
+                <th>Purchase</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="t-body">
-                <td><img src ="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" /></td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-                <td class="last-Action">
-                    <a href="#" class="Trash"data-clients =".Delete-clients"> <i class="fas fa-trash-alt"></i> </a>
-                    <a href="#" class="Edit" data-clients =".Edit-clients"> <i class="far fa-edit"></i> </a>
-                    <a href="#" class="View" data-clients =".View-clients"> <i class="far fa-eye"></i> </a>
-                </td>
-            </tr>
-            <tr class="t-body">
-                <td><img src ="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" /></td>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-                <td class="last-Action">
-                    <a href="#" class="Trash" data-clients =".Delete-clients"> <i class="fas fa-trash-alt"></i> </a>
-                    <a href="#" class="Edit"  data-clients =".Edit-clients"> <i class="far fa-edit"></i> </a>
-                    <a href="#" class="View"  data-clients =".View-clients"> <i class="far fa-eye"></i> </a>
-                </td>
-            </tr>
-            <tr class="t-body">
-                <td><img src ="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" /></td>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009/01/12</td>
-                <td>$86,000</td>
-                <td class="last-Action">
-                    <a href="#" class="Trash" data-clients =".Delete-clients"> <i class="fas fa-trash-alt"></i> </a>
-                    <a href="#" class="Edit"  data-clients =".Edit-clients"> <i class="far fa-edit"></i> </a>
-                    <a href="#" class="View"  data-clients =".View-clients"> <i class="far fa-eye"></i> </a>
-                </td>
-            </tr>
+            <?php
+                if ($Count_Seller_Info > 0) {
+                    while ($Rows = mysqli_fetch_array($Result_Seller_Info)) {
+                        // echo $Rows['HA_U_Username'];
+                        echo '
+                            <tr class="t-body" >
+                                <td>'.$Rows['HA_U_ID'].'</td>
+                                <td><img src="IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']/image.jpg" alt="Img" style="width:50px"/></td>
+                                <td>'.$Rows['HA_U_Username'] .'</td>
+                                <td>'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
+                                <td>'.$Rows['HA_U_User_Status'].'</td>
+                                <td>'.$Rows['HA_U_Date_Created'].'</td>
+                                <td>'.number_format((int)$Rows['HA_U_Purchase']).'</td>
+                                <td class="last-Action" >
+                                    <a href="#" class="Trash" data-users=".Delete-user"> <i class="fas fa-trash-alt"></i> </a>
+                                    <a href="#" class="Edit" data-users=".Edit-username"> <i class="far fa-edit"></i> </a>
+                                    <a href="#" class="View" data-users=".View-User"> <i class="far fa-eye"></i> </a>
+                                </td>
+                            </tr>
+                        ';
+                    }
+                }
+            ?>
         </tbody>
         <tfoot>
             <tr>
-                <th><img src ="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" /></th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>ID</th>
+                <th>Img</th>
+                <th>Username</th>
+                <th>Full Name</th>
+                <th>Status</th>
+                <th>Join Date</th>
+                <th>Purchase</th>
+                <th>Action</th>
             </tr>
         </tfoot>
     </table>
@@ -125,5 +107,5 @@
             </div>
             <button type="submit" name="BTN_Register" class="btn form-control Edit-Prfile-clients">Edit</button>
         </form>
-     </div>
+    </div>
 </div>

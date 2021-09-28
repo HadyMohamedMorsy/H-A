@@ -1,10 +1,12 @@
 <?php
     include('Datebase/Config.php');
-    include('Datebase/DB_Login.php');
-    include('Datebase/DB-Sign-Up.php');
-
+    include('Datebase/DB-Vendor-Clients-Manger.php');
 ?>
-
+<?php
+    if ($_SESSION['HA_P_Permission_Clients_Manager'] !== 'Available') {
+        header('Location: index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +29,7 @@
     <?php include ("Website-Structure/Dashbored-header.php"); ?>
     <!-- End The Header-->
 
-    <?php include ("./Website-Structure/Clients-Body.php"); ?>
+    <?php include ("./Website-Structure/Vendor-Clients-Manager-Body.php"); ?>
 
     <!-- Start The Footer -->
 </div>

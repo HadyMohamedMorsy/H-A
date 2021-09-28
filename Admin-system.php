@@ -1,6 +1,7 @@
 <?php
     include('Datebase/Config.php');
     include('Datebase/DB_Login.php');
+    
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +41,6 @@
     <?php include ("Links javascript Dashbored.php"); ?>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
         <script>
             var xyValues = [
             {x:50, y:7},
@@ -55,7 +55,6 @@
             {x:140, y:14},
             {x:150, y:15}
             ];
-
             new Chart("myChart", {
             type: "scatter",
             data: {
@@ -74,8 +73,6 @@
             }
             });
         </script>
-
-
     <!-- End The Links Files -->
 </body>
 

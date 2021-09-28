@@ -1,3 +1,8 @@
+<?php
+    if (empty($_SESSION)) {
+        header("location: index.php");
+    }
+?>
 
 <aside>
     <div class="image-useres">
@@ -18,8 +23,16 @@
             echo '<li><a href="Vendor-Seller-Manager.php" class="Projects"><i class="fas fa-briefcase"></i>Sellers Management</a></li>';
         }
         ?>
-        <li><a href="Clients.php" class="Clients"><i class="fas fa-briefcase"></i>Clients on  Website</a></li>
-        <li><a href="Employer.php" class="Employeres"><i class="fas fa-briefcase"></i>Employeres on  Website</a></li>
+        <?php 
+        if ($_SESSION['HA_P_Permission_Clients_Manager'] == 'Available') {
+            echo '<li><a href="Vendor-Clients-Manager.php" class="Clients"><i class="fas fa-briefcase"></i>Clients Management</a></li>';
+        }
+        ?>
+        <?php 
+        if ($_SESSION['HA_P_Permission_Employee_Manager'] == 'Available') {
+            echo '<li><a href="Vendor-Employee-Manager.php" class="Employeres"><i class="fas fa-briefcase"></i>Employeres Management</a></li>';
+        }
+        ?>
         <li><a href="Add-prodect.php" class="Add Project"><i class="fas fa-briefcase"></i>Add Prodect</a></li>
         <li><a href="Add-Catagry.php" class="Add Catogry"><i class="fas fa-briefcase"></i>Add Catogry</a></li>
         <li><a href="All-Products.php" class="All-Products"><i class="fas fa-briefcase"></i>All My Products</a></li>
