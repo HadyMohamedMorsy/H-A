@@ -50,6 +50,7 @@
                     $_SESSION['HA_U_P_Employee_Manager']                = $Row_User_Permissions['HA_U_P_Employee_Manager'];
                     $_SESSION['HA_U_P_Category_Manager']                = $Row_User_Permissions['HA_U_P_Category_Manager'];
                     $_SESSION['HA_U_P_Category_List']                   = $Row_User_Permissions['HA_U_P_Category_List'];
+                    $_SESSION['HA_U_P_Add_Product']                     = $Row_User_Permissions['HA_U_P_Add_Product'];
                 }
                 $SQL_Update_Last_Login = 'UPDATE ha_users SET HA_U_Last_Login = "'.$Current_Date_And_Time.'" WHERE HA_U_ID = "'.$_SESSION['HA_U_ID'].'"';
                 if (mysqli_query($Connection,$SQL_Update_Last_Login)) {

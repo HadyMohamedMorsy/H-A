@@ -12,7 +12,7 @@
             </div>
             <div class="form-group">
             <label for="exampleFormControlSelect1">Catagroy</label>
-             <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" id="exampleFormControlSelect1">
                 <option>Phone</option>
                 <option>Table</option>
                 <option>gaming</option>

@@ -24,11 +24,33 @@
                 $Alert_Message[] = 'Product Name Alerdy Exist';
             }else {
                 if (empty($Alert_Message)) {
-                    $SQL_Insert_New_Category = 'INSERT INTO ha_category_list (HA_C_L_Name_Child, HA_C_L_Parent_ID,HA_C_L_Count_Product, HA_C_L_Date_Created, HA_C_L_Time_Created, HA_C_L_User_ID_Created) 
-                        VALUES ("'.$Input_Category_Name.'", "'.$Parent_ID.'","0", "'.$Current_Date.'", "'.$Current_Time.'","'.$_SESSION['HA_U_ID'].'")';
+                    $SQL_Insert_New_Category = 'INSERT INTO ha_category_list (
+                                                                                HA_C_L_Name_Child, 
+                                                                                HA_C_L_Parent_ID,
+                                                                                HA_C_L_Status,
+                                                                                HA_C_L_Count_Products, 
+                                                                                HA_C_L_Count_Sales,
+                                                                                HA_C_L_Count_Returns,
+                                                                                HA_C_L_Date_Created, 
+                                                                                HA_C_L_Time_Created, 
+                                                                                HA_C_L_User_ID_Created
+                                                                                ) 
+                                                    VALUES (
+                                                        "'.$Input_Category_Name.'", 
+                                                        "'.$Parent_ID.'",
+                                                        "Active", 
+                                                        "0", 
+                                                        "0", 
+                                                        "0", 
+                                                        "'.$Current_Date.'", 
+                                                        "'.$Current_Time.'",
+                                                        "'.$_SESSION['HA_U_ID'].'"
+                                                        )';
                     if ( mysqli_query($Connection,$SQL_Insert_New_Category) ) {
                         $Alert_Message[] = 'Good, Category Is Insert';
                         //header("Refresh: 0;");
+                    }else {
+                        echo 'sory';
                     }
                 }
             }

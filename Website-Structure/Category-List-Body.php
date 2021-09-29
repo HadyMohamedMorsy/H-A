@@ -30,7 +30,7 @@
                                 <td>'.$Rows['HA_C_L_Count_Sales'].'</td>
                                 <td>'.$Rows['HA_C_L_Count_Returns'].'</td>
                                 <td>'.$Row_Get_Username['HA_U_Username'].'</td>
-                                <td>'.$Rows['HA_C_L_Date_Created'].'</td>
+                                <td>'.$Rows['HA_C_L_Date_Created'] . ' ' . $Rows['HA_C_L_Time_Created'] . '</td>
                             </tr>
                         ';
                     }

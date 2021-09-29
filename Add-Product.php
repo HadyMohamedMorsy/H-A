@@ -1,9 +1,12 @@
 <?php
     include('Datebase/Config.php');
-    include('Datebase/DB_Login.php');
-    include('Datebase/DB-Sign-Up.php');
+    include('Datebase/DB_Product.php');
 ?>
-
+<?php
+    if ($_SESSION['HA_U_P_Add_Product'] !== 'Available') {
+        header('Location: index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
