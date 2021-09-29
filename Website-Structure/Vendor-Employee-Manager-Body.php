@@ -13,8 +13,8 @@
         </thead>
         <tbody>
             <?php
-                if ($Count_Seller_Info > 0) {
-                    while ($Rows = mysqli_fetch_array($Result_Seller_Info)) {
+                if ($Count_Employee_Info > 0) {
+                    while ($Rows = mysqli_fetch_array($Result_Employee_Info)) {
                         // echo $Rows['HA_U_Username'];
                         echo '
                             <tr class="t-body" style="text-align: center;">

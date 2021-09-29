@@ -3,7 +3,7 @@
     include('Datebase/DB-Vendor-Seller-Manger.php');
 ?>
 <?php
-    if ($_SESSION['HA_P_Permission_Seller_Manager'] !== 'Available') {
+    if ($_SESSION['HA_U_P_Seller_Manager'] !== 'Available') {
         header('Location: index.php');
     }
 ?>

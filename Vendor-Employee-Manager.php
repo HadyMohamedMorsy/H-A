@@ -2,7 +2,11 @@
     include('Datebase/Config.php');
     include('Datebase/DB-Vendor-Employee-Manger.php');
 ?>
-
+<?php
+    if ($_SESSION['HA_U_P_Employee_Manager'] !== 'Available') {
+        header('Location: index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 

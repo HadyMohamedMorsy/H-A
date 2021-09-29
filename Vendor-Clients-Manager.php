@@ -3,7 +3,7 @@
     include('Datebase/DB-Vendor-Clients-Manger.php');
 ?>
 <?php
-    if ($_SESSION['HA_P_Permission_Clients_Manager'] !== 'Available') {
+    if ($_SESSION['HA_U_P_Clients_Manager'] !== 'Available') {
         header('Location: index.php');
     }
 ?>
