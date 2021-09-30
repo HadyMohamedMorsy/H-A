@@ -1,6 +1,6 @@
 <?php
     include('Datebase/Config.php');
-    include('Datebase/DB_Product.php');
+    include('Datebase/DB_Add_Product.php');
 ?>
 <?php
     if ($_SESSION['HA_U_P_Add_Product'] !== 'Available') {
@@ -11,7 +11,7 @@
 <html lang="en">
 
 <?php
-    $Page_Title = 'H_A';
+    $Page_Title = 'HA | Add Product';
     include ('Website-Structure/Header-Elemnts.php') ;
 ?>
     <!-- Start The Links Files -->
