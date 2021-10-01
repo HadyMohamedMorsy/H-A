@@ -7,7 +7,19 @@
 <aside>
     <div class="image-useres">
         <div class="image-user-content">
-            <?php echo '<img src = "IMG/User-Profile-Picture/[User-ID='.$_SESSION['HA_U_ID'].']/image.jpg" alt="emp_default.jpg"/>';?>
+            <?php 
+                $Scan_Profile_Img = scandir('IMG/User-Profile-Picture/[User-ID='.$_SESSION['HA_U_ID'].']');
+                if (count($Scan_Profile_Img) == 2) {
+                    if ($_SESSION['HA_U_Gender'] == 'Male') {
+                        $Profile_Img = 'IMG/User-Profile-Picture/[Defult-Profile-IMG]/IMG-Defult-Male.jpg';
+                    }elseif ($_SESSION['HA_U_Gender'] == 'Female') {
+                        $Profile_Img = 'IMG/User-Profile-Picture/[Defult-Profile-IMG]/IMG-Defult-Female.jpg';
+                    }
+                }else {
+                    $Profile_Img =  'IMG/User-Profile-Picture/[User-ID='.$_SESSION['HA_U_ID'].']' . '/' . $Scan_Profile_Img[2];
+                }
+            echo '<img src = "'.$Profile_Img.'"/>';
+            ?>
         </div>
         <?php echo '<h5>'.$_SESSION['User_First_Three_Names'].'</h5>';?>
         <?php echo '<br><h6>'.$_SESSION['HA_U_User_Type'].'</h6>';?>
