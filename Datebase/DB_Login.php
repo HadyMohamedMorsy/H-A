@@ -39,6 +39,7 @@
                 $_SESSION['HA_U_Last_Name']         = $Row_Login['HA_U_Last_Name'];
                 $_SESSION['User_First_Three_Names'] = $Row_Login['HA_U_First_Name'] . ' ' . $Row_Login['HA_U_Second_Name'] . ' ' . $Row_Login['HA_U_Last_Name'] ;
                 $_SESSION['HA_U_User_Type']         = $Row_Login['HA_U_User_Type'];
+                $_SESSION['HA_U_Gender']            = $Row_Login['HA_U_Gender'];
                 // Get User Permission
                 $SQL_User_Permissions = 'SELECT * FROM ha_user_permission WHERE HA_U_P_User_ID = "'.$_SESSION['HA_U_ID'].'"';
                 $Result_User_Permissions = mysqli_query($Connection,$SQL_User_Permissions);
@@ -51,6 +52,7 @@
                     $_SESSION['HA_U_P_Category_Manager']                = $Row_User_Permissions['HA_U_P_Category_Manager'];
                     $_SESSION['HA_U_P_Category_List']                   = $Row_User_Permissions['HA_U_P_Category_List'];
                     $_SESSION['HA_U_P_Add_Product']                     = $Row_User_Permissions['HA_U_P_Add_Product'];
+                    $_SESSION['HA_U_P_Products_List']                   = $Row_User_Permissions['HA_U_P_Products_List'];
                 }
                 $SQL_Update_Last_Login = 'UPDATE ha_users SET HA_U_Last_Login = "'.$Current_Date_And_Time.'" WHERE HA_U_ID = "'.$_SESSION['HA_U_ID'].'"';
                 if (mysqli_query($Connection,$SQL_Update_Last_Login)) {

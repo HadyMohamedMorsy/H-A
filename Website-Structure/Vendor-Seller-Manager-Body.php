@@ -18,15 +18,25 @@
                 if ($Count_Seller_Info > 0) {
                     while ($Rows = mysqli_fetch_array($Result_Seller_Info)) {
                         // echo $Rows['HA_U_Username'];
+                        $Scan_Profile_Img = scandir('IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']');
+                        if (count($Scan_Profile_Img) == 2) {
+                            if ($Rows['HA_U_Gender'] == 'Male') {
+                                $Profile_Img = 'IMG/User-Profile-Picture/[Defult-Profile-IMG]/IMG-Defult-Male.jpg';
+                            }elseif ($Rows['HA_U_Gender'] == 'Female') {
+                                $Profile_Img = 'IMG/User-Profile-Picture/[Defult-Profile-IMG]/IMG-Defult-Female.jpg';
+                            }
+                        }else {
+                            $Profile_Img =  'IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']' . '/' . $Scan_Profile_Img[2];
+                        }
                         echo '
                             <tr class="t-body" style="text-align: center;">
                             <td>'.$Rows['HA_U_ID'].'</td>
-                            <td><img src="IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']/image.jpg" alt="Img" style="width:50px"/></td>
+                            <td><img src="'.$Profile_Img.'" alt="Img" style="width:50px"/></td>
                             <td>'.$Rows['HA_U_Username'] .'</td>
                             <td>'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
                             <td>'.$Rows['HA_U_User_Status'].'</td>
                             <td>'.$Rows['HA_U_Date_Created'].'</td>
-                            <td>$ '.number_format($Rows['HA_U_Sales']).'</td>
+                            <td>$ '.number_format($Rows['HA_U_Sales'] , 2).'</td>
                             <td>'.$Rows['HA_U_Last_Login'].'</td>
                             <td class="last-Action" style="text-align: center;">
                                 <a href="#" class="Trash" data-users=".Delete-user"> <i class="fas fa-trash-alt"></i> </a>

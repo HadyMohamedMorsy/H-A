@@ -15,7 +15,7 @@
             <?php
                 if ($Count_Category_List > 0) {
                     while ($Rows = mysqli_fetch_array($Result_Category_List)) {
-                        $SQL_Get_Parent_Name = 'SELECT HA_C_L_Name_Parent FROM ha_category_list WHERE HA_C_L_ID = "'.$Rows['HA_C_L_Parent_ID'].'"';
+                        $SQL_Get_Parent_Name = 'SELECT HA_C_L_Category_Name FROM ha_category_list WHERE HA_C_L_ID = "'.$Rows['HA_C_L_Parent_ID'].'"';
                         $Result_Get_Parent_Name = mysqli_query($Connection,$SQL_Get_Parent_Name);
                         $Row_Get_Parent_Name  = mysqli_fetch_array($Result_Get_Parent_Name, MYSQLI_ASSOC);  
                         // User Name Crated
@@ -24,8 +24,8 @@
                         $Row_Get_Username = mysqli_fetch_array($Result_Get_Username, MYSQLI_ASSOC);  
                         echo '
                             <tr>
-                                <td>'.$Row_Get_Parent_Name['HA_C_L_Name_Parent'].'</td>
-                                <td>'.$Rows['HA_C_L_Name_Child'].'</td>
+                                <td>'.$Row_Get_Parent_Name['HA_C_L_Category_Name'].'</td>
+                                <td>'.$Rows['HA_C_L_Category_Name'].'</td>
                                 <td>'.$Rows['HA_C_L_Count_Products'].'</td>
                                 <td>'.$Rows['HA_C_L_Count_Sales'].'</td>
                                 <td>'.$Rows['HA_C_L_Count_Returns'].'</td>

@@ -47,7 +47,11 @@
             echo '<li><a href="Add-Product.php" class="Add Project"><i class="fas fa-cart-plus"></i>Add Prodect</a></li>';
         }
         ?>
-        <li><a href="All-Products.php" class="All-Products"><i class="fas fa-store"></i>All My Products</a></li>
+        <?php 
+        if ($_SESSION['HA_U_P_Products_List'] == 'Available') {
+            echo '<li><a href="Products-List.php" class="All-Products"><i class="fas fa-store"></i>Products List</a></li>';
+        }
+        ?>
         <li><a href="Logout.php" class="Add LogOut"><i class="fas fa-sign-out-alt"></i>LogOut</a></li>
     </ul>
 </aside>

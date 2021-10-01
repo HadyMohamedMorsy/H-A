@@ -1,70 +1,57 @@
 <div class="right-All-Clients Dasbored-content">
-<table id="example" class="table table-striped table-bordered" style="width:100%">
-        <thead>
+<table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;">
+        <thead >
             <tr>
-                <th>Img</th>
+                <th>ID</th>
+                <th>IMG</th>
                 <th>Name</th>
-                <th>Code</th>
                 <th>Catagroy</th>
-                <th>Quantity</th>
+                <th>Qty</th>
                 <th>Price</th>
-                <th>Salary</th>
-                <th>Actiones</th>
+                <th>Status</th>
+                <th>Action</th>
             </tr>
         </thead>
-        <tbody>
-            <tr class="t-body">
-                <td><img src ="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" /></td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-                <td class="last-Action">
-                    <a href="#" class="Trash"data-clients =".Delete-clients"> <i class="fas fa-trash-alt"></i> </a>
-                    <a href="#" class="Edit" data-clients =".Edit-clients"> <i class="far fa-edit"></i> </a>
-                    <a href="#" class="View" data-clients =".View-clients"> <i class="far fa-eye"></i> </a>
-                </td>
-            </tr>
-            <tr class="t-body">
-                <td><img src ="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" /></td>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-                <td class="last-Action">
-                    <a href="#" class="Trash" data-clients =".Delete-clients"> <i class="fas fa-trash-alt"></i> </a>
-                    <a href="#" class="Edit"  data-clients =".Edit-clients"> <i class="far fa-edit"></i> </a>
-                    <a href="#" class="View"  data-clients =".View-clients"> <i class="far fa-eye"></i> </a>
-                </td>
-            </tr>
-            <tr class="t-body">
-                <td><img src ="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" /></td>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009/01/12</td>
-                <td>$86,000</td>
-                <td class="last-Action">
-                    <a href="#" class="Trash" data-clients =".Delete-clients"> <i class="fas fa-trash-alt"></i> </a>
-                    <a href="#" class="Edit"  data-clients =".Edit-clients"> <i class="far fa-edit"></i> </a>
-                    <a href="#" class="View"  data-clients =".View-clients"> <i class="far fa-eye"></i> </a>
-                </td>
-            </tr>
+        <tbody> 
+            <!-- ImgCover -->
+                <?php
+                    if ($Count_Products_List > 0) {
+                        while ($Rows = mysqli_fetch_array($Result_Products_List)) {
+                            $SQL_Get_Category_Name = 'SELECT HA_C_L_Category_Name FROM ha_category_list WHERE HA_C_L_ID = "'.$Rows['HA_P_Category_ID'].'"';
+                            $Result_Get_Category_Name = mysqli_query($Connection,$SQL_Get_Category_Name);
+                            $Row_Get_Category_Name  = mysqli_fetch_array($Result_Get_Category_Name, MYSQLI_ASSOC);  
+                            $Path_Folder_Cover = 'IMG/Imges-Products/P_ID-'.$Rows['HA_P_ID'].'/P_ID-'.$Rows['HA_P_ID'].'-Cover';
+                            $Cover_Img = scandir($Path_Folder_Cover); 
+                            echo '
+                                <tr class="t-body">
+                                    <td>'.$Rows['HA_P_ID'].'</td>
+                                    <td><img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" alt="Img" style="width:50px"/></td>
+                                    <td>'.$Rows['HA_P_Name'].'</td>
+                                    <td>'.$Row_Get_Category_Name['HA_C_L_Category_Name'].'</td>
+                                    <td>'.$Rows['HA_P_Qty'].'</td>
+                                    <td>'. number_format($Rows['HA_P_Price'] , 2).'</td>
+                                    <td>'.$Rows['HA_P_Status'].'</td>
+                                    <td class="last-Action">
+                                        <a href="#" class="Trash" data-clients =".Delete-clients"> <i class="fas fa-trash-alt"></i> </a>
+                                        <a href="#" class="Edit"  data-clients =".Edit-clients"> <i class="far fa-edit"></i> </a>
+                                        <a href="#" class="View"  data-clients =".View-clients"> <i class="far fa-eye"></i> </a>
+                                    </td>
+                                </tr>
+                            ';
+                        }
+                    }
+                ?>
         </tbody>
         <tfoot>
             <tr>
-                <th><img src ="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" /></th>
+                <th>ID</th>
+                <th>IMG</th>
                 <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Catagroy</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Action</th>
             </tr>
         </tfoot>
     </table>
@@ -75,7 +62,6 @@
             <button class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
         </div>
     </div>
-
     <div class="View-clients remove-Delete">
         <div class="View-clients-Details">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
