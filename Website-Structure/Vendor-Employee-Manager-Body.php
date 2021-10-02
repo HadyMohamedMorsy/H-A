@@ -14,6 +14,7 @@
         <tbody>
             <?php
                 if ($Count_Employee_Info > 0) {
+                    $ID = 1;
                     while ($Rows = mysqli_fetch_array($Result_Employee_Info)) {
                         // echo $Rows['HA_U_Username'];
                         $Scan_Profile_Img = scandir('IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']');
@@ -37,6 +38,7 @@
                                 <td>'.$Rows['HA_U_Email'].'</td>
                             </tr>
                         ';
+                        $ID += 3;
                     }
                 }
             ?>

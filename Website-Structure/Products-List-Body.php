@@ -16,6 +16,7 @@
             <!-- ImgCover -->
                 <?php
                     if ($Count_Products_List > 0) {
+                        $ID = 1;
                         while ($Rows = mysqli_fetch_array($Result_Products_List)) {
                             $SQL_Get_Category_Name = 'SELECT HA_C_L_Category_Name FROM ha_category_list WHERE HA_C_L_ID = "'.$Rows['HA_P_Category_ID'].'"';
                             $Result_Get_Category_Name = mysqli_query($Connection,$SQL_Get_Category_Name);
@@ -23,7 +24,7 @@
                             $Path_Folder_Cover = 'IMG/Imges-Products/P_ID-'.$Rows['HA_P_ID'].'/P_ID-'.$Rows['HA_P_ID'].'-Cover';
                             $Cover_Img = scandir($Path_Folder_Cover); 
                             echo '
-                                <tr class="t-body">
+                                <tr class="t-body" id="T'.$ID.'">
                                     <td>'.$Rows['HA_P_ID'].'</td>
                                     <td><img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" alt="Img" style="width:50px"/></td>
                                     <td>'.$Rows['HA_P_Name'].'</td>
@@ -38,6 +39,7 @@
                                     </td>
                                 </tr>
                             ';
+                            $ID += 3;
                         }
                     }
                 ?>

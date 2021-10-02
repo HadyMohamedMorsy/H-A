@@ -15,6 +15,7 @@
         <tbody>
             <?php
                 if ($Count_Clients_Info > 0) {
+                    $ID = 1;
                     while ($Rows = mysqli_fetch_array($Result_Clients_Info)) {
                         // echo $Rows['HA_U_Username'];
                         $Scan_Profile_Img = scandir('IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']');
@@ -28,7 +29,7 @@
                             $Profile_Img =  'IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']' . '/' . $Scan_Profile_Img[2];
                         }
                         echo '
-                            <tr class="t-body" >
+                            <tr class="t-body" id="T'.$ID.'">
                                 <td>'.$Rows['HA_U_ID'].'</td>
                                 <td><img src="'.$Profile_Img.'" alt="Img" style="width:50px"/></td>
                                 <td>'.$Rows['HA_U_Username'] .'</td>
@@ -43,6 +44,7 @@
                                 </td>
                             </tr>
                         ';
+                        $ID += 3;
                     }
                 }
             ?>
