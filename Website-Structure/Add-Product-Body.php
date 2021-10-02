@@ -53,13 +53,13 @@
                 <input type="text" name="Input_Product_Brand" class="form-control" id="exampleInputPassword1" placeholder="Brand" autocomplete="off">
             </div>
             <div class="form-group">
-                <label for="upload-photo" class="label form-control"> Upload Product Cover IMG *</label>
-                <input type="file" name="File_Product_Cover" id="upload-photo" />
+                <label for="upload-cover" class="label form-control"> Upload Product Cover IMG *</label>
+                <input type="file" name="File_Product_Cover" id="upload-cover" class="label-input" />
             </div>
             <button type="submit" name="BTN_Add_Product" class="Add-Products">Add Products</button>
             <div class="form-group">
-                <label class="label form-control"> Upload Product Imges.. *</label>
-                <input type="file" name="File_Product_Imges" id="upload-photo" />
+                <label for="upload-photo" class="label form-control"> Upload Product Imges.. *</label>
+                <input type="file" name="File_Product_Imges" id="upload-photo" class="label-input"/>
             </div>
         </form>
     </div>

@@ -32,9 +32,9 @@
                                     <td>'. number_format($Rows['HA_P_Price'] , 2).'</td>
                                     <td>'.$Rows['HA_P_Status'].'</td>
                                     <td class="last-Action">
-                                        <a href="#" class="Trash" data-clients =".Delete-clients"> <i class="fas fa-trash-alt"></i> </a>
-                                        <a href="#" class="Edit"  data-clients =".Edit-clients"> <i class="far fa-edit"></i> </a>
-                                        <a href="#" class="View"  data-clients =".View-clients"> <i class="far fa-eye"></i> </a>
+                                    <a href="#" class="Trash" data-module=".question-delete-row"> <i class="fas fa-trash-alt"></i> </a>
+                                    <a href="#" class="Edit" data-module=".Edit-row"> <i class="far fa-edit"></i> </a>
+                                    <a href="#" class="View" data-module=".View-row"> <i class="far fa-eye"></i> </a>
                                     </td>
                                 </tr>
                             ';
@@ -55,15 +55,16 @@
             </tr>
         </tfoot>
     </table>
-    <div class="Delete-clients remove-Delete">
-        <div class="Delete-clients-question">
+    <div class="question-delete-row remove-Delete">
+        <form class="Delete-question">
             <h4>Are You Sure To Delete This ?</h4>
             <button class="btn btn-danger"> Yes   </button>
             <button class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
-        </div>
+        </form>
     </div>
-    <div class="View-clients remove-Delete">
-        <div class="View-clients-Details">
+
+    <div class="View-row remove-Delete">
+        <div class="View-row-Details">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
             <div class="Image-View">
                 <img src ="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" />
@@ -81,8 +82,8 @@
         </div>
     </div>
 
-    <div class="Edit-clients remove-Delete">
-        <form class="Edit-clients" action="" method="POST">
+    <div class="Edit-row remove-Delete">
+        <form class="Edit-row-details" action="" method="POST">
             <div class="cancel-Dashbored Edit-cancel">
                 <i class="fas fa-times"></i>
             </div>

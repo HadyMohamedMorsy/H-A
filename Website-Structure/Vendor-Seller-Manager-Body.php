@@ -1,5 +1,5 @@
 <div class="right-All-users Dasbored-content">
-    <table id="Seller" class="table table-striped table-bordered" style="width:100%">
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead style="text-align: center;">
             <tr>
                 <th>ID</th>
@@ -13,7 +13,7 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody">
             <?php
                 if ($Count_Seller_Info > 0) {
                     while ($Rows = mysqli_fetch_array($Result_Seller_Info)) {
@@ -32,16 +32,16 @@
                             <tr class="t-body" style="text-align: center;">
                             <td>'.$Rows['HA_U_ID'].'</td>
                             <td><img src="'.$Profile_Img.'" alt="Img" style="width:50px"/></td>
-                            <td>'.$Rows['HA_U_Username'] .'</td>
-                            <td>'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
-                            <td>'.$Rows['HA_U_User_Status'].'</td>
+                            <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
+                            <td class="FullName-Edit-Module">'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
+                            <td class="FullName-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
                             <td>'.$Rows['HA_U_Date_Created'].'</td>
                             <td>$ '.number_format($Rows['HA_U_Sales'] , 2).'</td>
                             <td>'.$Rows['HA_U_Last_Login'].'</td>
                             <td class="last-Action" style="text-align: center;">
-                                <a href="#" class="Trash" data-users=".Delete-user"> <i class="fas fa-trash-alt"></i> </a>
-                                <a href="#" class="Edit" data-users=".Edit-username"> <i class="far fa-edit"></i> </a>
-                                <a href="#" class="View" data-users=".View-User"> <i class="far fa-eye"></i> </a>
+                                <a href="#" class="Trash" data-module=".question-delete-row"> <i class="fas fa-trash-alt"></i> </a>
+                                <a href="#" class="Edit" data-module=".Edit-row"> <i class="far fa-edit"></i> </a>
+                                <a href="#" class="View" data-module=".View-row"> <i class="far fa-eye"></i> </a>
                             </td>
                             </tr>
                         ';
@@ -64,16 +64,16 @@
         </tfoot>
     </table>
 
-    <div class="Delete-user remove-Delete">
-        <div class="Delete-user-question">
+    <div class="question-delete-row remove-Delete">
+        <form class="Delete-question">
             <h4>Are You Sure To Delete This ?</h4>
-            <button class="btn btn-danger"> Yes </button>
-            <button class="btn btn-dark No-user cancel-Dashbored">  NO  </button>
-        </div>
+            <button class="btn btn-danger" type="submit"> Yes </button>
+            <button class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+        </form>
     </div>
 
-    <div class="View-User remove-Delete">
-        <div class="View-User-Details">
+    <div class="View-row remove-Delete">
+        <div class="View-row-Details">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
             <div class="Image-View">
                 <img src="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" />
@@ -92,33 +92,27 @@
     </div>
 
 
-    <div class="Edit-username remove-Delete">
-        <form class="Edit-user" action="" method="POST">
+    <div class="Edit-row remove-Delete">
+        <form class="Edit-row-details" action="" method="POST">
             <div class="cancel-Dashbored Edit-cancel">
                 <i class="fas fa-times"></i>
             </div>
             <h2>Edit Profile</h2>
             <div class="form-group">
+                <input type="number" name="Input_Id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" hidden>
+            </div>
+            <div class="form-group">
                 <input type="text" name="Input_Username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
             </div>
             <div class="form-group">
-                <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Postion">
+                <input type="text" name="Input-FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="FullName">
             </div>
             <div class="form-group">
-                <input type="text" name="Input_Last_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Office">
-            </div>
-            <div class="form-group">
-                <input type="Text" name="Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Age">
-            </div>
-            <div class="form-group">
-                <input type="text" name="Input_Re_Password" class="form-control" id="exampleInputPassword1" placeholder="Start date">
-            </div>
-            <div class="form-group">
-                <input type="text" name="Input_Country" class="form-control" id="exampleInputPassword1" placeholder="Salary">
+                <input type="text" name="Input-Status" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Status">
             </div>
             <div class="form-group">
                 <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
-                <input type="file" name="photo" id="upload-photo" />
+                <input type="file" name="photo" id="upload-photo" class="label-input" />
             </div>
             <button type="submit" name="BTN_Register" class="btn form-control Edit-Prfile-user">Edit</button>
         </form>

@@ -13,26 +13,34 @@ $(document).ready(function(){
     
     $('#example').DataTable();
 
-    $('.last-Action a').on("click",function(e){
+    // $('.last-Action a').on("click",function(e){
 
-        e.preventDefault();
+    //     e.preventDefault();
 
-        $($(this).data('clients')).removeClass('remove-Delete');
+    //     $($(this).data('module')).removeClass('remove-Delete');
+
+
+    // });
+
+
+    $("#tbody .t-body .last-Action a").each(function(index , i) {
+
+        $(this).on("click", function(){
+
+            var boolKey = $(this).data('module');
+
+            $(boolKey).removeClass('remove-Delete');
+
+            var  retindex = index;
+
+        });
 
     });
+
     
-    $('#Seller').DataTable();
-
-    $('.last-Action a').on("click",function(e){
-
-        e.preventDefault();
-
-        $($(this).data('users')).removeClass('remove-Delete');
-
-    });
-
     $('.cancel-Dashbored').on("click",function(){
 
         $(this).parent().parent().addClass('remove-Delete');
     })
+
 });

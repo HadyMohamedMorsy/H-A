@@ -151,38 +151,13 @@ input:-internal-autofill-selected{
 
 // User
 
-.Delete-user{
+.question-delete-row{
     @include fixed;
     background-color: rgba(192,192,192,.6);
-    .Delete-user-question{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%,-40%);
-        background-color: $white;
+    .Delete-question{
+        @include viewmoduletable;
         padding: 30px 15px;
         width: 400px;
-        border-radius: 10px;
-        h4{
-            padding-bottom: 30px;
-        }
-        .btn{
-            width: 100px;
-        }
-    }
-}
-.Delete-clients{
-    @include fixed;
-    background-color: rgba(192,192,192,.6);
-    .Delete-clients-question{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%,-40%);
-        background-color: $white;
-        padding: 30px 15px;
-        width: 400px;
-        border-radius: 10px;
         h4{
             padding-bottom: 30px;
         }
@@ -193,27 +168,18 @@ input:-internal-autofill-selected{
 }
 
 // users
-.remove-Delete{
 
-    display : none;
-}
-
-.View-User{
+.View-row{
     @include fixed;
     background-color: rgba(192,192,192,.6);
     z-index: 1;
     .View-cancel{
         @include button;
     }
-    .View-User-Details{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%,-40%);
-        background-color: $white;
+    .View-row-Details{
+        @include viewmoduletable;
         padding: 16px;
         width: 700px;
-        border-radius: 10px;
         display: flex;
         justify-content: space-between;
         z-index: 2;
@@ -242,55 +208,10 @@ input:-internal-autofill-selected{
 }
 
 
-.View-clients{
-    @include fixed;
-    background-color: rgba(192,192,192,.6);
-    z-index: 1;
-    .View-cancel{
-        @include button;
-    }
-    .View-clients-Details{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%,-40%);
-        background-color: $white;
-        padding: 16px;
-        width: 700px;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-        z-index: 2;
-        .Image-View{
-            flex-basis: 50%;
-            img{
-                width: 100%;
-            }
-        }
-        .Deatils-View{
-            flex-basis: 50%;
-            ul{
-                list-style: none;
-                li{
-                    padding: 15px 0px;
-                    font-size: 20px;
-                    margin-right: 10px;
-                    span{
-                        font-size: 16px;
-                        font-weight: 300;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-.Edit-username{
+.Edit-row{
     @include fixed;
     background-color: rgba(#cccbcb , 0.5);
-    .Edit-user{
+    .Edit-row-details{
         .Edit-cancel{
             @include button;
         }
@@ -310,27 +231,9 @@ input:-internal-autofill-selected{
     }
 }
 
-.Edit-clients{
-    @include fixed;
-    background-color: rgba(#cccbcb , 0.5);
-    .Edit-clients{
-        .Edit-cancel{
-            @include button;
-        }
-        @include formHome;
-        top : 35%;
-        .form-group{
-            input{
-                @include inputfornhome;
-            }
-        }
-        h2{
-            @include headerformhome;
-        }
-        .Edit-Prfile-clients{
-            @include submitHome;
-        }
-    }
+.remove-Delete{
+
+    display : none;
 }
 
 .Trash{
