@@ -49,7 +49,7 @@
                 <input type="datetime-local" name="Input_Product_Available_From_Date" class="form-control" id="exampleInputPassword1" placeholder="Date And Time" autocomplete="off">
             </div>
             <div class="form-group">
-                <label>Brand *</label>
+                <label>Brand</label>
                 <input type="text" name="Input_Product_Brand" class="form-control" id="exampleInputPassword1" placeholder="Brand" autocomplete="off">
             </div>
             <div class="form-group">

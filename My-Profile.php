@@ -20,7 +20,7 @@
     <?php include ("Website-Structure/Dashbored-header.php"); ?>
     <!-- End The Header-->
 
-    <?php include ("./Website-Structure/index-Body_edit.php"); ?>
+    <?php include ("./Website-Structure/My-Profile-Body.php"); ?>
 
     <!-- Start The Footer -->
 </div>

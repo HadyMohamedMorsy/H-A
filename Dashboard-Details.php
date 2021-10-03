@@ -1,14 +1,12 @@
 <?php
     include('Datebase/Config.php');
-    include('Datebase/DB_Login.php');
-    
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <?php
-    $Page_Title = 'Admin-system';
+    $Page_Title = 'Dashboard-Details';
     include ('Website-Structure/Header-Elemnts.php') ;
 ?>
     <!-- Start The Links Files -->
@@ -29,7 +27,7 @@
     <?php include("./Website-Structure/Dashbored-header.php"); ?>
     <!-- End The Header-->
 
-    <?php include ("./Website-Structure/Dashbored-Body.php"); ?>
+    <?php include ("./Website-Structure/Dashboard-Details-Body.php"); ?>
 
     <!-- Start The Footer -->
     <?php include ("Website-Structure/Footer.php"); ?>
