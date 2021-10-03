@@ -1,0 +1,12 @@
+# Start Redirect Section
+
+RewriteEngine On
+
+RewriteRule ^Clients-Manager?$ Vendor-Clients-Manager.php
+
+RewriteRule ^Seller-Manager?$ Vendor-Seller-Manager.php
+
+RewriteRule ^Employee-Manager?$ Vendor-Employee-Manager.php
+
+# End Redirect Section
+
