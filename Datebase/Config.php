@@ -1,10 +1,18 @@
 <?php
     session_start();  
     // Change this to your connection info.
-    $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = '';
-    $DATABASE_NAME = 'ha';
+    $DATABASE_HOST = 'remotemysql.com'; 
+    $DATABASE_USER = 'pXTbMHDknr';
+    $DATABASE_PASS = '84s2FH89CR';
+    $DATABASE_NAME = 'pXTbMHDknr';
+
+    /*
+        // Localhost Connection //
+        $DATABASE_HOST = 'localhost';
+        $DATABASE_USER = 'root';
+        $DATABASE_PASS = '';
+        $DATABASE_NAME = 'ha';
+    */
 
     date_default_timezone_set('Africa/Cairo');
     // Try and connect using the info above.

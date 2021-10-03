@@ -1,0 +1,10 @@
+Username: pXTbMHDknr
+
+Database name: pXTbMHDknr
+
+Password: 84s2FH89CR
+
+Server: remotemysql.com
+
+Port: 3306
+
