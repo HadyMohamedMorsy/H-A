@@ -12,7 +12,7 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody">
             <?php
                 if ($Count_Clients_Info > 0) {
                     while ($Rows = mysqli_fetch_array($Result_Clients_Info)) {
@@ -30,12 +30,12 @@
                         echo '
                             <tr class="t-body" >
                                 <td>'.$Rows['HA_U_ID'].'</td>
-                                <td><img src="'.$Profile_Img.'" alt="Img" style="width:50px"/></td>
-                                <td>'.$Rows['HA_U_Username'] .'</td>
-                                <td>'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
-                                <td>'.$Rows['HA_U_User_Status'].'</td>
-                                <td>'.$Rows['HA_U_Date_Created'].'</td>
-                                <td>'.number_format((int)$Rows['HA_U_Purchase'],2).'</td>
+                                <td class="IMG-DATABASE"><img src="'.$Profile_Img.'" alt="Img" style="width:50px"/></td>
+                                <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
+                                <td class="FullName-Edit-Module">'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
+                                <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
+                                <td class="Date-Created">'.$Rows['HA_U_Date_Created'].'</td>
+                                <td class="HA-U-Purchase">'.number_format((int)$Rows['HA_U_Purchase'],2).'</td>
                                 <td class="last-Action" >
                                 <a href="#" class="Trash" data-module=".question-delete-row"> <i class="fas fa-trash-alt"></i> </a>
                                 <a href="#" class="Edit" data-module=".Edit-row"> <i class="far fa-edit"></i> </a>
@@ -72,17 +72,16 @@
         <div class="View-row-Details">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
             <div class="Image-View">
-                <img src ="IMG/emp_default.jpg" alt="IMG/emp_default.jpg" />
+            <img  alt="IMG/emp_default.jpg" id="view-Details-show-IMG"/>
             </div>
             <div class="Deatils-View">
-                    <ul>
-                        <li>Name          : <span>Ashton Cox</span></li>
-                        <li>Postion       : <span>Junior Technical Author</span></li>
-                        <li>Office        : <span>San Francisco</span></li>
-                        <li>Age           : <span>23</span></li>
-                        <li>Start date    : <span>2009/01/12</span></li>
-                        <li>Salary        : <span>$86,000</span></li>
-                    </ul>
+                <ul>
+                    <li>Name         : <span id="view-Details-show-name"></span></li>
+                    <li>FullName     : <span id="view-Details-show-FullName"></span></li>
+                    <li>Status       : <span id="view-Details-show-Status"></span></li>
+                    <li>Date_Created : <span id="view-Details-show-Date-Created"></span></li>
+                    <li>Purchases    : <span id="view-Details-show-Purchases"></span></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -94,26 +93,23 @@
             </div>
             <h2>Edit Profile</h2>
             <div class="form-group">
-                <input type="text" name="Input_Username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                <input type="text" name="Input_Username" class="form-control" id="Edit-Username" aria-describedby="emailHelp" placeholder="Username">
             </div>
             <div class="form-group">
-                <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Postion">
+                <input type="text" name="Input_First_Name" class="form-control" id="Edit-FullName" aria-describedby="emailHelp" placeholder="FullName">
             </div>
             <div class="form-group">
-                <input type="text" name="Input_Last_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Office">
-            </div>
-            <div class="form-group">
-                <input type="Text" name="Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Age">
-            </div>
-            <div class="form-group">
-                <input type="text" name="Input_Re_Password" class="form-control" id="exampleInputPassword1" placeholder="Start date">
-            </div>
-            <div class="form-group">
-                <input type="text" name="Input_Country" class="form-control" id="exampleInputPassword1" placeholder="Salary">
+              <select name="Input-Status" class="form-control" id="Status">
+                    <option value="">Status</option>
+                    <option value="Active">Active</option>
+                    <option value="UnActice">UnActice</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Suspended">Suspended</option>
+             </select>
             </div>
             <div class="form-group">
             <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
-                <input type="file" name="photo" id="upload-photo" />
+                <input type="file" name="photo" id="upload-photo" class="label-input"/>
             </div>
             <button type="submit" name="BTN_Register" class="btn form-control Edit-Prfile-clients">Edit</button>
         </form>

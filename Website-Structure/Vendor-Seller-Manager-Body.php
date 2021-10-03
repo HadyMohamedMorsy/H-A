@@ -113,6 +113,8 @@
                     <option value="">Status</option>
                     <option value="Active">Active</option>
                     <option value="UnActice">UnActice</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Suspended">Suspended</option>
              </select>
             </div>
             <div class="form-group">
