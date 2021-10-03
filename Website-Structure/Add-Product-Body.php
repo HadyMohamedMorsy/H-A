@@ -59,7 +59,7 @@
             <button type="submit" name="BTN_Add_Product" class="Add-Products">Add Products</button>
             <div class="form-group">
                 <label for="upload-photo" class="label form-control"> Upload Product Imges.. *</label>
-                <input type="file" name="File_Product_Imges" id="upload-photo" class="label-input"/>
+                <input type="file"  name="File_Product_Imges[]" id="upload-photo" class="label-input" multiple/>
             </div>
         </form>
     </div>

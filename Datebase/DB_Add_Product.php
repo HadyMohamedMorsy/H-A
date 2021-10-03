@@ -18,12 +18,22 @@
         $Input_Product_Alert_Qty            = $_POST['Input_Product_Alert_Qty'];
         $Input_Product_Available_From_Date  = $_POST['Input_Product_Available_From_Date'];
         $Input_Product_Brand                = $_POST['Input_Product_Brand'];
+        // Cover IMG Varible
         $Uploaded_File_Cover                = $_FILES['File_Product_Cover'];
         $Img_Name_Cover  = $Uploaded_File_Cover['name'];
         $Img_Type_Cover  = $Uploaded_File_Cover['type'];
         $Img_Temp_Cover  = $Uploaded_File_Cover['tmp_name'];
         $Img_Error_Cover = $Uploaded_File_Cover['error'];
         $Img_Size_Cover  = $Uploaded_File_Cover['size'];
+        // Imges Varible
+        $Uploaded_File_Imges                = $_FILES['File_Product_Imges'];
+        $Imgs_Name_Imges  = $Uploaded_File_Imges['name'];
+        $Imgs_Type_Imges  = $Uploaded_File_Imges['type'];
+        $Imgs_Temp_Imges  = $Uploaded_File_Imges['tmp_name'];
+        $Imgs_Error_Imges = $Uploaded_File_Imges['error'];
+        $Imgs_Size_Imges  = $Uploaded_File_Imges['size'];
+        $Imges_Files_Count = count($Imgs_Name_Imges);
+        
         if ($Input_Product_Name == '') {
             $Alert_Message[] = 'Input_Product_Name Is Empty';
         }
@@ -51,6 +61,7 @@
         if ($Img_Error_Cover == 4) {
             $Alert_Message[] = 'File_Product_Cover Is Empty';
         }
+        // Cover Check
         $Extension = explode('.',$Img_Name_Cover);
         $File_Extensions = strtolower(end($Extension)) ;
         if (!in_array($File_Extensions,$Allowed_File_Extensions) AND $Img_Error_Cover !== 4) {
@@ -69,9 +80,37 @@
                                     <span aria-hidden="true">×</span>
                                 </button>
                                 <h4><i class="fas fa-exclamation-circle"></i> خطاء فى الصوره </h4>
-                                <hr> يبدو ان اسم هذه الصوره اكبر من '. number_format( $Maximum_File_Size / 1024) .' ميجا بايت
+                                <hr> يبدو ان اسم هذه الصوره اكبر من '. number_format( $Maximum_File_Size / 1024 / 1024) .' ميجا بايت
                                 <hr> '.$Img_Name_Cover.'
                             </div>';
+            }
+        }
+        // Imges Check
+        if ($Imges_Files_Count > 0) {
+            for ($i=0; $i < $Imges_Files_Count; $i++) {
+                $Extensions = explode('.',$Imgs_Name_Imges[$i]);
+                $Files_Extensions = strtolower(end($Extensions)) ;
+                if (!in_array($Files_Extensions,$Allowed_File_Extensions)) {
+                    $Alert_Message[] = '<div class="alert alert-danger fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <h4><i class="fas fa-exclamation-circle"></i> خطاء فى الصوره </h4>
+                                    <hr> يبدور ان هذا الملف ليس صوره 
+                                    <hr> '.$Imgs_Name_Imges[$i].'
+                                </div>';
+                }else {
+                    if ($Imgs_Size_Imges[$i] > $Maximum_File_Size) {
+                        $Alert_Message[] = '<div class="alert alert-danger fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <h4><i class="fas fa-exclamation-circle"></i> خطاء فى الصوره </h4>
+                                        <hr> يبدو ان اسم هذه الصوره اكبر من '. number_format( $Maximum_File_Size / 1024 / 1024) .' ميجا بايت
+                                        <hr> '.$Imgs_Name_Imges[$i].'
+                                    </div>';
+                    }
+                }
             }
         }
         /**********************************************************************************************************************************************************************/
@@ -116,15 +155,45 @@
                                                             "Pending"
                                                         )';
             if (empty($Alert_Message) AND mysqli_query($Connection,$SQL_Add_Product)) {
-                if ( !is_dir( $Path_Dir.$Folder_Name.'/'.$Cover_Folder_Creat ) ) {
+                if ( !is_dir( $Path_Dir.$Folder_Name.'/'.$Cover_Folder_Creat ) AND !is_dir( $Path_Dir.$Folder_Name.'/'.$IMGS_Folder_Creat)) {
                     mkdir($Path_Dir.$Folder_Name, 0700); // Make Folder 
                     mkdir( $Path_Dir . $Folder_Name . '/' . $Cover_Folder_Creat , 0700 ); // Make Folder 
                     mkdir( $Path_Dir . $Folder_Name . '/' . $IMGS_Folder_Creat , 0700 ); // Make Folder 
                     move_uploaded_file($Img_Temp_Cover, $Path_Dir.$Folder_Name . '/' . $Cover_Folder_Creat  . '/' . 'ImgCover' . '.' . $File_Extensions);
+                    if ($Imges_Files_Count > 0) {
+                        for ($i=0; $i < $Imges_Files_Count; $i++) {
+                            move_uploaded_file($Imgs_Temp_Imges[$i], $Path_Dir .$Folder_Name .'/'.$IMGS_Folder_Creat . '/' .  $i  . '.' . $Files_Extensions);
+                        }
+                        // $Alert_Message[] = '<div class="alert alert-success fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl">
+                        //                         <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left">
+                        //                             <span aria-hidden="true">×</span>
+                        //                         </button>
+                        //                         <h4><i class="fas fa-check-circle"></i> نجاح العمليه 1</h4>
+                        //                         <hr> تم رفع الصور بنجاح 
+                        //                     </div>';
+                    }
                 }else {
                     move_uploaded_file($Img_Temp_Cover, $Path_Dir.$Folder_Name . '/' . $Cover_Folder_Creat  . '/' . 'ImgCover' . '.' . $File_Extensions);
+                    if ($Imges_Files_Count > 0) {
+                        for ($i=0; $i < $Imges_Files_Count; $i++) {
+                            move_uploaded_file($Imgs_Temp_Imges[$i], $Path_Dir .$Folder_Name .'/'.$IMGS_Folder_Creat . '/' .  $i  . '.' . $Files_Extensions);
+                        }
+                        // $Alert_Message[] = '<div class="alert alert-success fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl">
+                        //                         <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left">
+                        //                             <span aria-hidden="true">×</span>
+                        //                         </button>
+                        //                         <h4><i class="fas fa-check-circle"></i> نجاح العمليه </h4>
+                        //                         <hr> تم رفع الصور بنجاح 
+                        //                     </div>';
+                    }
                 }
-                $Alert_Message[] = 'Product Sale Succsess';
+                $Alert_Message[] = '<div class="alert alert-success fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <h4><i class="fas fa-check-circle"></i> نجاح العمليه </h4>
+                                        <hr> تم رفع المنتج الى الاداره بنجاح وبأنتظار الموافقه. 
+                                    </div>';
             }else {
                 $Alert_Message[] = 'Error Cant Insert Data ';
             }
