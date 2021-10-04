@@ -4,6 +4,13 @@
             <tr>
                 <th>ID</th>
                 <th>IMG</th>
+                <th style="display: none;"></th>
+                <th style="display: none;"></th>
+                <th style="display: none;"></th>
+                <th style="display: none;"></th>
+                <th style="display: none;"></th>
+                <th style="display: none;"></th>
+
                 <th>Name</th>
                 <th>Catagroy</th>
                 <th>Qty</th>
@@ -22,9 +29,19 @@
                             $Row_Get_Category_Name  = mysqli_fetch_array($Result_Get_Category_Name, MYSQLI_ASSOC);  
                             $Path_Folder_Cover = 'IMG/Imges-Products/P_ID-'.$Rows['HA_P_ID'].'/P_ID-'.$Rows['HA_P_ID'].'-Cover';
                             $Cover_Img = scandir($Path_Folder_Cover); 
+                            // Get User Created Info
+                            $SQL_Get_Created_Info = 'SELECT HA_U_Username FROM ha_users WHERE HA_U_ID = "'.$Rows['HA_P_User_ID_Created'].'"';
+                            $Result_Get_Created_Info= mysqli_query($Connection,$SQL_Get_Created_Info);
+                            $Row_Get_Created_Info = mysqli_fetch_array($Result_Get_Created_Info, MYSQLI_ASSOC);  
                             echo '
                                 <tr class="t-body" >
                                     <td>'.$Rows['HA_P_ID'].'</td>
+                                    <td style="display:none">'.$Rows['HA_P_Alert_Qty'].'</td>
+                                    <td style="display:none">'.$Rows['HA_P_Brand'].'</td>
+                                    <td style="display:none">'.$Rows['HA_P_Available_From_Date'].'</td>
+                                    <td style="display:none">'.$Rows['HA_P_Date_Created'] . ' ' . $Rows['HA_P_Time_Created'] .'</td>
+                                    <td style="display:none">'.$Row_Get_Created_Info['HA_U_Username'].'</td>
+                                    <td style="display:none">'.$Rows['HA_P_Description'].'</td>
                                     <td class="IMG-DATABASE"><img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" alt="Img" style="width:50px"/></td>
                                     <td class="Username-Edit-Module">'.$Rows['HA_P_Name'].'</td>
                                     <td class="HA-C-L-Category-Name">'.$Row_Get_Category_Name['HA_C_L_Category_Name'].'</td>
@@ -46,6 +63,12 @@
             <tr>
                 <th>ID</th>
                 <th>IMG</th>
+                <th style="display: none;"></th>
+                <th style="display: none;"></th>
+                <th style="display: none;"></th>
+                <th style="display: none;"></th>
+                <th style="display: none;"></th>
+                <th style="display: none;"></th>
                 <th>Name</th>
                 <th>Catagroy</th>
                 <th>Qty</th>
