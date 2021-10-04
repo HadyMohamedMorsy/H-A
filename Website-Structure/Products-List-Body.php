@@ -94,7 +94,11 @@
                 <input type="text" name="Input_Username" class="form-control" id="Edit-Username" aria-describedby="emailHelp" placeholder="Username">
             </div>
             <div class="form-group">
-                <input type="text" name="Input-FullName" class="form-control" id="Catagroy-Name" aria-describedby="emailHelp" placeholder="Catagroy-Name">
+            <select name="Input-Status" class="form-control" id="Catagroy-Name">
+                    <option value="">car</option>
+                    <option value="TV">TV</option>
+                    <option value="watch">watch</option>
+             </select>
             </div>
             <div class="form-group">
               <select name="Input-Status" class="form-control" id="Status">
