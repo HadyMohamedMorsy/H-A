@@ -3,10 +3,15 @@
     $Current_Time = date('h:i:s A');
     $Current_Date_And_Time = $Current_Date . ' ' . $Current_Time;
     $Alert_Message = array();
+    // Category List
+    $SQL_Category_List = 'SELECT * FROM ha_category_list WHERE HA_C_L_Status = "Active" AND HA_C_L_Parent_ID != "" ORDER BY HA_C_L_ID DESC ';
+    $Result_Category_List = mysqli_query($Connection,$SQL_Category_List);
+    $Count_Category_List  = mysqli_num_rows($Result_Category_List);
+    // Add New Category
     $SQL_Category_Parent = 'SELECT * FROM ha_category_list WHERE HA_C_L_Parent_ID = "" ORDER BY HA_C_L_ID DESC ';
     $Result_Category_Parent = mysqli_query($Connection,$SQL_Category_Parent);
     $Count_Category_Parent  = mysqli_num_rows($Result_Category_Parent);
-
+    // Add New Category Function
     if (isset($_POST['BTN_Insert_Category'])) {
         $Input_Category_Name = $_POST['Input_Category_Name'];
         if ($Input_Category_Name == '') {

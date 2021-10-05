@@ -1,10 +1,12 @@
 <?php
     include('Datebase/Config.php');
-    include('Datebase/DB_Login.php');
-    include('Datebase/DB-Sign-Up.php');
-
+    include('Datebase/DB-Category-Management.php');
 ?>
-
+<?php
+    if ($_SESSION['HA_U_P_Category_Manager'] !== 'Available') {
+        header('Location: index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +22,7 @@
     <?php include ("Website-Structure/Dashbored-header.php"); ?>
     <!-- End The Header-->
 
-    <?php include ("./Website-Structure/My-Profile-Body.php"); ?>
+    <?php include ("./Website-Structure/Category-Management-Body.php"); ?>
 
     <!-- Start The Footer -->
 </div>

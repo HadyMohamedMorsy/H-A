@@ -28,7 +28,7 @@
         <li><a href="./" class="Projects"><i class="fas fa-home"></i>Home Page</a></li>
         <?php 
         if (!empty($_SESSION)) {
-            echo '<li><a href="My-Profile" class="Edit-profile"><i class="fas fa-user" class="Edit-profile"></i>My Profile</a></li>';
+            echo '<li><a href="My-Profile-Setting" class="Edit-profile"><i class="fas fa-user" class="Edit-profile"></i>My Profile</a></li>';
         }
         ?>
         <!-- <li><a href="Edit-Profile-seller.php" class="Edit-Seller"><i class="fas fa-user" class="Edit-profile"></i>Edit Profile Seller</a></li> -->
@@ -49,12 +49,7 @@
         ?>
         <?php 
         if ($_SESSION['HA_U_P_Category_Manager'] == 'Available') {
-            echo '<li><a href="Add-Category" class="Add Catogry"><i class="fas fa-tag"></i>Add Category</a></li>';
-        }
-        ?>
-        <?php 
-        if ($_SESSION['HA_U_P_Category_List'] == 'Available') {
-            echo '<li><a href="Category-List" class="All-Catagry"><i class="fas fa-tags"></i>Category List</a></li>';
+            echo '<li><a href="Category-Management" class="Add Catogry"><i class="fas fa-tag"></i>Category Management</a></li>';
         }
         ?>
         <?php 

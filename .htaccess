@@ -3,7 +3,7 @@
 RewriteEngine On
 
 
-RewriteRule ^My-Profile?$ My-Profile.php
+RewriteRule ^My-Profile-Setting?$ My-Profile-Setting.php
 
 RewriteRule ^Clients-Manager?$ Vendor-Clients-Manager.php
 
@@ -11,9 +11,7 @@ RewriteRule ^Seller-Manager?$ Vendor-Seller-Manager.php
 
 RewriteRule ^Employee-Manager?$ Vendor-Employee-Manager.php
 
-RewriteRule ^Add-Category?$ Add-Category.php
-
-RewriteRule ^Category-List?$ Category-List.php
+RewriteRule ^Category-Management?$ Category-Management.php
 
 RewriteRule ^Add-Product?$ Add-Product.php
 

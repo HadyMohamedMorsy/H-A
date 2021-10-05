@@ -1,12 +1,8 @@
 <?php
     include('Datebase/Config.php');
-    include('Datebase/DB-Add-Category.php');
+    include('Datebase/DB_My_Profile.php');
 ?>
-<?php
-    if ($_SESSION['HA_U_P_Category_Manager'] !== 'Available') {
-        header('Location: index.php');
-    }
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +18,7 @@
     <?php include ("Website-Structure/Dashbored-header.php"); ?>
     <!-- End The Header-->
 
-    <?php include ("./Website-Structure/Add-Category-Body.php"); ?>
+    <?php include ("./Website-Structure/My-Profile-Setting-Body.php"); ?>
 
     <!-- Start The Footer -->
 </div>

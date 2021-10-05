@@ -136,7 +136,7 @@
                 ';
             }else {
                 echo'
-                <a href="My-Profile"><i class="fas fa-user-cog"></i></a>
+                <a href="My-Profile-Setting"><i class="fas fa-user-cog"></i></a>
                 <a href="Logout.php"><i class="fas fa-sign-out-alt"></i></a>
                 ';
             }
