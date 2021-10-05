@@ -39,7 +39,6 @@
 
     <!-- Start The Links Files -->
     <?php include ("Links javascript Dashbored.php"); ?>
-    <script src="./Javascript-Files/action-seler.js"></script>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <!-- End The Links Files -->
 </body>

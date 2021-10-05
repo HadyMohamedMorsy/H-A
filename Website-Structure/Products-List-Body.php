@@ -52,7 +52,7 @@
                                     <td class="last-Action">
                                         <a href="#" class="Trash" data-module=".question-delete-row"> <i class="fas fa-trash-alt"></i> </a>
                                         <a href="#" class="Edit" data-module=".Edit-row"> <i class="far fa-edit"></i> </a>
-                                        <a href="#" class="View" data-module=".View-row"> <i class="far fa-eye"></i> </a>
+                                        <a href="Vendor-view.php" class="View" data-module=".View-row"> <i class="far fa-eye"></i> </a>
                                     </td>
                                 </tr>
                             ';
@@ -80,67 +80,16 @@
             </tr>
         </tfoot>
     </table>
-    <div class="question-delete-row remove-Delete">
-        <form class="Delete-question">
-            <h4>Are You Sure To Delete This ?</h4>
-            <button class="btn btn-danger"> Yes   </button>
-            <button class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
-        </form>
-    </div>
 
-    <div class="View-row remove-Delete">
-        <div class="View-row-Details">
-            <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
-            <div class="Image-View">
-                <img alt="IMG/emp_default.jpg" id="view-Details-show-IMG" />
-            </div>
-            <div class="Deatils-View">
-                <ul>
-                    <li>Name : <span id="view-Details-show-name"></span></li>
-                    <li>Catagroy : <span id="view-Details-show-Catagroy"></span></li>
-                    <li>QTY : <span id="view-Details-show-Qty"></span></li>
-                    <li>Price : <span id="view-Details-show-Date-Price"></span></li>
-                    <li>Status : <span id="view-Details-show-Status"></span></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
-    <div class="Edit-row remove-Delete">
-        <form class="Edit-row-details" action="" method="POST">
-            <div class="cancel-Dashbored Edit-cancel">
-                <i class="fas fa-times"></i>
-            </div>
-            <h2>Edit Product</h2>
-            <div class="form-group">
-                <input type="number" name="Input_Id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" hidden>
-            </div>
-            <div class="form-group">
-                <input type="text" name="Input_Username" class="form-control" id="Edit-Username" aria-describedby="emailHelp" placeholder="Username">
-            </div>
-            <div class="form-group">
-                <select name="Input-Status" class="form-control" id="Catagroy-Name">
-                    <?php
-                        if ($Count_Category_List > 0) {
-                            while ($Rows = mysqli_fetch_array($Result_Category_List)) {
-                                $SQL_Get_Parent_Name = 'SELECT HA_C_L_Category_Name FROM ha_category_list WHERE HA_C_L_ID = "'.$Rows['HA_C_L_Parent_ID'].'"';
-                                $Result_Get_Parent_Name = mysqli_query($Connection,$SQL_Get_Parent_Name);
-                                $Row_Get_Parent_Name  = mysqli_fetch_array($Result_Get_Parent_Name, MYSQLI_ASSOC);
-                                echo '<option value="'.$Rows['HA_C_L_ID'].'"> '.$Row_Get_Parent_Name['HA_C_L_Category_Name'] . ' | ' . $Rows['HA_C_L_Category_Name'] .'</option>';
-                            }
-                        }
-                    ?>
-                </select>
-            </div>
-            <div class="form-group">
-                <select name="Input-Status" class="form-control" id="Status">
-                    <option value="Active">Active</option>
-                    <option value="Deactivate">Deactivate </option>
-                    <option value="Pending">Pending</option>
-                    <option value="Suspended">Suspended</option>
-                </select>
-            </div>
-            <button type="submit" name="BTN_Register" class="btn form-control Edit-Prfile-user">Edit</button>
-        </form>
-    </div>
+    <?php
+            // if ($Count_Category_List > 0) {
+                // while ($Rows = mysqli_fetch_array($Result_Category_List)) {
+                    // $SQL_Get_Parent_Name = 'SELECT HA_C_L_Category_Name FROM ha_category_list WHERE HA_C_L_ID = "'.$Rows['HA_C_L_Parent_ID'].'"';
+                    // $Result_Get_Parent_Name = mysqli_query($Connection,$SQL_Get_Parent_Name);
+                    // $Row_Get_Parent_Name  = mysqli_fetch_array($Result_Get_Parent_Name, MYSQLI_ASSOC);
+                    // echo '<option value="'.$Rows['HA_C_L_ID'].'"> '.$Row_Get_Parent_Name['HA_C_L_Category_Name'] . ' | ' . $Rows['HA_C_L_Category_Name'] .'</option>';
+                    // }
+                    // }
+        ?>
 </div>
