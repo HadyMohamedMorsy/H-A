@@ -62,7 +62,7 @@
             <div class="form-group">
             <input type="checkbox" name="Checkbox" value="Take_Child">
             <label for="exampleFormControlSelect1">Parent Catgaroy</label>
-            <select name="Parent_ID" class="form-control" id="exampleFormControlSelect1" disabled>
+            <select name="Parent_ID" class="form-control" id="exampleFormControlSelect1">
                 <option value="">Choice..</option>
                 <?php
                     if ($Count_Category_Parent > 0) {
@@ -75,7 +75,7 @@
             </div>
             <div class="form-group">
                 <label for="upload-photo" class="label form-control"> Upload Your catgroy...</label>
-                <input type="file" name="photo" id="upload-photo" class="label-input" disabled/>
+                <input type="file" name="photo" id="upload-photo" />
             </div>
             <button type="submit" name="BTN_Insert_Category" class="Add-catgroys">Add catgroy</button>
         </form>
