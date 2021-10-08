@@ -6,9 +6,9 @@
                 <th>Img</th>
                 <th>Username</th>
                 <th>Full Name</th>
+                <th>Gender</th>
                 <th>Status</th>
                 <th>Last Login</th>
-                <th>Gender</th>
                 <th>Purchase</th>
                 <th style="display: none;">HA_U_Date_Created</th>
                 <th style="display: none;">HA_U_Birthday</th>
@@ -41,9 +41,9 @@
                                 <td class="IMG-DATABASE"><img src="'.$Profile_Img.'" alt="'.$Rows['HA_U_Username'].'"/></td>
                                 <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
                                 <td class="FullName-Edit-Module">'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
+                                <td class="Date-Created">'.$Rows['HA_U_Gender'].'</td>
                                 <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
                                 <td class="">'.$Rows['HA_U_Last_Login'].'</td>
-                                <td class="Date-Created">'.$Rows['HA_U_Gender'].'</td>
                                 <td class="HA-U-Purchase">'.number_format((int)$Rows['HA_U_Purchase'],2).'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Date_Created'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Birthday'].'</td>
@@ -100,11 +100,19 @@
             </div>
             <div class="Deatils-View">
                 <ul>
-                    <li>Name         : <span id="view-Details-show-name"></span></li>
-                    <li>FullName     : <span id="view-Details-show-FullName"></span></li>
-                    <li>Status       : <span id="view-Details-show-Status"></span></li>
-                    <li>Date_Created : <span id="view-Details-show-Date-Created"></span></li>
-                    <li>Purchases    : <span id="view-Details-show-Purchases"></span></li>
+                    <li>Username                 : <span id="view-Details-show-name"></span></li>
+                    <li>Full Name                : <span id="view-Details-show-FullName"></span></li>
+                    <li>Gender                   : <span id="view-Details-show-Gender"></span></li>
+                    <li>Status                   : <span id="view-Details-show-Status"></span></li>
+                    <li>Last Login               : <span id="view-Details-show-Login"></span></li>
+                    <li>Purchase                 : <span id="view-Details-show-Purchase"></span></li>
+                    <li>Created Login            : <span id="view-Details-show-Created"></span></li>
+                    <li>Birthday                 : <span id="view-Details-show-Birthday"></span></li>
+                    <li>Country                  : <span id="view-Details-show-Country"></span></li>
+                    <li>ZIP_Code                 : <span id="view-Details-show-ZIP"></span></li>
+                    <li>Address                  : <span id="view-Details-show-Address"></span></li>
+                    <li>Mobile                   : <span id="view-Details-show-Mobile"></span></li>
+                    <li>Email                    : <span id="view-Details-show-Email"></span></li>
                 </ul>
             </div>
         </div>

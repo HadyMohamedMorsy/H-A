@@ -22,9 +22,17 @@
                 $('#view-Details-show-IMG').attr('src',src);
                 $('#view-Details-show-name').text(data[2]);
                 $('#view-Details-show-FullName').text(data[3]);
-                $('#view-Details-show-Status').text(data[4]);
-                $('#view-Details-show-Date-Created').text(data[5]);
-                $('#view-Details-show-Purchases').text(data[6]);
+                $('#view-Details-show-Gender').text(data[4]);
+                $('#view-Details-show-Status').text(data[5]);
+                $('#view-Details-show-Login').text(data[6]);
+                $('#view-Details-show-Purchase').text(data[7]);
+                $('#view-Details-show-Created').text(data[8]);
+                $('#view-Details-show-Birthday').text(data[9]);
+                $('#view-Details-show-Country').text(data[10]);
+                $('#view-Details-show-ZIP').text(data[11]);
+                $('#view-Details-show-Address').text(data[12]);
+                $('#view-Details-show-Mobile').text(data[13]);
+                $('#view-Details-show-Email').text(data[14]);
             }
 
 
