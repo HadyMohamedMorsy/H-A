@@ -7,8 +7,16 @@
                 <th>Username</th>
                 <th>Full Name</th>
                 <th>Status</th>
-                <th>Join Date</th>
+                <th>Last Login</th>
+                <th>Gender</th>
                 <th>Purchase</th>
+                <th style="display: none;">HA_U_Date_Created</th>
+                <th style="display: none;">HA_U_Birthday</th>
+                <th style="display: none;">HA_U_Country</th>
+                <th style="display: none;">HA_U_ZIP_Code</th>
+                <th style="display: none;">HA_U_Address</th>
+                <th style="display: none;">HA_U_Mobile_Number</th>
+                <th style="display: none;">HA_U_Email</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -34,12 +42,20 @@
                                 <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
                                 <td class="FullName-Edit-Module">'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
                                 <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
-                                <td class="Date-Created">'.$Rows['HA_U_Date_Created'].'</td>
+                                <td class="">'.$Rows['HA_U_Last_Login'].'</td>
+                                <td class="Date-Created">'.$Rows['HA_U_Gender'].'</td>
                                 <td class="HA-U-Purchase">'.number_format((int)$Rows['HA_U_Purchase'],2).'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Date_Created'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Birthday'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Country'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_ZIP_Code'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Address'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Mobile_Number'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Email'].'</td>
                                 <td class="last-Action" >
-                                <a href="#" class="Trash" data-module=".question-delete-row"> <i class="fas fa-trash-alt"></i> </a>
-                                <a href="#" class="Edit" data-module=".Edit-row"> <i class="far fa-edit"></i> </a>
-                                <a href="#" class="View" data-module=".View-row"> <i class="far fa-eye"></i> </a>
+                                    <a href="#" class="Trash" data-module=".question-delete-row"> <i class="fas fa-trash-alt"></i> </a>
+                                    <a href="#" class="Edit" data-module=".Edit-row"> <i class="far fa-edit"></i> </a>
+                                    <a href="#" class="View" data-module=".View-row"> <i class="far fa-eye"></i> </a>
                                 </td>
                             </tr>
                         ';
@@ -54,8 +70,16 @@
                 <th>Username</th>
                 <th>Full Name</th>
                 <th>Status</th>
-                <th>Join Date</th>
+                <th>Last Login</th>
+                <th>Gender</th>
                 <th>Purchase</th>
+                <th style="display: none;">HA_U_Date_Created</th>
+                <th style="display: none;">HA_U_Birthday</th>
+                <th style="display: none;">HA_U_Country</th>
+                <th style="display: none;">HA_U_ZIP_Code</th>
+                <th style="display: none;">HA_U_Address</th>
+                <th style="display: none;">HA_U_Mobile_Number</th>
+                <th style="display: none;">HA_U_Email</th>
                 <th>Action</th>
             </tr>
         </tfoot>
