@@ -2,7 +2,9 @@
         var table = $('#example').DataTable();
          
         $('#example tbody .last-Action a').on('click',function (e) {
+            
             e.preventDefault();
+
             var Select = $(this).parent().parent();
             var data = table.row(Select).data();
 
