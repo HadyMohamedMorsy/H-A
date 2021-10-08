@@ -30,7 +30,7 @@
                         echo '
                             <tr class="t-body" >
                                 <td>'.$Rows['HA_U_ID'].'</td>
-                                <td class="IMG-DATABASE"><img src="'.$Profile_Img.'" alt="Img" style="width:50px"/></td>
+                                <td class="IMG-DATABASE"><img src="'.$Profile_Img.'" alt="'.$Rows['HA_U_Username'].'"/></td>
                                 <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
                                 <td class="FullName-Edit-Module">'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
                                 <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
