@@ -60,10 +60,40 @@
         }
 
         if((module) == '.Edit-row'){
-            let DeleteQuestion = document.querySelector('.Delete-question');
 
             viewque.classList.remove('remove-Delete');
 
+            let EditID = document.getElementById('Edit-ID');
+            let EditUsername = document.getElementById('Edit-Username');
+            let EditZIP = document.getElementById('Edit-ZIP');
+            let EditAddress = document.getElementById('Edit-Address');
+            let EditMobileNumber = document.getElementById('Edit-Mobile-Number');
+            let EditEmail = document.getElementById('Edit-Email');
+            let EditFullName = document.getElementById('Edit-FullName');
+            let EditBirthday = document.getElementById('Edit-Birthday');
+            let Country = document.getElementById('Edit-Country');
+            let Gender = document.getElementById('Gender');
+            let Status = document.getElementById('Status');
+            
+            EditID.value = select[0].innerText;
+            EditUsername.value = select[2].innerText;
+            EditZIP.value = select[11].innerText;
+            EditAddress.value = select[12].innerText;
+            EditMobileNumber.value = select[13].innerText;
+            EditEmail.value = select[14].innerText;
+            EditFullName.value = select[3].innerText;
+            // date
+            let date = select[9].innerText;
+            let datebirthday = new Date(date);
+            let Year = datebirthday.getFullYear();
+            let Month = datebirthday.getMonth()+1;
+            let day = String(datebirthday.getDate());
+            let finalDate = Year+ '-' + Month + '-' + day;
+            // date
+            EditBirthday.value = finalDate;
+            Country.value = select[10].innerText;
+            Gender.value = select[4].innerText;
+            Status.value = select[5].innerText;
         }
 
 

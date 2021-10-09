@@ -131,11 +131,37 @@
                 <i class="fas fa-times"></i>
             </div>
             <h2>Edit Profile</h2>
+            <input type="number" name="ID" class="form-control" id="Edit-ID" aria-describedby="emailHelp" placeholder="ID" hidden>
             <div class="form-group">
                 <input type="text" name="Input_Username" class="form-control" id="Edit-Username" aria-describedby="emailHelp" placeholder="Username">
             </div>
             <div class="form-group">
+                <input type="number" name="ZIP" class="form-control" id="Edit-ZIP" aria-describedby="emailHelp" placeholder="ZIP">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Address" class="form-control" id="Edit-Address" aria-describedby="emailHelp" placeholder="Address">
+            </div>
+            <div class="form-group">
+                <input type="number" name="Mobile-Number" class="form-control" id="Edit-Mobile-Number" aria-describedby="emailHelp" placeholder="Mobile_Number">
+            </div>
+            <div class="form-group">
+                <input type="email" name="Email" class="form-control" id="Edit-Email" aria-describedby="emailHelp" placeholder="Email">
+            </div>
+            <div class="form-group">
                 <input type="text" name="Input_First_Name" class="form-control" id="Edit-FullName" aria-describedby="emailHelp" placeholder="FullName">
+            </div>
+            <div class="form-group">
+                <input type="date" name="Birthday" class="form-control" id="Edit-Birthday" aria-describedby="emailHelp" placeholder="Birthday">
+            </div>
+            <div class="form-group">
+                <input type="text" name="country" class="form-control" id="Edit-Country" aria-describedby="emailHelp" placeholder="number">
+            </div>
+            <div class="form-group">
+              <select name="Input-Gender" class="form-control" id="Gender">
+                    <option value="">Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+             </select>
             </div>
             <div class="form-group">
               <select name="Input-Status" class="form-control" id="Status">
