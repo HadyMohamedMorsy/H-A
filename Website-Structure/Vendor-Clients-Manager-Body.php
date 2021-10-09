@@ -91,7 +91,7 @@
     </table>
     <div class="question-delete-row remove-Delete">
         <form class="Delete-question">
-            <input type="number"   id="hiddenDelete"/>
+            <input type="number" hidden  id="hiddenDelete"/>
             <h4 id="question"></h4>
             <submit class="btn btn-danger"> Yes   </submit>
             <button class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>

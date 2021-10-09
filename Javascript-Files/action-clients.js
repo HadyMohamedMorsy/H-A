@@ -1,7 +1,7 @@
 
 
     function clickhere(id){
-        
+
         let module = document.getElementById(id).getAttribute("data-module");
 
         let viewque = document.querySelector(module);
@@ -57,6 +57,11 @@
             Question.innerHTML = "Are You Sure To Delete This" + " " + select[2].innerText + " " + "?";
             hiddenDelete.value = select[0].innerText;
 
+        }
+
+        if((module) == '.Edit-row'){
+
+            viewque.classList.remove('remove-Delete');
         }
 
 
