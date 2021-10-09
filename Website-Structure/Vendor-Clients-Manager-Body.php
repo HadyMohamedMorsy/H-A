@@ -23,7 +23,9 @@
         <tbody id="tbody">
             <?php
                 if ($Count_Clients_Info > 0) {
+                    $id = 0;
                     while ($Rows = mysqli_fetch_array($Result_Clients_Info)) {
+   
                         // echo $Rows['HA_U_Username'];
                         $Scan_Profile_Img = scandir('IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']');
                         if (count($Scan_Profile_Img) == 2) {
@@ -53,13 +55,16 @@
                                 <td class="" style="display: none;">'.$Rows['HA_U_Mobile_Number'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Email'].'</td>
                                 <td class="last-Action" >
-                                    <a href="#" class="Trash" data-module=".question-delete-row"> <i class="fas fa-trash-alt"></i> </a>
-                                    <a href="#" class="Edit" data-module=".Edit-row"> <i class="far fa-edit"></i> </a>
-                                    <a href="#" class="View" data-module=".View-row"> <i class="far fa-eye"></i> </a>
+                                    <button  class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick="clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
+                                    <button  class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick="clickhere(this.id)"> <i class="far fa-edit"></i> </button>
+                                    <button  class="View" data-module=".View-row" id="T'.$id.'" onclick="clickhere(this.id)"> <i class="far fa-eye"></i> </button>
                                 </td>
                             </tr>
+                            
                         ';
+                        $id += 1;
                     }
+
                 }
             ?>
         </tbody>

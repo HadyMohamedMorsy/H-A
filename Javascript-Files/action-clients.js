@@ -1,52 +1,46 @@
 
-    $(document).ready(function() {
+
+    function clickhere(id){
+        let module = document.getElementById(id).getAttribute("data-module");
+
+        if((module) == ".View-row"){
+
+            let  select = document.getElementById(id).parentElement.parentElement.children;
+            let viewque = document.querySelector(module);
+
+            let img = document.getElementById('view-Details-show-IMG');
+            let Name = document.getElementById('view-Details-show-name');
+            let Fullname = document.getElementById('view-Details-show-FullName');
+            let gender = document.getElementById('view-Details-show-Gender');
+            let status = document.getElementById('view-Details-show-Status');
+            let Login = document.getElementById('view-Details-show-Login');
+            let Purchase = document.getElementById('view-Details-show-Purchase');
+            let Created = document.getElementById('view-Details-show-Created');
+            let Birthday = document.getElementById('view-Details-show-Birthday');
+            let Country = document.getElementById('view-Details-show-Country');
+            let ZIP = document.getElementById('view-Details-show-ZIP');
+            let Address = document.getElementById('view-Details-show-Address');
+            let Mobile = document.getElementById('view-Details-show-Mobile');
+            let Email = document.getElementById('view-Details-show-Email');
 
 
-        var table = $('#example').DataTable();
-
-        console.log(table);
-         
-        $('#example tbody .last-Action ').on('click','a',function (e) {
-            e.preventDefault();
-
-            $($(this).data('module')).removeClass('remove-Delete');
+            viewque.classList.remove('remove-Delete');
 
 
-            var Select = $(this).parent().parent();
+            img.setAttribute('src', select[1].firstElementChild.getAttribute('src'));
+            Name.innerHTML = select[2].innerText;
+            Fullname.innerHTML = select[3].innerText;
+            gender.innerHTML = select[4].innerText;
+            status.innerHTML = select[5].innerText;
+            Login.innerHTML = select[6].innerText;
+            Purchase.innerHTML = select[7].innerText;
+            Created.innerHTML = select[8].innerText;
+            Birthday.innerHTML = select[9].innerText;
+            Country.innerHTML = select[10].innerText;
+            ZIP.innerHTML = select[11].innerText;
+            Address.innerHTML = select[12].innerText;
+            Mobile.innerHTML = select[13].innerText;
+            Email.innerHTML = select[14].innerText;
+        }
 
-            var data = table.row(Select[0]).data();
-
-            var src = data[1].replace('<img src="','').replace('"','').replace('>','').replace("alt=",'').replace('"','').replace('"','').replace(data[2],'');
-            console.log(src);
-
-            if($(this).data('module') == ".View-row"){
-
-                $($(this).data('module')).removeClass('remove-Delete');
-
-                // $('#view-Details-show-IMG').attr('src',src);
-                // $('#view-Details-show-name').text(data[2]);
-                // $('#view-Details-show-FullName').text(data[3]);
-                // $('#view-Details-show-Gender').text(data[4]);
-                // $('#view-Details-show-Status').text(data[5]);
-                // $('#view-Details-show-Login').text(data[6]);
-                // $('#view-Details-show-Purchase').text(data[7]);
-                // $('#view-Details-show-Created').text(data[8]);
-                // $('#view-Details-show-Birthday').text(data[9]);
-                // $('#view-Details-show-Country').text(data[10]);
-                // $('#view-Details-show-ZIP').text(data[11]);
-                // $('#view-Details-show-Address').text(data[12]);
-                // $('#view-Details-show-Mobile').text(data[13]);
-                // $('#view-Details-show-Email').text(data[14]);
-            }
-
-
-        });
-    } );
-    // $(document).ready(function() {
-    //     var table = $('#example').DataTable();
-         
-    //     $('#example tbody').on('click', 'tr', function () {
-    //         var data = table.row( this ).data();
-    //         alert( 'You clicked on '+data[0]+'\'s row' );
-    //     } );
-    // } );
+    }

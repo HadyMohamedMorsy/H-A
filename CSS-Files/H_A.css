@@ -816,8 +816,9 @@ tfoot tr th:first-child img {
 tfoot tr th:first-child {
   text-align: center; }
 
-.t-body td a {
-  margin-left: 10px; }
+.t-body td button {
+  margin-left: 10px;
+  border: none; }
 
 .t-body th:first-child img {
   width: 50px; }
