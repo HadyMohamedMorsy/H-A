@@ -91,8 +91,9 @@
     </table>
     <div class="question-delete-row remove-Delete">
         <form class="Delete-question">
-            <h4>Are You Sure To Delete This ?</h4>
-            <button class="btn btn-danger"> Yes   </button>
+            <input type="number"   id="hiddenDelete"/>
+            <h4 id="question"></h4>
+            <submit class="btn btn-danger"> Yes   </submit>
             <button class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
         </form>
     </div>

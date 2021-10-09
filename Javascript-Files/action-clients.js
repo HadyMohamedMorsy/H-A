@@ -1,12 +1,14 @@
 
 
     function clickhere(id){
+        
         let module = document.getElementById(id).getAttribute("data-module");
 
-        if((module) == ".View-row"){
+        let viewque = document.querySelector(module);
 
-            let  select = document.getElementById(id).parentElement.parentElement.children;
-            let viewque = document.querySelector(module);
+        let  select = document.getElementById(id).parentElement.parentElement.children;
+
+        if((module) == ".View-row"){
 
             let img = document.getElementById('view-Details-show-IMG');
             let Name = document.getElementById('view-Details-show-name');
@@ -44,6 +46,17 @@
             Mobile.innerHTML = select[13].innerText;
             Email.innerHTML = select[14].innerText;
  
+        }
+        if((module) == ".question-delete-row"){
+
+            viewque.classList.remove('remove-Delete');
+
+            let Question = document.getElementById('question');
+            let hiddenDelete = document.getElementById('hiddenDelete');
+
+            Question.innerHTML = "Are You Sure To Delete This" + " " + select[2].innerText + " " + "?";
+            hiddenDelete.value = select[0].innerText;
+
         }
 
 
