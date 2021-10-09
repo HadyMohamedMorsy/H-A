@@ -60,8 +60,10 @@
         }
 
         if((module) == '.Edit-row'){
+            let DeleteQuestion = document.querySelector('.Delete-question');
 
             viewque.classList.remove('remove-Delete');
+
         }
 
 
