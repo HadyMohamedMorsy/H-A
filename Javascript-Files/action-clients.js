@@ -22,12 +22,14 @@
             let Address = document.getElementById('view-Details-show-Address');
             let Mobile = document.getElementById('view-Details-show-Mobile');
             let Email = document.getElementById('view-Details-show-Email');
+            let ID = document.getElementById('view-Details-show-ID');
 
 
             viewque.classList.remove('remove-Delete');
 
 
             img.setAttribute('src', select[1].firstElementChild.getAttribute('src'));
+            ID.innerHTML = select[0].innerText;
             Name.innerHTML = select[2].innerText;
             Fullname.innerHTML = select[3].innerText;
             gender.innerHTML = select[4].innerText;
@@ -41,6 +43,8 @@
             Address.innerHTML = select[12].innerText;
             Mobile.innerHTML = select[13].innerText;
             Email.innerHTML = select[14].innerText;
+ 
         }
+
 
     }

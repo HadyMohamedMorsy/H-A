@@ -105,6 +105,7 @@
             </div>
             <div class="Deatils-View">
                 <ul>
+                    <li>ID                       : <span id="view-Details-show-ID"></span></li>
                     <li>Username                 : <span id="view-Details-show-name"></span></li>
                     <li>Full Name                : <span id="view-Details-show-FullName"></span></li>
                     <li>Gender                   : <span id="view-Details-show-Gender"></span></li>
