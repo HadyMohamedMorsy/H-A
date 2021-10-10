@@ -51,10 +51,10 @@
                                     <td style="display:none">'.$Row_Get_Created_Info['HA_U_Username'].'</td>
                                     <td style="display:none">'.$Rows['HA_P_Description'].'</td>
                                     <td class="last-Action">
-                                        <button type="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick="clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
-                                        <button type="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick="clickhere(this.id)"> <i class="far fa-edit"></i> </button>
-                                        <button type="button" class="View" data-module=".View-row" id="T'.$id.'" onclick="clickhere(this.id)"> <i class="far fa-eye"></i> </button>
-                                        <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-check-circle"></i></button>
+                                    <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
+                                    <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
+                                    <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
+                                    <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>
                                     </td>
                                 </tr>
                             ';
@@ -94,7 +94,7 @@
         <form class="Done-question">
             <input type="number" hidden  id="DoneDelete"/>
             <h4 id="Done"></h4>
-            <submit class="btn btn-danger" type="submit"> Yes </submit>
+            <submit class="btn btn-success" type="submit"> Yes </submit>
             <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
         </form>
     </div>

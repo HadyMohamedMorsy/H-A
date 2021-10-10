@@ -403,10 +403,13 @@ input:-internal-autofill-selected {
   display: none; }
 
 .Trash {
-  color: red; }
+  color: #ff7675; }
 
 .View {
-  color: #FFC107; }
+  color: #ff9f1a; }
+
+.Done {
+  color: #00b894; }
 
 .navbar {
   padding: 0px 40px;
@@ -853,9 +856,6 @@ tfoot tr th:first-child {
 
 .IMG-DATABASE img {
   width: 50px; }
-
-.Done {
-  color: #2196f3; }
 
 .header-pages-Product {
   position: relative;
