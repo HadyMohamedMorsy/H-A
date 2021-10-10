@@ -115,6 +115,7 @@
             </div>
             <div class="Deatils-View">
                 <ul>
+                    <li>ID : <span id="view-Details-show-ID"></span></li>
                     <li>Parent Ctagroy Name : <span id="view-Details-show-Ctagroy"></span></li>
                     <li>Child Ctagroy Name  : <span id="view-Details-show-Child"></span></li>
                     <li>Cound Products      : <span id="view-Details-show-Products"></span></li>
@@ -147,7 +148,7 @@
               <select name="Input-Status" class="form-control" id="ID">
                     <option value="1">1</option>
                     <option value="2">2</option>
-                    <option value=">3">3</option>
+                    <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
              </select>

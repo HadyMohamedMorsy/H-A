@@ -19,17 +19,19 @@
             let Returns  = document.getElementById('view-Details-show-Returns');
             let User = document.getElementById('view-Details-show-Created');
             let Date = document.getElementById("view-Details-show-Date");
+            let id = document.getElementById('view-Details-show-ID');
 
 
             viewque.classList.remove('remove-Delete');
 
-            Parent.innerHTML = select[0].innerText;
-            Child.innerHTML = select[1].innerText;
-            Products.innerHTML = select[2].innerText;
-            Sales.innerHTML = select[3].innerText;
-            Returns.innerHTML = select[4].innerText;
-            User.innerHTML = select[5].innerText;
-            Date.innerHTML = select[6].innerText;
+            Parent.innerHTML = select[1].innerText;
+            Child.innerHTML = select[2].innerText;
+            Products.innerHTML = select[3].innerText;
+            Sales.innerHTML = select[4].innerText;
+            Returns.innerHTML = select[5].innerText;
+            User.innerHTML = select[6].innerText;
+            Date.innerHTML = select[7].innerText;
+            id.innerHTML = select[0].innerText
         }
 
         if((module) == ".question-delete-row"){
@@ -51,10 +53,12 @@
             let parent = document.getElementById('Edit-parent');
             let Chiled = document.getElementById('Edit-Chiled');
             let user = document.getElementById('Edit-user');
+            let ID = document.getElementById('ID');
             
-            parent.value = select[0].innerText;
-            Chiled.value = select[1].innerText;
-            user.value = select[5].innerText;
+            parent.value = select[1].innerText;
+            Chiled.value = select[2].innerText;
+            user.value = select[6].innerText;
+            ID.value = select[0].innerText;
 
         }
 
