@@ -11,11 +11,13 @@
                 <th>Count Returns</th>
                 <th>User Created</th>
                 <th>Date Created</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <?php
                 if ($Count_Category_List > 0) {
+                    $id= 0;
                     while ($Rows = mysqli_fetch_array($Result_Category_List)) {
                         $SQL_Get_Parent_Name = 'SELECT HA_C_L_Category_Name FROM ha_category_list WHERE HA_C_L_ID = "'.$Rows['HA_C_L_Parent_ID'].'"';
                         $Result_Get_Parent_Name = mysqli_query($Connection,$SQL_Get_Parent_Name);
@@ -25,7 +27,7 @@
                         $Result_Get_Username = mysqli_query($Connection,$SQL_Get_Username);
                         $Row_Get_Username = mysqli_fetch_array($Result_Get_Username, MYSQLI_ASSOC);  
                         echo '
-                            <tr>
+                            <tr class="t-body">
                                 <td>'.$Row_Get_Parent_Name['HA_C_L_Category_Name'].'</td>
                                 <td>'.$Rows['HA_C_L_Category_Name'].'</td>
                                 <td>'.$Rows['HA_C_L_Count_Products'].'</td>
@@ -33,8 +35,14 @@
                                 <td>'.$Rows['HA_C_L_Count_Returns'].'</td>
                                 <td>'.$Row_Get_Username['HA_U_Username'].'</td>
                                 <td>'.$Rows['HA_C_L_Date_Created'] . ' ' . $Rows['HA_C_L_Time_Created'] . '</td>
+                                <td class="last-Action">
+                                    <button type="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick="clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
+                                    <button type="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick="clickhere(this.id)"> <i class="far fa-edit"></i> </button>
+                                    <button type="button" class="View" data-module=".View-row" id="T'.$id.'" onclick="clickhere(this.id)"> <i class="far fa-eye"></i> </button>
+                                </td>
                             </tr>
                         ';
+                        $id +=1;
                     }
                 }
             ?>
@@ -48,6 +56,7 @@
                 <th>Count Returns</th>
                 <th>User Created</th>
                 <th>Date Created</th>
+                <th>Actions</th>
             </tr>
         </tfoot>
 </table>
@@ -85,5 +94,56 @@
         echo $value;
     }
 ?>
+    <div class="question-delete-row remove-Delete">
+        <form class="Delete-question">
+            <input type="number" hidden  id="hiddenDelete"/>
+            <h4 id="question"></h4>
+            <submit class="btn btn-danger" type="submit"> Yes </submit>
+            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+        </form>
+    </div>
 
+    <div class="View-row remove-Delete">
+        <div class="View-row-Details">
+            <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
+            <div class="Image-View">
+                <img  alt="IMG/emp_default.jpg" id="view-Details-show-IMG"/>
+            </div>
+            <div class="Deatils-View">
+                <ul>
+                    <li>Parent Ctagroy Name : <span id="view-Details-show-Ctagroy"></span></li>
+                    <li>Child Ctagroy Name  : <span id="view-Details-show-Child"></span></li>
+                    <li>Cound Products      : <span id="view-Details-show-Products"></span></li>
+                    <li>Count Sales         : <span id="view-Details-show-Sales"></span></li>
+                    <li>Count_Returns       : <span id="view-Details-show-Returns"></span></li>
+                    <li>User Created        : <span id="view-Details-show-Created"></span></li>
+                    <li>Date Created        : <span id="view-Details-show-Date"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="Edit-row remove-Delete">
+        <form class="Edit-row-details" action="" method="POST">
+            <div class="cancel-Dashbored Edit-cancel">
+                <i class="fas fa-times"></i>
+            </div>
+            <h2>Edit Profile</h2>
+            <div class="form-group">
+                <input type="text" name="Input_Username" class="form-control" id="Edit-parent" aria-describedby="emailHelp" placeholder="parent Catagroy">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Input-FullName" class="form-control" id="Edit-Chiled" aria-describedby="emailHelp" placeholder="Chiled Catagroy">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Input-FullName" class="form-control" id="Edit-user" aria-describedby="emailHelp" placeholder="User created">
+            </div>
+            <div class="form-group">
+                <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
+                <input type="file" name="photo" id="upload-photo" class="label-input" />
+            </div>
+            <button type="submit" name="BTN_Register" class="btn form-control Edit-Prfile-user">Edit</button>
+        </form>
+    </div>
 </div>
