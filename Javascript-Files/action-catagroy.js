@@ -60,3 +60,40 @@
 
 
     }
+
+    let chech = document.getElementById('chech');
+    
+    let Parent = document.getElementById('Parent-cataroy');
+
+    chech.addEventListener('click',()=>{
+        if (chech.checked == true) {
+            Parent.removeAttribute('disabled');
+        }else{
+            Parent.setAttribute('disabled', true);
+        }
+    });
+
+    let Add = document.getElementById('Add');
+
+    let DeleteCatgroy = document.getElementById('Delete-Catgroy');
+
+    Add.addEventListener('click',function(){
+        
+        let id = document.getElementById("Add").getAttribute("data-Catagroy");
+
+        let select = document.querySelector(id);
+    
+        select.classList.remove('remove-Delete');
+
+    });
+
+    DeleteCatgroy.addEventListener('click',function(){
+        
+        let id = document.getElementById("Delete-Catgroy").getAttribute("data-Catagroy");
+
+        let select = document.querySelector(id);
+    
+        select.classList.add('remove-Delete');
+
+    })
+

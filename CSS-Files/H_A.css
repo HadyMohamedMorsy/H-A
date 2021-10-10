@@ -799,7 +799,9 @@ input:-internal-autofill-selected {
     padding: 20px; }
     .container-hady .right-catagroy .add-catgroy-from {
       background-color: #fff;
-      padding: 180px 16px; }
+      padding: 80px 16px;
+      margin-bottom: 30px;
+      border-radius: 20px; }
       .container-hady .right-catagroy .add-catgroy-from h5 {
         padding-bottom: 40px; }
       .container-hady .right-catagroy .add-catgroy-from .Form-Add-catgroy {
@@ -816,7 +818,12 @@ input:-internal-autofill-selected {
       outline: none;
       border-radius: 10px;
       border: none;
-      padding: 0px 30px;
+      padding: 15px 30px;
+      margin-left: 15px; }
+    .container-hady .right-catagroy .btn-danger {
+      border-radius: 10px;
+      border: none;
+      padding: 15px 30px;
       margin-right: 15px; }
   .container-hady .right-All-Clients {
     flex-basis: 80%;
@@ -829,6 +836,9 @@ input:-internal-autofill-selected {
 
 .none-Dashbored {
   display: none !important; }
+
+.Add-Catagroy {
+  margin-bottom: 20px; }
 
 .t-body td:first-child img {
   width: 50px; }
