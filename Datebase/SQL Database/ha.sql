@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 08, 2021 at 06:02 PM
+-- Generation Time: Oct 10, 2021 at 11:53 PM
 -- Server version: 8.0.13-4
 -- PHP Version: 7.2.24-0ubuntu0.18.04.8
 
@@ -70,7 +70,13 @@ INSERT INTO `ha_category_list` (`HA_C_L_ID`, `HA_C_L_Category_Name`, `HA_C_L_Par
 (22, 'Phone\'s', '', 'Deactivate', '0', '0', '0', '2021/10/01', '08:02:09 AM', '2'),
 (23, 'Mouse', '18', 'Active', '0', '0', '0', '2021/10/03', '08:45:09 AM', '2'),
 (24, 'Keyboard', '18', 'Active', '0', '0', '0', '2021/10/03', '08:47:27 AM', '2'),
-(25, 'Rings Gold', '6', 'Active', '0', '0', '0', '2021/10/03', '02:15:51 PM', '2');
+(25, 'Rings Gold', '6', 'Active', '0', '0', '0', '2021/10/03', '02:15:51 PM', '2'),
+(26, 'Smart Home', '', 'Active', '0', '0', '0', '2021/10/10', '11:49:56 PM', '2'),
+(27, 'New Smart Device', '26', 'Active', '0', '0', '0', '2021/10/10', '11:51:34 PM', '2'),
+(28, 'Wifi Smart Device', '26', 'Active', '0', '0', '0', '2021/10/11', '01:43:50 AM', '2'),
+(29, 'Books', '', 'Active', '0', '0', '0', '2021/10/11', '01:45:55 AM', '2'),
+(30, 'Computer Since ', '29', 'Active', '0', '0', '0', '2021/10/11', '01:47:14 AM', '2'),
+(31, 'Islamic', '29', 'Active', '0', '0', '0', '2021/10/11', '01:48:21 AM', '2');
 
 -- --------------------------------------------------------
 
@@ -147,8 +153,8 @@ CREATE TABLE `ha_users` (
 --
 
 INSERT INTO `ha_users` (`HA_U_ID`, `HA_U_Username`, `HA_U_Password`, `HA_U_User_Status`, `HA_U_First_Name`, `HA_U_Second_Name`, `HA_U_Last_Name`, `HA_U_Last_Login`, `HA_U_Gender`, `HA_U_Birthday`, `HA_U_Country`, `HA_U_ZIP_Code`, `HA_U_Address`, `HA_U_Email`, `HA_U_Mobile_Number`, `HA_U_User_Type`, `HA_P_Views`, `HA_U_Sales`, `HA_U_Purchase`, `HA_U_Date_Created`, `HA_U_Time_Created`) VALUES
-(1, 'HadyMM', '123', 'Active', 'Hady', 'Muhammed', 'Morsy', '2021/10/08 04:43:44 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(2, 'AbdulBasetRS', '123', 'Active', 'AbdulBaset', 'Reda', 'Sayed', '2021/10/08 06:13:39 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulBasetRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(1, 'HadyMM', '123', 'Active', 'Hady', 'Muhammed', 'Morsy', '2021/10/09 07:41:08 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(2, 'AbdulBasetRS', '123', 'Active', 'AbdulBaset', 'Reda', 'Sayed', '2021/10/11 01:36:56 AM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulBasetRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
 (3, 'FatmaMM', '123', 'Active', 'Fatma', 'Muhammed', 'Morsy', '2021/10/03 06:00:25 AM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'FatmaMM@Gmail.com', '01097579845', 'Seller', '3051', '5400', '0', '2021/09/15', '08:43:13 PM'),
 (4, 'SayedMM', '123', 'Pending', 'Sayed', 'Muhammed', 'Morsy', '2021/09/29 01:44:34 PM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
 (5, 'MuhammedMM', '123', 'Active', 'Muhammed', 'Muhammed', 'Morsy', '2021/09/28 04:12:05 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MuhammedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
@@ -236,7 +242,7 @@ ALTER TABLE `ha_user_permission`
 -- AUTO_INCREMENT for table `ha_category_list`
 --
 ALTER TABLE `ha_category_list`
-  MODIFY `HA_C_L_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `HA_C_L_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `ha_products`

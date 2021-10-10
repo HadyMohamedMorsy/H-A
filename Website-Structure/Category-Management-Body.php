@@ -39,6 +39,7 @@
 <table id="example" class="table table-striped table-bordered" style="width:100%;text-align:center;">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Category Parent</th>
                 <th>Category Child</th>
                 <th>Count Product</th>
@@ -63,6 +64,7 @@
                         $Row_Get_Username = mysqli_fetch_array($Result_Get_Username, MYSQLI_ASSOC);  
                         echo '
                             <tr class="t-body">
+                                <td>'.$Rows['HA_C_L_ID'].'</td>
                                 <td>'.$Row_Get_Parent_Name['HA_C_L_Category_Name'].'</td>
                                 <td>'.$Rows['HA_C_L_Category_Name'].'</td>
                                 <td>'.$Rows['HA_C_L_Count_Products'].'</td>
@@ -84,6 +86,7 @@
         </tbody>
         <tfoot>
             <tr>
+                <th>ID</th>
                 <th>Category Parent</th>
                 <th>Category Child</th>
                 <th>Count Product</th>
