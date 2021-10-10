@@ -23,6 +23,7 @@
             <!-- ImgCover -->
             <?php
                     if ($Count_Products_List > 0) {
+                        $id = 0;
                         while ($Rows = mysqli_fetch_array($Result_Products_List)) {
                             $SQL_Get_Category_Name = 'SELECT HA_C_L_Category_Name FROM ha_category_list WHERE HA_C_L_ID = "'.$Rows['HA_P_Category_ID'].'"';
                             $Result_Get_Category_Name = mysqli_query($Connection,$SQL_Get_Category_Name);
@@ -36,7 +37,7 @@
                             echo '
                                 <tr class="t-body" >
                                     <td>'.$Rows['HA_P_ID'].'</td>
-                                    <td class="IMG-DATABASE"><img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" alt="Img" style="width:50px"/></td>
+                                    <td class="IMG-DATABASE"><img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" alt="Img"/></td>
                                     <td class="Username-Edit-Module">'.$Rows['HA_P_Name'].'</td>
                                     <td >'.$Row_Get_Category_Name['HA_C_L_Category_Name'].'</td>
                                     <td class="HA-P-Qty">'.$Rows['HA_P_Qty'].'</td>
@@ -50,12 +51,13 @@
                                     <td style="display:none">'.$Row_Get_Created_Info['HA_U_Username'].'</td>
                                     <td style="display:none">'.$Rows['HA_P_Description'].'</td>
                                     <td class="last-Action">
-                                        <a href="#" class="Trash" data-module=".question-delete-row"> <i class="fas fa-trash-alt"></i> </a>
-                                        <a href="#" class="Edit" data-module=".Edit-row"> <i class="far fa-edit"></i> </a>
-                                        <a href="#" class="View" data-module=".View-row"> <i class="far fa-eye"></i> </a>
+                                        <button type="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick="clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
+                                        <button type="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick="clickhere(this.id)"> <i class="far fa-edit"></i> </button>
+                                        <button type="button" class="View" data-module=".View-row" id="T'.$id.'" onclick="clickhere(this.id)"> <i class="far fa-eye"></i> </button>
                                     </td>
                                 </tr>
                             ';
+                            $id += 1;
                         }
                     }
                 ?>
@@ -82,9 +84,9 @@
     </table>
     <div class="question-delete-row remove-Delete">
         <form class="Delete-question">
-            <h4>Are You Sure To Delete This ?</h4>
-            <button class="btn btn-danger"> Yes   </button>
-            <button class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
+            <h4 id="question"></h4>
+            <submit class="btn btn-danger"> Yes   </submit>
+            <button type = "button" class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
         </form>
     </div>
 
@@ -96,11 +98,19 @@
             </div>
             <div class="Deatils-View">
                 <ul>
-                    <li>Name : <span id="view-Details-show-name"></span></li>
-                    <li>Catagroy : <span id="view-Details-show-Catagroy"></span></li>
+                    <li>ID  : <span id="view-Details-show-ID"></span></li>
+                    <li>ID Catagroy : <span id="view-Details-show-ID-catagory"></span></li>
+                    <li>Name Product: <span id="view-Details-show-Name"></span></li>
+                    <li>Name Catagroy : <span id="view-Details-show-Name-Catagroy"></span></li>
                     <li>QTY : <span id="view-Details-show-Qty"></span></li>
-                    <li>Price : <span id="view-Details-show-Date-Price"></span></li>
+                    <li>Price : <span id="view-Details-show-Price"></span></li>
                     <li>Status : <span id="view-Details-show-Status"></span></li>
+                    <li>Alert Qty : <span id="view-Details-show-Alert"></span></li>
+                    <li>Brand : <span id="view-Details-show-Brand"></span></li>
+                    <li>Avalible From Data : <span id="view-Details-show-Avalible"></span></li>
+                    <li>Created : <span id="view-Details-show-Created"></span></li>
+                    <li>UserName : <span id="view-Details-show-UserName"></span></li>
+                    <li>Description : <span id="view-Details-show-Description"></span></li>
                 </ul>
             </div>
         </div>
@@ -112,11 +122,31 @@
                 <i class="fas fa-times"></i>
             </div>
             <h2>Edit Product</h2>
+            <input type="number" name="Input_Id" class="form-control" id="Edit-id" aria-describedby="emailHelp" placeholder="ID" hidden>
+            <input type="number" name="Input_Id" class="form-control" id="Edit-id-catagroy" aria-describedby="emailHelp" placeholder="ID-catagrot" hidden>
             <div class="form-group">
-                <input type="number" name="Input_Id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" hidden>
+                <input type="text" name="Input_Id" class="form-control" id="Edit-Name" aria-describedby="emailHelp" placeholder="Name">
             </div>
             <div class="form-group">
-                <input type="text" name="Input_Username" class="form-control" id="Edit-Username" aria-describedby="emailHelp" placeholder="Username">
+                <input type="text" name="Input_Id" class="form-control" id="Edit-Name-catagroy" aria-describedby="emailHelp" placeholder="Name Catagroy">
+            </div>
+            <div class="form-group">
+                <input type="number" name="Input_Id" class="form-control" id="Edit-QTY" aria-describedby="emailHelp" placeholder="QTY">
+            </div>
+            <div class="form-group">
+                <input type="number" name="Input_Username" class="form-control" id="Edit-price" aria-describedby="emailHelp" placeholder="price">
+            </div>
+            <div class="form-group">
+                <input type="number" name="Input_Username" class="form-control" id="Edit-Alert" aria-describedby="emailHelp" placeholder="Alert">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Input_Username" class="form-control" id="Edit-Brand" aria-describedby="emailHelp" placeholder="Brand">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Input_Username" class="form-control" id="Edit-User-Created" aria-describedby="emailHelp" placeholder="User Created">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Input_Username" class="form-control" id="Edit-Description" aria-describedby="emailHelp" placeholder="Description">
             </div>
             <div class="form-group">
                 <select name="Input-Status" class="form-control" id="Catagroy-Name">
