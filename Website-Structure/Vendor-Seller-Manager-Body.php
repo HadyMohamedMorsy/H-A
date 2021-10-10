@@ -16,6 +16,7 @@
         <tbody id="tbody">
             <?php
                 if ($Count_Seller_Info > 0) {
+                    $id = 0;
                     while ($Rows = mysqli_fetch_array($Result_Seller_Info)) {
                         // echo $Rows['HA_U_Username'];
                         $Scan_Profile_Img = scandir('IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']');
@@ -31,7 +32,7 @@
                         echo '
                             <tr class="t-body" style="text-align: center;">
                             <td>'.$Rows['HA_U_ID'].'</td>
-                            <td class="IMG-DATABASE"><img src="'.$Profile_Img.'" alt="Img" style="width:50px"/></td>
+                            <td class="IMG-DATABASE"><img src="'.$Profile_Img.'" alt="'.$Rows['HA_U_Username'].'"/></td>
                             <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
                             <td class="FullName-Edit-Module">'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
                             <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
@@ -39,12 +40,13 @@
                             <td class="Sales">$ '.number_format($Rows['HA_U_Sales'] , 2).'</td>
                             <td class="Last-Login">'.$Rows['HA_U_Last_Login'].'</td>
                             <td class="last-Action" style="text-align: center;">
-                                <a href="#" class="Trash" data-module=".question-delete-row"> <i class="fas fa-trash-alt"></i> </a>
-                                <a href="#" class="Edit" data-module=".Edit-row"> <i class="far fa-edit"></i> </a>
-                                <a href="#" class="View" data-module=".View-row"> <i class="far fa-eye"></i> </a>
+                                <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
+                                <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
+                                <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
                             </td>
                             </tr>
                         ';
+                        $id += 1;
                     }
 
                 }
@@ -67,9 +69,10 @@
 
     <div class="question-delete-row remove-Delete">
         <form class="Delete-question">
-            <h4>Are You Sure To Delete This ?</h4>
-            <button class="btn btn-danger" type="submit"> Yes </button>
-            <button class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+            <input type="number" hidden  id="hiddenDelete"/>
+            <h4 id="question"></h4>
+            <submit class="btn btn-danger" type="submit"> Yes </submit>
+            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
         </form>
     </div>
 
@@ -81,6 +84,7 @@
             </div>
             <div class="Deatils-View">
                 <ul>
+                    <li>ID           : <span id="view-Details-show-ID"></span></li>
                     <li>Name         : <span id="view-Details-show-name"></span></li>
                     <li>FullName     : <span id="view-Details-show-FullName"></span></li>
                     <li>Status       : <span id="view-Details-show-Status"></span></li>
@@ -99,9 +103,7 @@
                 <i class="fas fa-times"></i>
             </div>
             <h2>Edit Profile</h2>
-            <div class="form-group">
-                <input type="number" name="Input_Id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" hidden>
-            </div>
+            <input type="number" name="Input_Id" class="form-control" id="Edit-ID" aria-describedby="emailHelp" placeholder="ID" hidden>>
             <div class="form-group">
                 <input type="text" name="Input_Username" class="form-control" id="Edit-Username" aria-describedby="emailHelp" placeholder="Username">
             </div>
