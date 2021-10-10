@@ -43,6 +43,8 @@
                                 <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
                                 <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
                                 <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
+                                <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-check-circle"></i></button>
+
                             </td>
                             </tr>
                         ';
@@ -75,6 +77,14 @@
             <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
         </form>
     </div>
+    <div class="Done-row remove-Delete">
+        <form class="Done-question">
+            <input type="number" hidden  id="DoneDelete"/>
+            <h4 id="Done"></h4>
+            <submit class="btn btn-danger" type="submit"> Yes </submit>
+            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+        </form>
+    </div>
 
     <div class="View-row remove-Delete">
         <div class="View-row-Details">
@@ -95,8 +105,7 @@
             </div>
         </div>
     </div>
-
-
+    
     <div class="Edit-row remove-Delete">
         <form class="Edit-row-details" action="" method="POST">
             <div class="cancel-Dashbored Edit-cancel">

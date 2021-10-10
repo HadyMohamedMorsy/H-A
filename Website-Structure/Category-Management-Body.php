@@ -102,7 +102,6 @@
             <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
         </form>
     </div>
-
     <div class="View-row remove-Delete">
         <div class="View-row-Details">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>

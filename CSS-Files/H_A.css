@@ -269,6 +269,29 @@ input:-internal-autofill-selected {
     .question-delete-row .Delete-question .btn {
       width: 100px; }
 
+.Done-row {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(192, 192, 192, 0.6); }
+  .Done-row .Done-question {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 15px;
+    width: 400px; }
+    .Done-row .Done-question h4 {
+      padding-bottom: 30px; }
+    .Done-row .Done-question .btn {
+      width: 100px; }
+
 .View-row {
   position: fixed;
   width: 100%;
@@ -830,6 +853,9 @@ tfoot tr th:first-child {
 
 .IMG-DATABASE img {
   width: 50px; }
+
+.Done {
+  color: #2196f3; }
 
 .header-pages-Product {
   position: relative;

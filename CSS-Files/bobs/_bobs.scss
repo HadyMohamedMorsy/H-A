@@ -166,6 +166,21 @@ input:-internal-autofill-selected{
         }
     }
 }
+.Done-row{
+    @include fixed;
+    background-color: rgba(192,192,192,.6);
+    .Done-question{
+        @include viewmoduletable;
+        padding: 30px 15px;
+        width: 400px;
+        h4{
+            padding-bottom: 30px;
+        }
+        .btn{
+            width: 100px;
+        }
+    }
+}
 
 // users
 

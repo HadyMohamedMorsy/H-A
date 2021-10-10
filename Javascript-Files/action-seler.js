@@ -42,8 +42,19 @@
             let Question = document.getElementById('question');
             let hiddenDelete = document.getElementById('hiddenDelete');
 
-            Question.innerHTML = "Are You Sure To Delete This" + " " + select[2].innerText + " " + "?";
+            Question.innerHTML = "Are You Sure To Delete " + " " + select[2].innerText + " " + "?";
             hiddenDelete.value = select[0].innerText;
+
+        }
+        if((module) == ".Done-row"){
+
+            viewque.classList.remove('remove-Delete');
+
+            let Done = document.getElementById('Done');
+            let DoneDelete = document.getElementById('DoneDelete');
+
+            Done.innerHTML = "Are You Sure To Approve " + " " + select[2].innerText + " " + "?";
+            DoneDelete.value = select[0].innerText;
 
         }
 
