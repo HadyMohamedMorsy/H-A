@@ -103,7 +103,7 @@
                 <i class="fas fa-times"></i>
             </div>
             <h2>Edit Profile</h2>
-            <input type="number" name="Input_Id" class="form-control" id="Edit-ID" aria-describedby="emailHelp" placeholder="ID" hidden>>
+            <input type="number" name="Input_Id" class="form-control" id="Edit-ID" aria-describedby="emailHelp" placeholder="ID" hidden>
             <div class="form-group">
                 <input type="text" name="Input_Username" class="form-control" id="Edit-Username" aria-describedby="emailHelp" placeholder="Username">
             </div>
