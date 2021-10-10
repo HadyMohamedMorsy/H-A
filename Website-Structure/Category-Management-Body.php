@@ -141,6 +141,15 @@
                 <input type="text" name="Input-FullName" class="form-control" id="Edit-user" aria-describedby="emailHelp" placeholder="User created">
             </div>
             <div class="form-group">
+              <select name="Input-Status" class="form-control" id="ID">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value=">3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+             </select>
+            </div>
+            <div class="form-group">
                 <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
                 <input type="file" name="photo" id="upload-photo" class="label-input" />
             </div>
