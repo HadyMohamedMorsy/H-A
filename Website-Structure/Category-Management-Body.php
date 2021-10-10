@@ -28,7 +28,7 @@
             </select>
             </div>
             <button type="submit" name="BTN_Insert_Category" class="Add-catgroys">Add Catgroy</button>
-            <button type="button"  class="btn btn-danger" id="Delete-Catgroy" data-Catagroy = ".add-catgroy-from">Delete Catgroy</button>
+            <button type="button"  class="btn btn-danger" id="Delete-Catgroy" data-Catagroy = ".add-catgroy-from">Cancel Catgroy</button>
         </form>
     </div>
     <?php

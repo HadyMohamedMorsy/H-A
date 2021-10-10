@@ -70,6 +70,7 @@
             Parent.removeAttribute('disabled');
         }else{
             Parent.setAttribute('disabled', true);
+            Parent.value = "";
         }
     });
 
