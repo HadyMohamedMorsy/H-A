@@ -46,19 +46,19 @@ const data = {
   labels: labels,
   datasets: [{
         label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
+        backgroundColor: 'rgb(255, 118, 117)',
+        borderColor: 'rgb(255, 117, 117)',
+        data: [0, 10, 5, 2, 20, 30, 35],
     },{
         label: 'My Secound dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 13, 15, 45],
+        backgroundColor: 'rgb(255, 159, 26)',
+        borderColor: 'rgb(255, 159, 26)',
+        data: [0, 10, 5, 2, 13, 15, 25],
     },{
         label: 'My Secound dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 12, 14, 7, 15, 11, 45],
+        backgroundColor: 'rgb(0, 184, 148)',
+        borderColor: 'rgb(0, 184, 148)',
+        data: [0, 12, 14, 7, 15, 11, 15],
     }]
 };
 // </block:setup>
