@@ -115,7 +115,7 @@
             </div>
             <div class="Deatils-View">
                 <ul>
-                    <li>ID : <span id="view-Details-show-ID"></span></li>
+                    <li>ID                  : <span id="view-Details-show-ID"></span></li>
                     <li>Parent Ctagroy Name : <span id="view-Details-show-Ctagroy"></span></li>
                     <li>Child Ctagroy Name  : <span id="view-Details-show-Child"></span></li>
                     <li>Cound Products      : <span id="view-Details-show-Products"></span></li>
