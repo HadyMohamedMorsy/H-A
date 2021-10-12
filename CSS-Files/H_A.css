@@ -639,8 +639,6 @@ input:-internal-autofill-selected {
       width: 100%;
       background-color: #fef3e5;
       height: 300px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
