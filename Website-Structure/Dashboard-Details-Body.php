@@ -1,6 +1,9 @@
 <div class="right-admin Dasbored-content">
     <div class="chart">
         <h3>Profile Views</h3>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
     </div>
     <div class="the-most-Views">
         <h3>Most Viewed Services</h3>
