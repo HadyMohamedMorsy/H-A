@@ -77,6 +77,40 @@
                     .analysis-chiled{
                         background-color: $white;
                         padding: 30px;
+                        display: flex;
+                        .Revenue{
+                            background-color: rgba(244,21,217,0.4);
+                        }
+                        .Orders{
+                            background-color: rgba(0,255,137,0.4);
+                        }
+                        .Products{
+                            background-color: rgba(251,255,0,0.4);
+                        }
+                        .Monthly{
+                            background-color: rgba(3,169,244,0.4);    
+                        }
+                        .anaysis-icon{
+                            margin-right: 20px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 75px;
+                            height: 75px;
+                            border-radius: 50%;
+                            svg{
+
+                                font-size: 23px;
+                            }
+
+                        }
+                        .anaysis-details{
+                            .number{
+                                font-size: 24px;
+                                font-weight: bold;
+                            }
+
+                        }
                     }
                 }
             }
