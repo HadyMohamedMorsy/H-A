@@ -630,6 +630,10 @@ input:-internal-autofill-selected {
   height: 100%;
   display: flex;
   background-color: #f3f7fd; }
+  .container-hady .Content-table {
+    flex-basis: 80%;
+    background-color: #f5f5f5;
+    padding: 20px; }
   .container-hady aside {
     flex-basis: 20%;
     background-color: #fff;
@@ -673,41 +677,18 @@ input:-internal-autofill-selected {
           font-size: 18px; }
           .container-hady aside .list-of-dashbored li a svg {
             margin-right: 30px; }
-  .container-hady .right-admin {
+  .container-hady .Dashbored-content {
     flex-basis: 80%;
-    padding: 60px  20px;
-    display: flex; }
-    .container-hady .right-admin .chart {
-      flex-basis: 70%;
+    padding: 60px  20px; }
+    .container-hady .Dashbored-content .chart {
       padding: 25px 30px; }
-      .container-hady .right-admin .chart h3 {
-        color: #0000ee; }
-    .container-hady .right-admin .the-most-Views {
-      flex-basis: 30%;
-      background-color: #fff;
-      padding: 25px 30px;
-      border-radius: 10px;
-      box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.3);
-      display: flex;
-      flex-direction: column; }
-      .container-hady .right-admin .the-most-Views h3 {
-        color: #0000ee; }
-      .container-hady .right-admin .the-most-Views .content-most-views {
-        width: 100%;
-        display: flex;
-        padding: 20px 0px; }
-        .container-hady .right-admin .the-most-Views .content-most-views .content-v-image {
-          flex-basis: 30%; }
-          .container-hady .right-admin .the-most-Views .content-most-views .content-v-image img {
-            width: 100%; }
-        .container-hady .right-admin .the-most-Views .content-most-views .content-v-Details {
-          margin-top: 30px;
-          margin-left: 20px; }
-          .container-hady .right-admin .the-most-Views .content-most-views .content-v-Details h5 {
-            color: #0000ee; }
-          .container-hady .right-admin .the-most-Views .content-most-views .content-v-Details p:last-child {
-            color: #f7a690;
-            font-size: 18px; }
+      .container-hady .Dashbored-content .chart .Title-dashbored {
+        padding-bottom: 20px; }
+      .container-hady .Dashbored-content .chart .analysis {
+        margin-bottom: 30px; }
+        .container-hady .Dashbored-content .chart .analysis .row .analysis-chiled {
+          background-color: #fff;
+          padding: 30px; }
   .container-hady .right-Edit {
     flex-basis: 80%;
     padding: 60px  20px; }
@@ -762,10 +743,6 @@ input:-internal-autofill-selected {
             .container-hady .right-Edit .contact-personal .right-con > div .right-con-form > div {
               padding: 0px 15px;
               flex-basis: 50%; }
-  .container-hady .right-All-users {
-    flex-basis: 80%;
-    background-color: #f5f5f5;
-    padding: 20px; }
   .container-hady .right-add-projects {
     flex-basis: 80%;
     background-color: #f5f5f5;
@@ -823,14 +800,6 @@ input:-internal-autofill-selected {
       border: none;
       padding: 15px 30px;
       margin-right: 15px; }
-  .container-hady .right-All-Clients {
-    flex-basis: 80%;
-    background-color: #f5f5f5;
-    padding: 20px; }
-  .container-hady .right-All-Employeres {
-    flex-basis: 80%;
-    background-color: #f5f5f5;
-    padding: 20px; }
 
 .none-Dashbored {
   display: none !important; }

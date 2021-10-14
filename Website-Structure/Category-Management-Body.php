@@ -1,6 +1,4 @@
-
-
-<div class="right-catagroy Dasbored-content">
+<div class="Content-table">
 <h3 style="text-align: center;"> Category List </h3>
 <div class="Add-Catagroy">
     <button type="button" class="btn btn-primary" data-Catagroy = ".add-catgroy-from" id="Add">Add Catagoy</button>
