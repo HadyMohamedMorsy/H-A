@@ -718,29 +718,29 @@ input:-internal-autofill-selected {
         .container-hady .Dashbored-content .chart .Add-member h4 {
           margin-bottom: 40px; }
         .container-hady .Dashbored-content .chart .Add-member .content-members {
-          display: flex;
-          position: relative;
-          margin-bottom: 30px; }
-          .container-hady .Dashbored-content .chart .Add-member .content-members .img-member {
-            margin-right: 20px; }
-            .container-hady .Dashbored-content .chart .Add-member .content-members .img-member img {
-              width: 90px;
-              height: 90px;
-              border-radius: 50%; }
-        .container-hady .Dashbored-content .chart .Add-member .content-member-Details {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column; }
-          .container-hady .Dashbored-content .chart .Add-member .content-member-Details .position {
-            color: #b1b1b1;
-            font-size: 17px; }
-        .container-hady .Dashbored-content .chart .Add-member .Add {
-          position: absolute;
-          right: 5%;
-          top: 20%; }
-          .container-hady .Dashbored-content .chart .Add-member .Add button {
-            padding: 10px 30px; }
+          position: relative; }
+          .container-hady .Dashbored-content .chart .Add-member .content-members::before {
+            content: "";
+            border: 1px solid rgba(189, 189, 189, 0.4);
+            margin-bottom: 0px;
+            position: absolute;
+            height: 100%; }
+          .container-hady .Dashbored-content .chart .Add-member .content-members .content {
+            padding: 10px 10px;
+            margin-left: 10px;
+            position: relative;
+            display: flex;
+            justify-content: space-between; }
+            .container-hady .Dashbored-content .chart .Add-member .content-members .content .icon-time {
+              position: absolute;
+              left: -15px; }
+            .container-hady .Dashbored-content .chart .Add-member .content-members .content .time {
+              flex-basis: 10%;
+              font-weight: bold; }
+            .container-hady .Dashbored-content .chart .Add-member .content-members .content .right {
+              flex-basis: 10%; }
+              .container-hady .Dashbored-content .chart .Add-member .content-members .content .right svg {
+                color: #007bff; }
   .container-hady .right-Edit {
     flex-basis: 80%;
     padding: 60px  20px; }

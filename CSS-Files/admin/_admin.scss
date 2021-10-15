@@ -122,34 +122,34 @@
                     margin-bottom: 40px;
                 }
                 .content-members{
-                    display: flex;
                     position: relative;
-                    margin-bottom: 30px;
-                    .img-member{
-                        img{
-                            width: 90px;
-                            height: 90px;
-                            border-radius: 50%;
+                    &::before{
+                        content: "";
+                        border: 1px solid rgba(189, 189, 189,0.4);
+                        margin-bottom: 0px;
+                        position: absolute;
+                        height: 100%;
+                    }
+                    .content{
+                        padding: 10px 10px;
+                        margin-left: 10px;
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        .icon-time{
+                            position: absolute;
+                            left: -15px;
                         }
-                        margin-right: 20px;
-                    }
-                }
-                .content-member-Details{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    .position{
-                        color: #b1b1b1;
-                        font-size: 17px;
-                    }
-                }
-                .Add{
-                    position: absolute;
-                    right: 5%;
-                    top: 20%;                
-                    button{
-                        padding: 10px 30px;
+                        .time{
+                            flex-basis: 10%;
+                            font-weight: bold;
+                        }
+                        .right{
+                            flex-basis: 10%;
+                            svg{
+                                color:  $primary;
+                            }
+                        }
                     }
                 }
             }

@@ -60,41 +60,50 @@
         <div class="secound-row">
             <div class="row">
                 <div class="col-lg-6 Add-member">
-                    <h4>Add Member</h4>
+                    <h4>Recent activities</h4>
                     <div class="content-members">
-                        <div class="img-member">
-                            <img src="./IMG/1.jpg" alt="1.jpg" />
+                        <div class="content">
+                            <div class="icon-time">
+                                <i class="far fa-clock"></i>
+                            </div>
+                           <span class="time"> Today</span>
+                           <span class="right"><i class="fas fa-long-arrow-alt-right"></i></span>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi.</p>
                         </div>
-                        <div class="content-member-Details">
-                            <h5>Patric Adams</h5>
-                            <span class="position">Clients</span>
+                        <div class="content">
+                        <div class="icon-time">
+                                <i class="far fa-clock"></i>
                         </div>
-                        <div class="Add">
-                            <button type="button" class="btn btn-primary Add-button">Add</button>
+                           <span class="time"> 17 May</span>
+                           <span class="right"><i class="fas fa-long-arrow-alt-right"></i></span>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi.</p>
+
                         </div>
-                    </div>
-                    <div class="content-members">
-                        <div class="img-member">
-                            <img src="./IMG/1.jpg" alt="1.jpg" />
+                        <div class="content">
+                        <div class="icon-time">
+                                <i class="far fa-clock"></i>
                         </div>
-                        <div class="content-member-Details">
-                            <h5>Patric Adams</h5>
-                            <span class="position">Clients</span>
+                           <span class="time">13 May</span> 
+                           <span class="right"><i class="fas fa-long-arrow-alt-right"></i></span>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi.</p>
+
                         </div>
-                        <div class="Add">
-                            <button type="button" class="btn btn-primary Add-button">Add</button>
+                        <div class="content">
+                        <div class="icon-time">
+                                <i class="far fa-clock"></i>
                         </div>
-                    </div>
-                    <div class="content-members">
-                        <div class="img-member">
-                            <img src="./IMG/1.jpg" alt="1.jpg" />
+                            <span class="time">  05 April</span>
+                            <span class="right"><i class="fas fa-long-arrow-alt-right"></i></span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi.</p>
+
                         </div>
-                        <div class="content-member-Details">
-                            <h5>Patric Adams</h5>
-                            <span class="position">Clients</span>
+                        <div class="content">
+                        <div class="icon-time">
+                                <i class="far fa-clock"></i>
                         </div>
-                        <div class="Add">
-                            <button type="button" class="btn btn-primary Add-button">Add</button>
+                            <span class="time"> 26 Mar </span> 
+                            <span class="right"><i class="fas fa-long-arrow-alt-right"></i></span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi.</p>
                         </div>
                     </div>
                 </div>
