@@ -58,8 +58,8 @@
             <canvas id="myChart"></canvas>
         </div>
         <div class="secound-row">
-            <div class="row">
-                <div class="col-lg-6 Add-member">
+            <div class="row-secound">
+                <div class=" Add-member">
                     <h4>Recent activities</h4>
                     <div class="content-members">
                         <div class="content">
@@ -107,8 +107,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 Dashbored-secound">
-                    <h4>Dashbored</h4>
+                <div class=" progress-content">
+                    <h4>Markting Chanel</h4>
+                    <div class="content">
+                        <div>Test 1</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">25%</div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div>Test 2</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div>Test 3</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div>Test 4</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">20%</div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div>Test 5</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 28%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">28%</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

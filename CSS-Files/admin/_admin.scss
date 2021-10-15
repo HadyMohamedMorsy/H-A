@@ -114,43 +114,62 @@
                     }
                 }
             }
-            .Add-member{
-                background-color: $white;
-                padding: 20px;
-                margin-top: 30px;
-                h4{
-                    margin-bottom: 40px;
-                }
-                .content-members{
-                    position: relative;
-                    &::before{
-                        content: "";
-                        border: 1px solid rgba(189, 189, 189,0.4);
-                        margin-bottom: 0px;
-                        position: absolute;
-                        height: 100%;
-                    }
-                    .content{
-                        padding: 10px 10px;
-                        margin-left: 10px;
-                        position: relative;
-                        display: flex;
-                        justify-content: space-between;
-                        .icon-time{
-                            position: absolute;
-                            left: -15px;
+            .secound-row{
+                width: 100%;
+                .row-secound{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    .Add-member{
+                        background-color: $white;
+                        padding: 20px;
+                        margin-top: 30px;
+                        flex-basis: 48%;
+                        h4{
+                            margin-bottom: 40px;
                         }
-                        .time{
-                            flex-basis: 10%;
-                            font-weight: bold;
-                        }
-                        .right{
-                            flex-basis: 10%;
-                            svg{
-                                color:  $primary;
+                        .content-members{
+                            position: relative;
+                            &::before{
+                                content: "";
+                                border: 1px solid rgba(189, 189, 189,0.4);
+                                margin-bottom: 0px;
+                                position: absolute;
+                                height: 100%;
+                            }
+                            .content{
+                                padding: 10px 10px;
+                                margin-left: 10px;
+                                position: relative;
+                                display: flex;
+                                justify-content: space-between;
+                                .icon-time{
+                                    position: absolute;
+                                    left: -15px;
+                                }
+                                .time{
+                                    flex-basis: 10%;
+                                    font-weight: bold;
+                                }
+                                .right{
+                                    flex-basis: 10%;
+                                    svg{
+                                        color:  $primary;
+                                    }
+                                }
                             }
                         }
                     }
+                }
+
+            }
+            .progress-content{
+                background-color: $white;
+                padding: 20px;
+                margin-top: 30px;
+                flex-basis: 48%;
+                .content{
+                    padding: 10px 10px;
                 }
             }
 

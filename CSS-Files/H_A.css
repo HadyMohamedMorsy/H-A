@@ -711,36 +711,50 @@ input:-internal-autofill-selected {
           .container-hady .Dashbored-content .chart .analysis .row .analysis-chiled .anaysis-details .number {
             font-size: 24px;
             font-weight: bold; }
-      .container-hady .Dashbored-content .chart .Add-member {
+      .container-hady .Dashbored-content .chart .secound-row {
+        width: 100%; }
+        .container-hady .Dashbored-content .chart .secound-row .row-secound {
+          width: 100%;
+          display: flex;
+          justify-content: space-between; }
+          .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            flex-basis: 48%; }
+            .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member h4 {
+              margin-bottom: 40px; }
+            .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members {
+              position: relative; }
+              .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members::before {
+                content: "";
+                border: 1px solid rgba(189, 189, 189, 0.4);
+                margin-bottom: 0px;
+                position: absolute;
+                height: 100%; }
+              .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content {
+                padding: 10px 10px;
+                margin-left: 10px;
+                position: relative;
+                display: flex;
+                justify-content: space-between; }
+                .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .icon-time {
+                  position: absolute;
+                  left: -15px; }
+                .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .time {
+                  flex-basis: 10%;
+                  font-weight: bold; }
+                .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .right {
+                  flex-basis: 10%; }
+                  .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .right svg {
+                    color: #007bff; }
+      .container-hady .Dashbored-content .chart .progress-content {
         background-color: #fff;
         padding: 20px;
-        margin-top: 30px; }
-        .container-hady .Dashbored-content .chart .Add-member h4 {
-          margin-bottom: 40px; }
-        .container-hady .Dashbored-content .chart .Add-member .content-members {
-          position: relative; }
-          .container-hady .Dashbored-content .chart .Add-member .content-members::before {
-            content: "";
-            border: 1px solid rgba(189, 189, 189, 0.4);
-            margin-bottom: 0px;
-            position: absolute;
-            height: 100%; }
-          .container-hady .Dashbored-content .chart .Add-member .content-members .content {
-            padding: 10px 10px;
-            margin-left: 10px;
-            position: relative;
-            display: flex;
-            justify-content: space-between; }
-            .container-hady .Dashbored-content .chart .Add-member .content-members .content .icon-time {
-              position: absolute;
-              left: -15px; }
-            .container-hady .Dashbored-content .chart .Add-member .content-members .content .time {
-              flex-basis: 10%;
-              font-weight: bold; }
-            .container-hady .Dashbored-content .chart .Add-member .content-members .content .right {
-              flex-basis: 10%; }
-              .container-hady .Dashbored-content .chart .Add-member .content-members .content .right svg {
-                color: #007bff; }
+        margin-top: 30px;
+        flex-basis: 48%; }
+        .container-hady .Dashbored-content .chart .progress-content .content {
+          padding: 10px 10px; }
   .container-hady .right-Edit {
     flex-basis: 80%;
     padding: 60px  20px; }
