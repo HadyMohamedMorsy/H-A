@@ -1,4 +1,4 @@
-<div class="right-All-Clients Dasbored-content">
+<div class="Content-table">
     <table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;">
         <thead>
             <tr>

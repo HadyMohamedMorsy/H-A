@@ -57,6 +57,52 @@
         <div>
             <canvas id="myChart"></canvas>
         </div>
+        <div class="secound-row">
+            <div class="row">
+                <div class="col-lg-6 Add-member">
+                    <h4>Add Member</h4>
+                    <div class="content-members">
+                        <div class="img-member">
+                            <img src="./IMG/1.jpg" alt="1.jpg" />
+                        </div>
+                        <div class="content-member-Details">
+                            <h5>Patric Adams</h5>
+                            <span class="position">Clients</span>
+                        </div>
+                        <div class="Add">
+                            <button type="button" class="btn btn-primary Add-button">Add</button>
+                        </div>
+                    </div>
+                    <div class="content-members">
+                        <div class="img-member">
+                            <img src="./IMG/1.jpg" alt="1.jpg" />
+                        </div>
+                        <div class="content-member-Details">
+                            <h5>Patric Adams</h5>
+                            <span class="position">Clients</span>
+                        </div>
+                        <div class="Add">
+                            <button type="button" class="btn btn-primary Add-button">Add</button>
+                        </div>
+                    </div>
+                    <div class="content-members">
+                        <div class="img-member">
+                            <img src="./IMG/1.jpg" alt="1.jpg" />
+                        </div>
+                        <div class="content-member-Details">
+                            <h5>Patric Adams</h5>
+                            <span class="position">Clients</span>
+                        </div>
+                        <div class="Add">
+                            <button type="button" class="btn btn-primary Add-button">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 Dashbored-secound">
+                    <h4>Dashbored</h4>
+                </div>
+            </div>
+        </div>
 
     </div>
 

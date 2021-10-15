@@ -114,6 +114,45 @@
                     }
                 }
             }
+            .Add-member{
+                background-color: $white;
+                padding: 20px;
+                margin-top: 30px;
+                h4{
+                    margin-bottom: 40px;
+                }
+                .content-members{
+                    display: flex;
+                    position: relative;
+                    margin-bottom: 30px;
+                    .img-member{
+                        img{
+                            width: 90px;
+                            height: 90px;
+                            border-radius: 50%;
+                        }
+                        margin-right: 20px;
+                    }
+                }
+                .content-member-Details{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    .position{
+                        color: #b1b1b1;
+                        font-size: 17px;
+                    }
+                }
+                .Add{
+                    position: absolute;
+                    right: 5%;
+                    top: 20%;                
+                    button{
+                        padding: 10px 30px;
+                    }
+                }
+            }
 
         }
     }
