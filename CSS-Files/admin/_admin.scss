@@ -160,18 +160,43 @@
                             }
                         }
                     }
+                    .progress-content{
+                        background-color: $white;
+                        padding: 20px;
+                        margin-top: 30px;
+                        flex-basis: 48%;
+                        .content{
+                            padding: 10px 10px;
+                        }
+                    }
                 }
 
             }
-            .progress-content{
+            .thired-row{
+                .analysthic-dashbored{
+                    width: 100%;
+                    display: flex;
+                    margin-top: 30px;
+                    justify-content: space-between;
+                    .Dashbored-one{
+                        flex-basis: 48%;
+                        background-color: $white;
+                        padding: 20px;
+                    }
+                    .Dashbored-two{
+                        flex-basis: 48%;
+                        background-color: $white;
+                        padding: 20px;
+                    }
+                }
+            }
+            .thired-row{
+                width: 100%;
                 background-color: $white;
                 padding: 20px;
                 margin-top: 30px;
-                flex-basis: 48%;
-                .content{
-                    padding: 10px 10px;
-                }
             }
+
 
         }
     }

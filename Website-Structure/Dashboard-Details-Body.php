@@ -142,7 +142,15 @@
                 </div>
             </div>
         </div>
-
+        <div class="thired-row">
+            <div class="analysthic-dashbored">
+                    <div class="Dashbored-one"> <canvas id="myChartthree"></canvas> </div>
+                    <div class="Dashbored-two"> <canvas id="myCharttwo"></canvas> </div>
+            </div>
+        </div>
+        <div class="thired-row">
+             <canvas id="myChartfor"></canvas>
+        </div>
     </div>
 
 </div>
