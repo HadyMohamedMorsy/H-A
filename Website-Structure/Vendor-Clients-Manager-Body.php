@@ -25,7 +25,6 @@
                 if ($Count_Clients_Info > 0) {
                     $id = 0;
                     while ($Rows = mysqli_fetch_array($Result_Clients_Info)) {
-   
                         // echo $Rows['HA_U_Username'];
                         $Scan_Profile_Img = scandir('IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']');
                         if (count($Scan_Profile_Img) == 2) {
@@ -36,6 +35,16 @@
                             }
                         }else {
                             $Profile_Img =  'IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']' . '/' . $Scan_Profile_Img[2];
+                        }
+                        if ($Rows['HA_U_User_Status'] == 'Pending') {
+                            $BTN_Active = '<button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>';
+                        }else {
+                            $BTN_Active = '';
+                        }
+                        if ($Rows['HA_U_User_Status'] !== 'Deactivated') {
+                            $BTN_Deactivate = '<button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>';
+                        }else {
+                            $BTN_Deactivate = '';
                         }
                         echo '
                             <tr class="t-body" >
@@ -55,17 +64,16 @@
                                 <td class="" style="display: none;">'.$Rows['HA_U_Mobile_Number'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Email'].'</td>
                                 <td class="last-Action" >
-                                <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
-                                <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
-                                <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
-                                <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>
+                                    <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
+                                    <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
+                                    '.$BTN_Deactivate.'
+                                    '.$BTN_Active.'
                                 </td>
                             </tr>
                             
                         ';
                         $id += 1;
                     }
-
                 }
             ?>
         </tbody>
@@ -91,18 +99,18 @@
         </tfoot>
     </table>
     <div class="question-delete-row remove-Delete">
-        <form class="Delete-question">
-            <input type="number" hidden  id="hiddenDelete"/>
+        <form class="Delete-question" action="" method="POST">
+            <input type="number" name="Deactivate_ID" hidden  id="hiddenDelete"/>
             <h4 id="question"></h4>
-            <submit class="btn btn-danger"> Yes   </submit>
-            <button type = "button" class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
+            <button class="btn btn-danger" name="BTN_Deactivate"> Yes </button>
+            <button type="button" class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
         </form>
     </div>
     <div class="Done-row remove-Delete">
-        <form class="Done-question">
-            <input type="number" hidden  id="DoneDelete"/>
+        <form class="Done-question" action="" method="POST">
+            <input type="number" name="Active_ID" hidden  id="DoneDelete"/>
             <h4 id="Done"></h4>
-            <submit class="btn btn-success" type="submit"> Yes </submit>
+            <button type="submit" name="BTN_Active" class="btn btn-success"> Yes </button>
             <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
         </form>
     </div>
@@ -166,20 +174,20 @@
                 <input type="text" name="country" class="form-control" id="Edit-Country" aria-describedby="emailHelp" placeholder="number">
             </div>
             <div class="form-group">
-              <select name="Input-Gender" class="form-control" id="Gender">
-                    <option value="">Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-             </select>
+                <select name="Input-Gender" class="form-control" id="Gender">
+                        <option value="" disabled>Gender..</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                </select>
             </div>
             <div class="form-group">
-              <select name="Input-Status" class="form-control" id="Status">
-                    <option value="">Status</option>
-                    <option value="Active">Active</option>
-                    <option value="UnActice">UnActice</option>
-                    <option value="Pending">Pending</option>
-                    <option value="Suspended">Suspended</option>
-             </select>
+                <select name="Input-Status" class="form-control" id="Status">
+                        <option value="" disabled>Status..</option>
+                        <option value="Active">Active</option>
+                        <option value="Deactivated">Deactivate</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Suspended">Suspended</option>
+                </select>
             </div>
             <div class="form-group">
             <label for="upload-photo" class="label form-control"> Upload Your Image...</label>

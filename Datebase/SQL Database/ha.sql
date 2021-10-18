@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 10, 2021 at 11:53 PM
+-- Generation Time: Oct 18, 2021 at 02:41 AM
 -- Server version: 8.0.13-4
 -- PHP Version: 7.2.24-0ubuntu0.18.04.8
 
@@ -145,30 +145,33 @@ CREATE TABLE `ha_users` (
   `HA_U_Sales` varchar(255) NOT NULL,
   `HA_U_Purchase` varchar(255) NOT NULL,
   `HA_U_Date_Created` varchar(255) NOT NULL,
-  `HA_U_Time_Created` varchar(255) NOT NULL
+  `HA_U_Time_Created` varchar(255) NOT NULL,
+  `HA_U_Approval_From_User_ID` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `HA_U_Approval_Date_Created` varchar(255) NOT NULL,
+  `HA_U_Approval_Time_Created` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ha_users`
 --
 
-INSERT INTO `ha_users` (`HA_U_ID`, `HA_U_Username`, `HA_U_Password`, `HA_U_User_Status`, `HA_U_First_Name`, `HA_U_Second_Name`, `HA_U_Last_Name`, `HA_U_Last_Login`, `HA_U_Gender`, `HA_U_Birthday`, `HA_U_Country`, `HA_U_ZIP_Code`, `HA_U_Address`, `HA_U_Email`, `HA_U_Mobile_Number`, `HA_U_User_Type`, `HA_P_Views`, `HA_U_Sales`, `HA_U_Purchase`, `HA_U_Date_Created`, `HA_U_Time_Created`) VALUES
-(1, 'HadyMM', '123', 'Active', 'Hady', 'Muhammed', 'Morsy', '2021/10/09 07:41:08 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(2, 'AbdulBasetRS', '123', 'Active', 'AbdulBaset', 'Reda', 'Sayed', '2021/10/11 01:36:56 AM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulBasetRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(3, 'FatmaMM', '123', 'Active', 'Fatma', 'Muhammed', 'Morsy', '2021/10/03 06:00:25 AM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'FatmaMM@Gmail.com', '01097579845', 'Seller', '3051', '5400', '0', '2021/09/15', '08:43:13 PM'),
-(4, 'SayedMM', '123', 'Pending', 'Sayed', 'Muhammed', 'Morsy', '2021/09/29 01:44:34 PM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
-(5, 'MuhammedMM', '123', 'Active', 'Muhammed', 'Muhammed', 'Morsy', '2021/09/28 04:12:05 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MuhammedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
-(6, 'RedaSH', '123', 'Suspended', 'Reda', 'Sayed', 'Hussien', '2021/09/28 04:12:05 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'RedaSH@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
-(7, 'MahmoudME', '123', 'Active', 'Mahmoud', 'Mosad', 'El-Adawy', '2021/09/28 04:12:05 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MahmoudME@Gmail.com', '01097579845', 'Client', '', '', '1200', '2021/09/15', '08:45:58 PM'),
-(8, 'MariamMM', '123', 'Active', 'Mariam', 'Muhammed', 'Morsy', '2021/09/28 04:12:05 PM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MariamMM@Gmail.com', '01097579845', 'Seller', '1516457', '78500', '0', '2021/09/18', '08:43:13 PM'),
-(9, 'ClientDemo', '123', 'Active', 'Client', 'Demo', '', '2021/10/01 08:19:00 AM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Client_Demo@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
-(10, 'SellerDemo', '123', 'Active', 'Seller', 'Demo', '', '2021/10/01 08:23:45 AM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Seller_Demo@Gmail.com', '01097579845', 'Seller', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(11, 'RamdanBM', '123', 'Pending', 'Ramdan', 'Pablo', 'Morsy', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(12, 'AhmedEA', '123', 'Pending', 'Ahmed', 'El-Gaml', 'Ahmed', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AhmedElGaml@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(13, 'HamzaMM', '123', 'Pending', 'Hamza', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HamzaMMMuhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(14, 'AbdulrahmanMM', '123', 'Pending', 'Abdulrahman', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulrahmanMuhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(15, 'GlalMM', '123', 'Pending', 'Glal', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Glal-Muhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(16, 'DlalMM', '123', 'Pending', 'Dlal', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Dlal-Muhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM');
+INSERT INTO `ha_users` (`HA_U_ID`, `HA_U_Username`, `HA_U_Password`, `HA_U_User_Status`, `HA_U_First_Name`, `HA_U_Second_Name`, `HA_U_Last_Name`, `HA_U_Last_Login`, `HA_U_Gender`, `HA_U_Birthday`, `HA_U_Country`, `HA_U_ZIP_Code`, `HA_U_Address`, `HA_U_Email`, `HA_U_Mobile_Number`, `HA_U_User_Type`, `HA_P_Views`, `HA_U_Sales`, `HA_U_Purchase`, `HA_U_Date_Created`, `HA_U_Time_Created`, `HA_U_Approval_From_User_ID`, `HA_U_Approval_Date_Created`, `HA_U_Approval_Time_Created`) VALUES
+(1, 'HadyMM', '123', 'Active', 'Hady', 'Muhammed', 'Morsy', '2021/10/16 06:18:00 AM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM', '', '', ''),
+(2, 'AbdulBasetRS', '123', 'Active', 'AbdulBaset', 'Reda', 'Sayed', '2021/10/18 12:27:10 AM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulBasetRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM', '', '', ''),
+(3, 'FatmaMM', '123', 'Active', 'Fatma', 'Muhammed', 'Morsy', '2021/10/03 06:00:25 AM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'FatmaMM@Gmail.com', '01097579845', 'Seller', '3051', '5400', '0', '2021/09/15', '08:43:13 PM', '', '', ''),
+(4, 'SayedMM', '123', 'Pending', 'Sayed', 'Muhammed', 'Morsy', '2021/09/29 01:44:34 PM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM', '', '', ''),
+(5, 'MuhammedMM', '123', 'Pending', 'Muhammed', 'Muhammed', 'Morsy', '2021/09/28 04:12:05 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MuhammedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM', '', '', ''),
+(6, 'RedaSH', '123', 'Suspended', 'Reda', 'Sayed', 'Hussien', '2021/09/28 04:12:05 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'RedaSH@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM', '', '', ''),
+(7, 'MahmoudME', '123', 'Deactivated', 'Mahmoud', 'Mosad', 'El-Adawy', '2021/09/28 04:12:05 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MahmoudME@Gmail.com', '01097579845', 'Client', '', '', '1200', '2021/09/15', '08:45:58 PM', '', '', ''),
+(8, 'MariamMM', '123', 'Pending', 'Mariam', 'Muhammed', 'Morsy', '2021/09/28 04:12:05 PM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MariamMM@Gmail.com', '01097579845', 'Seller', '1516457', '78500', '0', '2021/09/18', '08:43:13 PM', '', '', ''),
+(9, 'ClientDemo', '123', 'Pending', 'Client', 'Demo', '', '2021/10/01 08:19:00 AM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Client_Demo@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM', '', '', ''),
+(10, 'SellerDemo', '123', 'Pending', 'Seller', 'Demo', '', '2021/10/01 08:23:45 AM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Seller_Demo@Gmail.com', '01097579845', 'Seller', '0', '0', '0', '2021/09/15', '08:43:13 PM', '', '', ''),
+(11, 'RamdanBM', '123', 'Pending', 'Ramdan', 'Pablo', 'Morsy', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM', '', '', ''),
+(12, 'AhmedEA', '123', 'Pending', 'Ahmed', 'El-Gaml', 'Ahmed', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AhmedElGaml@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM', '', '', ''),
+(13, 'HamzaMM', '123', 'Active', 'Hamza', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HamzaMMMuhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM', '', '', ''),
+(14, 'AbdulrahmanMM', '123', 'Deactivated', 'Abdulrahman', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulrahmanMuhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM', '', '', ''),
+(15, 'GlalMM', '123', 'Pending', 'Glal', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Glal-Muhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM', '', '', ''),
+(16, 'DlalMM', '123', 'Pending', 'Dlal', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Dlal-Muhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -204,6 +207,31 @@ INSERT INTO `ha_user_permission` (`HA_U_P_ID`, `HA_U_P_User_ID`, `HA_U_P_Clients
 (9, '9', 'Unavailable', 'Unavailable', 'Unavailable', 'Unavailable', 'Unavailable', 'Unavailable', 'Unavailable'),
 (10, '10', 'Unavailable', 'Unavailable', 'Unavailable', 'Unavailable', 'Unavailable', 'Available', 'Unavailable');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ha_user_status_activities`
+--
+
+CREATE TABLE `ha_user_status_activities` (
+  `HA_U_S_A_ID` bigint(20) UNSIGNED NOT NULL,
+  `HA_U_S_A_User_ID` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_U_S_A_Status` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_U_S_A_Action_From_User_ID` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_U_S_A_Status_Reason` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `HA_U_S_A_Date_Created` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_U_S_A_Time_Created` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `ha_user_status_activities`
+--
+
+INSERT INTO `ha_user_status_activities` (`HA_U_S_A_ID`, `HA_U_S_A_User_ID`, `HA_U_S_A_Status`, `HA_U_S_A_Action_From_User_ID`, `HA_U_S_A_Status_Reason`, `HA_U_S_A_Date_Created`, `HA_U_S_A_Time_Created`) VALUES
+(1, '13', 'Active', '2', 'Null', '2021/10/18', '04:26:39 AM'),
+(2, '14', 'Deactivated', '2', 'Null', '2021/10/18', '04:30:45 AM'),
+(3, '7', 'Deactivated', '2', 'Null', '2021/10/18', '04:36:23 AM');
+
 --
 -- Indexes for dumped tables
 --
@@ -235,6 +263,12 @@ ALTER TABLE `ha_user_permission`
   ADD UNIQUE KEY `HA_U_P_User_ID` (`HA_U_P_User_ID`);
 
 --
+-- Indexes for table `ha_user_status_activities`
+--
+ALTER TABLE `ha_user_status_activities`
+  ADD UNIQUE KEY `HA_U_S_A_ID` (`HA_U_S_A_ID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -261,6 +295,12 @@ ALTER TABLE `ha_users`
 --
 ALTER TABLE `ha_user_permission`
   MODIFY `HA_U_P_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `ha_user_status_activities`
+--
+ALTER TABLE `ha_user_status_activities`
+  MODIFY `HA_U_S_A_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

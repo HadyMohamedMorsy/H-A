@@ -11,7 +11,7 @@
 <html lang="en">
 
 <?php
-    $Page_Title = 'H_A';
+    $Page_Title = 'Clients Manager';
     include ('Website-Structure/Header-Elemnts.php') ;
 ?>
     <!-- Start The Links Files -->
