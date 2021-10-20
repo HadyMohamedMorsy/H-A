@@ -1,7 +1,7 @@
 <div class="Content-table">
 <table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;" >
         <thead >
-            <tr >
+            <tr class="header-table">
                 <th>ID</th>
                 <th>Img</th>
                 <th>Username</th>
@@ -10,13 +10,13 @@
                 <th>Status</th>
                 <th>Last Login</th>
                 <th>Purchase</th>
-                <th style="display: none;">HA_U_Date_Created</th>
-                <th style="display: none;">HA_U_Birthday</th>
-                <th style="display: none;">HA_U_Country</th>
-                <th style="display: none;">HA_U_ZIP_Code</th>
-                <th style="display: none;">HA_U_Address</th>
-                <th style="display: none;">HA_U_Mobile_Number</th>
-                <th style="display: none;">HA_U_Email</th>
+                <th style="display: none;">Date_Created</th>
+                <th style="display: none;">Birthday</th>
+                <th style="display: none;">Country</th>
+                <th style="display: none;">ZIP_Code</th>
+                <th style="display: none;">Address</th>
+                <th style="display: none;">Mobile_Number</th>
+                <th style="display: none;">Email</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -87,13 +87,6 @@
                 <th>Last Login</th>
                 <th>Gender</th>
                 <th>Purchase</th>
-                <th style="display: none;">HA_U_Date_Created</th>
-                <th style="display: none;">HA_U_Birthday</th>
-                <th style="display: none;">HA_U_Country</th>
-                <th style="display: none;">HA_U_ZIP_Code</th>
-                <th style="display: none;">HA_U_Address</th>
-                <th style="display: none;">HA_U_Mobile_Number</th>
-                <th style="display: none;">HA_U_Email</th>
                 <th>Action</th>
             </tr>
         </tfoot>
@@ -122,21 +115,7 @@
             <img  alt="IMG/emp_default.jpg" id="view-Details-show-IMG"/>
             </div>
             <div class="Deatils-View">
-                <ul>
-                    <li>ID                       : <span id="view-Details-show-ID"></span></li>
-                    <li>Username                 : <span id="view-Details-show-name"></span></li>
-                    <li>Full Name                : <span id="view-Details-show-FullName"></span></li>
-                    <li>Gender                   : <span id="view-Details-show-Gender"></span></li>
-                    <li>Status                   : <span id="view-Details-show-Status"></span></li>
-                    <li>Last Login               : <span id="view-Details-show-Login"></span></li>
-                    <li>Purchase                 : <span id="view-Details-show-Purchase"></span></li>
-                    <li>Created Login            : <span id="view-Details-show-Created"></span></li>
-                    <li>Birthday                 : <span id="view-Details-show-Birthday"></span></li>
-                    <li>Country                  : <span id="view-Details-show-Country"></span></li>
-                    <li>ZIP_Code                 : <span id="view-Details-show-ZIP"></span></li>
-                    <li>Address                  : <span id="view-Details-show-Address"></span></li>
-                    <li>Mobile                   : <span id="view-Details-show-Mobile"></span></li>
-                    <li>Email                    : <span id="view-Details-show-Email"></span></li>
+                <ul class="view-here">
                 </ul>
             </div>
         </div>

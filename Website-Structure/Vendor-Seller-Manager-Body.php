@@ -1,7 +1,7 @@
 <div class="Content-table">
     <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead style="text-align: center;">
-            <tr>
+            <tr class="header-table">
                 <th>ID</th>
                 <th>Img</th>
                 <th>Username</th>
@@ -93,14 +93,7 @@
                 <img  alt="IMG/emp_default.jpg" id="view-Details-show-IMG"/>
             </div>
             <div class="Deatils-View">
-                <ul>
-                    <li>ID           : <span id="view-Details-show-ID"></span></li>
-                    <li>Name         : <span id="view-Details-show-name"></span></li>
-                    <li>FullName     : <span id="view-Details-show-FullName"></span></li>
-                    <li>Status       : <span id="view-Details-show-Status"></span></li>
-                    <li>Date_Created : <span id="view-Details-show-Date-Created"></span></li>
-                    <li>Sales        : <span id="view-Details-show-Sales"></span></li>
-                    <li>Last-Login   : <span id="view-Details-show-Last-Login"></span></li>
+                <ul class="view-here">
                 </ul>
             </div>
         </div>

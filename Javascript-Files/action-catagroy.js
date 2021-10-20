@@ -8,30 +8,20 @@
 
         let  select = document.getElementById(id).parentElement.parentElement.children;
 
-        console.log(select);
+        let viewhere = document.querySelector('.view-here');
 
         if((module) == ".View-row"){
 
-            let Parent = document.getElementById('view-Details-show-Ctagroy');
-            let Child = document.getElementById('view-Details-show-Child');
-            let Products = document.getElementById('view-Details-show-Products');
-            let Sales = document.getElementById('view-Details-show-Sales');
-            let Returns  = document.getElementById('view-Details-show-Returns');
-            let User = document.getElementById('view-Details-show-Created');
-            let Date = document.getElementById("view-Details-show-Date");
-            let id = document.getElementById('view-Details-show-ID');
-
-
             viewque.classList.remove('remove-Delete');
 
-            Parent.innerHTML = select[1].innerText;
-            Child.innerHTML = select[2].innerText;
-            Products.innerHTML = select[3].innerText;
-            Sales.innerHTML = select[4].innerText;
-            Returns.innerHTML = select[5].innerText;
-            User.innerHTML = select[6].innerText;
-            Date.innerHTML = select[7].innerText;
-            id.innerHTML = select[0].innerText
+            let headerTable = document.querySelectorAll('.header-table th');
+
+            let newtable = headerTable.length-2;
+
+            for(let i =0; i<=newtable; i++){
+
+                viewhere.innerHTML += "<li>" +  headerTable[i].innerHTML+ ":" + "<span>"+ select[i].innerText +"</span>" + "</li>";
+            }
         }
 
         if((module) == ".question-delete-row"){

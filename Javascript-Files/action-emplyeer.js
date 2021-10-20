@@ -8,28 +8,27 @@
 
         let  select = document.getElementById(id).parentElement.parentElement.children;
 
+        let viewhere = document.querySelector('.view-here');
 
         if((module) == ".View-row"){
 
-            let img = document.getElementById('view-Details-show-IMG');
-            let UserName = document.getElementById('view-Details-show-name');
-            let Fullname = document.getElementById('view-Details-show-FullName');
-            let status = document.getElementById('view-Details-show-Status');
-            let Join = document.getElementById('view-Details-show-Date-Join');
-            let Email = document.getElementById('view-Details-show-Email');
-            let ID = document.getElementById('view-Details-show-ID');
-
-
             viewque.classList.remove('remove-Delete');
 
+            let headerTable = document.querySelectorAll('.header-table th');
 
+            let newtable = headerTable.length-2;
+
+            for(let i =0; i<=newtable; i++){
+
+                viewhere.innerHTML += "<li>" +  headerTable[i].innerHTML+ ":" + "<span>"+ select[i].innerText +"</span>" + "</li>";
+            }
+
+            let newviewhere = document.querySelectorAll(".view-here li");
+
+            newviewhere[1].remove();
+
+            let img = document.getElementById('view-Details-show-IMG');
             img.setAttribute('src', select[1].firstElementChild.getAttribute('src'));
-            ID.innerHTML = select[0].innerText;
-            UserName.innerHTML = select[2].innerText;
-            Fullname.innerHTML = select[3].innerText;
-            status.innerHTML = select[4].innerText;
-            Join.innerHTML = select[5].innerText;
-            Email.innerHTML = select[6].innerText;
         }
 
         if((module) == ".question-delete-row"){

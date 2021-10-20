@@ -1,9 +1,9 @@
 <div class="Content-table">
 <table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;" >
         <thead>
-            <tr>
+            <tr class="header-table">
                 <th scope="col">ID</th>
-                <th scope="col">IMG</th>
+                <th scope="col" id="image-table">IMG</th>
                 <th scope="col">Username</th>
                 <th scope="col">Full Name</th>
                 <th scope="col">Status</th>
@@ -87,13 +87,7 @@
                 <img  alt="IMG/emp_default.jpg" id="view-Details-show-IMG"/>
             </div>
             <div class="Deatils-View">
-                <ul>
-                    <li>ID           : <span id="view-Details-show-ID"></span></li>
-                    <li>UserName     : <span id="view-Details-show-name"></span></li>
-                    <li>FullName     : <span id="view-Details-show-FullName"></span></li>
-                    <li>Status       : <span id="view-Details-show-Status"></span></li>
-                    <li>Join Date    : <span id="view-Details-show-Date-Join"></span></li>
-                    <li>Email        : <span id="view-Details-show-Email"></span></li>
+                <ul class="view-here">
                 </ul>
             </div>
         </div>

@@ -36,7 +36,7 @@
 ?>
 <table id="example" class="table table-striped table-bordered" style="width:100%;text-align:center;">
         <thead>
-            <tr>
+            <tr class="header-table">
                 <th>ID</th>
                 <th>Category Parent</th>
                 <th>Category Child</th>
@@ -108,19 +108,8 @@
     <div class="View-row remove-Delete">
         <div class="View-row-Details">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
-            <div class="Image-View">
-                <img  alt="IMG/emp_default.jpg" id="view-Details-show-IMG"/>
-            </div>
             <div class="Deatils-View">
-                <ul>
-                    <li>ID                  : <span id="view-Details-show-ID"></span></li>
-                    <li>Parent Ctagroy Name : <span id="view-Details-show-Ctagroy"></span></li>
-                    <li>Child Ctagroy Name  : <span id="view-Details-show-Child"></span></li>
-                    <li>Cound Products      : <span id="view-Details-show-Products"></span></li>
-                    <li>Count Sales         : <span id="view-Details-show-Sales"></span></li>
-                    <li>Count_Returns       : <span id="view-Details-show-Returns"></span></li>
-                    <li>User Created        : <span id="view-Details-show-Created"></span></li>
-                    <li>Date Created        : <span id="view-Details-show-Date"></span></li>
+                <ul class="view-here">
                 </ul>
             </div>
         </div>
