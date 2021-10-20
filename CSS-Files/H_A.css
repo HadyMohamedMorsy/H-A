@@ -927,7 +927,15 @@ tfoot tr th:first-child {
   height: 500px; }
 
 .Secound-Section {
-  padding-top: 50px; }
+  padding-top: 10px;
+  padding-right: 2.5%;
+  padding-left: 2.5%; }
+  .Secound-Section .icones-filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px; }
+    .Secound-Section .icones-filter .icones-include-filter svg {
+      color: #282828; }
   .Secound-Section .row .Products img {
     width: 100%; }
 

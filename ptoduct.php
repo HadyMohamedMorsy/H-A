@@ -29,6 +29,7 @@
 
     <!-- Start The Links Files -->
     <?php include ("Links Javascript In Footer Area.php"); ?>
+    <script src="./Javascript-Files/product.js"></script>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <!-- End The Links Files -->
 </body>

@@ -10,7 +10,19 @@
 
 }
 .Secound-Section{
-    padding-top: 50px;
+    .icones-filter{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 15px;
+        .icones-include-filter{
+            svg{
+                color: #282828;
+            }
+        }
+    }
+    padding-top: 10px;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
     .row{
         .Products{
             img{
