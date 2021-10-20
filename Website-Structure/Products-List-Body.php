@@ -1,7 +1,7 @@
 <div class="Content-table">
     <table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;">
         <thead>
-            <tr>
+            <tr class="header-table">
                 <th>ID</th>
                 <th>IMG</th>
                 <th>Name</th>
@@ -106,20 +106,7 @@
                 <img alt="IMG/emp_default.jpg" id="view-Details-show-IMG" />
             </div>
             <div class="Deatils-View">
-                <ul>
-                    <li>ID  : <span id="view-Details-show-ID"></span></li>
-                    <li>ID Catagroy : <span id="view-Details-show-ID-catagory"></span></li>
-                    <li>Name Product: <span id="view-Details-show-Name"></span></li>
-                    <li>Name Catagroy : <span id="view-Details-show-Name-Catagroy"></span></li>
-                    <li>QTY : <span id="view-Details-show-Qty"></span></li>
-                    <li>Price : <span id="view-Details-show-Price"></span></li>
-                    <li>Status : <span id="view-Details-show-Status"></span></li>
-                    <li>Alert Qty : <span id="view-Details-show-Alert"></span></li>
-                    <li>Brand : <span id="view-Details-show-Brand"></span></li>
-                    <li>Avalible From Data : <span id="view-Details-show-Avalible"></span></li>
-                    <li>Created : <span id="view-Details-show-Created"></span></li>
-                    <li>UserName : <span id="view-Details-show-UserName"></span></li>
-                    <li>Description : <span id="view-Details-show-Description"></span></li>
+                <ul class="view-here">
                 </ul>
             </div>
         </div>
