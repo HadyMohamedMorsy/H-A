@@ -1063,6 +1063,17 @@ tfoot tr th:first-child {
       .click-filter .panel-open-filters .side-panel-content .side-panel-content-list .catagroy-filter li {
         margin-bottom: 5px;
         padding-left: 10px; }
+      .click-filter .panel-open-filters .side-panel-content .side-panel-content-list .catagroy-color li {
+        display: inline-flex;
+        margin: 0 10px 5px 0 !important;
+        padding: 0; }
+        .click-filter .panel-open-filters .side-panel-content .side-panel-content-list .catagroy-color li .et-swatch-circle {
+          height: 18px;
+          width: 18px;
+          margin-right: 0;
+          padding: 1px;
+          border: 1px solid transparent;
+          border-radius: 50%; }
       .click-filter .panel-open-filters .side-panel-content .widget {
         padding-bottom: 10px;
         margin-bottom: 10px;

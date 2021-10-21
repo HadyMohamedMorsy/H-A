@@ -52,12 +52,60 @@
                   <i class="fas fa-angle-up"></i>
                 </span>
               </h2>
+              <ul class="catagroy-filter">
+                <li>Men</li>
+                <li>Speaker</li>
+                <li>women</li>
+              </ul>
             </div>
-            <ul class="catagroy-filter">
-              <li>Men</li>
-              <li>Speaker</li>
-              <li>women</li>
-            </ul>
+            <div id="wcapf-active-filters-1" class="wcapf-widget-hidden woocommerce wcapf-ajax-term-filter widget cf widget_wcapf-active-filters">
+              <h2 class="widgettitle collapsible">
+              FILTER BY Color
+                <span>
+                  <i class="fas fa-angle-up"></i>
+                </span>
+              </h2>
+              <ul class="catagroy-color">
+                <li>
+                    <span class="et-swatch-circle" style="background-color : red"></span>
+
+                </li>
+                <li>
+                    <span class="et-swatch-circle"  style="background-color : blue"></span>
+
+                </li>
+                <li>
+                    <span class="et-swatch-circle"  style="background-color : red"></span>
+
+                </li>
+                <li>
+                    <span class="et-swatch-circle"  style="background-color : red"></span>
+
+                </li>
+                <li>
+                    <span class="et-swatch-circle"  style="background-color : red"></span>
+
+                </li>
+                <li>
+                    <span class="et-swatch-circle"  style="background-color : red"></span>
+                </li>
+                <li>
+                    <span class="et-swatch-circle"  style="background-color : red"></span>
+                </li>
+                <li>
+                    <span class="et-swatch-circle"  style="background-color : red"></span>
+                </li>
+                <li>
+                    <span class="et-swatch-circle"  style="background-color : red"></span>
+                </li>
+                <li>
+                    <span class="et-swatch-circle"  style="background-color : red"></span>
+                </li>
+                <li>
+                    <span class="et-swatch-circle"  style="background-color : red"></span>
+                </li>
+              </ul>
+            </div>
           </ul>
         </div>
     </div>
