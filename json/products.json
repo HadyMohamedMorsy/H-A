@@ -22,6 +22,90 @@
     },
     {
         "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
+        "name"  : "Name Of Product thired",
+        "price" : "0,20$",
+        "IMG"   : "./IMG/3.jpg",
+        "alt"   : "1.jpg"
+    },
+    {
+        "col"   : "col-3",
         "name"  : "Name Of Product forth",
         "price" : "0,20$",
         "IMG"   : "./IMG/4.jpg",
