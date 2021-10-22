@@ -92,9 +92,9 @@
             Gender.value = select[4].innerText;
             Status.value = select[5].innerText;
 
-            EditFirstname.value = select[14].innerText;
-            Editsecoundname.value = select[15].innerText;
-            Editlastname.value = select[16].innerText;
+            EditFirstname.value = select[15].innerText;
+            Editsecoundname.value = select[16].innerText;
+            Editlastname.value = select[17].innerText;
         }
 
 
