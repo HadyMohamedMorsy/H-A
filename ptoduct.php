@@ -2,7 +2,6 @@
     include('Datebase/Config.php');
     include('Datebase/DB_Login.php');
     include('Datebase/DB-Sign-Up.php');
-    // include('Datebase/Json-Files/JSON-Products.php');
 ?>
 
 <!DOCTYPE html>
