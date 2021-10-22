@@ -1,6 +1,6 @@
 <div class="Content-table">
-<table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;" >
-        <thead >
+    <table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;">
+        <thead>
             <tr class="header-table">
                 <th>ID</th>
                 <th>Img</th>
@@ -93,7 +93,7 @@
     </table>
     <div class="question-delete-row remove-Delete">
         <form class="Delete-question" action="" method="POST">
-            <input type="number" name="Deactivate_ID" hidden  id="hiddenDelete"/>
+            <input type="number" name="Deactivate_ID" hidden id="hiddenDelete" />
             <h4 id="question"></h4>
             <button class="btn btn-danger" name="BTN_Deactivate"> Yes </button>
             <button type="button" class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
@@ -101,10 +101,10 @@
     </div>
     <div class="Done-row remove-Delete">
         <form class="Done-question" action="" method="POST">
-            <input type="number" name="Active_ID" hidden  id="DoneDelete"/>
+            <input type="number" name="Active_ID" hidden id="DoneDelete" />
             <h4 id="Done"></h4>
             <button type="submit" name="BTN_Active" class="btn btn-success"> Yes </button>
-            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+            <button type="button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
         </form>
     </div>
 
@@ -112,7 +112,7 @@
         <div class="View-row-Details">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
             <div class="Image-View">
-            <img  alt="IMG/emp_default.jpg" id="view-Details-show-IMG"/>
+                <img alt="IMG/emp_default.jpg" id="view-Details-show-IMG" />
             </div>
             <div class="Deatils-View">
                 <ul class="view-here">
@@ -127,40 +127,40 @@
                 <i class="fas fa-times"></i>
             </div>
             <h2>Edit Profile</h2>
-            <input type="number" name="ID" class="form-control" id="Edit-ID" aria-describedby="emailHelp" placeholder="ID" hidden>
+            <input type="text" name="ID" class="form-control" id="Edit-ID" aria-describedby="emailHelp" placeholder="ID" hidden>
             <div class="form-group">
                 <input type="text" name="Input_Username" class="form-control" id="Edit-Username" aria-describedby="emailHelp" placeholder="Username">
             </div>
             <div class="form-group">
-                <input type="number" name="ZIP" class="form-control" id="Edit-ZIP" aria-describedby="emailHelp" placeholder="ZIP">
+                <input type="text" name="Input_ZIP" class="form-control" id="Edit-ZIP" aria-describedby="emailHelp" placeholder="ZIP">
             </div>
             <div class="form-group">
-                <input type="text" name="Address" class="form-control" id="Edit-Address" aria-describedby="emailHelp" placeholder="Address">
+                <textarea type="text" name="Input_Address" class="form-control" id="Edit-Address" aria-describedby="emailHelp" placeholder="Address"></textarea>
             </div>
             <div class="form-group">
-                <input type="number" name="Mobile-Number" class="form-control" id="Edit-Mobile-Number" aria-describedby="emailHelp" placeholder="Mobile_Number">
+                <input type="text" name="Input_Mobile_Number" class="form-control" id="Edit-Mobile-Number" aria-describedby="emailHelp" placeholder="Mobile_Number">
             </div>
             <div class="form-group">
-                <input type="email" name="Email" class="form-control" id="Edit-Email" aria-describedby="emailHelp" placeholder="Email">
+                <input type="email" name="Input_Email" class="form-control" id="Edit-Email" aria-describedby="emailHelp" placeholder="Email">
             </div>
             <div class="form-group">
                 <input type="text" name="Input_First_Name" class="form-control" id="Edit-FullName" aria-describedby="emailHelp" placeholder="FullName">
             </div>
             <div class="form-group">
-                <input type="date" name="Birthday" class="form-control" id="Edit-Birthday" aria-describedby="emailHelp" placeholder="Birthday">
+                <input type="date" name="Input_Birthday" class="form-control" id="Edit-Birthday" aria-describedby="emailHelp" placeholder="Birthday">
             </div>
             <div class="form-group">
-                <input type="text" name="country" class="form-control" id="Edit-Country" aria-describedby="emailHelp" placeholder="number">
+                <input type="text" name="Input_Country" class="form-control" id="Edit-Country" aria-describedby="emailHelp" placeholder="number">
             </div>
             <div class="form-group">
-                <select name="Input-Gender" class="form-control" id="Gender">
+                <select name="Input_Gender" class="form-control" id="Gender">
                         <option value="" disabled>Gender..</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                 </select>
             </div>
             <div class="form-group">
-                <select name="Input-Status" class="form-control" id="Status">
+                <select name="Input_Status" class="form-control" id="Status">
                         <option value="" disabled>Status..</option>
                         <option value="Active">Active</option>
                         <option value="Deactivated">Deactivate</option>
@@ -168,11 +168,11 @@
                         <option value="Suspended">Suspended</option>
                 </select>
             </div>
-            <div class="form-group">
-            <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
-                <input type="file" name="photo" id="upload-photo" class="label-input"/>
-            </div>
-            <button type="submit" name="BTN_Register" class="btn form-control Edit-Prfile-clients">Edit</button>
+            <!-- <div class="form-group">
+                <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
+                <input type="file" name="photo" id="upload-photo" class="label-input" />
+            </div> -->
+            <button type="submit" name="BTN_Edit_Profile" class="btn form-control Edit-Prfile-clients">Edit Profile</button>
         </form>
     </div>
 </div>

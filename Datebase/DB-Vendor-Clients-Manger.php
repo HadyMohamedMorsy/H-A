@@ -34,4 +34,29 @@
             header("Refresh: 0;");
         }
     }
+
+    if (isset($_POST['BTN_Edit_Profile'])) {
+        $ID = $_POST['ID'];
+        $Input_Username = $_POST['Input_Username'];
+        $Input_ZIP = $_POST['Input_ZIP'];
+        $Input_Address = $_POST['Input_Address'];
+        $Input_Mobile_Number = $_POST['Input_Mobile_Number'];
+        $Input_Email = $_POST['Input_Email'];
+        $Input_First_Name = $_POST['Input_First_Name'];
+        $Input_Birthday = $_POST['Input_Birthday'];
+        $Input_Country = $_POST['Input_Country'];
+        $Input_Gender = $_POST['Input_Gender'];
+        $Input_Status = $_POST['Input_Status'];
+        $SQL_Modify_User = 'UPDATE ha_users
+                            SET HA_U_Username = "'.$Input_Username.'",
+                                HA_U_ZIP_Code = "'.$Input_ZIP.'",
+                                HA_U_Address = "'.$Input_Address.'",
+                                HA_U_Email = "'.$Input_Email.'",
+                                HA_U_Mobile_Number = "'.$Input_Mobile_Number.'",
+                                HA_U_Birthday = "'.$Input_Birthday.'",
+                                HA_U_Country = "'.$Input_Country.'",
+                                HA_U_Gender = "'.$Input_Gender.'",
+                                HA_U_User_Status = "'.$Input_Status.'"
+                            WHERE HA_U_ID = "' . $ID . '"';
+    }
 ?>
