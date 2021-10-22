@@ -10,6 +10,9 @@
                 <th>Status</th>
                 <th>Last Login</th>
                 <th>Purchase</th>
+                <th style="display: none;">First_Name</th>
+                <th style="display: none;">Second_Name</th>
+                <th style="display: none;">Last_Name</th>
                 <th style="display: none;">Date_Created</th>
                 <th style="display: none;">Birthday</th>
                 <th style="display: none;">Country</th>
@@ -56,6 +59,9 @@
                                 <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
                                 <td class="">'.$Rows['HA_U_Last_Login'].'</td>
                                 <td class="HA-U-Purchase">'.number_format((int)$Rows['HA_U_Purchase'],2).'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Second_Name'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Last_Name'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Date_Created'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Birthday'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Country'].'</td>
@@ -87,6 +93,16 @@
                 <th>Last Login</th>
                 <th>Gender</th>
                 <th>Purchase</th>
+                <th style="display: none;">First_Name</th>
+                <th style="display: none;">Second_Name</th>
+                <th style="display: none;">Last_Name</th>
+                <th style="display: none;">Date_Created</th>
+                <th style="display: none;">Birthday</th>
+                <th style="display: none;">Country</th>
+                <th style="display: none;">ZIP_Code</th>
+                <th style="display: none;">Address</th>
+                <th style="display: none;">Mobile_Number</th>
+                <th style="display: none;">Email</th>
                 <th>Action</th>
             </tr>
         </tfoot>

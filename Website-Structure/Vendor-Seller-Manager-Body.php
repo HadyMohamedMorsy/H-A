@@ -11,6 +11,9 @@
                 <th>Sales</th>
                 <th>Last Login</th>
                 <th>Action</th>
+                <th style="display: none;">First_Name</th>
+                <th style="display: none;">Second_Name</th>
+                <th style="display: none;">Last_Name</th>
             </tr>
         </thead>
         <tbody id="tbody">
@@ -31,21 +34,23 @@
                         }
                         echo '
                             <tr class="t-body" style="text-align: center;">
-                            <td>'.$Rows['HA_U_ID'].'</td>
-                            <td class="IMG-DATABASE"><img src="'.$Profile_Img.'" alt="'.$Rows['HA_U_Username'].'"/></td>
-                            <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
-                            <td class="FullName-Edit-Module">'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
-                            <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
-                            <td class="Date-Created">'.$Rows['HA_U_Date_Created'].'</td>
-                            <td class="Sales">$ '.number_format($Rows['HA_U_Sales'] , 2).'</td>
-                            <td class="Last-Login">'.$Rows['HA_U_Last_Login'].'</td>
-                            <td class="last-Action" style="text-align: center;">
-                                <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
-                                <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
-                                <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
-                                <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>
-
-                            </td>
+                                <td>'.$Rows['HA_U_ID'].'</td>
+                                <td class="IMG-DATABASE"><img src="'.$Profile_Img.'" alt="'.$Rows['HA_U_Username'].'"/></td>
+                                <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
+                                <td class="FullName-Edit-Module">'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
+                                <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
+                                <td class="Date-Created">'.$Rows['HA_U_Date_Created'].'</td>
+                                <td class="Sales">$ '.number_format($Rows['HA_U_Sales'] , 2).'</td>
+                                <td class="Last-Login">'.$Rows['HA_U_Last_Login'].'</td>
+                                <td class="last-Action" style="text-align: center;">
+                                    <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
+                                    <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
+                                    <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
+                                    <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>
+                                </td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Second_Name'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Last_Name'].'</td>
                             </tr>
                         ';
                         $id += 1;
@@ -65,6 +70,9 @@
                 <th>Sales</th>
                 <th>Views</th>
                 <th>Action</th>
+                <th style="display: none;">First_Name</th>
+                <th style="display: none;">Second_Name</th>
+                <th style="display: none;">Last_Name</th>
             </tr>
         </tfoot>
     </table>

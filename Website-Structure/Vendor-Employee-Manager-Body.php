@@ -10,6 +10,9 @@
                 <th scope="col">Join Date</th>
                 <th scope="col">Email</th>
                 <th scope="col">Action</th>
+                <th style="display: none;">First_Name</th>
+                <th style="display: none;">Second_Name</th>
+                <th style="display: none;">Last_Name</th>
             </tr>
         </thead>
         <tbody>
@@ -38,11 +41,14 @@
                                 <td>'.$Rows['HA_U_Date_Created'].'</td>
                                 <td>'.$Rows['HA_U_Email'].'</td>
                                 <td class="last-Action">
-                                <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
-                                <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
-                                <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
-                                <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>
+                                    <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
+                                    <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
+                                    <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
+                                    <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>
                                 </td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Second_Name'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Last_Name'].'</td>
                             </tr>
                         ';
                         $id +=1;
@@ -60,6 +66,9 @@
                 <th scope="col">Join Date</th>
                 <th scope="col">Email</th>
                 <th scope="col">Action</th>
+                <th style="display: none;">First_Name</th>
+                <th style="display: none;">Second_Name</th>
+                <th style="display: none;">Last_Name</th>
             </tr>
         </tfoot>
     </table>
