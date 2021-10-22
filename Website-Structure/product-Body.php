@@ -37,7 +37,7 @@
 				<a href="#" class="et-infload-btn et-shop-infload-btn button outlined">Load More</a>
 		</div>
 </div>
-  <div class="click-filter">
+  <div class="click-filter" style="display : none">
     <div class="panel-open-filters">
         <header>
             <div class="side-panel-title">Filters</div>
