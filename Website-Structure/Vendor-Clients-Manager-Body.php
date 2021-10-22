@@ -1,5 +1,5 @@
 <div class="Content-table">
-    <table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;">
+    <table id="example" class="table table-striped table-bordered " style="width:100%;text-align: center;">
         <thead>
             <tr class="header-table">
                 <th>ID</th>
@@ -107,6 +107,12 @@
             </tr>
         </tfoot>
     </table>
+    <div style=" margin-bottom:30px;"></div>
+    <?php
+    foreach ($Alert_Message as  $value) {
+        echo $value;
+    }
+?>
     <div class="question-delete-row remove-Delete">
         <form class="Delete-question" action="" method="POST">
             <input type="number" name="Deactivate_ID" hidden id="hiddenDelete" />

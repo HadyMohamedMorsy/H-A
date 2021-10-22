@@ -58,5 +58,16 @@
                                 HA_U_Gender = "'.$Input_Gender.'",
                                 HA_U_User_Status = "'.$Input_Status.'"
                             WHERE HA_U_ID = "' . $ID . '"';
+        if (mysqli_query($Connection,$SQL_Modify_User)) {
+            $Alert_Message[] = '<div class="alert alert-success fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <h4><i class="fas fa-check-circle"></i> نجاح العمليه </h4>
+                                    <hr> تم تعديل البيانات بنجاح
+                                </div>
+                                <script>setTimeout(function() { window.location=window.location;},2000);</script>';
+            //header("Refresh: 0;");
+        }
     }
 ?>
