@@ -42,15 +42,15 @@
                                 <td class="Date-Created">'.$Rows['HA_U_Date_Created'].'</td>
                                 <td class="Sales">$ '.number_format($Rows['HA_U_Sales'] , 2).'</td>
                                 <td class="Last-Login">'.$Rows['HA_U_Last_Login'].'</td>
+                                <td style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
+                                <td style="display: none;">'.$Rows['HA_U_Second_Name'].'</td>
+                                <td style="display: none;">'.$Rows['HA_U_Last_Name'].'</td>
                                 <td class="last-Action" style="text-align: center;">
                                     <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
                                     <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
                                     <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
                                     <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>
                                 </td>
-                                <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
-                                <td class="" style="display: none;">'.$Rows['HA_U_Second_Name'].'</td>
-                                <td class="" style="display: none;">'.$Rows['HA_U_Last_Name'].'</td>
                             </tr>
                         ';
                         $id += 1;
@@ -118,7 +118,13 @@
                 <input type="text" name="Input_Username" class="form-control" id="Edit-Username" aria-describedby="emailHelp" placeholder="Username">
             </div>
             <div class="form-group">
-                <input type="text" name="Input-FullName" class="form-control" id="Edit-FullName" aria-describedby="emailHelp" placeholder="FullName">
+                <input type="text" name="Input-First" class="form-control" id="Edit-First-Name" aria-describedby="emailHelp" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Input-Secound" class="form-control" id="Edit-Secound-Name" aria-describedby="emailHelp" placeholder="Secound Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Input-Last" class="form-control" id="Edit-Last-Name" aria-describedby="emailHelp" placeholder="Last Name">
             </div>
             <div class="form-group">
               <select name="Input-Status" class="form-control" id="Status">

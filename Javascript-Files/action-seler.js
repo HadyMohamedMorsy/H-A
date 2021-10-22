@@ -60,12 +60,16 @@
 
             let EditID = document.getElementById('Edit-ID');
             let EditUsername = document.getElementById('Edit-Username');
-            let EditFullName = document.getElementById('Edit-FullName');
+            let EditFirstname = document.getElementById('Edit-First-Name');
+            let EditSecoundname = document.getElementById('Edit-Secound-Name');
+            let EditLasrName = document.getElementById('Edit-Last-Name');
             let Status = document.getElementById('Status');
             
             EditID.value = select[0].innerText;
             EditUsername.value = select[2].innerText;
-            EditFullName.value = select[3].innerText;
+            EditFirstname.value = select[8].innerText;
+            EditSecoundname.value = select[9].innerText;
+            EditLasrName.value = select[10].innerText;
             Status.value = select[4].innerText;
         }
 

@@ -64,7 +64,9 @@
             let EditAddress = document.getElementById('Edit-Address');
             let EditMobileNumber = document.getElementById('Edit-Mobile-Number');
             let EditEmail = document.getElementById('Edit-Email');
-            let EditFullName = document.getElementById('Edit-FullName');
+            let EditFirstname = document.getElementById('Edit-First-name');
+            let Editsecoundname = document.getElementById('Edit-Secound-name');
+            let Editlastname = document.getElementById('Edit-Last-name');
             let EditBirthday = document.getElementById('Edit-Birthday');
             let Country = document.getElementById('Edit-Country');
             let Gender = document.getElementById('Gender');
@@ -76,7 +78,7 @@
             EditAddress.value = select[12].innerText;
             EditMobileNumber.value = select[13].innerText;
             EditEmail.value = select[14].innerText;
-            EditFullName.value = select[3].innerText;
+
             // date
             let date = select[9].innerText;
             let datebirthday = new Date(date);
@@ -89,6 +91,10 @@
             Country.value = select[10].innerText;
             Gender.value = select[4].innerText;
             Status.value = select[5].innerText;
+
+            EditFirstname.value = select[14].innerText;
+            Editsecoundname.value = select[15].innerText;
+            Editlastname.value = select[16].innerText;
         }
 
 

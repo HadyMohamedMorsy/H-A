@@ -59,9 +59,6 @@
                                 <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
                                 <td class="">'.$Rows['HA_U_Last_Login'].'</td>
                                 <td class="HA-U-Purchase">'.number_format((int)$Rows['HA_U_Purchase'],2).'</td>
-                                <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
-                                <td class="" style="display: none;">'.$Rows['HA_U_Second_Name'].'</td>
-                                <td class="" style="display: none;">'.$Rows['HA_U_Last_Name'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Date_Created'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Birthday'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Country'].'</td>
@@ -69,6 +66,9 @@
                                 <td class="" style="display: none;">'.$Rows['HA_U_Address'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Mobile_Number'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Email'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Second_Name'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Last_Name'].'</td>
                                 <td class="last-Action" >
                                     <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
                                     <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
@@ -160,7 +160,13 @@
                 <input type="email" name="Input_Email" class="form-control" id="Edit-Email" aria-describedby="emailHelp" placeholder="Email">
             </div>
             <div class="form-group">
-                <input type="text" name="Input_First_Name" class="form-control" id="Edit-FullName" aria-describedby="emailHelp" placeholder="FullName">
+                <input type="text" name="Input_First_Name" class="form-control" id="Edit-First-name" aria-describedby="emailHelp" placeholder="First Nmae">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Input_First_Name" class="form-control" id="Edit-Secound-name" aria-describedby="emailHelp" placeholder="Secound Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Input_First_Name" class="form-control" id="Edit-Last-name" aria-describedby="emailHelp" placeholder="Last Name">
             </div>
             <div class="form-group">
                 <input type="date" name="Input_Birthday" class="form-control" id="Edit-Birthday" aria-describedby="emailHelp" placeholder="Birthday">
