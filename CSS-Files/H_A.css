@@ -37,6 +37,11 @@ ul {
 li {
   list-style: none; }
 
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
 .background {
   background-color: #d5d4d3;
   position: fixed;
@@ -1098,5 +1103,21 @@ tfoot tr th:first-child {
             right: 0;
             top: 50%;
             margin-top: -15px; }
+      .click-filter .panel-open-filters .side-panel-content .sizes {
+        margin-left: 0;
+        padding: 0; }
+        .click-filter .panel-open-filters .side-panel-content .sizes li {
+          display: inline-flex;
+          margin: 0 10px 5px 0;
+          padding: 0; }
+          .click-filter .panel-open-filters .side-panel-content .sizes li a {
+            border: 1px solid #ddd;
+            padding: 0 10px 0 10px;
+            display: inline-flex;
+            align-items: center;
+            line-height: 30px;
+            height: 30px;
+            color: #000;
+            position: relative; }
 
 /*# sourceMappingURL=H_A.css.map */

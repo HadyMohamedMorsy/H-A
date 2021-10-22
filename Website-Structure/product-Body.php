@@ -60,7 +60,7 @@
             </div>
             <div id="wcapf-active-filters-1" class="wcapf-widget-hidden woocommerce wcapf-ajax-term-filter widget cf widget_wcapf-active-filters">
               <h2 class="widgettitle collapsible">
-              FILTER BY Color
+              FILTER BY COLOR
                 <span>
                   <i class="fas fa-angle-up"></i>
                 </span>
@@ -105,6 +105,59 @@
                     <span class="et-swatch-circle"  style="background-color : red"></span>
                 </li>
               </ul>
+            </div>
+            <div id="wcapf-active-filters-1" class="wcapf-widget-hidden woocommerce wcapf-ajax-term-filter widget cf widget_wcapf-active-filters">
+              <h2 class="widgettitle collapsible">
+              FILTER BY SIZES
+                <span>
+                  <i class="fas fa-angle-up"></i>
+                </span>
+              </h2>
+              <ul class="sizes">
+                <li><a href="#"> XS </a></li>
+                <li><a href="#"> S </a> </li>
+                <li><a href="#"> M </a></li>
+                <li><a href="#"> L </a></li>
+              </ul>
+            </div>
+            <div id="wcapf-active-filters-1" class="wcapf-widget-hidden woocommerce wcapf-ajax-term-filter widget cf widget_wcapf-active-filters">
+              <h2 class="widgettitle collapsible">
+              FILTER BY PRICE
+                <span>
+                  <i class="fas fa-angle-up"></i>
+                </span>
+              </h2>
+              <div class="filter-size">
+                <form class="input-size">
+                  <input class="input-size-price" type="number" />
+                  <input class="input-size-price" type="number" />
+                   <button type="submit" class="set"></button>
+                </form>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                  <label class="form-check-label" for="exampleRadios1">
+                    0 - 1000$
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    1000$ - 2000$
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    2000$ - 3000$
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    3000$ - 4000$
+                  </label>
+                </div>
+              </div>
             </div>
           </ul>
         </div>
