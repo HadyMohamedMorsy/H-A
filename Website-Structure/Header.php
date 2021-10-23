@@ -215,3 +215,77 @@
     </div>
 </div>
 <!-- nav -->
+<!-- cart -->
+<div class="cart">
+    <div class="cart-list">
+    <header>
+				<div class="container">
+					<div class="panel-header-inner">
+					<div class="side-panel-title">Cart <span class="item-counter minicart-counter">1</span></div>
+                    <div class="cancel se-cancel">
+                        <i class="fas fa-times"></i>
+                    </div>
+					</div>
+				</div>
+	</header>
+    <div class="all-content-cart">
+        <div class="list">
+        <div class="product-list-cart">
+            <div class="img-product-cart">
+                <img src="./IMG/1.jpg" alt="1.jpg"/>
+            </div>
+            <div class="content-product">
+                <h6> Name of product </h6>
+                <span class="min"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span> <span> 1 </span> <span class="plus"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span>
+                <div class="cancel-cart">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="price-cart">
+                    <span>10$</span>
+                </div>
+            </div>
+        </div>
+        <div class="product-list-cart">
+            <div class="img-product-cart">
+                <img src="./IMG/1.jpg" alt="1.jpg"/>
+            </div>
+            <div class="content-product">
+                <h6> Name of product </h6>
+                <span class="min"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span> <span> 1 </span> <span class="plus"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span>
+                <div class="cancel-cart">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="price-cart">
+                    <span>10$</span>
+                </div>
+            </div>
+        </div>
+        <div class="product-list-cart">
+            <div class="img-product-cart">
+                <img src="./IMG/1.jpg" alt="1.jpg"/>
+            </div>
+            <div class="content-product">
+                <h6> Name of product </h6>
+                <span class="min"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span> <span> 1 </span> <span class="plus"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span>
+                <div class="cancel-cart">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="price-cart">
+                    <span>10$</span>
+                </div>
+            </div>
+       </div>
+        </div>
+     <div class="subtotal">
+        <span class="sub"> Subtotal </span>
+        <span> 20$</span>
+    </div>
+
+    <div class="finish-list-cart">
+        <button> Finish </button>
+        <button> Finish </button>
+    </div>
+    </div>
+    </div>
+</div>
+<!-- cart -->
