@@ -143,7 +143,7 @@
         ?>
         <a href="#" class="search-nav"><i class="fas fa-search"></i></a>
         <a href="#"><i class="far fa-heart"></i></a>
-        <a href="#"><i class="fas fa-cart-plus"></i></a>
+        <a href="#" class="open-plus-cart"><i class="fas fa-cart-plus"></i></a>
     </div>
     <div class="icones-items items-mobile">
         <a href="#"><i class="fas fa-cart-plus"></i></a>
@@ -237,7 +237,7 @@
             <div class="content-product">
                 <h6> Name of product </h6>
                 <span class="min"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span> <span> 1 </span> <span class="plus"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span>
-                <div class="cancel-cart">
+                <div class="cancel-cart cart-list-cancel">
                     <i class="fas fa-times"></i>
                 </div>
                 <div class="price-cart">
@@ -282,8 +282,8 @@
     </div>
 
     <div class="finish-list-cart">
-        <button> Finish </button>
-        <button> Finish </button>
+        <a href="#" class="button wc-forward"> View cart</a>
+        <a href="#" class="button checkout wc-forward"> Checkout</a>
     </div>
     </div>
     </div>
