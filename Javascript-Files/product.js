@@ -18,3 +18,21 @@ fetch('./json/products.json')
     });
 
   });
+  let clickfilter = document.querySelector('.click-filter');
+
+  let close = document.querySelector('.et-close');
+  close.addEventListener("click",function(){
+    clickfilter.style.top = "100%";
+    clickfilter.style.left = "100%";
+    clickfilter.style.right = "100%";
+    clickfilter.style.bottom = "100%";
+  });
+  let filterdone = document.querySelector('.filter-done');
+
+  filterdone.addEventListener("click",function(){
+    clickfilter.style.top = "0%";
+    clickfilter.style.left = "0%";
+    clickfilter.style.right = "0%";
+    clickfilter.style.bottom = "0%";
+
+  });

@@ -4,7 +4,7 @@
 <!-- header -->
 <div class="container-fluid Secound-Section">
         <div class="icones-filter">
-          <div class="icones-include-filter"> <div class="filter"> <span class="filter-trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sliders"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg> </span> <span> Filters</span></div></div>
+          <div class="icones-include-filter filter-done"> <div class="filter"> <span class="filter-trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sliders"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg> </span> <span> Filters</span></div></div>
           <div class="icones-include-filter">
             <form class="woocommerce-ordering" method="get">
               <select name="orderby" class="orderby" aria-label="Shop order">
@@ -37,7 +37,7 @@
 				<a href="#" class="et-infload-btn et-shop-infload-btn button outlined">Load More</a>
 		</div>
 </div>
-  <div class="click-filter" style="display : none">
+  <div class="click-filter">
     <div class="panel-open-filters">
         <header>
             <div class="side-panel-title">Filters</div>
@@ -45,7 +45,7 @@
         </header>
         <div class="side-panel-content">
           <ul class="side-panel-content-list">
-            <div id="wcapf-active-filters-1" class="wcapf-widget-hidden woocommerce wcapf-ajax-term-filter widget cf widget_wcapf-active-filters">
+            <div id="wcapf-active-filters-1" class="widget">
               <h2 class="widgettitle collapsible">
               FILTER BY CATEGORY
                 <span>
@@ -58,7 +58,7 @@
                 <li>women</li>
               </ul>
             </div>
-            <div id="wcapf-active-filters-1" class="wcapf-widget-hidden woocommerce wcapf-ajax-term-filter widget cf widget_wcapf-active-filters">
+            <div id="wcapf-active-filters-1" class="widget">
               <h2 class="widgettitle collapsible">
               FILTER BY COLOR
                 <span>
@@ -106,7 +106,7 @@
                 </li>
               </ul>
             </div>
-            <div id="wcapf-active-filters-1" class="wcapf-widget-hidden woocommerce wcapf-ajax-term-filter widget cf widget_wcapf-active-filters">
+            <div id="wcapf-active-filters-1" class="widget">
               <h2 class="widgettitle collapsible">
               FILTER BY SIZES
                 <span>
@@ -120,7 +120,7 @@
                 <li><a href="#"> L </a></li>
               </ul>
             </div>
-            <div id="wcapf-active-filters-1" class="wcapf-widget-hidden woocommerce wcapf-ajax-term-filter widget cf widget_wcapf-active-filters">
+            <div id="wcapf-active-filters-1" class="widget">
               <h2 class="widgettitle collapsible">
               FILTER BY PRICE
                 <span>
@@ -130,8 +130,9 @@
               <div class="filter-size">
                 <form class="input-size">
                   <input class="input-size-price" type="number" />
+                  <span> - </span>
                   <input class="input-size-price" type="number" />
-                   <button type="submit" class="set"></button>
+                   <button type="submit" class="set">Set Price</button>
                 </form>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
