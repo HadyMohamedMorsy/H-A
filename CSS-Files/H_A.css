@@ -1100,7 +1100,8 @@ tfoot tr th:first-child {
     .Secound-Section .icones-filter .shop-views button.active {
       opacity: 1; }
   .Secound-Section .row .Products img {
-    width: 100%; }
+    width: 100%;
+    height: 290px; }
   .Secound-Section .button-load {
     text-align: center;
     display: block;
