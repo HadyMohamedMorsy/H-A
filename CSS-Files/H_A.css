@@ -1309,8 +1309,8 @@ tfoot tr th:first-child {
     .slider-product .slider-img .img-slider {
       margin-bottom: 10px; }
       .slider-product .slider-img .img-slider img {
-        width: 60px;
-        height: 60px;
+        width: 175px;
+        height: 125px;
         cursor: pointer; }
 
 .content-description {
