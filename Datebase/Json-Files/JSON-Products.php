@@ -55,5 +55,5 @@
         
         $i++;
     }
-    echo json_encode($Products_Details_JSON);
+    echo json_encode($Products_Details_JSON,JSON_PRETTY_PRINT);
 ?>
