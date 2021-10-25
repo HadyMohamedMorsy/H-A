@@ -47,10 +47,7 @@
         $Products_Details_JSON[$i]['Product_Imges'] =  array_slice($IMG_Product,2) ;
         $i++;
     }
-    echo '<pre>';
-    print_r(json_encode($Products_Details_JSON));
-    echo '</pre>';
-    // echo '<pre>';
-    // print_r($Products_Details_JSON);
-    // echo '</pre>';
+
+    echo json_encode($Products_Details_JSON);
+
 ?>
