@@ -1,4 +1,6 @@
 <?php 
+    header('Content-Type: json');
+
     $Current_Date = date('Y/m/d');
     $Current_Time = date('h:i:s A');
     $Current_Date_And_Time = $Current_Date . ' ' . $Current_Time;
