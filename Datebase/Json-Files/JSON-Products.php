@@ -32,19 +32,27 @@
         $Result_Owner_User = mysqli_query($Connection,$SQL_Owner_User);
         $Row_Owner_User  = mysqli_fetch_array($Result_Owner_User, MYSQLI_ASSOC);
 
-        // Get Img Path
-        $Path_Cover = 'IMG/Imges-Products/P_ID-' . $Rows['Product_ID'] . '/' . 'P_ID-' . $Rows['Product_ID'] . '-Cover/';
-        $Path_Imgs = 'IMG/Imges-Products/P_ID-' . $Rows['Product_ID'] . '/' . 'P_ID-' . $Rows['Product_ID'] . '-IMGS/';
-        $Cover_Product = scandir($Path_Cover);
-        $IMG_Product = scandir($Path_Imgs);
-
         // Insert Data Key And Value In Json Array
         $Products_Details_JSON[$i]['Product_Category_Name'] = $Row_Category_Name['HA_C_L_Category_Name'] ;
         $Products_Details_JSON[$i]['Product_Username_Created'] = $Row_Owner_User['HA_U_Username'] ;
-        $Products_Details_JSON[$i]['Product_Path_Cover_Img'] =  $Path_Cover ;
-        $Products_Details_JSON[$i]['Product_Cover'] =  $Cover_Product[2] ;
-        $Products_Details_JSON[$i]['Product_Path_Imges'] =  $Path_Imgs ;
-        $Products_Details_JSON[$i]['Product_Imges'] =  array_slice($IMG_Product,2) ;
+
+        // Get Img Path
+        $Path_Cover = 'IMG/Imges-Products/P_ID-' . $Rows['Product_ID'] . '/' . 'P_ID-' . $Rows['Product_ID'] . '-Cover/';
+        $Path_Imgs = 'IMG/Imges-Products/P_ID-' . $Rows['Product_ID'] . '/' . 'P_ID-' . $Rows['Product_ID'] . '-IMGS/';
+        // Cover Chechk is folder exiest
+        if(is_dir($Path_Cover)){
+            $Cover_Product = scandir($Path_Cover);
+            $Products_Details_JSON[$i]['Product_Path_Cover_Img'] =  $Path_Cover ;
+            $Products_Details_JSON[$i]['Product_Cover'] =  $Cover_Product[2] ;
+        }
+        // IMGS Check is folder exiest
+        if(is_dir($Path_Imgs)){
+            $IMG_Product = scandir($Path_Imgs);
+            $Products_Details_JSON[$i]['Product_Path_Imges'] =  $Path_Imgs ;
+            $Products_Details_JSON[$i]['Product_Imges'] =  array_slice($IMG_Product,2) ;
+        }
+
+        
         $i++;
     }
     echo json_encode($Products_Details_JSON);
