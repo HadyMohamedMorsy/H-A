@@ -1,7 +1,7 @@
 let SecoundSection = document.querySelector('.Secound-Section .row');
 let setallvaluehere = "";
 
-fetch('.API-Product.php')
+fetch('API-Product.php')
   .then((response) => {
     return response.json();
   })
