@@ -7,7 +7,7 @@
         </div>
         <h2>Login</h2>
         <div class="form-group">
-            <input type="text" name="Input_Username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+            <input type="text" name="Input_Username" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Username">
         </div>
         <div class="form-group">
             <input type="password" name="Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
@@ -40,7 +40,7 @@
             <input type="text" name="Input_Username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
         </div>
         <div class="form-group">
-            <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+            <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Name">
         </div>
         <div class="form-group">
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
@@ -61,13 +61,13 @@
                 </select>
         </div>
         <div class="form-group">
-            <input type="password" name="Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" name="Input_Password" class="form-control" id="exampleInputPassword2" placeholder="Password">
         </div>
         <div class="form-group">
-            <input type="text" name="Input_Country" class="form-control" id="exampleInputPassword1" placeholder="RE Password">
+            <input type="text" name="Input_Country" class="form-control" id="exampleInputPassword3" placeholder="RE Password">
         </div>
         <div class="form-group">
-                <input type="Text" name="Input_Password" class="form-control" id="exampleInputPassword1" placeholder="Age">
+                <input type="Text" name="Input_Password" class="form-control" id="exampleInputPassword4" placeholder="Age">
         </div>
         <div class="form-group">
                 <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
@@ -79,7 +79,7 @@
             <label class="form-check-label" for="inlineRadio1">seller</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Client">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="Client">
             <label class="form-check-label" for="inlineRadio2">Client</label>
         </div>
         <button type="submit" name="BTN_Register" class="btn form-control Sign-user">Register</button>
