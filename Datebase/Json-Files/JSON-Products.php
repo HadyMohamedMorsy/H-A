@@ -47,7 +47,5 @@
         $Products_Details_JSON[$i]['Product_Imges'] =  array_slice($IMG_Product,2) ;
         $i++;
     }
-
     echo json_encode($Products_Details_JSON);
-
 ?>
