@@ -69,9 +69,73 @@
 </div>
 <div class="testemonial">
     <h2>Testemonial</h2>
-    <div class="content-test container">
-        <div class="person-tes">
+    <div class="content-test">
+        <div class="all-content">
+            <div class="flex">
+                <div class="person-tes active">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
+                    <div class="per-image-tes">
+                        <img src="./IMG/9.jpg" alt="" />
+                        <p>Name of person</p>
+                    </div>
+                </div>
+                <div class="person-tes">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
+                    <div class="per-image-tes">
+                        <img src="./IMG/10.jpg" alt="" />
+                        <p>Name of person</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="curosel-circle">
+            <span class="circle"></span>
+            <span class="circle"></span>
+    </div>
+</div>
+
+<div class="Trending-random">
+    <div class="container">
+        <div class="content-trending">
+            <h2>Trending Outfits</h2>
+            <p>Intelligentsia migas next level 90s woke ramps. Glossier vape celiac tumeric keffiyeh.</p>
+        </div>
+        <div class="row">
+            <div class="col-3 random">
+                <img src="./IMG/8.jpg" alt="8.jpg"/>
+                <p class="name-product"> Name product </p>
+                <p class="price"> 20$ </p>
+            </div>
+
+            <div class="col-3 random">
+                <img src="./IMG/10.jpg" alt="8.jpg"/>
+                <p class="name-product"> Name product </p>
+                <p class="price"> 20$ </p>
+            </div>
+            <div class="col-3 random">
+                <img src="./IMG/11.jpg" alt="8.jpg"/>
+                <p class="name-product"> Name product </p>
+                <p class="price"> 20$ </p>
+            </div>
+            <div class="col-3 random">
+                <img src="./IMG/12.jpg" alt="8.jpg"/>
+                <p class="name-product"> Name product </p>
+                <p class="price"> 20$ </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sec_row container-fluid"></div>
+
+<div class="visit">
+    <div class="container">
+        <div class="content-visit">
+            <h2> Visit Us</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
+        </div>
+        <div class="visit-image">
+            <img src="./IMG/vist.jpg" alt=""/>
         </div>
     </div>
 </div>
