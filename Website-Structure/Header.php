@@ -114,7 +114,7 @@
                 <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="About-Us.php">About Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="ptoduct.php">Shop</a>

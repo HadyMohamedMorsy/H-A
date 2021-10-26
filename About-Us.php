@@ -1,13 +1,19 @@
+<?php
+    include('Datebase/Config.php');
+    include('Datebase/DB_Login.php');
+    include('Datebase/DB-Sign-Up.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <?php
-    $Page_Title = 'About Us';
+    $Page_Title = 'H_A';
     include ('Website-Structure/Header-Elemnts.php') ;
 ?>
     <!-- Start The Links Files -->
     <?php include ("Links CSS In Head Area.php"); ?>
-    <link rel="stylesheet" href="CSS-Files/Style-About-Us.css">
     <!-- End The Links Files -->
 <body>
 
@@ -23,7 +29,7 @@
 
     <!-- Start The Links Files -->
     <?php include ("Links Javascript In Footer Area.php"); ?>
-    <script type="text/javascript" src="Javascript-Files/Main-About-Us.js"></script>
+    <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <!-- End The Links Files -->
 </body>
 
