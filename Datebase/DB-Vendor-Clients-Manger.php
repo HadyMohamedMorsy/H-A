@@ -10,7 +10,6 @@
         $SQL_GET_USER_STATUS = 'SELECT HA_U_User_Status FROM ha_users WHERE HA_U_ID = "'.$_POST['Active_ID'].'"';
         $Result_GET_USER_STATUS = mysqli_query($Connection,$SQL_GET_USER_STATUS);
         $Row_GET_USER_STATUS  = mysqli_fetch_array($Result_GET_USER_STATUS, MYSQLI_ASSOC);  
-
         $SQL_Active_User = 'UPDATE ha_users
                             SET HA_U_User_Status = "Active"
                             WHERE HA_U_ID = "'. $_POST['Active_ID'].'"';
@@ -24,7 +23,6 @@
         $SQL_GET_USER_STATUS = 'SELECT HA_U_User_Status FROM ha_users WHERE HA_U_ID = "'.$_POST['Deactivate_ID'].'"';
         $Result_GET_USER_STATUS = mysqli_query($Connection,$SQL_GET_USER_STATUS);
         $Row_GET_USER_STATUS  = mysqli_fetch_array($Result_GET_USER_STATUS, MYSQLI_ASSOC);  
-
         $SQL_Active_User = 'UPDATE ha_users
                             SET HA_U_User_Status = "Deactivated"
                             WHERE HA_U_ID = "'. $_POST['Deactivate_ID'].'"';
@@ -34,7 +32,6 @@
             header("Refresh: 0;");
         }
     }
-
     if (isset($_POST['BTN_Edit_Profile'])) {
         $ID = $_POST['ID'];
         $Input_Username = $_POST['Input_Username'];
