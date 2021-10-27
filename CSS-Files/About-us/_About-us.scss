@@ -36,3 +36,123 @@
     }
 
 }
+.about-video{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .video{
+        width: 100%;
+        position: relative;
+        img{
+            width: 100%;
+        }
+        svg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 60px;
+            height: 60px;
+            color: $white;
+            cursor: pointer;
+            stroke: #fff;
+            fill: #fff;
+        }
+        
+    }
+    .content-video{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h5{
+            color: #b9a16b;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            margin-bottom: 15px;
+            font-size: 14.4px;
+            margin-bottom: 28px;
+        }
+        h2{
+            margin-bottom: 28px;
+        }
+        .number-off-viewers{
+            display: flex;
+            .number{
+                .count{
+                    span{
+                        font-size: 34px;
+                    }
+
+                }
+            }
+            .content-number{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+.our-story{
+    padding-top: 80px;
+    padding-bottom: 45px;
+    background-color: #f2f2f2;
+    h5{
+        color: #b9a16b;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        margin-bottom: 15px;
+        font-size: 14.4px;
+        margin-bottom: 28px;
+    }
+    h2{
+        margin-bottom: 28px;
+    }
+}
+.core-value{
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 45px;
+    background-color: #f2f2f2;
+    h5{
+        color: #b9a16b;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        margin-bottom: 15px;
+        font-size: 14.4px;
+        margin-bottom: 28px;
+    }
+    h2{
+        margin-bottom: 28px;
+    }
+    .content-all{
+        margin-top: 60px;
+        .row{
+            span{
+                font-size: 30px;
+            }
+        }
+    }
+
+}
+.fonderes{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .content-founder{
+        h5{
+            color: #b9a16b;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            margin-bottom: 15px;
+            font-size: 14.4px;
+            margin-bottom: 28px;
+        }
+        h2{
+            margin-bottom: 28px; 
+        }
+    }
+    .content-person{
+        img{
+            width: 100%;
+        }
+    }
+}

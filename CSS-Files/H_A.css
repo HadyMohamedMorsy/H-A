@@ -1574,4 +1574,93 @@ tfoot tr th:first-child {
         width: 10px;
         height: 100%; }
 
+.about-video {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .about-video .video {
+    width: 100%;
+    position: relative; }
+    .about-video .video img {
+      width: 100%; }
+    .about-video .video svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      color: #fff;
+      cursor: pointer;
+      stroke: #fff;
+      fill: #fff; }
+  .about-video .content-video {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    .about-video .content-video h5 {
+      color: #b9a16b;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      margin-bottom: 15px;
+      font-size: 14.4px;
+      margin-bottom: 28px; }
+    .about-video .content-video h2 {
+      margin-bottom: 28px; }
+    .about-video .content-video .number-off-viewers {
+      display: flex; }
+      .about-video .content-video .number-off-viewers .number .count span {
+        font-size: 34px; }
+      .about-video .content-video .number-off-viewers .content-number {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+
+.our-story {
+  padding-top: 80px;
+  padding-bottom: 45px;
+  background-color: #f2f2f2; }
+  .our-story h5 {
+    color: #b9a16b;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 15px;
+    font-size: 14.4px;
+    margin-bottom: 28px; }
+  .our-story h2 {
+    margin-bottom: 28px; }
+
+.core-value {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 45px;
+  background-color: #f2f2f2; }
+  .core-value h5 {
+    color: #b9a16b;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 15px;
+    font-size: 14.4px;
+    margin-bottom: 28px; }
+  .core-value h2 {
+    margin-bottom: 28px; }
+  .core-value .content-all {
+    margin-top: 60px; }
+    .core-value .content-all .row span {
+      font-size: 30px; }
+
+.fonderes {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .fonderes .content-founder h5 {
+    color: #b9a16b;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 15px;
+    font-size: 14.4px;
+    margin-bottom: 28px; }
+  .fonderes .content-founder h2 {
+    margin-bottom: 28px; }
+  .fonderes .content-person img {
+    width: 100%; }
+
 /*# sourceMappingURL=H_A.css.map */
