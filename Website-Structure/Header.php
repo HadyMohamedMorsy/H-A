@@ -120,7 +120,7 @@
                 <a class="nav-link" href="ptoduct.php">Shop</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="Contact-us.php">Contact Us</a>
             </li>
         </ul>
     </div>
