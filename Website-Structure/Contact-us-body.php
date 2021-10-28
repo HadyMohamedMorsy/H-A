@@ -16,5 +16,12 @@
                 <a href="#">hello@example.com</a></p>
             </div>
         </div>
+        <form class="form">
+            <p>Fields marked with an * are required</p>
+            <div><input type="text" placeholder="Name"/></div>
+            <div><input type="email" placeholder="Email"/></div>
+            <div> <textarea id="nf-field-3"class="text"placeholder="Message"></textarea> </div>
+            <button type="submit" class="sub-mess"> Submit </button>
+        </form>
     </div>
 </div>

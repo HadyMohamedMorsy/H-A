@@ -1685,5 +1685,31 @@ tfoot tr th:first-child {
       .contact-us .form-contact-us .Adress .Touch {
         flex-basis: 50%;
         padding: 0px 15px; }
+  .contact-us .form div {
+    margin-top: 20px;
+    margin-bottom: 24px; }
+    .contact-us .form div input {
+      width: 100%;
+      font-family: inherit;
+      font-size: 1em;
+      line-height: 1.6;
+      outline: 0;
+      padding: 0.75rem; }
+    .contact-us .form div textarea {
+      width: 100%;
+      font-family: inherit;
+      font-size: 1em;
+      line-height: 1.6;
+      outline: 0;
+      padding: 0.75rem;
+      resize: none;
+      height: 200px; }
+  .contact-us .form .sub-mess {
+    cursor: pointer;
+    opacity: .72;
+    background: #000;
+    padding: 0.75rem 1.75rem;
+    border: 2px solid transparent;
+    color: #fff; }
 
 /*# sourceMappingURL=H_A.css.map */
