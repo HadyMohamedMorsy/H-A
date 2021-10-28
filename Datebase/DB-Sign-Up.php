@@ -11,19 +11,16 @@
         $Input_Password = $_POST['Input_Password'];
         $Input_Re_Password = $_POST['Input_Re_Password'];
         $Input_Country = $_POST['Input_Country'];
-
         $SQL_Check_User_Name = 'SELECT * FROM ha_users WHERE HA_U_Username = "'.$Input_Username.'"';
         $Result_Check_User_Name = mysqli_query($Connection,$SQL_Check_User_Name);
         $Row_Check_User_Name  = mysqli_fetch_array($Result_Check_User_Name, MYSQLI_ASSOC);  
         $Count_Check_User_Name  = mysqli_num_rows($Result_Check_User_Name);
-
         if ($Input_Password !== $Input_Re_Password) {
             $Alert_Message[] = 'Error 01';
         }
         if ($Count_Check_User_Name !== 0) {
             $Alert_Message[] = 'Error 02';
         }
-
         if (empty($Alert_Message)) {
             $SQL_Register_User = 'INSERT INTO ha_users (    
                         HA_U_Username, 
