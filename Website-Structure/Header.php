@@ -142,7 +142,7 @@
             }
         ?>
         <a href="#" class="search-nav"><i class="fas fa-search"></i></a>
-        <a href="#"><i class="far fa-heart"></i></a>
+        <a href="Wishlet.php"><i class="far fa-heart"></i></a>
         <a href="#" class="open-plus-cart"><i class="fas fa-cart-plus"></i></a>
     </div>
     <div class="icones-items items-mobile">
