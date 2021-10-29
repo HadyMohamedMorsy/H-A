@@ -1712,4 +1712,29 @@ tfoot tr th:first-child {
     border: 2px solid transparent;
     color: #fff; }
 
+.cart-items {
+  padding-top: 140px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .cart-items h1 {
+    font-size: 3rem; }
+
+.cheack-price {
+  width: 100%; }
+  .cheack-price .list {
+    display: flex; }
+    .cheack-price .list .content-list {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0px;
+      width: 100%;
+      margin: 0px 30px; }
+      .cheack-price .list .content-list img {
+        width: 95px;
+        height: 95px; }
+
 /*# sourceMappingURL=H_A.css.map */
