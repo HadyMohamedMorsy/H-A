@@ -1815,4 +1815,42 @@ tfoot tr th:first-child {
       background-color: #282828;
       color: #fff; }
 
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 50px 0px; }
+  .footer .content-links {
+    padding: 50px 0px; }
+    .footer .content-links .menu .widgettitle {
+      font-size: 20px; }
+    .footer .content-links .menu li {
+      margin-bottom: 10px; }
+      .footer .content-links .menu li a {
+        padding: 0.1em 0;
+        color: #282828; }
+  .footer .content-discound h2 {
+    text-align: center; }
+  .footer .content-discound .code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .footer .content-discound .code button {
+      background-color: #282828;
+      color: #ffffff;
+      padding: 0.75rem 1.75rem;
+      border: 2px solid transparent; }
+
+.copyright-final {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 30px;
+  margin-top: 30px; }
+  .copyright-final .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px; }
+    .copyright-final .copyright ul li {
+      display: inline-block;
+      margin-left: 5px; }
+
 /*# sourceMappingURL=H_A.css.map */

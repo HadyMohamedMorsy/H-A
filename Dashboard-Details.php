@@ -23,7 +23,6 @@
     <?php include ("./Website-Structure/Dashboard-Details-Body.php"); ?>
 
     <!-- Start The Footer -->
-    <?php include ("Website-Structure/Footer.php"); ?>
 
     <!-- End The Footer-->
     

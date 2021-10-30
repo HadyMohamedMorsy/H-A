@@ -24,7 +24,6 @@
 
     <!-- Start The Footer -->
 </div>
-    <?php include ("Website-Structure/Footer.php"); ?>
     <!-- End The Footer-->
 
     <!-- Start The Links Files -->
