@@ -15,7 +15,7 @@
     include ('Website-Structure/Header-Elemnts.php') ;
 ?>
     <!-- Start The Links Files -->
-    <?php include ("./Links Header With Tables.php"); ?>
+    <?php include ("Links Header With Tables.php"); ?>
 <body>
 <div class="container-hady">
     <!-- Start The Header -->
@@ -34,6 +34,26 @@
 
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <!-- End The Links Files -->
+    <script>
+        $(document).ready(function() {
+            $('#BTN_Deactivate_User').on('click', function() {
+                //$("#BTN_Deactivate_User").attr("disabled", "disabled");
+                var user_id = $('#hiddenDelete').val();
+                $.ajax({
+                    url: "Datebase/Action-By-Ajax/User-Mangement/Deactivate-User-Status.php",
+                    type: "POST",
+                    data: {
+                        User_ID: user_id
+                    },
+                    cache: false,
+                    success: function(dataResult) {
+                        alert('Success Deactivate User Status');
+                        //console.log(dataResult);
+                    }
+                });
+            })
+        })
+    </script>
 </body>
 
 </html>

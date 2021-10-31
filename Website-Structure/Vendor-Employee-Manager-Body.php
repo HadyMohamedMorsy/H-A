@@ -31,6 +31,16 @@
                         }else {
                             $Profile_Img =  'IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']' . '/' . $Scan_Profile_Img[2];
                         }
+                        if ($Rows['HA_U_User_Status'] == 'Pending') {
+                            $BTN_Active = '<button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>';
+                        }else {
+                            $BTN_Active = '';
+                        }
+                        if ($Rows['HA_U_User_Status'] !== 'Deactivated') {
+                            $BTN_Deactivate = '<button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>';
+                        }else {
+                            $BTN_Deactivate = '';
+                        }
                         echo '
                             <tr class="t-body" style="text-align: center;">
                                 <td>'.$Rows['HA_U_ID'].'</td>
@@ -46,8 +56,8 @@
                                 <td class="last-Action">
                                     <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
                                     <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
-                                    <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
-                                    <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>
+                                    '.$BTN_Deactivate.'
+                                    '.$BTN_Active.'
                                 </td>
                             </tr>
                         ';
@@ -76,8 +86,8 @@
         <form class="Delete-question">
             <input type="number" hidden  id="hiddenDelete"/>
             <h4 id="question"></h4>
-            <submit class="btn btn-danger" type="submit"> Yes </submit>
-            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+            <button id="BTN_Deactivate_User" class="btn btn-danger cancel-Dashbored" type="button"> Yes </button>
+            <button type="button" class="btn btn-dark No-user cancel-Dashbored">  NO  </button>
         </form>
     </div>
     <div class="Done-row remove-Delete">
@@ -126,13 +136,13 @@
                 <input type="text" name="Input-FullName" class="form-control" id="Edit-Email" aria-describedby="emailHelp" placeholder="Email">
             </div>
             <div class="form-group">
-              <select name="Input-Status" class="form-control" id="Status">
-                    <option value="">Status</option>
-                    <option value="Active">Active</option>
-                    <option value="UnActice">UnActice</option>
-                    <option value="Pending">Pending</option>
-                    <option value="Suspended">Suspended</option>
-             </select>
+                <select name="Input-Status" class="form-control" id="Status">
+                        <option value="">Status</option>
+                        <option value="Active">Active</option>
+                        <option value="UnActice">UnActice</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Suspended">Suspended</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
