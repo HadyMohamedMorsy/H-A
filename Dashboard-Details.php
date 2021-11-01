@@ -10,7 +10,8 @@
     include ('Website-Structure/Header-Elemnts.php') ;
 ?>
     <!-- Start The Links Files -->
-    <?php include('./Links CSS In Head Area.php') ?>
+    <?php include('./links-Dashbored.php') ?>
+    <link rel="stylesheet" href="./CSS-Files/Dashbored.css">
     <!-- End The Links Files -->
 <body>
 
@@ -28,7 +29,7 @@
     
 </div>
     <!-- Start The Links Files -->
-    <?php include ("./Links Javascript In Footer Area.php"); ?>
+    <?php include ("./Links javascript Dashbored.php"); ?>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>

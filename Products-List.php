@@ -16,6 +16,7 @@
 ?>
     <!-- Start The Links Files -->
     <?php include ("./Links Header With Tables.php"); ?>
+    <link rel="stylesheet" href="./CSS-Files/product-list.css">
 <body>
 <div class="container-hady">
     <!-- Start The Header -->

@@ -1,0 +1,245 @@
+
+.container-hady{
+    width: 100%;
+    display: flex;
+    background-color: #f3f7fd;
+    .mobile-header-dashbored{
+        position: relative;
+        .click-drop-burger-small{
+            position: absolute;
+            right: 50px;
+            top: 8px;
+            cursor: pointer;
+        }
+        flex-basis: 5%;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s;
+        ul{
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .list-of-dashbored{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            li{
+                 padding: 3rem 1rem 1rem 3rem;
+                 a{
+                     text-decoration: none;
+                     color: $another;
+                     font-size: 18px;
+                     svg{
+                         margin-right: 30px;
+                     }
+                 }
+ 
+            }
+        }
+    }
+    aside{
+        .click-drop-burger-large{
+            position: absolute;
+            right: 15px;
+            cursor: pointer;
+        }
+        flex-basis: 20%;
+        position: relative;
+        z-index: 2;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        left: -400px;
+        display: none;
+        transition: all 0.5s;
+        .image-useres{
+            width: 100%;
+            background-color: #fef3e5;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .image-user-content{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 2px dashed orange;
+                position: relative;
+                margin-bottom: 20px;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    vertical-align: middle;
+                    position: absolute;
+                    border-radius: 50%;
+                    
+                }
+            }
+        }
+        ul{
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .list-of-dashbored{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            li{
+                 padding: 1rem 1rem 1rem 3rem;
+                 a{
+                     text-decoration: none;
+                     color: $another;
+                     font-size: 18px;
+                     svg{
+                         margin-right: 30px;
+                     }
+                 }
+ 
+            }
+        }
+     }
+     
+.Dashbored-content{
+    flex-basis: 92%;
+    padding: 60px  20px;
+    .chart{
+        padding: 25px 30px;
+        .Title-dashbored{
+            padding-bottom: 20px;
+        }
+        .analysis{
+            margin-bottom: 30px;
+            .row{
+                .analysis-chiled{
+                    background-color: $white;
+                    padding: 30px;
+                    display: flex;
+                    .Revenue{
+                        background-color: rgba(244,21,217,0.4);
+                    }
+                    .Orders{
+                        background-color: rgba(0,255,137,0.4);
+                    }
+                    .Products{
+                        background-color: rgba(251,255,0,0.4);
+                    }
+                    .Monthly{
+                        background-color: rgba(3,169,244,0.4);    
+                    }
+                    .anaysis-icon{
+                        margin-right: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 75px;
+                        height: 75px;
+                        border-radius: 50%;
+                        svg{
+
+                            font-size: 23px;
+                        }
+
+                    }
+                    .anaysis-details{
+                        .number{
+                            font-size: 24px;
+                            font-weight: bold;
+                        }
+
+                    }
+                }
+            }
+        }
+        .secound-row{
+            width: 100%;
+            .row-secound{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .Add-member{
+                    background-color: $white;
+                    padding: 20px;
+                    margin-top: 30px;
+                    flex-basis: 48%;
+                    h4{
+                        margin-bottom: 40px;
+                    }
+                    .content-members{
+                        position: relative;
+                        &::before{
+                            content: "";
+                            border: 1px solid rgba(189, 189, 189,0.4);
+                            margin-bottom: 0px;
+                            position: absolute;
+                            height: 100%;
+                        }
+                        .content{
+                            padding: 10px 10px;
+                            margin-left: 10px;
+                            position: relative;
+                            display: flex;
+                            justify-content: space-between;
+                            .icon-time{
+                                position: absolute;
+                                left: -15px;
+                            }
+                            .time{
+                                flex-basis: 10%;
+                                font-weight: bold;
+                            }
+                            .right{
+                                flex-basis: 10%;
+                                svg{
+                                    color:  $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+                .progress-content{
+                    background-color: $white;
+                    padding: 20px;
+                    margin-top: 30px;
+                    flex-basis: 48%;
+                    .content{
+                        padding: 10px 10px;
+                    }
+                }
+            }
+
+        }
+        .thired-row{
+            .analysthic-dashbored{
+                width: 100%;
+                display: flex;
+                margin-top: 30px;
+                justify-content: space-between;
+                .Dashbored-one{
+                    flex-basis: 48%;
+                    background-color: $white;
+                    padding: 20px;
+                }
+                .Dashbored-two{
+                    flex-basis: 48%;
+                    background-color: $white;
+                    padding: 20px;
+                }
+            }
+        }
+        .thired-row{
+            width: 100%;
+            margin-top: 30px;
+        }
+
+
+    }
+}
+}
+

@@ -742,150 +742,8 @@ input:-internal-autofill-selected {
 
 .container-hady {
   width: 100%;
-  height: 100%;
   display: flex;
   background-color: #f3f7fd; }
-  .container-hady .Content-table {
-    flex-basis: 80%;
-    background-color: #f5f5f5;
-    padding: 20px; }
-  .container-hady aside {
-    flex-basis: 20%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column; }
-    .container-hady aside .image-useres {
-      width: 100%;
-      background-color: #fef3e5;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column; }
-      .container-hady aside .image-useres .image-user-content {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        border: 2px dashed orange;
-        position: relative;
-        margin-bottom: 20px; }
-        .container-hady aside .image-useres .image-user-content img {
-          width: 100%;
-          height: 100%;
-          vertical-align: middle;
-          position: absolute;
-          border-radius: 50%; }
-    .container-hady aside ul {
-      display: flex;
-      margin: 0;
-      padding: 0; }
-    .container-hady aside .list-of-dashbored {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      width: 100%; }
-      .container-hady aside .list-of-dashbored li {
-        padding: 1rem 1rem 1rem 3rem; }
-        .container-hady aside .list-of-dashbored li a {
-          text-decoration: none;
-          color: #282828;
-          font-size: 18px; }
-          .container-hady aside .list-of-dashbored li a svg {
-            margin-right: 30px; }
-  .container-hady .Dashbored-content {
-    flex-basis: 80%;
-    padding: 60px  20px; }
-    .container-hady .Dashbored-content .chart {
-      padding: 25px 30px; }
-      .container-hady .Dashbored-content .chart .Title-dashbored {
-        padding-bottom: 20px; }
-      .container-hady .Dashbored-content .chart .analysis {
-        margin-bottom: 30px; }
-        .container-hady .Dashbored-content .chart .analysis .row .analysis-chiled {
-          background-color: #fff;
-          padding: 30px;
-          display: flex; }
-          .container-hady .Dashbored-content .chart .analysis .row .analysis-chiled .Revenue {
-            background-color: rgba(244, 21, 217, 0.4); }
-          .container-hady .Dashbored-content .chart .analysis .row .analysis-chiled .Orders {
-            background-color: rgba(0, 255, 137, 0.4); }
-          .container-hady .Dashbored-content .chart .analysis .row .analysis-chiled .Products {
-            background-color: rgba(251, 255, 0, 0.4); }
-          .container-hady .Dashbored-content .chart .analysis .row .analysis-chiled .Monthly {
-            background-color: rgba(3, 169, 244, 0.4); }
-          .container-hady .Dashbored-content .chart .analysis .row .analysis-chiled .anaysis-icon {
-            margin-right: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 75px;
-            height: 75px;
-            border-radius: 50%; }
-            .container-hady .Dashbored-content .chart .analysis .row .analysis-chiled .anaysis-icon svg {
-              font-size: 23px; }
-          .container-hady .Dashbored-content .chart .analysis .row .analysis-chiled .anaysis-details .number {
-            font-size: 24px;
-            font-weight: bold; }
-      .container-hady .Dashbored-content .chart .secound-row {
-        width: 100%; }
-        .container-hady .Dashbored-content .chart .secound-row .row-secound {
-          width: 100%;
-          display: flex;
-          justify-content: space-between; }
-          .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member {
-            background-color: #fff;
-            padding: 20px;
-            margin-top: 30px;
-            flex-basis: 48%; }
-            .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member h4 {
-              margin-bottom: 40px; }
-            .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members {
-              position: relative; }
-              .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members::before {
-                content: "";
-                border: 1px solid rgba(189, 189, 189, 0.4);
-                margin-bottom: 0px;
-                position: absolute;
-                height: 100%; }
-              .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content {
-                padding: 10px 10px;
-                margin-left: 10px;
-                position: relative;
-                display: flex;
-                justify-content: space-between; }
-                .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .icon-time {
-                  position: absolute;
-                  left: -15px; }
-                .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .time {
-                  flex-basis: 10%;
-                  font-weight: bold; }
-                .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .right {
-                  flex-basis: 10%; }
-                  .container-hady .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .right svg {
-                    color: #007bff; }
-          .container-hady .Dashbored-content .chart .secound-row .row-secound .progress-content {
-            background-color: #fff;
-            padding: 20px;
-            margin-top: 30px;
-            flex-basis: 48%; }
-            .container-hady .Dashbored-content .chart .secound-row .row-secound .progress-content .content {
-              padding: 10px 10px; }
-      .container-hady .Dashbored-content .chart .thired-row .analysthic-dashbored {
-        width: 100%;
-        display: flex;
-        margin-top: 30px;
-        justify-content: space-between; }
-        .container-hady .Dashbored-content .chart .thired-row .analysthic-dashbored .Dashbored-one {
-          flex-basis: 48%;
-          background-color: #fff;
-          padding: 20px; }
-        .container-hady .Dashbored-content .chart .thired-row .analysthic-dashbored .Dashbored-two {
-          flex-basis: 48%;
-          background-color: #fff;
-          padding: 20px; }
-      .container-hady .Dashbored-content .chart .thired-row {
-        width: 100%;
-        margin-top: 30px; }
   .container-hady .right-Edit {
     flex-basis: 80%;
     padding: 60px  20px; }
@@ -940,31 +798,6 @@ input:-internal-autofill-selected {
             .container-hady .right-Edit .contact-personal .right-con > div .right-con-form > div {
               padding: 0px 15px;
               flex-basis: 50%; }
-  .container-hady .right-add-projects {
-    flex-basis: 80%;
-    background-color: #f5f5f5;
-    padding: 20px; }
-    .container-hady .right-add-projects .add-Product-from {
-      background-color: #fff;
-      padding: 180px 16px; }
-      .container-hady .right-add-projects .add-Product-from h5 {
-        padding-bottom: 40px; }
-      .container-hady .right-add-projects .add-Product-from .Form-Add-Product {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; }
-        .container-hady .right-add-projects .add-Product-from .Form-Add-Product .form-group {
-          flex-basis: 50%;
-          padding-left: 15px;
-          padding-right: 15px; }
-    .container-hady .right-add-projects .Add-Products {
-      background-color: #282828;
-      color: #fff;
-      outline: none;
-      border-radius: 10px;
-      border: none;
-      padding: 0px 30px;
-      margin-right: 15px; }
   .container-hady .right-catagroy {
     flex-basis: 80%;
     background-color: #f5f5f5;
@@ -1003,6 +836,10 @@ input:-internal-autofill-selected {
 
 .Add-Catagroy {
   margin-bottom: 20px; }
+
+.btn-secondary {
+  background-color: #007bff;
+  border: none; }
 
 .t-body td:first-child img {
   width: 50px; }

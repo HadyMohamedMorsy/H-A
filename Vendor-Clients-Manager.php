@@ -16,15 +16,17 @@
 ?>
     <!-- Start The Links Files -->
     <?php include ("./Links Header With Tables.php"); ?>
+    <link rel="stylesheet" href="./CSS-Files/clients.css">
 <body>
 <div class="container-hady">
-    <!-- Start The Header -->
-    <?php include ("Website-Structure/Dashbored-header.php"); ?>
-    <!-- End The Header-->
 
-    <?php include ("./Website-Structure/Vendor-Clients-Manager-Body.php"); ?>
+        <!-- Start The Header -->
+        <?php include ("Website-Structure/Dashbored-header.php"); ?>
+        <!-- End The Header-->
 
-    <!-- Start The Footer -->
+        <?php include ("./Website-Structure/Vendor-Clients-Manager-Body.php"); ?>
+
+        <!-- Start The Footer -->
 </div>
     <!-- End The Footer-->
 

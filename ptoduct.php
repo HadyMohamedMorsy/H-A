@@ -13,6 +13,7 @@
 ?>
     <!-- Start The Links Files -->
     <?php include ("Links CSS In Head Area.php"); ?>
+    <link rel="stylesheet" href="CSS-Files/H_A.css">
     <!-- End The Links Files -->
 <body>
 

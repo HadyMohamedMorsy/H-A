@@ -99,3 +99,11 @@
 
 
     }
+
+    function table(){
+
+        let table = document.querySelector('.dataTables_wrapper');
+
+        console.log(table);
+    }
+    table();

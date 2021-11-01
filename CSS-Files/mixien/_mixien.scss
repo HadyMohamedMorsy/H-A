@@ -1,3 +1,28 @@
+//640px 1024px 1400px
+$breakepoint-up: ("mid":"40em","lg":"64em","xl":"87.5em");
+
+// 639px 1023px 1399px
+$breakepoint-down: ("xsmall" : "16.875em" ,"small":"39.9375em","mid":"63.9375em","lg":"87.4375em");
+
+
+@mixin breakepoint-up($size) { // for display block desktop
+    @media(min-width: map-get($breakepoint-up , $size)){
+        @content;
+    }
+}
+@mixin breakepoint-down($size) { // for display block mobile
+    @media(max-width: map-get($breakepoint-down , $size)){
+        @content;
+    }
+}
+
+@mixin flexbox($size){
+    $calc : 12 / $size;
+    flex: 0 0 100% / $calc;
+    max-width: 100% / $calc;
+}
+
+
 @mixin button {
     position: absolute;
     top: 30px;

@@ -13,9 +13,11 @@
 <?php
     $Page_Title = 'HA | Add Product';
     include ('Website-Structure/Header-Elemnts.php') ;
+
 ?>
     <!-- Start The Links Files -->
-    <?php include ("Links CSS In Head Area.php"); ?>
+    <?php include ("./links-Dashbored.php"); ?>
+    <link rel="stylesheet" href="./CSS-Files/add-product.css">
 <body>
 <div class="container-hady">
     <!-- Start The Header -->
@@ -29,7 +31,7 @@
     <!-- End The Footer-->
 
     <!-- Start The Links Files -->
-    <?php include ("./Links Javascript In Footer Area.php"); ?>
+    <?php include ("./Links javascript Dashbored.php"); ?>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <!-- End The Links Files -->
 </body>
