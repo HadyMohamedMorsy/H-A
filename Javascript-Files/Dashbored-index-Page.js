@@ -104,7 +104,7 @@ $(document).ready(function(){
         );
         $(this).parent().css("display","none");
 
-        $('.Dashbored-content').css("flex-basis" , "80%");
+        $('.Dashbored-content').css("flex-basis" , "65%");
     });
 
 });
