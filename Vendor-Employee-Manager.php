@@ -52,8 +52,20 @@
                     },
                     cache: false,
                     success: function(dataResult) {
-                        alert('Success Deactivate User Status');
-                        //console.log(dataResult);
+                        // alert('Success Deactivate User Status');
+                        // console.log(dataResult);
+                        $.get('Datebase/Action-By-Ajax/User-Mangement/GET-User-After-Action.php?User_ID=' + user_id, function (Data ,Status ,XHR) {
+                            // console.log(JSON.parse(Data).HA_U_User_Status);
+                            // console.log(Status);
+                            // console.log(XHR.status);
+                            if (XHR.status == 200) {
+                                if (JSON.parse(Data).HA_U_User_Status == "Deactivated") {
+                                    // Code Delete The Row
+                                }
+                            }else{
+                                // Code
+                            }
+                        });
                     }
                 });
             })
