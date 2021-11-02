@@ -143,3 +143,11 @@
     
     });
 
+    (function Removerow(){
+        let stats = document.querySelectorAll('.Status');
+        stats.forEach((item)=>{
+            if(item.innerHTML == "Deactivated"){
+                item.parentElement.remove();
+            }
+        });
+    })();
