@@ -42,3 +42,86 @@
 </body>
 
 </html>
+
+
+
+<script>
+    // Active User Status
+    $('#BTN_Active_Product').on('click', function() {
+        //$("#BTN_Active_User").attr("disabled", "disabled");
+        var product_id = $('#DoneDelete').val();
+        $.ajax({
+            url: "Datebase/Action-By-Ajax/Product-Mangement/Active-Product-Status.php",
+            type: "POST",
+            data: {
+                Product_ID: product_id
+            },
+            cache: false,
+            success: function(dataResult) {
+                // alert('Success Deactivate Product Status');
+                // console.log(dataResult);
+                $.get('Datebase/Action-By-Ajax/Product-Mangement/GET-Product-After-Action.php?Product_ID=' + product_id, function (Data ,Status ,XHR) {
+                    // console.log(JSON.parse(Data).HA_P_Status);
+                    // console.log(Status);
+                    // console.log(XHR.status);
+                    if (XHR.status == 200) {
+                        if (JSON.parse(Data).HA_P_Status == "Active") {
+                            let row = document.querySelector('#T_Row_' + product_id).children[6];
+                            row.innerHTML = JSON.parse(Data).HA_P_Status;
+                            document.querySelector('#A' + product_id).remove();
+                            //let hay = document.querySelector('#T_Row_' + product_id);
+                            // table.row($(hay)).remove().draw(false);
+                        }
+                    }else{
+                        // Code
+                    }
+                });
+            }
+        });
+    });
+    // Deactive Product Status
+    $(document).ready(function(){
+        let table = $('#example').DataTable();
+        $('#BTN_Deactivate_Product').on('click', function() {
+            //$("#BTN_Deactivate_Product").attr("disabled", "disabled");
+            var product_id = $('#hiddenDelete').val();
+            $.ajax({
+                url: "Datebase/Action-By-Ajax/Product-Mangement/Deactivate-Product-Status.php",
+                type: "POST",
+                data: {
+                    Product_ID: product_id
+                },
+                cache: false,
+                success: function(dataResult) {
+                    // alert('Success Deactivate Product Status');
+                    // console.log(dataResult);
+                    $.get('Datebase/Action-By-Ajax/Product-Mangement/GET-Product-After-Action.php?Product_ID=' + product_id, function (Data ,Status ,XHR) {
+                        // console.log(JSON.parse(Data).HA_P_Status);
+                        // console.log(Status);
+                        // console.log(XHR.status);
+                        if (XHR.status == 200) {
+                            if (JSON.parse(Data).HA_P_Status == "Deactivated") {
+                                let row = document.querySelector('#T_Row_' + product_id).children[6];
+                                row.innerHTML = JSON.parse(Data).HA_P_Status;
+                                document.querySelector('#D' + product_id).remove();
+                                let hay = document.querySelector('#T_Row_' + product_id);
+                                table.row($(hay)).remove().draw(false);
+                            }
+                        }else{
+                            // Code
+                        }
+                    });
+                }
+            });
+        });
+    });
+    // Fun Deleated Row For Deactivted User Status
+    (function Removerow(){
+        let stats = document.querySelectorAll('.Status');
+        stats.forEach((item)=>{
+            if(item.innerHTML == "Deactivated"){
+                item.parentElement.remove();
+            }
+        });
+    })();
+</script>

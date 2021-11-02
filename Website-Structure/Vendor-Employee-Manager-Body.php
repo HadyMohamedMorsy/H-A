@@ -94,8 +94,8 @@
         <form class="Done-question">
             <input type="number" hidden  id="DoneDelete"/>
             <h4 id="Done"></h4>
-            <button id="BTN_Active_User" class="btn btn-success cancel-Dashbored" type="button" ob> Yes </button>
-            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="button">  NO  </button>
+            <button id="BTN_Active_User" class="btn btn-success cancel-Dashbored" type="button"> Yes </button>
+            <button type="button" class="btn btn-dark No-user cancel-Dashbored" >  NO  </button>
         </form>
     </div>
 

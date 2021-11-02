@@ -65,7 +65,6 @@
                         ';
                         $id += 1;
                     }
-
                 }
             ?>
         </tbody>
@@ -137,13 +136,13 @@
                 <input type="text" name="Input-Last" class="form-control" id="Edit-Last-Name" aria-describedby="emailHelp" placeholder="Last Name">
             </div>
             <div class="form-group">
-              <select name="Input-Status" class="form-control" id="Status">
-                    <option value="">Status</option>
-                    <option value="Active">Active</option>
-                    <option value="UnActice">UnActice</option>
-                    <option value="Pending">Pending</option>
-                    <option value="Suspended">Suspended</option>
-             </select>
+                <select name="Input-Status" class="form-control" id="Status">
+                        <option value="">Status</option>
+                        <option value="Active">Active</option>
+                        <option value="UnActice">UnActice</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Suspended">Suspended</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="upload-photo" class="label form-control"> Upload Your Image...</label>

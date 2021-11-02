@@ -34,8 +34,18 @@
                             $SQL_Get_Created_Info = 'SELECT HA_U_Username FROM ha_users WHERE HA_U_ID = "'.$Rows['HA_P_User_ID_Created'].'"';
                             $Result_Get_Created_Info= mysqli_query($Connection,$SQL_Get_Created_Info);
                             $Row_Get_Created_Info = mysqli_fetch_array($Result_Get_Created_Info, MYSQLI_ASSOC);  
+                            if ($Rows['HA_P_Status'] == 'Pending') {
+                                $BTN_Active = '<button type ="button" class="Done" data-module=".Done-row" id="A'.$Rows['HA_P_ID'].'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>';
+                            }else {
+                                $BTN_Active = '';
+                            }
+                            if ($Rows['HA_P_Status'] !== 'Deactivated') {
+                                $BTN_Deactivate = '<button type ="button" class="Trash" data-module=".question-delete-row" id="D'.$Rows['HA_P_ID'].'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>';
+                            }else {
+                                $BTN_Deactivate = '';
+                            }
                             echo '
-                                <tr class="t-body" >
+                                <tr class="t-body" style="text-align: center;" id="T_Row_'.$Rows['HA_P_ID'].'" >
                                     <td>'.$Rows['HA_P_ID'].'</td>
                                     <td class="IMG-DATABASE"><img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" alt="Img"/></td>
                                     <td class="Username-Edit-Module">'.$Rows['HA_P_Name'].'</td>
@@ -51,10 +61,10 @@
                                     <td style="display:none">'.$Row_Get_Created_Info['HA_U_Username'].'</td>
                                     <td style="display:none">'.$Rows['HA_P_Description'].'</td>
                                     <td class="last-Action">
-                                    <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
-                                    <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
-                                    <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
-                                    <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>
+                                        <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
+                                        <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
+                                        '.$BTN_Deactivate.'
+                                        '.$BTN_Active.'
                                     </td>
                                 </tr>
                             ';
@@ -85,17 +95,18 @@
     </table>
     <div class="question-delete-row remove-Delete">
         <form class="Delete-question">
+        <input type="number" hidden  id="hiddenDelete"/>
             <h4 id="question"></h4>
-            <submit class="btn btn-danger"> Yes   </submit>
-            <button type = "button" class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
+            <button type="button" id="BTN_Deactivate_Product" class="btn btn-danger cancel-Dashbored"> Yes </button>
+            <button type="button" class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
         </form>
     </div>
     <div class="Done-row remove-Delete">
         <form class="Done-question">
             <input type="number" hidden  id="DoneDelete"/>
             <h4 id="Done"></h4>
-            <submit class="btn btn-success" type="submit"> Yes </submit>
-            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+            <button id="BTN_Active_Product" class="btn btn-success cancel-Dashbored" type="button" > Yes </button>
+            <button type="button" class="btn btn-dark No-user cancel-Dashbored" >  NO  </button>
         </form>
     </div>
 
