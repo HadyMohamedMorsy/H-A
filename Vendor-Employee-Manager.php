@@ -60,7 +60,9 @@
                             // console.log(XHR.status);
                             if (XHR.status == 200) {
                                 if (JSON.parse(Data).HA_U_User_Status == "Deactivated") {
-                                    document.getElementById('T_Row_' + user_id).remove();
+                                    let Status = '.Status';
+                                    let row = document.querySelector('#T_Row_' + user_id).children[4];
+                                    row.innerHTML = JSON.parse(Data).HA_U_User_Status; 
                                 }
                             }else{
                                 // Code

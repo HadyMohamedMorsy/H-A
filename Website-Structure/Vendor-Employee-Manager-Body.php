@@ -47,7 +47,7 @@
                                 <td><img src="'.$Profile_Img.'" alt="Img" style="width:50px"/></td>
                                 <td>'.$Rows['HA_U_Username'] .'</td>
                                 <td>'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
-                                <td>'.$Rows['HA_U_User_Status'].'</td>
+                                <td class="Status">'.$Rows['HA_U_User_Status'].'</td>
                                 <td>'.$Rows['HA_U_Date_Created'].'</td>
                                 <td>'.$Rows['HA_U_Email'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
