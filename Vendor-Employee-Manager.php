@@ -39,41 +39,6 @@
 
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <!-- End The Links Files -->
-    <script>
-        $(document).ready(function() {
-            $('#BTN_Deactivate_User').on('click', function() {
-                //$("#BTN_Deactivate_User").attr("disabled", "disabled");
-                var user_id = $('#hiddenDelete').val();
-                $.ajax({
-                    url: "Datebase/Action-By-Ajax/User-Mangement/Deactivate-User-Status.php",
-                    type: "POST",
-                    data: {
-                        User_ID: user_id
-                    },
-                    cache: false,
-                    success: function(dataResult) {
-                        // alert('Success Deactivate User Status');
-                        // console.log(dataResult);
-                        $.get('Datebase/Action-By-Ajax/User-Mangement/GET-User-After-Action.php?User_ID=' + user_id, function (Data ,Status ,XHR) {
-                            // console.log(JSON.parse(Data).HA_U_User_Status);
-                            // console.log(Status);
-                            // console.log(XHR.status);
-                            if (XHR.status == 200) {
-                                if (JSON.parse(Data).HA_U_User_Status == "Deactivated") {
-                                    let row = document.querySelector('#T_Row_' + user_id).children[4];
-                                    row.innerHTML = JSON.parse(Data).HA_U_User_Status;
-                                    document.querySelector('#D' + user_id).style.display = "none";
-                                }
-                            }else{
-                                // Code
-                            }
-                        });
-                    }
-                });
-            })
-        })
-        
-    </script>
 </body>
 
 </html>
