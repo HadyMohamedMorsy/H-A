@@ -37,17 +37,17 @@
                             $BTN_Active = '';
                         }
                         if ($Rows['HA_U_User_Status'] !== 'Deactivated') {
-                            $BTN_Deactivate = '<button type ="button" class="Trash" data-module=".question-delete-row" id="T_Row_'.$Rows['HA_U_ID'].'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>';
+                            $BTN_Deactivate = '<button type ="button" class="Trash" data-module=".question-delete-row" id="D'.$Rows['HA_U_ID'].'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>';
                         }else {
                             $BTN_Deactivate = '';
                         }
                         echo '
-                            <tr class="t-body" style="text-align: center;">
+                            <tr class="t-body" style="text-align: center;" id="T_Row_'.$Rows['HA_U_ID'].'">
                                 <td>'.$Rows['HA_U_ID'].'</td>
                                 <td><img src="'.$Profile_Img.'" alt="Img" style="width:50px"/></td>
                                 <td>'.$Rows['HA_U_Username'] .'</td>
                                 <td>'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
-                                <td>'.$Rows['HA_U_User_Status'].'</td>
+                                <td class="Status">'.$Rows['HA_U_User_Status'].'</td>
                                 <td>'.$Rows['HA_U_Date_Created'].'</td>
                                 <td>'.$Rows['HA_U_Email'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
