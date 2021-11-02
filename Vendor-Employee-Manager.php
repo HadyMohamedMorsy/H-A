@@ -60,7 +60,7 @@
                             // console.log(XHR.status);
                             if (XHR.status == 200) {
                                 if (JSON.parse(Data).HA_U_User_Status == "Deactivated") {
-                                    // Code Delete The Row
+                                    console.log($('#T_Row_1'));
                                 }
                             }else{
                                 // Code
