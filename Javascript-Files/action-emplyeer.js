@@ -131,6 +131,7 @@
                             if (JSON.parse(Data).HA_U_User_Status == "Deactivated") {
                                 let row = document.querySelector('#T_Row_' + user_id).children[4];
                                 row.innerHTML = JSON.parse(Data).HA_U_User_Status;
+                                document.querySelector('#D' + user_id).style.display = "none";
                             }
                         }else{
                             // Code
