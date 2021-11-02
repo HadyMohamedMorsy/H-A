@@ -110,8 +110,7 @@
     
         });
         let table = $('#example').DataTable();
-        function myFunction($param){
-            $($param).on('click', function() {
+            $('#BTN_Deactivate_User').on('click', function() {
                 //$("#BTN_Deactivate_User").attr("disabled", "disabled");
                 var user_id = $('#hiddenDelete').val();
                 $.ajax({
@@ -134,7 +133,7 @@
                                     row.innerHTML = JSON.parse(Data).HA_U_User_Status;
                                     document.querySelector('#D' + user_id).remove();
                                     let hay = document.querySelector('#T_Row_' + user_id);
-                                    table.row($(hay)).remove().draw();
+                                    table.row($(hay)).remove().draw(false);
                                 }
                             }else{
                                 // Code
@@ -142,10 +141,7 @@
                         });
                     }
                 });
-            })
-         }
-         myFunction($('#BTN_Deactivate_User'));
-    
+            });
     });
 
 
