@@ -42,7 +42,7 @@
                             $BTN_Deactivate = '';
                         }
                         echo '
-                            <tr id="'.$Rows['HA_U_Username'] .'_'.$Rows['HA_U_ID'].'" class="t-body" style="text-align: center;">
+                            <tr id="T_Row_'.$Rows['HA_U_ID'].'" class="t-body" style="text-align: center;">
                                 <td>'.$Rows['HA_U_ID'].'</td>
                                 <td><img src="'.$Profile_Img.'" alt="Img" style="width:50px"/></td>
                                 <td>'.$Rows['HA_U_Username'] .'</td>
