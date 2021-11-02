@@ -60,7 +60,7 @@
                             // console.log(XHR.status);
                             if (XHR.status == 200) {
                                 if (JSON.parse(Data).HA_U_User_Status == "Deactivated") {
-                                    console.log($('#T_Row_1'));
+                                    console.log(document.getElementById('T_Row_1'));
                                 }
                             }else{
                                 // Code
@@ -70,6 +70,7 @@
                 });
             })
         })
+        
     </script>
 </body>
 
