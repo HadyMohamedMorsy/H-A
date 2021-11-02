@@ -32,7 +32,7 @@
                             $Profile_Img =  'IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']' . '/' . $Scan_Profile_Img[2];
                         }
                         if ($Rows['HA_U_User_Status'] == 'Pending') {
-                            $BTN_Active = '<button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>';
+                            $BTN_Active = '<button type ="button" class="Done" data-module=".Done-row" id="A'.$Rows['HA_U_ID'].'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>';
                         }else {
                             $BTN_Active = '';
                         }
@@ -94,8 +94,8 @@
         <form class="Done-question">
             <input type="number" hidden  id="DoneDelete"/>
             <h4 id="Done"></h4>
-            <submit class="btn btn-success" type="submit" ob> Yes </submit>
-            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+            <button id="BTN_Active_User" class="btn btn-success cancel-Dashbored" type="button" ob> Yes </button>
+            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="button">  NO  </button>
         </form>
     </div>
 

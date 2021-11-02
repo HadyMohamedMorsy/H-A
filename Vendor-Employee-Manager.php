@@ -42,3 +42,38 @@
 </body>
 
 </html>
+
+<script>
+    $('#BTN_Active_User').on('click', function() {
+        //$("#BTN_Active_User").attr("disabled", "disabled");
+        var user_id = $('#DoneDelete').val();
+        $.ajax({
+            url: "Datebase/Action-By-Ajax/User-Mangement/Active-User-Status.php",
+            type: "POST",
+            data: {
+                User_ID: user_id
+            },
+            cache: false,
+            success: function(dataResult) {
+                // alert('Success Deactivate User Status');
+                // console.log(dataResult);
+                $.get('Datebase/Action-By-Ajax/User-Mangement/GET-User-After-Action.php?User_ID=' + user_id, function (Data ,Status ,XHR) {
+                    // console.log(JSON.parse(Data).HA_U_User_Status);
+                    // console.log(Status);
+                    // console.log(XHR.status);
+                    if (XHR.status == 200) {
+                        if (JSON.parse(Data).HA_U_User_Status == "Active") {
+                            let row = document.querySelector('#T_Row_' + user_id).children[4];
+                            row.innerHTML = JSON.parse(Data).HA_U_User_Status;
+                            document.querySelector('#A' + user_id).remove();
+                            //let hay = document.querySelector('#T_Row_' + user_id);
+                            // table.row($(hay)).remove().draw(false);
+                        }
+                    }else{
+                        // Code
+                    }
+                });
+            }
+        });
+    });
+</script>
