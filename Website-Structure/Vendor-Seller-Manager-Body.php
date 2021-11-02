@@ -32,8 +32,18 @@
                         }else {
                             $Profile_Img =  'IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']' . '/' . $Scan_Profile_Img[2];
                         }
+                        if ($Rows['HA_U_User_Status'] == 'Pending') {
+                            $BTN_Active = '<button type ="button" class="Done" data-module=".Done-row" id="A'.$Rows['HA_U_ID'].'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>';
+                        }else {
+                            $BTN_Active = '';
+                        }
+                        if ($Rows['HA_U_User_Status'] !== 'Deactivated') {
+                            $BTN_Deactivate = '<button type ="button" class="Trash" data-module=".question-delete-row" id="D'.$Rows['HA_U_ID'].'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>';
+                        }else {
+                            $BTN_Deactivate = '';
+                        }
                         echo '
-                            <tr class="t-body" style="text-align: center;">
+                            <tr class="t-body" style="text-align: center;" id="T_Row_'.$Rows['HA_U_ID'].'">
                                 <td>'.$Rows['HA_U_ID'].'</td>
                                 <td class="IMG-DATABASE"><img src="'.$Profile_Img.'" alt="'.$Rows['HA_U_Username'].'"/></td>
                                 <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
@@ -48,8 +58,8 @@
                                 <td class="last-Action" style="text-align: center;">
                                     <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>
                                     <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
-                                    <button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>
-                                    <button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>
+                                    '.$BTN_Deactivate.'
+                                    '.$BTN_Active.'
                                 </td>
                             </tr>
                         ';
@@ -81,16 +91,16 @@
         <form class="Delete-question">
             <input type="number" hidden  id="hiddenDelete"/>
             <h4 id="question"></h4>
-            <submit class="btn btn-danger" type="submit"> Yes </submit>
-            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+            <button type="button" id="BTN_Deactivate_User" class="btn btn-danger cancel-Dashbored"> Yes </button>
+            <button type="button" class="btn btn-dark No-user cancel-Dashbored">  NO  </button>
         </form>
     </div>
     <div class="Done-row remove-Delete">
         <form class="Done-question">
             <input type="number" hidden  id="DoneDelete"/>
             <h4 id="Done"></h4>
-            <submit class="btn btn-success" type="submit"> Yes </submit>
-            <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+            <button type="button" id="BTN_Active_User" class="btn btn-success cancel-Dashbored"> Yes </button>
+            <button type="button" class="btn btn-dark No-user cancel-Dashbored">  NO  </button>
         </form>
     </div>
 

@@ -41,7 +41,7 @@
                             $Profile_Img =  'IMG/User-Profile-Picture/[User-ID='.$Rows['HA_U_ID'].']' . '/' . $Scan_Profile_Img[2];
                         }
                         if ($Rows['HA_U_User_Status'] == 'Pending') {
-                            $BTN_Active = '<button type ="button" class="Done" data-module=".Done-row" id="D'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>';
+                            $BTN_Active = '<button type ="button" class="Done" data-module=".Done-row" id="A'.$Rows['HA_U_ID'].'" onclick= "clickhere(this.id)"> <i class="fas fa-check-circle"></i></button>';
                         }else {
                             $BTN_Active = '';
                         }
@@ -123,11 +123,11 @@
         </form>
     </div>
     <div class="Done-row remove-Delete">
-        <form class="Done-question" action="" method="POST">
+        <form class="Done-question">
             <input type="number" name="Active_ID" hidden id="DoneDelete" />
             <h4 id="Done"></h4>
-            <button type="submit" name="BTN_Active" class="btn btn-success"> Yes </button>
-            <button type="button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
+            <button type="button" id="BTN_Active_User" class="btn btn-success cancel-Dashbored"> Yes </button>
+            <button type="button" class="btn btn-dark No-user cancel-Dashbored">  NO  </button>
         </form>
     </div>
     <div class="View-row remove-Delete">
