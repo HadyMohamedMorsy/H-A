@@ -46,12 +46,12 @@
                             $BTN_Active = '';
                         }
                         if ($Rows['HA_U_User_Status'] !== 'Deactivated') {
-                            $BTN_Deactivate = '<button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>';
+                            $BTN_Deactivate = '<button type ="button" class="Trash" data-module=".question-delete-row" id="D'.$Rows['HA_U_ID'].'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>';
                         }else {
                             $BTN_Deactivate = '';
                         }
                         echo '
-                            <tr class="t-body" >
+                            <tr class="t-body" style="text-align: center;" id="T_Row_'.$Rows['HA_U_ID'].'">
                                 <td>'.$Rows['HA_U_ID'].'</td>
                                 <td class="IMG-DATABASE"><img src="'.$Profile_Img.'" alt="'.$Rows['HA_U_Username'].'"/></td>
                                 <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
@@ -115,10 +115,10 @@
     }
 ?>
     <div class="question-delete-row remove-Delete">
-        <form class="Delete-question" action="" method="POST">
-            <input type="number" name="Deactivate_ID" hidden id="hiddenDelete" />
+        <form class="Delete-question" >
+            <input type="number" hidden id="hiddenDelete" />
             <h4 id="question"></h4>
-            <button class="btn btn-danger" name="BTN_Deactivate"> Yes </button>
+            <button type="button" id="BTN_Deactivate_User" class="btn btn-danger cancel-Dashbored"> Yes </button>
             <button type="button" class="btn btn-dark No-clients cancel-Dashbored">  NO  </button>
         </form>
     </div>
@@ -130,7 +130,6 @@
             <button type="button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
         </form>
     </div>
-
     <div class="View-row remove-Delete">
         <div class="View-row-Details">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
