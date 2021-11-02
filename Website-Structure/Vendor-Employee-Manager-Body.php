@@ -37,7 +37,7 @@
                             $BTN_Active = '';
                         }
                         if ($Rows['HA_U_User_Status'] !== 'Deactivated') {
-                            $BTN_Deactivate = '<button type ="button" class="Trash" data-module=".question-delete-row" id="TD'.$id.'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>';
+                            $BTN_Deactivate = '<button type ="button" class="Trash" data-module=".question-delete-row" id="T_Row_'.$Rows['HA_U_ID'].'" onclick= "clickhere(this.id)"> <i class="fas fa-trash-alt"></i> </button>';
                         }else {
                             $BTN_Deactivate = '';
                         }
