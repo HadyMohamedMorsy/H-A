@@ -109,40 +109,47 @@
             })
     
         });
-
-        $('#BTN_Deactivate_User').on('click', function() {
-            //$("#BTN_Deactivate_User").attr("disabled", "disabled");
-            var user_id = $('#hiddenDelete').val();
-            $.ajax({
-                url: "Datebase/Action-By-Ajax/User-Mangement/Deactivate-User-Status.php",
-                type: "POST",
-                data: {
-                    User_ID: user_id
-                },
-                cache: false,
-                success: function(dataResult) {
-                    // alert('Success Deactivate User Status');
-                    // console.log(dataResult);
-                    $.get('Datebase/Action-By-Ajax/User-Mangement/GET-User-After-Action.php?User_ID=' + user_id, function (Data ,Status ,XHR) {
-                        // console.log(JSON.parse(Data).HA_U_User_Status);
-                        // console.log(Status);
-                        // console.log(XHR.status);
-                        if (XHR.status == 200) {
-                            if (JSON.parse(Data).HA_U_User_Status == "Deactivated") {
-                                let row = document.querySelector('#T_Row_' + user_id).children[4];
-                                row.innerHTML = JSON.parse(Data).HA_U_User_Status;
-                                document.querySelector('#D' + user_id).remove();
-                                document.querySelector('#T_Row_' + user_id).remove();
+        let table = $('#example').DataTable();
+        function myFunction($param){
+            $($param).on('click', function() {
+                //$("#BTN_Deactivate_User").attr("disabled", "disabled");
+                var user_id = $('#hiddenDelete').val();
+                $.ajax({
+                    url: "Datebase/Action-By-Ajax/User-Mangement/Deactivate-User-Status.php",
+                    type: "POST",
+                    data: {
+                        User_ID: user_id
+                    },
+                    cache: false,
+                    success: function(dataResult) {
+                        // alert('Success Deactivate User Status');
+                        // console.log(dataResult);
+                        $.get('Datebase/Action-By-Ajax/User-Mangement/GET-User-After-Action.php?User_ID=' + user_id, function (Data ,Status ,XHR) {
+                            // console.log(JSON.parse(Data).HA_U_User_Status);
+                            // console.log(Status);
+                            // console.log(XHR.status);
+                            if (XHR.status == 200) {
+                                if (JSON.parse(Data).HA_U_User_Status == "Deactivated") {
+                                    let row = document.querySelector('#T_Row_' + user_id).children[4];
+                                    row.innerHTML = JSON.parse(Data).HA_U_User_Status;
+                                    document.querySelector('#D' + user_id).remove();
+                                    let hay = document.querySelector('#T_Row_' + user_id);
+                                    table.row($(hay)).remove().draw();
+                                }
+                            }else{
+                                // Code
                             }
-                        }else{
-                            // Code
-                        }
-                    });
-                }
-            });
-        })
+                        });
+                    }
+                });
+            })
+         }
+         myFunction($('#BTN_Deactivate_User'));
     
     });
+
+
+     
 
     (function Removerow(){
         let stats = document.querySelectorAll('.Status');

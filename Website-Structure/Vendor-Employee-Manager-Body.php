@@ -94,7 +94,7 @@
         <form class="Done-question">
             <input type="number" hidden  id="DoneDelete"/>
             <h4 id="Done"></h4>
-            <submit class="btn btn-success" type="submit"> Yes </submit>
+            <submit class="btn btn-success" type="submit" ob> Yes </submit>
             <button type = "button" class="btn btn-dark No-user cancel-Dashbored" type="submit">  NO  </button>
         </form>
     </div>
