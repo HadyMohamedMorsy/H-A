@@ -16,20 +16,22 @@
 <body>
 
     <!-- Start The Header -->
-<div class="container-hady">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Start The Header -->
+            <?php include ("Website-Structure/Dashbored-header.php"); ?>
+            <!-- End The Header-->
 
-    <?php include("./Website-Structure/Dashbored-header.php"); ?>
-    <!-- End The Header-->
+            <?php include ("./Website-Structure/Dashboard-Details-Body.php"); ?>
 
-    <?php include ("./Website-Structure/Dashboard-Details-Body.php"); ?>
-
-    <!-- Start The Footer -->
-
-    <!-- End The Footer-->
-    
+            <!-- Start The Footer -->
+        </div>
+    </div>
 </div>
     <!-- Start The Links Files -->
     <?php include ("./Links javascript Dashbored.php"); ?>
+    <script src="./Javascript-Files/Dashbored-main.js"></script>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
