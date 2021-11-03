@@ -748,7 +748,8 @@ aside {
   color: #00b894; }
 
 table {
-  font-size: 14px; }
+  font-size: 14px;
+  border-collapse: collapse; }
   table tr th {
     width: auto !important; }
 
