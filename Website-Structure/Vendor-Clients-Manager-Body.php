@@ -1,6 +1,6 @@
 
 <div class="Content-table">
-    <table id="example" class="table table-striped table-bordered">
+    <table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;">
         <thead>
             <tr class="header-table">
                 <th>ID</th>
