@@ -402,7 +402,8 @@ tfoot tr th:first-child {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    transition: all 0.5s; }
+    transition: all 0.5s;
+    box-shadow: 0px -1px 3px #000; }
     .container-hady .mobile-header-dashbored .click-drop-burger-small {
       position: absolute;
       right: 50px;

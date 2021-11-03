@@ -24,6 +24,7 @@
         z-index: 100;
         width: 100px;
         height: 100%;
+        box-shadow: 0px -1px 3px #000;
         ul{
             display: flex;
             margin: 0;
@@ -360,10 +361,15 @@
 }
 table{
     font-size: 14px;
-    border-collapse: collapse;
     tr{
         th{
             width: auto !important;
         }
+    }
+}
+@media (max-width : "767px") {
+    table{
+        display: inline-block;
+        width: 100%;
     }
 }

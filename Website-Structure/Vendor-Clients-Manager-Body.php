@@ -1,6 +1,6 @@
 
 <div class="Content-table">
-    <table id="example" class="table table-striped table-bordered" style="width:100%;text-align: center;">
+    <table id="example" class="table table-striped table-bordered display nowrap" collspacing="0" width="100%" style="width:100%;text-align;">
         <thead>
             <tr class="header-table">
                 <th>ID</th>
@@ -60,6 +60,9 @@
                                 <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
                                 <td class="">'.$Rows['HA_U_Last_Login'].'</td>
                                 <td class="HA-U-Purchase">'.number_format((int)$Rows['HA_U_Purchase'],2).'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Second_Name'].'</td>
+                                <td class="" style="display: none;">'.$Rows['HA_U_Last_Name'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Date_Created'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Birthday'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Country'].'</td>
@@ -67,9 +70,6 @@
                                 <td class="" style="display: none;">'.$Rows['HA_U_Address'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Mobile_Number'].'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_Email'].'</td>
-                                <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>
-                                <td class="" style="display: none;">'.$Rows['HA_U_Second_Name'].'</td>
-                                <td class="" style="display: none;">'.$Rows['HA_U_Last_Name'].'</td>
                                 <td class="last-Action" >
                                     <button type ="button" class="View" data-module=".View-row" id="T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-eye"></i> </button>
                                     <button type ="button" class="Edit" data-module=".Edit-row" id="-T'.$id.'" onclick= "clickhere(this.id)"> <i class="far fa-edit"></i> </button>

@@ -398,6 +398,7 @@ tfoot tr th:first-child {
   background-color: #f3f7fd; }
   .container-hady .mobile-header-dashbored {
     position: relative;
+    box-shadow: 0px -1px 3px #000;
     flex-basis: 5%;
     background-color: #fff;
     display: flex;
