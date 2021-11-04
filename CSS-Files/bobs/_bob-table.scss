@@ -1,0 +1,117 @@
+.question-delete-row{
+    @include fixed;
+    background-color: rgba(192,192,192,.6);
+    .Delete-question{
+        @include viewmoduletable;
+        padding: 30px 15px;
+        width: 400px;
+        h4{
+            padding-bottom: 30px;
+        }
+        .btn{
+            width: 100px;
+        }
+    }
+}
+.Done-row{
+    @include fixed;
+    background-color: rgba(192,192,192,.6);
+    .Done-question{
+        @include viewmoduletable;
+        padding: 30px 15px;
+        width: 400px;
+        h4{
+            padding-bottom: 30px;
+        }
+        .btn{
+            width: 100px;
+        }
+    }
+}
+
+// users
+
+.View-row{
+    @include fixed;
+    background-color: rgba(192,192,192,.6);
+    z-index: 1;
+    .View-cancel{
+        @include button;
+    }
+    .View-row-Details{
+        @include viewmoduletable;
+        padding: 16px;
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+        .Image-View{
+            flex-basis: 50%;
+            img{
+                width: 100%;
+            }
+        }
+        .Deatils-View{
+            flex-basis: 50%;
+            ul{
+                list-style: none;
+                li{
+                    padding: 15px 0px;
+                    font-size: 20px;
+                    margin-right: 10px;
+                    span{
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.Edit-row{
+    @include fixed;
+    background-color: rgba(#cccbcb , 0.5);
+    .Edit-row-details{
+        .Edit-cancel{
+            @include button;
+        }
+        @include formHome;
+        top : 35%;
+        .form-group{
+            input{
+                @include inputfornhome;
+            }
+        }
+        h2{
+            @include headerformhome;
+        }
+        .Edit-Prfile-user{
+            @include submitHome;
+        }
+    }
+}
+
+.remove-Delete{
+
+    display : none;
+}
+
+.Trash{
+    color: #ff7675;
+}
+.View{
+    color: #ff9f1a;
+}
+.Done{
+    color: #00b894;
+}
+table{
+    font-size: 14px;
+    tr{
+        th{
+            width: auto !important;
+        }
+    }
+}
