@@ -33,8 +33,8 @@
     <?php include ("./Links javascript Dashbored.php"); ?>
     <script src="./Javascript-Files/Dashbored-main.js"></script>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./Javascript-Files/Chart.js"></script>
+    <script src="./Javascript-Files/chart-cdn.js"></script>
     <script>
 // <block:setup:1>
     const labels = [
