@@ -22,6 +22,13 @@ $breakepoint-down: ("xsmall" : "16.875em" ,"small":"39.9375em","mid":"63.9375em"
     max-width: 100% / $calc;
 }
 
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+   
+    #{$property}: $value;
+  }
 
 @mixin button {
     position: absolute;

@@ -9,24 +9,24 @@
             top: 8px;
             cursor: pointer;
         }
+        @include prefix(display, flex , webkit ms o);
+        @include prefix(flex-direction, column , webkit ms o);
+        @include prefix(transition, all 0.5s , webkit ms o);
+        @include prefix(box-shadow, 0px -1px 3px #000 , webkit ms o);
         background-color: $white;
-        display: flex;
         left: 0px;
-        flex-direction: column;
-        transition: all 0.5s;
         z-index: 100;
         width: 100px;
         height: 100%;
-        box-shadow: 0px -1px 3px #000;
         ul{
-            display: flex;
+            @include prefix(display, flex , webkit ms o);
             margin: 0;
             padding: 0;
         }
         .list-of-dashbored{
+            @include prefix(display, flex , webkit ms o);
+            @include prefix(flex-direction, column , webkit ms o);
             list-style: none;
-            display: flex;
-            flex-direction: column;
             width: 100%;
             li{
                padding-top: 50px;
@@ -46,24 +46,24 @@
             right: 15px;
             cursor: pointer;
         }
+        @include prefix(display, flex , webkit ms o);
+        @include prefix(flex-direction, column , webkit ms o);
+        @include prefix(transition, all 0.5s , webkit ms o);
         overflow: auto;
         width: 320px;
         height: 100%;
         position: fixed;
         background-color: $white;
-        display: flex;
-        flex-direction: column;
         left: -400px;
-        transition: all 0.5s;
         z-index: 100;
         .image-useres{
+            @include prefix(display, flex , webkit ms o);
+            @include prefix(justify-content, center , webkit ms o);
+            @include prefix(align-items, center , webkit ms o);
+            @include prefix(flex-direction, column , webkit ms o);
             width: 100%;
             background-color: #fef3e5;
             height: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             .image-user-content{
                 width: 150px;
                 height: 150px;
@@ -83,14 +83,14 @@
             }
         }
         ul{
-            display: flex;
+            @include prefix(display, flex , webkit ms o);
             margin: 0;
             padding: 0;
         }
         .list-of-dashbored{
+            @include prefix(display, flex , webkit ms o);
+            @include prefix(flex-direction, column , webkit ms o);
             list-style: none;
-            display: flex;
-            flex-direction: column;
             width: 100%;
             li{
                  padding: 1rem 1rem 1rem 3rem;
@@ -107,10 +107,10 @@
         }
      }
      .right-add-projects{
+        @include prefix(transition, all 0.5s , webkit ms o);
         padding-left: 140px;
         padding-top: 30px;
         padding-right: 30px;
-        transition: all 0.5s;
         .add-Product-from{
             background-color: $white;
             padding: 180px 16px;
@@ -118,9 +118,9 @@
                 padding-bottom: 40px;
             }
             .Form-Add-Product{
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
+                @include prefix(display, flex , webkit ms o);
+                @include prefix(justify-content, space-between , webkit ms o);
+                @include prefix(flex-wrap, wrap , webkit ms o);
                 .form-group{
                     flex-basis: 50%;
                     padding-left: 15px;

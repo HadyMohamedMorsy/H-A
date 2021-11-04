@@ -395,28 +395,49 @@ tfoot tr th:first-child {
 .mobile-header-dashbored {
   position: fixed;
   overflow: auto;
-  background-color: #fff;
+  -webkit-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
   display: flex;
-  left: 0px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
   flex-direction: column;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-box-shadow: 0px -1px 3px #000;
+  -ms-box-shadow: 0px -1px 3px #000;
+  -o-box-shadow: 0px -1px 3px #000;
+  box-shadow: 0px -1px 3px #000;
+  background-color: #fff;
+  left: 0px;
   z-index: 100;
   width: 100px;
-  height: 100%;
-  box-shadow: 0px -1px 3px #000; }
+  height: 100%; }
   .mobile-header-dashbored .click-drop-burger-small {
     position: absolute;
     right: 40px;
     top: 8px;
     cursor: pointer; }
   .mobile-header-dashbored ul {
+    -webkit-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
     margin: 0;
     padding: 0; }
   .mobile-header-dashbored .list-of-dashbored {
-    list-style: none;
+    -webkit-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
     flex-direction: column;
+    list-style: none;
     width: 100%; }
     .mobile-header-dashbored .list-of-dashbored li {
       padding-top: 50px;
@@ -427,28 +448,49 @@ tfoot tr th:first-child {
         font-size: 14px; }
 
 aside {
+  -webkit-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   overflow: auto;
   width: 320px;
   height: 100%;
   position: fixed;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
   left: -400px;
-  transition: all 0.5s;
   z-index: 100; }
   aside .click-drop-burger-large {
     position: absolute;
     right: 15px;
     cursor: pointer; }
   aside .image-useres {
+    -webkit-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
     width: 100%;
     background-color: #fef3e5;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; }
+    height: 300px; }
     aside .image-useres .image-user-content {
       width: 150px;
       height: 150px;
@@ -463,13 +505,22 @@ aside {
         position: absolute;
         border-radius: 50%; }
   aside ul {
+    -webkit-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
     margin: 0;
     padding: 0; }
   aside .list-of-dashbored {
-    list-style: none;
+    -webkit-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
     flex-direction: column;
+    list-style: none;
     width: 100%; }
     aside .list-of-dashbored li {
       padding: 1rem 1rem 1rem 3rem; }
@@ -481,18 +532,30 @@ aside {
           margin-right: 30px; }
 
 .right-add-projects {
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   padding-left: 140px;
   padding-top: 30px;
-  padding-right: 30px;
-  transition: all 0.5s; }
+  padding-right: 30px; }
   .right-add-projects .add-Product-from {
     background-color: #fff;
     padding: 180px 16px; }
     .right-add-projects .add-Product-from h5 {
       padding-bottom: 40px; }
     .right-add-projects .add-Product-from .Form-Add-Product {
+      -webkit-display: flex;
+      -ms-display: flex;
+      -o-display: flex;
       display: flex;
+      -webkit-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
       justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -o-flex-wrap: wrap;
       flex-wrap: wrap; }
       .right-add-projects .add-Product-from .Form-Add-Product .form-group {
         flex-basis: 50%;
