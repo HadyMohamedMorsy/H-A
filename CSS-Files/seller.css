@@ -52,26 +52,47 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   overflow: auto;
   background-color: #fff;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
   display: flex;
-  left: 0px;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
   flex-direction: column;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
+  -moz-box-shadow: 0px -1px 3px #000;
+  -ms-box-shadow: 0px -1px 3px #000;
+  -o-box-shadow: 0px -1px 3px #000;
+  box-shadow: 0px -1px 3px #000;
+  left: 0px;
   z-index: 100;
   width: 100px;
-  height: 100%;
-  box-shadow: 0px -1px 3px #000; }
+  height: 100%; }
   .mobile-header-dashbored .click-drop-burger-small {
     position: absolute;
     right: 40px;
     top: 8px;
     cursor: pointer; }
   .mobile-header-dashbored ul {
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
     margin: 0;
     padding: 0; }
   .mobile-header-dashbored .list-of-dashbored {
     list-style: none;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
     flex-direction: column;
     width: 100%; }
     .mobile-header-dashbored .list-of-dashbored li {
@@ -88,7 +109,13 @@ aside {
   height: 100%;
   position: fixed;
   background-color: #fff;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
   display: flex;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
   flex-direction: column;
   left: -400px;
   transition: all 0.5s;
@@ -101,9 +128,21 @@ aside {
     width: 100%;
     background-color: #fef3e5;
     height: 300px;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
     justify-content: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
     align-items: center;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
     flex-direction: column; }
     aside .image-useres .image-user-content {
       width: 150px;
@@ -119,12 +158,21 @@ aside {
         position: absolute;
         border-radius: 50%; }
   aside ul {
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
     margin: 0;
     padding: 0; }
   aside .list-of-dashbored {
     list-style: none;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
     flex-direction: column;
     width: 100%; }
     aside .list-of-dashbored li {
@@ -343,5 +391,12 @@ tfoot tr th:first-child {
 
 .IMG-DATABASE img {
   width: 50px; }
+
+.btn-secondary {
+  background-color: #007bff;
+  border: none; }
+
+.Add-Catagroy {
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=seller.css.map */

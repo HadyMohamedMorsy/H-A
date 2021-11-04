@@ -3,36 +3,35 @@
         padding-left: 140px;
         padding-top: 30px;
         padding-right: 30px;
-        transition: all 0.5s;
+        @include prefix(transition, all 0.5s , webkit ms o);
         h3{
             color: #0000ee;
             margin-bottom: 30px;
         }
         .contact-personal{
-            display: flex;
-
+            @include prefix(display, flex , webkit ms o);
             .left-con{
-                flex-basis: 33.333333%;
+                @include prefix(flex-basis, 33.333333% , webkit ms o);
                 padding: 0px 15px;
                 > div{
                     background-color: $white;
                     padding: 25px 30px;
                     border-radius: 10px;
-                    box-shadow: 1px 0px 20px rgba(0,0,0,0.3);
+                    @include prefix(box-shadow, 1px 0px 20px rgba(0,0,0,0.3) , webkit ms o);
                     margin-bottom: 30px;
                         h5{
                             color: #0000ee;
                         }
                     .display-flex-data{
-                        display: flex;
+                        @include prefix(display, flex , webkit ms o);
                         div{
                             width: 30px;
                             height: 30px;
                             border-radius: 50%;
                             background-color: #f3f7fd;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            @include prefix(display, flex , webkit ms o);
+                            @include prefix(justify-content, center , webkit ms o);
+                            @include prefix(align-items, center , webkit ms o);
                             margin-right: 8px;
                             svg{
                                 color: #777;                        
@@ -46,13 +45,13 @@
                 }
             }
             .right-con{
-                flex-basis: 66.666667%;
+                @include prefix(flex-basis, 66.666667% , webkit ms o);
                 padding: 0px 15px;
                    > div{
                         background-color: $white;
                         padding: 25px 30px;
                         border-radius: 10px;
-                        box-shadow: 1px 0px 20px rgba(0,0,0,0.3);
+                        @include prefix(box-shadow, 1px 0px 20px rgba(0,0,0,0.3) , webkit ms o);
                         h5{
                             color: #0000ee;
                         }
@@ -61,11 +60,11 @@
                             margin-top: 30px;
                         }
                         .right-con-form{
-                            display: flex;
-                            flex-wrap: wrap;
+                            @include prefix(display, flex , webkit ms o);
+                            @include prefix(flex-wrap, wrap , webkit ms o);
                             > div{
                                 padding: 0px 15px;
-                                flex-basis: 50%;
+                                @include prefix(flex-basis, 50% , webkit ms o);
                                 
                             }
                         }
