@@ -1,20 +1,22 @@
-.container-hady{
-    width: 100%;
-    display: flex;
-    background-color: #f3f7fd;
+
+
     .mobile-header-dashbored{
-        position: relative;
+        position: fixed;
+        overflow: auto;
         .click-drop-burger-small{
             position: absolute;
-            right: 50px;
+            right: 40px;
             top: 8px;
             cursor: pointer;
         }
-        flex-basis: 5%;
         background-color: $white;
         display: flex;
+        left: 0px;
         flex-direction: column;
         transition: all 0.5s;
+        z-index: 100;
+        width: 100px;
+        height: 100%;
         box-shadow: 0px -1px 3px #000;
         ul{
             display: flex;
@@ -27,14 +29,12 @@
             flex-direction: column;
             width: 100%;
             li{
-                 padding: 3rem 1rem 1rem 3rem;
+               padding-top: 50px;
+               text-align: center;
                  a{
                      text-decoration: none;
                      color: $another;
-                     font-size: 18px;
-                     svg{
-                         margin-right: 30px;
-                     }
+                     font-size: 14px;
                  }
  
             }
@@ -46,15 +46,16 @@
             right: 15px;
             cursor: pointer;
         }
-        flex-basis: 20%;
-        position: relative;
-        z-index: 2;
+        overflow: auto;
+        width: 320px;
+        height: 100%;
+        position: fixed;
         background-color: $white;
         display: flex;
         flex-direction: column;
         left: -400px;
-        display: none;
         transition: all 0.5s;
+        z-index: 100;
         .image-useres{
             width: 100%;
             background-color: #fef3e5;
@@ -106,9 +107,10 @@
         }
      }
      .right-add-projects{
-        flex-basis: 95%;
-        background-color: #f5f5f5;
-        padding: 20px;
+        padding-left: 140px;
+        padding-top: 30px;
+        padding-right: 30px;
+        transition: all 0.5s;
         .add-Product-from{
             background-color: $white;
             padding: 180px 16px;
@@ -136,4 +138,4 @@
             margin-right: 15px;
         }
     }
-}
+

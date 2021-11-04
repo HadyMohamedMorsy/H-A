@@ -392,116 +392,119 @@ tfoot tr th:first-child {
   background-color: #007bff;
   border: none; }
 
-.container-hady {
-  width: 100%;
+.mobile-header-dashbored {
+  position: fixed;
+  overflow: auto;
+  background-color: #fff;
   display: flex;
-  background-color: #f3f7fd; }
-  .container-hady .mobile-header-dashbored {
-    position: relative;
-    flex-basis: 5%;
-    background-color: #fff;
+  left: 0px;
+  flex-direction: column;
+  transition: all 0.5s;
+  z-index: 100;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0px -1px 3px #000; }
+  .mobile-header-dashbored .click-drop-burger-small {
+    position: absolute;
+    right: 40px;
+    top: 8px;
+    cursor: pointer; }
+  .mobile-header-dashbored ul {
+    display: flex;
+    margin: 0;
+    padding: 0; }
+  .mobile-header-dashbored .list-of-dashbored {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    transition: all 0.5s;
-    box-shadow: 0px -1px 3px #000; }
-    .container-hady .mobile-header-dashbored .click-drop-burger-small {
-      position: absolute;
-      right: 50px;
-      top: 8px;
-      cursor: pointer; }
-    .container-hady .mobile-header-dashbored ul {
-      display: flex;
-      margin: 0;
-      padding: 0; }
-    .container-hady .mobile-header-dashbored .list-of-dashbored {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      width: 100%; }
-      .container-hady .mobile-header-dashbored .list-of-dashbored li {
-        padding: 3rem 1rem 1rem 3rem; }
-        .container-hady .mobile-header-dashbored .list-of-dashbored li a {
-          text-decoration: none;
-          color: #282828;
-          font-size: 18px; }
-          .container-hady .mobile-header-dashbored .list-of-dashbored li a svg {
-            margin-right: 30px; }
-  .container-hady aside {
-    flex-basis: 20%;
-    position: relative;
-    z-index: 2;
-    background-color: #fff;
+    width: 100%; }
+    .mobile-header-dashbored .list-of-dashbored li {
+      padding-top: 50px;
+      text-align: center; }
+      .mobile-header-dashbored .list-of-dashbored li a {
+        text-decoration: none;
+        color: #282828;
+        font-size: 14px; }
+
+aside {
+  overflow: auto;
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  left: -400px;
+  transition: all 0.5s;
+  z-index: 100; }
+  aside .click-drop-burger-large {
+    position: absolute;
+    right: 15px;
+    cursor: pointer; }
+  aside .image-useres {
+    width: 100%;
+    background-color: #fef3e5;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    aside .image-useres .image-user-content {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px dashed orange;
+      position: relative;
+      margin-bottom: 20px; }
+      aside .image-useres .image-user-content img {
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        position: absolute;
+        border-radius: 50%; }
+  aside ul {
+    display: flex;
+    margin: 0;
+    padding: 0; }
+  aside .list-of-dashbored {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    left: -400px;
-    display: none;
-    transition: all 0.5s; }
-    .container-hady aside .click-drop-burger-large {
-      position: absolute;
-      right: 15px;
-      cursor: pointer; }
-    .container-hady aside .image-useres {
-      width: 100%;
-      background-color: #fef3e5;
-      height: 300px;
+    width: 100%; }
+    aside .list-of-dashbored li {
+      padding: 1rem 1rem 1rem 3rem; }
+      aside .list-of-dashbored li a {
+        text-decoration: none;
+        color: #282828;
+        font-size: 18px; }
+        aside .list-of-dashbored li a svg {
+          margin-right: 30px; }
+
+.right-add-projects {
+  padding-left: 140px;
+  padding-top: 30px;
+  padding-right: 30px;
+  transition: all 0.5s; }
+  .right-add-projects .add-Product-from {
+    background-color: #fff;
+    padding: 180px 16px; }
+    .right-add-projects .add-Product-from h5 {
+      padding-bottom: 40px; }
+    .right-add-projects .add-Product-from .Form-Add-Product {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column; }
-      .container-hady aside .image-useres .image-user-content {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        border: 2px dashed orange;
-        position: relative;
-        margin-bottom: 20px; }
-        .container-hady aside .image-useres .image-user-content img {
-          width: 100%;
-          height: 100%;
-          vertical-align: middle;
-          position: absolute;
-          border-radius: 50%; }
-    .container-hady aside ul {
-      display: flex;
-      margin: 0;
-      padding: 0; }
-    .container-hady aside .list-of-dashbored {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      width: 100%; }
-      .container-hady aside .list-of-dashbored li {
-        padding: 1rem 1rem 1rem 3rem; }
-        .container-hady aside .list-of-dashbored li a {
-          text-decoration: none;
-          color: #282828;
-          font-size: 18px; }
-          .container-hady aside .list-of-dashbored li a svg {
-            margin-right: 30px; }
-  .container-hady .right-add-projects {
-    flex-basis: 95%;
-    background-color: #f5f5f5;
-    padding: 20px; }
-    .container-hady .right-add-projects .add-Product-from {
-      background-color: #fff;
-      padding: 180px 16px; }
-      .container-hady .right-add-projects .add-Product-from h5 {
-        padding-bottom: 40px; }
-      .container-hady .right-add-projects .add-Product-from .Form-Add-Product {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; }
-        .container-hady .right-add-projects .add-Product-from .Form-Add-Product .form-group {
-          flex-basis: 50%;
-          padding-left: 15px;
-          padding-right: 15px; }
-    .container-hady .right-add-projects .Add-Products {
-      background-color: #282828;
-      color: #fff;
-      outline: none;
-      border-radius: 10px;
-      border: none;
-      padding: 0px 30px;
-      margin-right: 15px; }
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .right-add-projects .add-Product-from .Form-Add-Product .form-group {
+        flex-basis: 50%;
+        padding-left: 15px;
+        padding-right: 15px; }
+  .right-add-projects .Add-Products {
+    background-color: #282828;
+    color: #fff;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    padding: 0px 30px;
+    margin-right: 15px; }
 
 /*# sourceMappingURL=add-product.css.map */
