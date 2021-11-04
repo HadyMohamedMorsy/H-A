@@ -14,20 +14,25 @@
     <?php include ("./links-Dashbored.php"); ?>
     <link rel="stylesheet" href="./CSS-Files/edit-profile.css">
 <body>
-<div class="container-hady">
-    <!-- Start The Header -->
-    <?php include ("Website-Structure/Dashbored-header.php"); ?>
-    <!-- End The Header-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Start The Header -->
+            <?php include ("Website-Structure/Dashbored-header.php"); ?>
+            <!-- End The Header-->
 
-    <?php include ("./Website-Structure/My-Profile-Setting-Body.php"); ?>
+            <?php include ("./Website-Structure/My-Profile-Setting-Body.php"); ?>
 
-    <!-- Start The Footer -->
+            <!-- Start The Footer -->
+        </div>
+    </div>
 </div>
 
     <!-- End The Footer-->
 
     <!-- Start The Links Files -->
     <?php include ("./Links javascript Dashbored.php"); ?>
+    <    <script src="./Javascript-Files/edit-profile.js"></script>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <!-- End The Links Files -->
 </body>
