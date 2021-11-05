@@ -108,12 +108,15 @@
             </tr>
         </tfoot>
     </table>
+    <div class="mt-3"></div>
+    <div class="container-fluid" style="text-align: right;" dir="ltr" id="Alert_Message">  </div>
+
     <div style=" margin-bottom:30px;"></div>
     <?php
-    foreach ($Alert_Message as  $value) {
-        echo $value;
-    }
-?>
+        foreach ($Alert_Message as  $value) {
+            echo $value;
+        }
+    ?>
     <div class="question-delete-row remove-Delete">
         <form class="Delete-question" >
             <input type="number" hidden id="hiddenDelete" />

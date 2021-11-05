@@ -57,25 +57,19 @@
                 Product_ID: product_id
             },
             cache: false,
-            success: function(dataResult) {
-                // alert('Success Deactivate Product Status');
-                // console.log(dataResult);
-                $.get('Datebase/Action-By-Ajax/Product-Mangement/GET-Product-After-Action.php?Product_ID=' + product_id, function (Data ,Status ,XHR) {
-                    // console.log(JSON.parse(Data).HA_P_Status);
-                    // console.log(Status);
-                    // console.log(XHR.status);
-                    if (XHR.status == 200) {
-                        if (JSON.parse(Data).HA_P_Status == "Active") {
-                            let row = document.querySelector('#T_Row_' + product_id).children[6];
-                            row.innerHTML = JSON.parse(Data).HA_P_Status;
-                            document.querySelector('#A' + product_id).remove();
-                            //let hay = document.querySelector('#T_Row_' + product_id);
-                            // table.row($(hay)).remove().draw(false);
-                        }
-                    }else{
-                        // Code
+            success: function(Data ,Status ,XHR) {
+                // console.log(JSON.parse(Data).Product_Status); console.log(Status); console.log(XHR.status);
+                if (XHR.status == 200) {
+                    if (JSON.parse(Data).Product_Status == "Active") {
+                        let row = document.querySelector('#T_Row_' + product_id).children[6];
+                        row.innerHTML = JSON.parse(Data).Product_Status;
+                        document.querySelector('#A' + product_id).remove();
+                        //let hay = document.querySelector('#T_Row_' + product_id);
+                        // table.row($(hay)).remove().draw(false);
+                        $("#Alert_Message").show('slow').delay(5000).fadeOut();
+                        document.getElementById("Alert_Message").innerHTML = '<div class="alert alert-success fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl"><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left"><span aria-hidden="true">×</span></button><h4><i class="fas fa-check-circle"></i> نجاح العمليه </h4><hr> تم تغير الحاله الى تنشيط , و تفعيل المنتج بنجاح </div>';
                     }
-                });
+                }
             }
         });
     });
@@ -92,25 +86,19 @@
                     Product_ID: product_id
                 },
                 cache: false,
-                success: function(dataResult) {
-                    // alert('Success Deactivate Product Status');
-                    // console.log(dataResult);
-                    $.get('Datebase/Action-By-Ajax/Product-Mangement/GET-Product-After-Action.php?Product_ID=' + product_id, function (Data ,Status ,XHR) {
-                        // console.log(JSON.parse(Data).HA_P_Status);
-                        // console.log(Status);
-                        // console.log(XHR.status);
-                        if (XHR.status == 200) {
-                            if (JSON.parse(Data).HA_P_Status == "Deactivated") {
-                                let row = document.querySelector('#T_Row_' + product_id).children[6];
-                                row.innerHTML = JSON.parse(Data).HA_P_Status;
-                                document.querySelector('#D' + product_id).remove();
-                                let hay = document.querySelector('#T_Row_' + product_id);
-                                table.row($(hay)).remove().draw(false);
-                            }
-                        }else{
-                            // Code
+                success: function(Data ,Status ,XHR) {
+                    // console.log(JSON.parse(Data).Product_Status); console.log(Status); console.log(XHR.status);
+                    if (XHR.status == 200) {
+                        if (JSON.parse(Data).Product_Status == "Deactivated") {
+                            let row = document.querySelector('#T_Row_' + product_id).children[6];
+                            row.innerHTML = JSON.parse(Data).Product_Status;
+                            document.querySelector('#D' + product_id).remove();
+                            let hay = document.querySelector('#T_Row_' + product_id);
+                            table.row($(hay)).remove().draw(false);
+                            $("#Alert_Message").show('slow').delay(5000).fadeOut();
+                            document.getElementById("Alert_Message").innerHTML = '<div class="alert alert-success fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl"><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left"><span aria-hidden="true">×</span></button><h4><i class="fas fa-check-circle"></i> نجاح العمليه </h4><hr> تم تغير الحاله الى معطل , و حذف المنتج بنجاح </div>';
                         }
-                    });
+                    }
                 }
             });
         });

@@ -29,6 +29,9 @@
                     SET HA_U_User_Status = "Deactivated"
                     WHERE HA_U_ID = "'.$User_ID.'"';
     if (mysqli_query($Connection,$SQL_Insert_Activities_Status_Deactivated) AND mysqli_query($Connection,$SQL_Change_Status_User_Deactivate)) {
-        # code...
+        $SQL_GET_USER_INFO_AFTER_ACTION  = 'SELECT HA_U_User_Status AS User_Status FROM ha_users WHERE HA_U_ID = "'.$User_ID.'"';
+        $RESULT_GET_USER_INFO_AFTER_ACTION  = mysqli_query($Connection,$SQL_GET_USER_INFO_AFTER_ACTION);
+        $ROW_GET_USER_INFO_AFTER_ACTION  = mysqli_fetch_array($RESULT_GET_USER_INFO_AFTER_ACTION, MYSQLI_ASSOC);
+        echo (json_encode($ROW_GET_USER_INFO_AFTER_ACTION));
     }
 ?>

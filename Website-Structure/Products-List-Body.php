@@ -93,6 +93,10 @@
             </tr>
         </tfoot>
     </table>
+    
+    <div class="mt-3"></div>
+    <div class="container-fluid" style="text-align: right;" dir="ltr" id="Alert_Message">  </div>
+
     <div class="question-delete-row remove-Delete">
         <form class="Delete-question">
         <input type="number" hidden  id="hiddenDelete"/>

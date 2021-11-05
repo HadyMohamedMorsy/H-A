@@ -29,6 +29,11 @@
                     SET HA_P_Status = "Deactivated"
                     WHERE HA_P_ID = "'.$Product_ID.'"';
     if (mysqli_query($Connection,$SQL_Insert_Activities_Status_Deactivate) AND mysqli_query($Connection,$SQL_Change_Status_Product_Deactivate)) {
-        # code...
+        $SQL_GET_Product_INFO_AFTER_ACTION  = 'SELECT HA_P_Status AS Product_Status FROM ha_products WHERE HA_P_ID = "'.$Product_ID.'"';
+        $RESULT_GET_Product_INFO_AFTER_ACTION  = mysqli_query($Connection,$SQL_GET_Product_INFO_AFTER_ACTION);
+        $ROW_GET_Product_INFO_AFTER_ACTION  = mysqli_fetch_array($RESULT_GET_Product_INFO_AFTER_ACTION, MYSQLI_ASSOC);
+        // echo '<pre>';
+        echo (json_encode($ROW_GET_Product_INFO_AFTER_ACTION));
+        // echo '<pre>';
     }
 ?>

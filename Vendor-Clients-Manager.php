@@ -56,25 +56,17 @@
                     User_ID: user_id
                 },
                 cache: false,
-                success: function(dataResult) {
-                    // alert('Success Deactivate User Status');
-                    // console.log(dataResult);
-                    $.get('Datebase/Action-By-Ajax/User-Mangement/GET-User-After-Action.php?User_ID=' + user_id, function (Data ,Status ,XHR) {
-                        // console.log(JSON.parse(Data).HA_U_User_Status);
-                        // console.log(Status);
-                        // console.log(XHR.status);
-                        if (XHR.status == 200) {
-                            if (JSON.parse(Data).HA_U_User_Status == "Active") {
-                                let row = document.querySelector('#T_Row_' + user_id).children[5];
-                                row.innerHTML = JSON.parse(Data).HA_U_User_Status;
-                                document.querySelector('#A' + user_id).remove();
-                                //let hay = document.querySelector('#T_Row_' + user_id);
-                                // table.row($(hay)).remove().draw(false);
-                            }
-                        }else{
-                            // Code
+                success: function(Data ,Status ,XHR) {
+                    // console.log(JSON.parse(Data));console.log(Status);console.log(XHR);
+                    if (XHR.status == 200) {
+                        if (JSON.parse(Data).User_Status == "Active") {
+                            let row = document.querySelector('#T_Row_' + user_id).children[5];
+                            row.innerHTML = JSON.parse(Data).User_Status;
+                            document.querySelector('#A' + user_id).remove();
+                            $("#Alert_Message").show('slow').delay(5000).fadeOut();
+                            document.getElementById("Alert_Message").innerHTML = '<div class="alert alert-success fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl"><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left"><span aria-hidden="true">×</span></button><h4><i class="fas fa-check-circle"></i> نجاح العمليه </h4><hr> تم تغير الحاله الى نشط , و تفعيل المستخدم بنجاح </div>';
                         }
-                    });
+                    }
                 }
             });
     });
@@ -91,25 +83,19 @@
                         User_ID: user_id
                     },
                     cache: false,
-                    success: function(dataResult) {
-                        // alert('Success Deactivate User Status');
-                        // console.log(dataResult);
-                        $.get('Datebase/Action-By-Ajax/User-Mangement/GET-User-After-Action.php?User_ID=' + user_id, function (Data ,Status ,XHR) {
-                            // console.log(JSON.parse(Data).HA_U_User_Status);
-                            // console.log(Status);
-                            // console.log(XHR.status);
-                            if (XHR.status == 200) {
-                                if (JSON.parse(Data).HA_U_User_Status == "Deactivated") {
-                                    let row = document.querySelector('#T_Row_' + user_id).children[4];
-                                    row.innerHTML = JSON.parse(Data).HA_U_User_Status;
-                                    document.querySelector('#D' + user_id).remove();
-                                    let hay = document.querySelector('#T_Row_' + user_id);
-                                    table.row($(hay)).remove().draw(false);
-                                }
-                            }else{
-                                // Code
+                    success: function(Data ,Status ,XHR) {
+                        // console.log(JSON.parse(Data));console.log(Status);console.log(XHR);
+                        if (XHR.status == 200) {
+                            if (JSON.parse(Data).User_Status == "Deactivated") {
+                                let row = document.querySelector('#T_Row_' + user_id).children[4];
+                                row.innerHTML = JSON.parse(Data).HA_U_User_Status;
+                                document.querySelector('#D' + user_id).remove();
+                                let hay = document.querySelector('#T_Row_' + user_id);
+                                table.row($(hay)).remove().draw(false);
+                                $("#Alert_Message").show('slow').delay(5000).fadeOut();
+                                document.getElementById("Alert_Message").innerHTML = '<div class="alert alert-success fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl"><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left"><span aria-hidden="true">×</span></button><h4><i class="fas fa-check-circle"></i> نجاح العمليه </h4><hr> تم تغير الحاله الى معطل , و حذف المستخدم بنجاح </div>';
                             }
-                        });
+                        }
                     }
                 });
             });
