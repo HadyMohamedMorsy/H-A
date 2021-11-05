@@ -174,12 +174,31 @@
             </li>
         </ul>
         <ul class="navbar-menu-burger anthoer-navbar-menu-burger Login-menu-burger">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-            </li>
-            <li class="nav-item">
+            
+            <?php
+                if (!isset($_SESSION['HA_U_ID'])) {
+                    echo '
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="Sign">Sign Up</a>
+                        </li>
+                    ';
+                }else {
+                    echo'
+                    <li class="nav-item">
+                        <a class="nav-link" href="My-Profile-Setting">Dashboard </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="My-Profile-Setting"><i class="fas fa-user-cog"></i></a>
+                    </li>
+                    ';
+                }
+            ?>
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#"><i class="far fa-user"></i></a>
-            </li>
+            </li> -->
         </ul>
         <ul class="navbar-menu-burger anthoer-navbar-menu-burger last-navbar-menu-burger">
             <li class="nav-item">
