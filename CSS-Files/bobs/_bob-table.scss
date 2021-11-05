@@ -72,7 +72,7 @@
 
 .Edit-row{
     @include fixed;
-    background-color: rgba(#cccbcb , 0.5);
+    background-color: rgba(192,192,192,.6);
     .Edit-row-details{
         .Edit-cancel{
             @include button;
@@ -94,8 +94,18 @@
 }
 
 .remove-Delete{
-
-    display : none;
+    top: -100%;
+    left: -100%;
+    bottom: -100%;
+    right: -100%;
+    @include prefix(transition, all 0.5s , webkit ms o);
+}
+.Add-Delete{
+    top: 0%;
+    left:0% ;
+    bottom: 0%;
+    right: 0%;
+    @include prefix(transition, all 0.5s , webkit ms o);
 }
 
 .Trash{

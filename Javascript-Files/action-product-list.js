@@ -13,6 +13,7 @@
         if((module) == ".View-row"){
 
             viewque.classList.remove('remove-Delete');
+            viewque.classList.add('Add-Delete');
 
             let headerTable = document.querySelectorAll('.header-table th');
 
@@ -35,6 +36,7 @@
         if((module) == ".question-delete-row"){
 
             viewque.classList.remove('remove-Delete');
+            viewque.classList.add('Add-Delete');
 
             let Question = document.getElementById('question');
             let hiddenDelete = document.getElementById('hiddenDelete');
@@ -46,6 +48,7 @@
         if((module) == ".Done-row"){
 
             viewque.classList.remove('remove-Delete');
+            viewque.classList.add('Add-Delete');
 
             let Done = document.getElementById('Done');
             let DoneDelete = document.getElementById('DoneDelete');
@@ -57,7 +60,9 @@
 
         if((module) == '.Edit-row'){
 
+
             viewque.classList.remove('remove-Delete');
+            viewque.classList.add('Add-Delete');
 
             let EditID = document.getElementById('Edit-id');
             let EditIDcatagoy = document.getElementById('Edit-id-catagroy');

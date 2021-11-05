@@ -203,10 +203,6 @@ aside {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   background-color: rgba(192, 192, 192, 0.6); }
   .question-delete-row .Delete-question {
     position: absolute;
@@ -226,10 +222,6 @@ aside {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   background-color: rgba(192, 192, 192, 0.6); }
   .Done-row .Done-question {
     position: absolute;
@@ -249,10 +241,6 @@ aside {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   background-color: rgba(192, 192, 192, 0.6);
   z-index: 1; }
   .View-row .View-cancel {
@@ -300,11 +288,7 @@ aside {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(204, 203, 203, 0.5); }
+  background-color: rgba(192, 192, 192, 0.6); }
   .Edit-row .Edit-row-details {
     position: absolute;
     left: 50%;
@@ -353,7 +337,24 @@ aside {
       margin-top: 18px; }
 
 .remove-Delete {
-  display: none; }
+  top: -100%;
+  left: -100%;
+  bottom: -100%;
+  right: -100%;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+
+.Add-Delete {
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  right: 0%;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
 
 .Trash {
   color: #ff7675; }
