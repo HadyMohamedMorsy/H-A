@@ -57,7 +57,7 @@
                                 <td class="Username-Edit-Module">'.$Rows['HA_U_Username'] .'</td>
                                 <td class="FullName-Edit-Module">'.$Rows['HA_U_First_Name'] . ' ' . $Rows['HA_U_Second_Name'] . ' ' . $Rows['HA_U_Last_Name'] . '</td>
                                 <td class="Date-Created">'.$Rows['HA_U_Gender'].'</td>
-                                <td class="Status-Edit-Status">'.$Rows['HA_U_User_Status'].'</td>
+                                <td class="Status">'.$Rows['HA_U_User_Status'].'</td>
                                 <td class="">'.$Rows['HA_U_Last_Login'].'</td>
                                 <td class="HA-U-Purchase">'.number_format((int)$Rows['HA_U_Purchase'],2).'</td>
                                 <td class="" style="display: none;">'.$Rows['HA_U_First_Name'].'</td>

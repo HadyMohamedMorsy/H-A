@@ -1,7 +1,7 @@
 <div class="right-Edit Dasbored-content">
     <h3>Edit Profile</h3>
-    <form class="contact-personal">
-        <div class="left-con">
+    <form class="contact-personal row">
+        <div class="left-con col-lg-3">
             <div class="parent-flex">
                 <h5>Username And Connect</h5>
                 <div class="form-group display-flex-data">
@@ -31,36 +31,36 @@
                 <button type="submit" name="BTN_Register" class="btn btn-primary">Update Password</button>
             </div>
         </div>
-        <div class="right-con">
+        <div class="right-con col-lg-9">
             <div>
                 <h5>Profile Basics</h5>
-                <div class="right-con-form">
-                    <div class="form-group">
+                <div class="right-con-form row">
+                    <div class="form-group col-lg-6 col-sm-12">
                         <label for="exampleInputEmail1">Frist Name</label>
                         <input type="text" value="<?php echo $Row_User_Info['HA_U_First_Name'];?>" class="form-control" aria-describedby="emailHelp" placeholder="Frist Name..">
                         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-lg-6 col-sm-12">
                         <label for="exampleInputPassword1">Socend Name</label>
                         <input type="text" value="<?php echo $Row_User_Info['HA_U_Second_Name'];?>" class="form-control" placeholder="Socend Name..">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-lg-6 col-sm-12">
                         <label for="exampleInputPassword1">Last Name</label>
                         <input type="Text" value="<?php echo $Row_User_Info['HA_U_Last_Name'];?>" class="form-control" placeholder="Last Name..">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-lg-6 col-sm-12">
                         <label for="exampleInputPassword1"> Birthday </label>
                         <input type="date" value="<?php echo str_replace('/', '-', $Row_User_Info['HA_U_Birthday']) ; ?>" class="form-control" placeholder="Birthday..">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-lg-6 col-sm-12">
                         <label for="exampleInputPassword1">Country</label>
                         <input type="text" value="<?php echo $Row_User_Info['HA_U_Country'];?>" class="form-control" placeholder="Country..">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-lg-6 col-sm-12">
                         <label for="exampleInputPassword1">ZIP Code</label>
                         <input type="text" value="<?php echo $Row_User_Info['HA_U_ZIP_Code'];?>" class="form-control" placeholder="ZIP Code..">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-lg-6 col-sm-12">
                         <label for="exampleInputPassword1"> Address </label>
                         <textarea type="text" class="form-control" placeholder="Address.."><?php echo $Row_User_Info['HA_U_Address'];?></textarea>
                     </div>

@@ -52,7 +52,7 @@
                                     <td >'.$Row_Get_Category_Name['HA_C_L_Category_Name'].'</td>
                                     <td class="HA-P-Qty">'.$Rows['HA_P_Qty'].'</td>
                                     <td class="HA-P-Price">'. number_format($Rows['HA_P_Price'] , 2).'</td>
-                                    <td class="HA-P-Status">'.$Rows['HA_P_Status'].'</td>
+                                    <td class="Status">'.$Rows['HA_P_Status'].'</td>
                                     <td style="display:none" class="HA-C-L-Category-Name">'.$Rows['HA_P_Category_ID'].'</td>
                                     <td style="display:none">'.$Rows['HA_P_Alert_Qty'].'</td>
                                     <td style="display:none">'.$Rows['HA_P_Brand'].'</td>
