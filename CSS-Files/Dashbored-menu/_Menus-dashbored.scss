@@ -6,6 +6,9 @@
         right: 40px;
         top: 8px;
         cursor: pointer;
+        @include breakepoint-new(mid){
+            display: none;
+        }
     }
     background-color: $white;
     @include prefix(display, flex , moz ms o);
@@ -16,6 +19,9 @@
     z-index: 100;
     width: 100px;
     height: 100%;
+    @include breakepoint-new(mid){
+        left: 0px !important;
+    }
     ul{
         @include prefix(display, flex , moz ms o);
         margin: 0;
@@ -43,6 +49,9 @@ aside{
         position: absolute;
         right: 15px;
         cursor: pointer;
+        @include breakepoint-new(mid){
+            display: none;
+        }
     }
     overflow: auto;
     width: 320px;
@@ -52,8 +61,11 @@ aside{
     @include prefix(display, flex , moz ms o);
     @include prefix(flex-direction, column , moz ms o);
     left: -400px;
-    transition: all 0.5s;
+    @include prefix(transition , all 0.5s , moz ms o);
     z-index: 100;
+    @include breakepoint-new(mid){
+        left: -400px !important;
+    }
     .image-useres{
         width: 100%;
         background-color: #fef3e5;
@@ -104,3 +116,4 @@ aside{
         }
     }
  }
+

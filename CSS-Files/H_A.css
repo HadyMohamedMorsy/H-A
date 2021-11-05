@@ -588,6 +588,9 @@ input:-internal-autofill-selected {
   padding-right: 30px;
   width: 100%;
   height: 100%; }
+  @media (max-width: 959px) {
+    .Content-table {
+      padding-left: 140px !important; } }
 
 .t-body td:first-child img {
   width: 50px; }

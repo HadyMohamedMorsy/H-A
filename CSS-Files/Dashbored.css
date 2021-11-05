@@ -77,6 +77,12 @@ h1, h2, h3, h4, h5, h6 {
     right: 40px;
     top: 8px;
     cursor: pointer; }
+    @media (max-width: 959px) {
+      .mobile-header-dashbored .click-drop-burger-small {
+        display: none; } }
+  @media (max-width: 959px) {
+    .mobile-header-dashbored {
+      left: 0px !important; } }
   .mobile-header-dashbored ul {
     -moz-display: flex;
     -ms-display: flex;
@@ -118,12 +124,21 @@ aside {
   -o-flex-direction: column;
   flex-direction: column;
   left: -400px;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 100; }
   aside .click-drop-burger-large {
     position: absolute;
     right: 15px;
     cursor: pointer; }
+    @media (max-width: 959px) {
+      aside .click-drop-burger-large {
+        display: none; } }
+  @media (max-width: 959px) {
+    aside {
+      left: -400px !important; } }
   aside .image-useres {
     width: 100%;
     background-color: #fef3e5;
@@ -187,19 +202,21 @@ aside {
 .Dashbored-content {
   padding-left: 140px;
   padding-top: 30px;
-  padding-right: 30px;
-  transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s; }
+  @media (max-width: 959px) {
+    .Dashbored-content {
+      padding-left: 140px !important; } }
   .Dashbored-content .chart .Title-dashbored {
     padding-bottom: 20px; }
   .Dashbored-content .chart .analysis {
     margin-bottom: 30px; }
     .Dashbored-content .chart .analysis .row .analysis-chiled {
       background-color: #e6e0ff;
-      padding: 30px;
+      padding: 10px;
+      margin-bottom: 10px;
       display: flex;
       -webkit-display: flex;
       -ms-display: flex;
@@ -237,79 +254,63 @@ aside {
         font-weight: bold; }
   .Dashbored-content .chart .secound-row {
     width: 100%; }
-    .Dashbored-content .chart .secound-row .row-secound {
-      width: 100%;
-      -webkit-display: flex;
-      -ms-display: flex;
-      -o-display: flex;
-      display: flex;
-      -webkit-justify-content: space-between;
-      -ms-justify-content: space-between;
-      -o-justify-content: space-between;
-      justify-content: space-between; }
-      .Dashbored-content .chart .secound-row .row-secound .Add-member {
-        background-color: #fff;
-        padding: 20px;
-        margin-top: 30px;
-        -webkit-flex-basis: 48%;
-        -ms-flex-basis: 48%;
-        -o-flex-basis: 48%;
-        flex-basis: 48%; }
-        .Dashbored-content .chart .secound-row .row-secound .Add-member h4 {
-          margin-bottom: 40px; }
-        .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members {
-          position: relative; }
-          .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members::before {
-            content: "";
-            border: 1px solid rgba(189, 189, 189, 0.4);
-            margin-bottom: 0px;
+    .Dashbored-content .chart .secound-row .row-secound .Add-member .chiled-member {
+      padding: 20px;
+      margin-top: 30px;
+      background-color: #e6e0ff; }
+      .Dashbored-content .chart .secound-row .row-secound .Add-member .chiled-member h4 {
+        margin-bottom: 40px; }
+      .Dashbored-content .chart .secound-row .row-secound .Add-member .chiled-member .content-members {
+        position: relative; }
+        .Dashbored-content .chart .secound-row .row-secound .Add-member .chiled-member .content-members::before {
+          content: "";
+          border: 1px solid rgba(189, 189, 189, 0.4);
+          margin-bottom: 0px;
+          position: absolute;
+          height: 100%; }
+        .Dashbored-content .chart .secound-row .row-secound .Add-member .chiled-member .content-members .content {
+          padding: 10px 10px;
+          margin-left: 10px;
+          position: relative;
+          -webkit-display: flex;
+          -ms-display: flex;
+          -o-display: flex;
+          display: flex;
+          -webkit-justify-content: space-between;
+          -ms-justify-content: space-between;
+          -o-justify-content: space-between;
+          justify-content: space-between; }
+          .Dashbored-content .chart .secound-row .row-secound .Add-member .chiled-member .content-members .content .icon-time {
             position: absolute;
-            height: 100%; }
-          .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content {
-            padding: 10px 10px;
-            margin-left: 10px;
-            position: relative;
-            -webkit-display: flex;
-            -ms-display: flex;
-            -o-display: flex;
-            display: flex;
-            -webkit-justify-content: space-between;
-            -ms-justify-content: space-between;
-            -o-justify-content: space-between;
-            justify-content: space-between; }
-            .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .icon-time {
-              position: absolute;
-              left: -15px; }
-            .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .time {
-              flex-basis: 10%;
-              -webkit-flex-basis: 10%;
-              -ms-flex-basis: 10%;
-              -o-flex-basis: 10%;
-              flex-basis: 10%;
-              font-weight: bold; }
-            .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .right {
-              -webkit-flex-basis: 10%;
-              -ms-flex-basis: 10%;
-              -o-flex-basis: 10%;
-              flex-basis: 10%; }
-              .Dashbored-content .chart .secound-row .row-secound .Add-member .content-members .content .right svg {
-                color: #007bff; }
-      .Dashbored-content .chart .secound-row .row-secound .progress-content {
-        background-color: #fff;
-        padding: 20px;
-        margin-top: 30px;
-        -webkit-flex-basis: 48%;
-        -ms-flex-basis: 48%;
-        -o-flex-basis: 48%;
-        flex-basis: 48%; }
-        .Dashbored-content .chart .secound-row .row-secound .progress-content .content {
-          padding: 10px 10px; }
+            left: -15px; }
+          .Dashbored-content .chart .secound-row .row-secound .Add-member .chiled-member .content-members .content .time {
+            flex-basis: 10%;
+            -webkit-flex-basis: 10%;
+            -ms-flex-basis: 10%;
+            -o-flex-basis: 10%;
+            flex-basis: 10%;
+            font-weight: bold; }
+          .Dashbored-content .chart .secound-row .row-secound .Add-member .chiled-member .content-members .content .right {
+            -webkit-flex-basis: 10%;
+            -ms-flex-basis: 10%;
+            -o-flex-basis: 10%;
+            flex-basis: 10%; }
+            .Dashbored-content .chart .secound-row .row-secound .Add-member .chiled-member .content-members .content .right svg {
+              color: #007bff; }
+    .Dashbored-content .chart .secound-row .row-secound .progress-content .chiled-prgress {
+      padding: 20px;
+      margin-top: 30px;
+      background-color: #e6e0ff; }
+      .Dashbored-content .chart .secound-row .row-secound .progress-content .chiled-prgress .content {
+        padding: 10px 10px; }
   .Dashbored-content .chart .thired-row .Dashbored-one {
     background-color: #e6e0ff;
-    padding: 20px; }
+    padding: 20px;
+    margin-bottom: 10px; }
   .Dashbored-content .chart .thired-row .Dashbored-two {
     background-color: #e6e0ff;
-    padding: 20px; }
+    padding: 20px;
+    margin-bottom: 10px; }
   .Dashbored-content .chart .thired-row {
     width: 100%;
     margin-top: 30px; }

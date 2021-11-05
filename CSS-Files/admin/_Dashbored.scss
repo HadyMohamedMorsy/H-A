@@ -2,8 +2,9 @@
     .Dashbored-content{
         padding-left: 140px;
         padding-top: 30px;
-        padding-right: 30px;
-        transition: all 0.5s;
+        @include breakepoint-new(mid){
+            padding-left: 140px !important;
+        }
         @include prefix(transition, all 0.5s , webkit ms o);
         .chart{
             .Title-dashbored{
@@ -14,7 +15,8 @@
                 .row{
                     .analysis-chiled{
                         background-color: #e6e0ff;
-                        padding: 30px;
+                        padding: 10px;
+                        margin-bottom: 10px;
                         display: flex;
                         @include prefix(display, flex , webkit ms o);
                         .Revenue{
@@ -56,17 +58,15 @@
             .secound-row{
                 width: 100%;
                 .row-secound{
-                    width: 100%;
-                    @include prefix(display, flex , webkit ms o);
-                    @include prefix(justify-content, space-between , webkit ms o);
                     .Add-member{
-                        background-color: $white;
-                        padding: 20px;
-                        margin-top: 30px;
-                        @include prefix(flex-basis, 48% , webkit ms o);
-                        h4{
-                            margin-bottom: 40px;
-                        }
+                        .chiled-member{
+                            padding: 20px;
+                            margin-top: 30px;
+                            background-color: #e6e0ff;
+                            
+                            h4{
+                                margin-bottom: 40px;
+                            }
                         .content-members{
                             position: relative;
                             &::before{
@@ -99,14 +99,18 @@
                                 }
                             }
                         }
+                        }
+
                     }
                     .progress-content{
-                        background-color: $white;
-                        padding: 20px;
-                        margin-top: 30px;
-                        @include prefix(flex-basis, 48% , webkit ms o);
-                        .content{
-                            padding: 10px 10px;
+                        
+                        .chiled-prgress{
+                            padding: 20px;
+                            margin-top: 30px;
+                            background-color: #e6e0ff;
+                            .content{
+                                padding: 10px 10px;
+                            }
                         }
                     }
                 }
@@ -116,11 +120,12 @@
                     .Dashbored-one{
                         background-color: #e6e0ff;
                         padding: 20px;
+                        margin-bottom: 10px;
                     }
                     .Dashbored-two{
                         background-color: #e6e0ff;
                         padding: 20px;
-
+                        margin-bottom: 10px;
                     }
             }
             .thired-row{

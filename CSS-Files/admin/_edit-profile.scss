@@ -3,6 +3,9 @@
         padding-left: 140px;
         padding-top: 30px;
         padding-right: 30px;
+        @include breakepoint-new(mid){
+            padding-left: 140px !important;
+        }
         @include prefix(transition, all 0.5s , webkit ms o);
         h3{
             color: #0000ee;

@@ -5,6 +5,9 @@
     padding-right: 30px;
     width: 100%;
     height: 100%;
+    @include breakepoint-new(mid){
+        padding-left: 140px !important;
+    }
 }
 .t-body  td:first-child img{
     width: 50px;

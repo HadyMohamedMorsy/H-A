@@ -58,8 +58,9 @@
             <canvas id="myChart"></canvas>
         </div>
         <div class="secound-row">
-            <div class="row-secound">
-                <div class=" Add-member">
+            <div class="row-secound row">
+                <div class=" Add-member col-lg-6">
+                    <div class="chiled-member">
                     <h4>Recent activities</h4>
                     <div class="content-members">
                         <div class="content">
@@ -106,8 +107,10 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
-                <div class=" progress-content">
+                <div class=" progress-content col-lg-6">
+                    <div class="chiled-prgress">
                     <h4>Markting Chanel</h4>
                     <div class="content">
                         <div>Test 1</div>
@@ -138,6 +141,7 @@
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" style="width: 28%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">28%</div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

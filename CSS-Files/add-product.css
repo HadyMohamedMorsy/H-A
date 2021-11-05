@@ -77,6 +77,12 @@ h1, h2, h3, h4, h5, h6 {
     right: 40px;
     top: 8px;
     cursor: pointer; }
+    @media (max-width: 959px) {
+      .mobile-header-dashbored .click-drop-burger-small {
+        display: none; } }
+  @media (max-width: 959px) {
+    .mobile-header-dashbored {
+      left: 0px !important; } }
   .mobile-header-dashbored ul {
     -moz-display: flex;
     -ms-display: flex;
@@ -118,12 +124,21 @@ aside {
   -o-flex-direction: column;
   flex-direction: column;
   left: -400px;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 100; }
   aside .click-drop-burger-large {
     position: absolute;
     right: 15px;
     cursor: pointer; }
+    @media (max-width: 959px) {
+      aside .click-drop-burger-large {
+        display: none; } }
+  @media (max-width: 959px) {
+    aside {
+      left: -400px !important; } }
   aside .image-useres {
     width: 100%;
     background-color: #fef3e5;
@@ -192,6 +207,9 @@ aside {
   padding-left: 140px;
   padding-top: 30px;
   padding-right: 30px; }
+  @media (max-width: 959px) {
+    .right-add-projects {
+      padding-left: 140px !important; } }
   .right-add-projects .add-Product-from {
     background-color: #fff;
     padding: 180px 16px; }

@@ -6,6 +6,9 @@
         padding-left: 140px;
         padding-top: 30px;
         padding-right: 30px;
+        @include breakepoint-new(mid){
+            padding-left: 140px !important;
+        }
         .add-Product-from{
             background-color: $white;
             padding: 180px 16px;
