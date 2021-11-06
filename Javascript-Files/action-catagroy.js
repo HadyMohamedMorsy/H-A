@@ -21,7 +21,7 @@
 
             for(let i =0; i<=newtable; i++){
 
-                viewhere.innerHTML += "<li>" +  headerTable[i].innerHTML+ ":" + "<span>"+ select[i].innerText +"</span>" + "</li>";
+                viewhere.innerHTML += "<li class='col-lg-4'>" +  headerTable[i].innerHTML+ ":" + "<span>"+ select[i].innerText +"</span>" + "</li>";
             }
         }
 
@@ -81,7 +81,8 @@
 
         let select = document.querySelector(id);
     
-        select.classList.remove('remove-Delete');
+        select.classList.remove('catagroy-remove');
+
 
     });
 
@@ -91,7 +92,7 @@
 
         let select = document.querySelector(id);
     
-        select.classList.add('remove-Delete');
+        select.classList.add('catagroy-remove');
 
     })
 

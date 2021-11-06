@@ -203,14 +203,15 @@ aside {
   position: fixed;
   width: 100%;
   height: 100%;
+  z-index: 100;
   background-color: rgba(192, 192, 192, 0.6); }
   .question-delete-row .Delete-question {
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
     background-color: #fff;
     border-radius: 10px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-40%, -50%);
     padding: 30px 15px;
     width: 400px; }
     .question-delete-row .Delete-question h4 {
@@ -222,14 +223,15 @@ aside {
   position: fixed;
   width: 100%;
   height: 100%;
+  z-index: 100;
   background-color: rgba(192, 192, 192, 0.6); }
   .Done-row .Done-question {
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
     background-color: #fff;
     border-radius: 10px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-40%, -50%);
     padding: 30px 15px;
     width: 400px; }
     .Done-row .Done-question h4 {
@@ -242,7 +244,7 @@ aside {
   width: 100%;
   height: 100%;
   background-color: rgba(192, 192, 192, 0.6);
-  z-index: 1; }
+  z-index: 100; }
   .View-row .View-cancel {
     position: absolute;
     top: 30px;
@@ -255,51 +257,63 @@ aside {
     background-color: #f5f5f5;
     border-radius: 50%;
     cursor: pointer;
-    right: 63px; }
+    right: 63px;
+    z-index: 4; }
   .View-row .View-row-Details {
+    overflow: auto;
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
     background-color: #fff;
     border-radius: 10px;
-    padding: 16px;
-    width: 700px;
-    display: flex;
-    justify-content: space-between;
-    z-index: 2; }
+    top: 45%;
+    left: 60%;
+    transform: translate(-60%, -45%);
+    width: 70%;
+    height: auto;
+    z-index: 2;
+    padding-bottom: 15px; }
+    @media (max-width: 719px) {
+      .View-row .View-row-Details {
+        width: 80%;
+        height: 100%; } }
     .View-row .View-row-Details .Image-View {
-      flex-basis: 50%; }
+      width: 100%;
+      height: 300px; }
       .View-row .View-row-Details .Image-View img {
-        width: 100%; }
-    .View-row .View-row-Details .Deatils-View {
-      flex-basis: 50%; }
-      .View-row .View-row-Details .Deatils-View ul {
-        list-style: none; }
-        .View-row .View-row-Details .Deatils-View ul li {
-          padding: 15px 0px;
-          font-size: 20px;
-          margin-right: 10px; }
-          .View-row .View-row-Details .Deatils-View ul li span {
-            font-size: 16px;
-            font-weight: 300; }
+        width: 100%;
+        height: 300px;
+        object-fit: scale-down; }
+    .View-row .View-row-Details .Deatils-View ul {
+      list-style: none;
+      padding-left: 40px;
+      padding-right: 40px; }
+      .View-row .View-row-Details .Deatils-View ul li {
+        padding: 10px 0px;
+        font-size: 19px;
+        font-weight: bold; }
+        .View-row .View-row-Details .Deatils-View ul li span {
+          font-size: 16px;
+          font-weight: 300;
+          margin-left: 10px; }
 
 .Edit-row {
   position: fixed;
   width: 100%;
   height: 100%;
+  z-index: 100;
   background-color: rgba(192, 192, 192, 0.6); }
   .Edit-row .Edit-row-details {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    width: 50%;
     margin: 0 auto;
     box-shadow: 0 40px 60px 0 #00000033;
     background: #fff;
     padding: 40px 70px;
     z-index: 5;
-    top: 35%; }
+    top: 30%;
+    left: 60%;
+    transform: translate(-60%, -30%);
+    height: 100%;
+    overflow: auto;
+    width: 70%; }
     .Edit-row .Edit-row-details .Edit-cancel {
       position: absolute;
       top: 30px;
@@ -313,6 +327,9 @@ aside {
       border-radius: 50%;
       cursor: pointer;
       right: 63px; }
+    @media (max-width: 719px) {
+      .Edit-row .Edit-row-details {
+        width: 100%; } }
     .Edit-row .Edit-row-details .form-group input {
       border: 2px solid #ddd;
       line-height: 1.6;

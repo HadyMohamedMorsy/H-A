@@ -21,7 +21,7 @@
 
             for(let i =0; i<=newtable; i++){
 
-                viewhere.innerHTML += "<li>" +  headerTable[i].innerHTML+ ":" + "<span>"+ select[i].innerText +"</span>" + "</li>";
+                viewhere.innerHTML += "<li  class='col-lg-4'>" +  headerTable[i].innerHTML+ ":" + "<span>"+ select[i].innerText +"</span>" + "</li>";
             }
 
             let newviewhere = document.querySelectorAll(".view-here li");

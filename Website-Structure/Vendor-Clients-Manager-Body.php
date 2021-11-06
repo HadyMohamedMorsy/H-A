@@ -134,13 +134,13 @@
         </form>
     </div>
     <div class="View-row remove-Delete">
-        <div class="View-row-Details">
+        <div class="View-row-Details row no-gutters">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
-            <div class="Image-View">
+            <div class="Image-View col-lg-12">
                 <img alt="IMG/emp_default.jpg" id="view-Details-show-IMG" />
             </div>
-            <div class="Deatils-View">
-                <ul class="view-here">
+            <div class="Deatils-View col-lg-12 pr-3 pl-3">
+                <ul class="view-here row ">
                 </ul>
             </div>
         </div>
@@ -203,7 +203,7 @@
                 <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
                 <input type="file" name="photo" id="upload-photo" class="label-input" />
             </div> -->
-            <button type="submit" name="BTN_Edit_Profile" class="btn form-control Edit-Prfile-clients">Edit Profile</button>
+            <button type="submit" name="BTN_Edit_Profile" class="btn form-control Edit-Prfile-user">Edit Profile</button>
         </form>
     </div>
 </div>

@@ -63,9 +63,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(204, 203, 203, 0.5); }
   .Login-username .Login-user {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    width: 50%;
     margin: 0 auto;
     box-shadow: 0 40px 60px 0 #00000033;
     background: #fff;
@@ -127,9 +124,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(204, 203, 203, 0.5); }
   .sign-username .sign-user {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    width: 50%;
     margin: 0 auto;
     box-shadow: 0 40px 60px 0 #00000033;
     background: #fff;
@@ -561,6 +555,9 @@ input:-internal-autofill-selected {
 
 .carousel-control-next {
   right: 2%; }
+
+.catagroy-remove {
+  display: none; }
 
 .Content-table {
   -moz-transition: all 0.5s;

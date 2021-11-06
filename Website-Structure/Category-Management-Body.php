@@ -4,7 +4,7 @@
     <button type="button" class="btn btn-primary" data-Catagroy = ".add-catgroy-from" id="Add">Add Catagoy</button>
 </div>
 
-<div class="add-catgroy-from remove-Delete">
+<div class="add-catgroy-from catagroy-remove">
         <form class="Form-Add-catgroy" action="" method="POST">
             <div class="form-group">
                 <label for="Name catgroy">Catgaroy Name</label>
@@ -106,10 +106,10 @@
         </form>
     </div>
     <div class="View-row remove-Delete">
-        <div class="View-row-Details">
+        <div class="View-row-Details row">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
-            <div class="Deatils-View">
-                <ul class="view-here">
+            <div class="Deatils-View col-lg-12 pr-3 pl-3">
+                <ul class="view-here row">
                 </ul>
             </div>
         </div>

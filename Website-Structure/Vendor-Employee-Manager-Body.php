@@ -103,13 +103,13 @@
     </div>
 
     <div class="View-row remove-Delete">
-        <div class="View-row-Details">
+        <div class="View-row-Details row no-gutters">
             <div class="View-cancel cancel-Dashbored"> <i class="fas fa-times"></i> </div>
-            <div class="Image-View">
+            <div class="Image-View  col-lg-12">
                 <img  alt="IMG/emp_default.jpg" id="view-Details-show-IMG"/>
             </div>
-            <div class="Deatils-View">
-                <ul class="view-here">
+            <div class="Deatils-View col-lg-12 pr-3 pl-3">
+                <ul class="view-here row">
                 </ul>
             </div>
         </div>
