@@ -27,13 +27,19 @@
 <div class="container">
     <div class="choose-price">
     <div class="row">
-        <div class="col-4 Image-choose-price">
-            <img src="./IMG/8.jpg" alt="8.jpg"/>
+        <div class="col-lg-4 mb-3 Image-choose-price">
+           <div class="image-shop-show"><img src="./IMG/8.jpg" alt="8.jpg"/> </div>
         </div>
-        <div class="col-4 Image-choose-price">
-            <img src="./IMG/9.jpg" alt="9.jpg"/>
+        <div class="col-lg-4  mb-3 Image-choose-price">
+            <div class="image-shop-show">
+                <div class="content-image">
+                    <h3>Choose your price</h3>
+                    <a href="#"> Choose yours</a>
+                </div>
+                <img src="./IMG/9.jpg" alt="9.jpg"/>
+             </div>
         </div>
-        <div class="col-4">
+        <div class="col-lg-4 mb-3">
             <div class="Clearance-Sales">
 
             </div>
@@ -49,18 +55,18 @@
     </div>
     <div class="best-seler">
         <div class="row">
-            <div class="col-4 Image-choose-best">
-                <img src="./IMG/10.jpg" alt="8.jpg"/>
+            <div class="col-lg-4 mb-3 Image-choose-best">
+            <div class="image-shop-show">  <img src="./IMG/10.jpg" alt="8.jpg"/></div>
                 <p class="name-product"> Name product </p>
                 <p class="price"> 20$ </p>
             </div>
-            <div class="col-4 Image-choose-best">
-                <img src="./IMG/11.jpg" alt="8.jpg"/>
+            <div class="col-lg-4 mb-3 Image-choose-best">
+            <div class="image-shop-show"> <img src="./IMG/11.jpg" alt="8.jpg"/></div>
                 <p class="name-product"> Name product </p>
                 <p class="price"> 20$ </p>
             </div>
-            <div class="col-4 Image-choose-best">
-                <img src="./IMG/12.jpg" alt="8.jpg"/>
+            <div class="col-lg-4 mb-3 Image-choose-best">
+            <div class="image-shop-show">   <img src="./IMG/12.jpg" alt="8.jpg"/></div>
                 <p class="name-product"> Name product </p>
                 <p class="price"> 20$ </p>
             </div>
@@ -102,24 +108,24 @@
             <p>Intelligentsia migas next level 90s woke ramps. Glossier vape celiac tumeric keffiyeh.</p>
         </div>
         <div class="row">
-            <div class="col-3 random">
-                <img src="./IMG/8.jpg" alt="8.jpg"/>
+            <div class="col-lg-3 mb-3 random">
+            <div class="image-shop-show">  <img src="./IMG/8.jpg" alt="8.jpg"/> </div>
                 <p class="name-product"> Name product </p>
                 <p class="price"> 20$ </p>
             </div>
 
-            <div class="col-3 random">
-                <img src="./IMG/10.jpg" alt="8.jpg"/>
+            <div class="col-lg-3 mb-3 random">
+            <div class="image-shop-show">  <img src="./IMG/10.jpg" alt="8.jpg"/> </div>
                 <p class="name-product"> Name product </p>
                 <p class="price"> 20$ </p>
             </div>
-            <div class="col-3 random">
-                <img src="./IMG/11.jpg" alt="8.jpg"/>
+            <div class="col-lg-3 mb-3 random">
+            <div class="image-shop-show"> <img src="./IMG/11.jpg" alt="8.jpg"/> </div>
                 <p class="name-product"> Name product </p>
                 <p class="price"> 20$ </p>
             </div>
-            <div class="col-3 random">
-                <img src="./IMG/12.jpg" alt="8.jpg"/>
+            <div class="col-lg-3  mb-3 random">
+            <div class="image-shop-show">  <img src="./IMG/12.jpg" alt="8.jpg"/> </div>
                 <p class="name-product"> Name product </p>
                 <p class="price"> 20$ </p>
             </div>
