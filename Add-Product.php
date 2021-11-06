@@ -35,7 +35,7 @@
     <!-- End The Footer-->
 
     <!-- Start The Links Files -->
-    <?php include ("./Links javascript Dashbored.php"); ?>
+    <?php include ("./another-page-dashbored.php"); ?>
     <script src="./Javascript-Files/add-product.js"></script>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <!-- End The Links Files -->

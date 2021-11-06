@@ -103,11 +103,16 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%; }
     .mobile-header-dashbored .list-of-dashbored li {
       padding-top: 50px;
-      text-align: center; }
+      text-align: center;
+      transition: all 0.5s; }
+      .mobile-header-dashbored .list-of-dashbored li.active a {
+        color: #007bff; }
       .mobile-header-dashbored .list-of-dashbored li a {
         text-decoration: none;
         color: #282828;
         font-size: 14px; }
+        .mobile-header-dashbored .list-of-dashbored li a:hover {
+          color: #007bff; }
 
 aside {
   overflow: auto;
@@ -192,10 +197,15 @@ aside {
     width: 100%; }
     aside .list-of-dashbored li {
       padding: 1rem 1rem 1rem 3rem; }
+      aside .list-of-dashbored li.active a {
+        color: #007bff; }
       aside .list-of-dashbored li a {
         text-decoration: none;
         color: #282828;
-        font-size: 18px; }
+        font-size: 18px;
+        transition: all 0.5s; }
+        aside .list-of-dashbored li a:hover {
+          color: #007bff; }
         aside .list-of-dashbored li a svg {
           margin-right: 30px; }
 

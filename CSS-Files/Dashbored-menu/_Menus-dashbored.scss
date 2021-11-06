@@ -35,10 +35,19 @@
         li{
            padding-top: 50px;
            text-align: center;
+           transition: all 0.5s;
+           &.active{
+               a{
+                    color: #007bff;
+               }
+           }
              a{
                  text-decoration: none;
                  color: $another;
                  font-size: 14px;
+                 &:hover{
+                    color: #007bff;
+                 }
              }
 
         }
@@ -104,10 +113,19 @@ aside{
         width: 100%;
         li{
              padding: 1rem 1rem 1rem 3rem;
+             &.active{
+                a{
+                     color: #007bff;
+                }
+            }
              a{
                  text-decoration: none;
                  color: $another;
                  font-size: 18px;
+                 transition: all 0.5s;
+                 &:hover{
+                    color: #007bff;
+                 }
                  svg{
                      margin-right: 30px;
                  }

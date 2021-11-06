@@ -14,5 +14,6 @@
 <script src="Framework/Bootstrap/js/bootstrap.js"></script>
 <script src="Framework/Fontawsome/js/all.js"></script>
 <script src="Javascript-Files/Dashbored-index-Page.js"></script>
+<script src="Javascript-Files/Dashbored-menu.js"></script>
 
 

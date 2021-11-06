@@ -30,7 +30,7 @@
     </div>
 </div>
     <!-- Start The Links Files -->
-    <?php include ("./Links javascript Dashbored.php"); ?>
+    <?php include ("./another-page-dashbored.php"); ?>
     <script src="./Javascript-Files/Dashbored-main.js"></script>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <script src="./Javascript-Files/Chart.js"></script>

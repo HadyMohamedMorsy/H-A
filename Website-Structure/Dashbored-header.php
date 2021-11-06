@@ -12,42 +12,42 @@
             <li><a href="./" class="Projects"><i class="fas fa-home"></i></a></li>
             <?php 
             if (!empty($_SESSION)) {
-                echo '<li><a href="My-Profile-Setting" class="Edit-profile"><i class="fas fa-user" class="Edit-profile"></i></a></li>';
+                echo '<li class="active profile-mob" data-aside =".profile"><a href="My-Profile-Setting" class="Edit-profile"><i class="fas fa-user" class="Edit-profile"></i></a></li>';
             }
             ?>
             <!-- <li><a href="Edit-Profile-seller.php" class="Edit-Seller"><i class="fas fa-user" class="Edit-profile"></i>Edit Profile Seller</a></li> -->
             <?php 
             if ($_SESSION['HA_U_P_Clients_Manager'] == 'Available') {
-                echo '<li><a href="Clients-Manager" class="Clients"><i class="fas fa-users"></i></a></li>';
+                echo '<li class="Clients-mob" data-aside =".Clients"><a href="Clients-Manager" class="Clients"><i class="fas fa-users"></i></a></li>';
             }
             ?>
             <?php 
             if ($_SESSION['HA_U_P_Seller_Manager'] == 'Available') {
-                echo '<li><a href="Seller-Manager" class="Projects"><i class="fas fa-user-tag"></i></a></li>';
+                echo '<li class="Seller-mob" data-aside =".Seller"><a href="Seller-Manager" class="Projects"><i class="fas fa-user-tag"></i></a></li>';
             }
             ?>
             <?php 
             if ($_SESSION['HA_U_P_Employee_Manager'] == 'Available') {
-                echo '<li><a href="Employee-Manager" class="Employeres"><i class="fas  fa-user-tie"></i></a></li>';
+                echo '<li class="Employee-mob" data-aside =".Employee"><a href="Employee-Manager" class="Employeres"><i class="fas  fa-user-tie"></i></a></li>';
             }
             ?>
             <?php 
             if ($_SESSION['HA_U_P_Category_Manager'] == 'Available') {
-                echo '<li><a href="Category-Management" class="Add Catogry"><i class="fas fa-tag"></i></a></li>';
+                echo '<li class="Category-mob" data-aside =".Category"><a href="Category-Management" class="Add Catogry"><i class="fas fa-tag"></i></a></li>';
             }
             ?>
             <?php 
             if ($_SESSION['HA_U_P_Add_Product'] == 'Available') {
-                echo '<li><a href="Add-Product" class="Add Project"><i class="fas fa-cart-plus"></i></a></li>';
+                echo '<li class="Product-mob" data-aside =".Product"><a href="Add-Product" class="Add Project"><i class="fas fa-cart-plus"></i></a></li>';
             }
             ?>
             <?php 
             if ($_SESSION['HA_U_P_Products_List'] == 'Available') {
-                echo '<li><a href="Products-List" class="All-Products"><i class="fas fa-store"></i></a></li>';
+                echo '<li class="List-mob" data-aside =".List"><a href="Products-List" class="All-Products"><i class="fas fa-store"></i></a></li>';
             }
             ?>
-            <li><a href="Dashboard-Details" class="Dashbored"><i class="fas fa-chart-line"></i></a></li>
-            <li><a href="Logout" class="Add LogOut"><i class="fas fa-sign-out-alt"></i></a></li>
+            <li class="Dashboard-mob" data-aside =".Dashboard"><a href="Dashboard-Details" class="Dashbored"><i class="fas fa-chart-line"></i></a></li>
+            <li class="Logout-mob" data-aside =".Logout"><a href="Logout" class="Add LogOut"><i class="fas fa-sign-out-alt"></i></a></li>
         </ul>      
     </div>
 <aside>
@@ -77,42 +77,42 @@
         <li><a href="./" class="Projects"><i class="fas fa-home"></i>Home Page</a></li>
         <?php 
         if (!empty($_SESSION)) {
-            echo '<li><a href="My-Profile-Setting" class="Edit-profile"><i class="fas fa-user" class="Edit-profile"></i>My Profile</a></li>';
+            echo '<li class="active profile" data-aside =".Profile-mob"><a href="My-Profile-Setting" class="Edit-profile"><i class="fas fa-user" class="Edit-profile"></i>My Profile</a></li>';
         }
         ?>
         <!-- <li><a href="Edit-Profile-seller.php" class="Edit-Seller"><i class="fas fa-user" class="Edit-profile"></i>Edit Profile Seller</a></li> -->
         <?php 
         if ($_SESSION['HA_U_P_Clients_Manager'] == 'Available') {
-            echo '<li><a href="Clients-Manager" class="Clients"><i class="fas fa-users"></i>Clients Management</a></li>';
+            echo '<li class="Clients" data-aside =".Clients-mob"><a href="Clients-Manager" class="Clients"><i class="fas fa-users"></i>Clients Management</a></li>';
         }
         ?>
         <?php 
         if ($_SESSION['HA_U_P_Seller_Manager'] == 'Available') {
-            echo '<li><a href="Seller-Manager" class="Projects"><i class="fas fa-user-tag"></i>Sellers Management</a></li>';
+            echo '<li class="Seller" data-aside =".Seller-mob"><a href="Seller-Manager" class="Projects"><i class="fas fa-user-tag"></i>Sellers Management</a></li>';
         }
         ?>
         <?php 
         if ($_SESSION['HA_U_P_Employee_Manager'] == 'Available') {
-            echo '<li><a href="Employee-Manager" class="Employeres"><i class="fas  fa-user-tie"></i>Employees Management</a></li>';
+            echo '<li class="Employee" data-aside =".Employee-mob"><a href="Employee-Manager" class="Employeres"><i class="fas  fa-user-tie"></i>Employees Management</a></li>';
         }
         ?>
         <?php 
         if ($_SESSION['HA_U_P_Category_Manager'] == 'Available') {
-            echo '<li><a href="Category-Management" class="Add Catogry"><i class="fas fa-tag"></i>Category Management</a></li>';
+            echo '<li class="Category" data-aside =".Category-mob"><a href="Category-Management" class="Add Catogry"><i class="fas fa-tag"></i>Category Management</a></li>';
         }
         ?>
         <?php 
         if ($_SESSION['HA_U_P_Add_Product'] == 'Available') {
-            echo '<li><a href="Add-Product" class="Add Project"><i class="fas fa-cart-plus"></i>Add Prodect</a></li>';
+            echo '<li class="Product" data-aside =".Product-mob"><a href="Add-Product" class="Add Project"><i class="fas fa-cart-plus"></i>Add Prodect</a></li>';
         }
         ?>
         <?php 
         if ($_SESSION['HA_U_P_Products_List'] == 'Available') {
-            echo '<li><a href="Products-List" class="All-Products"><i class="fas fa-store"></i>Products List</a></li>';
+            echo '<li class="List" data-aside =".List-mob"><a href="Products-List" class="All-Products"><i class="fas fa-store"></i>Products List</a></li>';
         }
         ?>
-        <li><a href="Dashboard-Details" class="Dashbored"><i class="fas fa-chart-line"></i>Dashbored</a></li>
-        <li><a href="Logout" class="Add LogOut"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+        <li class="Dashboard" data-mob =".Dashboard-aside"><a href="Dashboard-Details" class="Dashbored"><i class="fas fa-chart-line"></i>Dashbored</a></li>
+        <li class="Logout" data-mob =".Logout-aside"><a href="Logout" class="Add LogOut"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
     </ul>
 </aside>
 
