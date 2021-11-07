@@ -152,3 +152,5 @@ slidersContent.addEventListener('transitionend', () => {
         slidersContent.style.transform = 'translateX(' + (-size * current) + 'px)';
     }
 });
+
+

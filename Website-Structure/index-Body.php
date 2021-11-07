@@ -24,7 +24,7 @@
     </a>
 </div>
 
-<div class="container">
+<div class="container animation-scroll">
     <div class="choose-price">
     <div class="row">
         <div class="col-lg-4 mb-3 Image-choose-price">
@@ -58,7 +58,7 @@
     </div>
 </div>
 <div class="sec_row container-fluid"></div>
-<div class="sec-after-row container">
+<div class="sec-after-row container animation-scroll">
     <div class="addrese-section">
         <h2>Best Selling</h2>
         <p>Bushwick blue bottle photo booth copper mug marfa craft beer pour-over swag subway tile organic cloud bread.</p>
@@ -101,7 +101,7 @@
         </div>
     </div>
 </div>
-<div class="testemonial">
+<div class="testemonial animation-scroll">
     <h2>Testemonial</h2>
             <div class="flex">
                     <div class="per-image-tes">
@@ -143,7 +143,7 @@
             </div>
 </div>
 
-<div class="Trending container">
+<div class="Trending container animation-scroll">
     <div class="addrese-section">
         <h2>Trending Outfits</h2>
         <p>Intelligentsia migas next level 90s woke ramps. Glossier vape celiac tumeric keffiyeh.</p>
@@ -199,7 +199,7 @@
 </div>
 <div class="sec_row container-fluid"></div>
 
-<div class="visit">
+<div class="visit animation-scroll">
     <div class="container">
         <div class="content-visit">
             <h2> Visit Us</h2>

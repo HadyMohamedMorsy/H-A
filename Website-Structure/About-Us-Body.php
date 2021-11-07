@@ -14,7 +14,7 @@
 </div>
 <!-- header -->
 
-<div class="about-video">
+<div class="about-video animation-scroll">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 video">
@@ -39,7 +39,7 @@
     </div>
 </div>
 
-<div class="our-story">
+<div class="our-story animation-scroll">
     <h5 class="fancy-title" style="text-align: center;">Est. 2021</h5>
     <h2 style="text-align: center;">Our Story</h2>
     <div class="container">
@@ -60,7 +60,7 @@
     </div>
 </div>
 
-<div class="about-video">
+<div class="about-video animation-scroll">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 content-video">
@@ -84,7 +84,7 @@
     </div>
 </div>
 
-<div class="core-value">
+<div class="core-value animation-scroll">
     <h5 class="fancy-title">OUR FUTURE</h5>
     <h2>Growing Fast</h2>
     <p>Thundercats art party edison bulb authentic roof party taiyaki synth gluten-free squid tumeric retro iPhone etsy.</p>
@@ -109,7 +109,7 @@
     </div>
 </div>
 
-<div class="fonderes">
+<div class="fonderes animation-scroll">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 content-founder">

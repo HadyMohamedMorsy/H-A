@@ -48,6 +48,14 @@ a {
 h1, h2, h3, h4, h5, h6 {
   color: #282828; }
 
+.animation-scroll {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 1s ease-in-out; }
+  .animation-scroll.active {
+    opacity: 1;
+    transform: scale(1); }
+
 .mobile-header-dashbored {
   position: fixed;
   overflow: auto;

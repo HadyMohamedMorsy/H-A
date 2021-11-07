@@ -115,3 +115,25 @@ cartlistcancel.addEventListener("click",function(){
     cartlist.style.right = "0%";
   });
 
+  let animationscroll = document.querySelectorAll('.animation-scroll');
+
+
+window.addEventListener('scroll',()=>{
+
+    animationscroll.forEach((item)=>{
+
+        let contentPosition = item.getBoundingClientRect().top;
+
+        let screenposition = window.innerHeight;
+
+        if(contentPosition < screenposition){
+
+            item.classList.add('active');
+
+        }else{
+
+            item.classList.remove('active');
+        }
+
+    });
+});

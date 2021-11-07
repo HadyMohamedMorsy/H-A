@@ -1,7 +1,7 @@
-<div class="cart-items">
+<div class="cart-items animation-scroll">
     <h1 class="page-title" itemprop="name headline">Cart</h1>
 </div>
-<div class="cheack-price container">
+<div class="cheack-price container animation-scroll">
         <div class="list">
             <div class="content-parent row">
                 <div class="content-grid col-lg-7">

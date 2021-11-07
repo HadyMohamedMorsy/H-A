@@ -104,3 +104,13 @@ $breakepoint-new: ("xsmall" : "539px" ,"small":"719px","mid":"983px","lg":"1139p
     background-color: $white;
     border-radius: 10px;
 }
+
+.animation-scroll{
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 1s ease-in-out;
+    &.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
