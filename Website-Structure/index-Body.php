@@ -135,33 +135,56 @@
             </div>
 </div>
 
-<div class="Trending-random">
-    <div class="container">
-        <div class="content-trending">
-            <h2>Trending Outfits</h2>
-            <p>Intelligentsia migas next level 90s woke ramps. Glossier vape celiac tumeric keffiyeh.</p>
-        </div>
+<div class="Trending container">
+    <div class="addrese-section">
+        <h2>Trending Outfits</h2>
+        <p>Intelligentsia migas next level 90s woke ramps. Glossier vape celiac tumeric keffiyeh.</p>
+    </div>
+    <div class="Trending-Outfits">
         <div class="row">
-            <div class="col-lg-3 mb-3 random">
-            <div class="image-shop-show">  <img src="./IMG/8.jpg" alt="8.jpg"/> </div>
-                <p class="name-product"> Name product </p>
-                <p class="price"> 20$ </p>
+            <div class="col-lg-3 mb-3 Image-choose-best">
+                <div class="image-shop-show">  <img src="./IMG/10.jpg" alt="8.jpg"/></div>
+                <div class="icon-heart"><i class="far fa-heart"></i></div>
+                <div class="icon-compress same-class-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                <div class="icon-plus same-class-icon"><i class="fas fa-cart-plus"></i></div>
+                <div class="icon-Heart-hover same-class-icon"><i class="far fa-heart"></i></div>
+                <div class="content-product">
+                <h3><a class="name-product"> Cashmere Tank + Bag </a></h3>
+                <p class="price"> $39.00 – $98.00 </p>
             </div>
-
-            <div class="col-lg-3 mb-3 random">
-            <div class="image-shop-show">  <img src="./IMG/10.jpg" alt="8.jpg"/> </div>
-                <p class="name-product"> Name product </p>
-                <p class="price"> 20$ </p>
             </div>
-            <div class="col-lg-3 mb-3 random">
-            <div class="image-shop-show"> <img src="./IMG/11.jpg" alt="8.jpg"/> </div>
-                <p class="name-product"> Name product </p>
-                <p class="price"> 20$ </p>
+            <div class="col-lg-3 mb-3 Image-choose-best">
+                <div class="image-shop-show"> <img src="./IMG/11.jpg" alt="8.jpg"/></div>
+                <div class="icon-heart"><i class="far fa-heart"></i></div>
+                <div class="icon-compress same-class-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                <div class="icon-plus same-class-icon"><i class="fas fa-cart-plus"></i></div>
+                <div class="icon-Heart-hover same-class-icon"><i class="far fa-heart"></i></div>
+                <div class="content-product">
+                    <h3><a class="name-product"> Micro Form Bag </a></h3>
+                    <p class="price"> $98.00 </p>
+                </div>
             </div>
-            <div class="col-lg-3  mb-3 random">
-            <div class="image-shop-show">  <img src="./IMG/12.jpg" alt="8.jpg"/> </div>
-                <p class="name-product"> Name product </p>
-                <p class="price"> 20$ </p>
+            <div class="col-lg-3 mb-3 Image-choose-best">
+                <div class="image-shop-show"> <img src="./IMG/12.jpg" alt="8.jpg"/></div>
+                <div class="icon-heart"><i class="far fa-heart"></i></div>
+                <div class="icon-compress same-class-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                <div class="icon-plus same-class-icon"><i class="fas fa-cart-plus"></i></div>
+                <div class="icon-Heart-hover same-class-icon"><i class="far fa-heart"></i></div>
+                <div class="content-product">
+                    <h3><a class="name-product"> Cashmere Tank </a></h3>
+                    <p class="price"> $39.00$ </p>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-3 Image-choose-best">
+                <div class="image-shop-show"> <img src="./IMG/12.jpg" alt="8.jpg"/></div>
+                <div class="icon-heart"><i class="far fa-heart"></i></div>
+                <div class="icon-compress same-class-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                <div class="icon-plus same-class-icon"><i class="fas fa-cart-plus"></i></div>
+                <div class="icon-Heart-hover same-class-icon"><i class="far fa-heart"></i></div>
+                <div class="content-product">
+                    <h3><a class="name-product"> Cashmere Tank </a></h3>
+                    <p class="price"> $39.00$ </p>
+                </div>
             </div>
         </div>
     </div>
