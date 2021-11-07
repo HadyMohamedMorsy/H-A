@@ -29,6 +29,7 @@ let current = 1;
 let index = 0;
 
 
+
 const size = slidersImges[0].clientWidth;
 
 
@@ -109,6 +110,34 @@ for (var i = 0; i < circlespan.length; i++) {
         this.classList.add('active');
     }
 }
+
+function myFunction() {
+    setInterval(function(){
+
+        current++;
+
+        index++;
+
+        slidersContent.style.transition = 'transform 0.4s ease-in-out';
+
+        slidersContent.style.transform = 'translateX(' + (-size * current) + 'px)';
+
+        circlespan.forEach((element) =>{
+
+            element.classList.remove('active');
+        
+        });
+
+        if(index > 1){
+
+            index = 0;
+        }
+
+        circlespan[index].classList.add('active');
+       
+    }, 5000);
+ }
+ myFunction();
 slidersContent.addEventListener('transitionend', () => {
     if (slidersImges[current].id === "last-clone") {
         slidersContent.style.transition = 'none';
