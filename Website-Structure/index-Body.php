@@ -103,26 +103,20 @@
 </div>
 <div class="testemonial">
     <h2>Testemonial</h2>
-    <div class="content-test">
-        <div class="all-content">
             <div class="flex">
-                <div class="person-tes active">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
                     <div class="per-image-tes">
-                        <img src="./IMG/9.jpg" alt="" />
-                        <p>Name of person</p>
+                        <div class="cont-flex-test">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
+                            <img src="./IMG/9.jpg" alt="" />
+                            <p>Name of person</p>
+                        </div>
+                        <div class="cont-flex-test">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
+                            <img src="./IMG/10.jpg" alt="" />
+                            <p>Name of person</p>
+                        </div>
                     </div>
-                </div>
-                <div class="person-tes">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
-                    <div class="per-image-tes">
-                        <img src="./IMG/10.jpg" alt="" />
-                        <p>Name of person</p>
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
     <div class="curosel-circle">
             <span class="circle"></span>
             <span class="circle"></span>

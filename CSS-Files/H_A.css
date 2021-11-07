@@ -1219,34 +1219,31 @@ tfoot tr th:first-child {
   padding: 50px 0px;
   margin-top: 60px;
   margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
+  text-align: center; }
   .testemonial h2 {
     margin-bottom: 40px; }
-  .testemonial .content-test {
-    text-align: center; }
-    .testemonial .content-test .all-content {
-      width: 100%;
-      margin: auto;
-      flex-wrap: nowrap; }
-      .testemonial .content-test .all-content .flex .person-tes {
-        width: 100%;
-        display: none; }
-        .testemonial .content-test .all-content .flex .person-tes.active {
-          display: block; }
-        .testemonial .content-test .all-content .flex .person-tes .per-image-tes {
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-          .testemonial .content-test .all-content .flex .person-tes .per-image-tes img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 10px; }
-          .testemonial .content-test .all-content .flex .person-tes .per-image-tes p {
-            font-weight: bold; }
+  .testemonial .flex {
+    text-align: center;
+    width: 600px;
+    position: relative;
+    margin: auto;
+    overflow: hidden; }
+    .testemonial .flex .per-image-tes {
+      display: flex;
+      align-content: stretch;
+      align-items: stretch;
+      flex: 0 0 auto;
+      width: 100%; }
+      .testemonial .flex .per-image-tes .cont-flex-test {
+        flex-shrink: 0;
+        width: 100%; }
+        .testemonial .flex .per-image-tes .cont-flex-test p {
+          font-weight: bold; }
+        .testemonial .flex .per-image-tes .cont-flex-test img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin-right: 10px; }
   .testemonial .curosel-circle {
     display: flex;
     justify-content: center;
