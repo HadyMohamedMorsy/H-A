@@ -32,6 +32,11 @@
                     align-items: center;
                     justify-content: center;
                     padding: 0.75rem 1.75rem;
+                    transition: all 0.5s;
+                    opacity: 1;
+                    &:hover{
+                        opacity: 0.7;
+                    }
                 }
             }
             img{
@@ -52,6 +57,37 @@
         padding-bottom: 60px;
         padding-left: 10%;
         height:500px;
+
+        .content-image{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            h2{
+                color: $white;
+                margin-bottom: 14px;
+                font-size: 2rem;
+            }
+            p{
+                color: #e7dbbd;
+            }
+            a{
+                color: #282828;
+                background-color: #fff;
+                margin-top: 1.4rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.75rem 1.75rem;
+                opacity: 1;
+                transition: all 0.5s;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
     }
     
 }
@@ -72,16 +108,19 @@
     .best-seler{
         .Image-choose-best{
             width: 100%;
-            .image-shop-show{
-                width: 100%;
-                height: 500px;
-                cursor: pointer;
-                overflow: hidden;
-                &:hover{
+            cursor: pointer;
+            &:hover{
+                .image-shop-show{
                     img{
                         @include prefix(transform, perspective(500px) translateZ(50px) , moz ms o);
                     }
                 }
+            }
+            .image-shop-show{
+                width: 100%;
+                height: 500px;
+                overflow: hidden;
+                position: relative;
                 img{
                     width: 100%;
                     height:100%;
@@ -89,6 +128,48 @@
                     @include prefix(transition, all 0.5s , moz ms o);
                 }
             }
+            .icon-heart{
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                svg{
+                    color: #777;
+                }
+            }
+            @for $i from 1 through 3 {
+                .same-class-icon:nth-child(3n + #{$i}){
+                    position: absolute;
+                    top: $i * 8%;
+                    right: 30px;
+                    display: flex;
+                    background-color: $white;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 4px;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 10px;
+                    svg{
+                        color: #777;
+                    }
+
+                }
+              }
+            .content-product{
+                padding-top: 10px;
+                h3{
+                    font-size: 18px;
+                    margin: 0 0 5px;
+                    cursor: pointer;
+                    &:hover{
+                        a{
+                            color: #000;
+                        }
+                    }
+                }
+            }
+
 
         }
     }

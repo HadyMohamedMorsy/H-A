@@ -28,20 +28,30 @@
     <div class="choose-price">
     <div class="row">
         <div class="col-lg-4 mb-3 Image-choose-price">
-           <div class="image-shop-show"><img src="./IMG/8.jpg" alt="8.jpg"/> </div>
+           <div class="image-shop-show">
+                <div class="content-image">
+                    <h3>Button Up Shirts</h3>
+                    <a href="ptoduct.php"> Buy Now</a>
+                </div>
+               <img src="./IMG/8.jpg" alt="8.jpg"/> 
+            </div>
         </div>
         <div class="col-lg-4  mb-3 Image-choose-price">
             <div class="image-shop-show">
                 <div class="content-image">
                     <h3>Choose your price</h3>
-                    <a href="#"> Choose yours</a>
+                    <a href="ptoduct.php"> Choose yours</a>
                 </div>
                 <img src="./IMG/9.jpg" alt="9.jpg"/>
              </div>
         </div>
         <div class="col-lg-4 mb-3">
             <div class="Clearance-Sales">
-
+            <div class="content-image">
+                    <h2>Clearance Sales</h2>
+                    <p>Up to 70% Off & Free Shipping</p>
+                    <a href="ptoduct.php"> Browse sales</a>
+                </div>
             </div>
         </div>
     </div>
@@ -57,18 +67,36 @@
         <div class="row">
             <div class="col-lg-4 mb-3 Image-choose-best">
             <div class="image-shop-show">  <img src="./IMG/10.jpg" alt="8.jpg"/></div>
-                <p class="name-product"> Name product </p>
-                <p class="price"> 20$ </p>
+            <div class="icon-heart"><i class="far fa-heart"></i></div>
+            <div class="icon-compress same-class-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+            <div class="icon-plus same-class-icon"><i class="fas fa-cart-plus"></i></div>
+            <div class="icon-Heart-hover same-class-icon"><i class="far fa-heart"></i></div>
+            <div class="content-product">
+                <h3><a class="name-product"> Cashmere Tank + Bag </a></h3>
+                <p class="price"> $39.00 – $98.00 </p>
+            </div>
             </div>
             <div class="col-lg-4 mb-3 Image-choose-best">
             <div class="image-shop-show"> <img src="./IMG/11.jpg" alt="8.jpg"/></div>
-                <p class="name-product"> Name product </p>
-                <p class="price"> 20$ </p>
+            <div class="icon-heart"><i class="far fa-heart"></i></div>
+            <div class="icon-compress same-class-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+            <div class="icon-plus same-class-icon"><i class="fas fa-cart-plus"></i></div>
+            <div class="icon-Heart-hover same-class-icon"><i class="far fa-heart"></i></div>
+                <div class="content-product">
+                    <h3><a class="name-product"> Micro Form Bag </a></h3>
+                    <p class="price"> $98.00 </p>
+                </div>
             </div>
             <div class="col-lg-4 mb-3 Image-choose-best">
-            <div class="image-shop-show">   <img src="./IMG/12.jpg" alt="8.jpg"/></div>
-                <p class="name-product"> Name product </p>
-                <p class="price"> 20$ </p>
+            <div class="image-shop-show"> <img src="./IMG/12.jpg" alt="8.jpg"/></div>
+            <div class="icon-heart"><i class="far fa-heart"></i></div>
+            <div class="icon-compress same-class-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+            <div class="icon-plus same-class-icon"><i class="fas fa-cart-plus"></i></div>
+            <div class="icon-Heart-hover same-class-icon"><i class="far fa-heart"></i></div>
+            <div class="content-product">
+                <h3><a class="name-product"> Cashmere Tank </a></h3>
+                <p class="price"> $39.00$ </p>
+            </div>
             </div>
         </div>
     </div>

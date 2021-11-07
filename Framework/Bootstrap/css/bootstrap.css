@@ -575,6 +575,11 @@ pre code {
     max-width: 1140px;
   }
 }
+@media (min-width: 1490px){
+  .container {
+    max-width: 1420px;
+  }
+}
 
 .row {
   display: -ms-flexbox;
