@@ -1219,13 +1219,36 @@ tfoot tr th:first-child {
   padding: 50px 0px;
   margin-top: 60px;
   margin-bottom: 40px;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  width: 100%; }
+  .testemonial .arrows {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%; }
+    .testemonial .arrows .left {
+      position: absolute;
+      left: 30%; }
+    .testemonial .arrows .right {
+      position: absolute;
+      right: 30%; }
+    .testemonial .arrows .arrows-all {
+      display: flex;
+      background-color: #fff;
+      justify-content: center;
+      align-items: center;
+      padding: 4px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer; }
   .testemonial h2 {
     margin-bottom: 40px; }
   .testemonial .flex {
     text-align: center;
     width: 600px;
-    position: relative;
     margin: auto;
     overflow: hidden; }
     .testemonial .flex .per-image-tes {
@@ -1243,7 +1266,11 @@ tfoot tr th:first-child {
           width: 100px;
           height: 100px;
           border-radius: 50%;
-          margin-right: 10px; }
+          margin-right: 10px;
+          -moz-object-fit: fill;
+          -ms-object-fit: fill;
+          -o-object-fit: fill;
+          object-fit: fill; }
   .testemonial .curosel-circle {
     display: flex;
     justify-content: center;
@@ -1253,10 +1280,12 @@ tfoot tr th:first-child {
       display: inline-flex;
       width: 8px;
       height: 8px;
-      background-color: #b9a16b;
+      background: rgba(40, 40, 40, 0.6);
       border-radius: 50%;
       margin-left: 10px;
       cursor: pointer; }
+      .testemonial .curosel-circle .circle.active {
+        background-color: #b9a16b; }
 
 .Trending-random {
   margin-top: 60px;
