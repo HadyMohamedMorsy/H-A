@@ -19,3 +19,9 @@
 .carousel-control-next{
     right: 2%;
 }
+@include breakepoint-down(small){
+    .carousel-item img{
+        height: 100vh;
+        object-fit: cover;
+    } 
+}

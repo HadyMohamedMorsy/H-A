@@ -107,23 +107,31 @@
                     <div class="per-image-tes">
                     <div class="cont-flex-test" id="last-clone">
                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
-                            <img src="./IMG/10.jpg" alt="" />
-                            <p>Name of person</p>
+                             <div class="d-flex justify-content-center">
+                                <img src="./IMG/10.jpg" alt="" />
+                                <p>Name of person</p>
+                             </div>
                         </div>
                         <div class="cont-flex-test">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
-                            <img src="./IMG/9.jpg" alt="" />
-                            <p>Name of person</p>
+                            <div class="d-flex justify-content-center">
+                                <img src="./IMG/9.jpg" alt="" />
+                                <p>Name of person</p>
+                             </div>
                         </div>
                         <div class="cont-flex-test">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
-                            <img src="./IMG/10.jpg" alt="" />
-                            <p>Name of person</p>
+                            <div class="d-flex justify-content-center">
+                                <img src="./IMG/10.jpg" alt="" />
+                                <p>Name of person</p>
+                             </div>
                         </div>
                         <div class="cont-flex-test" id="first-clone">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo labore facilis</p>
-                            <img src="./IMG/9.jpg" alt="" />
-                            <p>Name of person</p>
+                            <div class="d-flex justify-content-center">
+                                <img src="./IMG/9.jpg" alt="" />
+                                <p>Name of person</p>
+                             </div>
                         </div>
                     </div>
             </div>

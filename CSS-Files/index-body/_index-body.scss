@@ -204,10 +204,16 @@
         .left{
             position: absolute;
             left: 30%;
+            @include breakepoint-down(small){
+                left: 10%;
+            }
         }
         .right{
             position: absolute;
             right: 30%;
+            @include breakepoint-down(small){
+                right: 10%;
+            }
         }
         .arrows-all{
             display: flex;
@@ -227,7 +233,10 @@
     }
     .flex{
         text-align: center;
-        width: 600px;
+        max-width: 600px;
+        @include breakepoint-down(small){
+            max-width: 300px;
+        }
         margin: auto;
         overflow: hidden;
             .per-image-tes{
