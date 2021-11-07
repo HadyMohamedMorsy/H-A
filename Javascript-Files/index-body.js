@@ -114,6 +114,8 @@ for (var i = 0; i < circlespan.length; i++) {
 function myFunction() {
     setInterval(function(){
 
+        if (current >= slidersImges.length - 1) return;
+
         current++;
 
         index++;
