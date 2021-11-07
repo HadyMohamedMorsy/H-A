@@ -115,6 +115,15 @@
                         @include prefix(transform, perspective(500px) translateZ(50px) , moz ms o);
                     }
                 }
+                    .same-class-icon{
+                        visibility: visible !important;
+                        display: flex  !important;
+                    }
+
+                  .icon-heart{
+                      visibility: hidden;
+                      display: none;
+                  }
             }
             .image-shop-show{
                 width: 100%;
@@ -132,6 +141,7 @@
                 position: absolute;
                 top: 20px;
                 right: 40px;
+                transition: visibility 0.5s;
                 svg{
                     color: #777;
                 }
@@ -150,6 +160,9 @@
                     width: 40px;
                     height: 40px;
                     margin-bottom: 10px;
+                    visibility: hidden;
+                    transition: visibility 0.5s;
+                    display: none;
                     svg{
                         color: #777;
                     }

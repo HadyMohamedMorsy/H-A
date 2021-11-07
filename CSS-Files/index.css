@@ -660,6 +660,12 @@ input:-internal-autofill-selected {
       -ms-transform: perspective(500px) translateZ(50px);
       -o-transform: perspective(500px) translateZ(50px);
       transform: perspective(500px) translateZ(50px); }
+    .sec-after-row .best-seler .Image-choose-best:hover .same-class-icon {
+      visibility: visible !important;
+      display: flex  !important; }
+    .sec-after-row .best-seler .Image-choose-best:hover .icon-heart {
+      visibility: hidden;
+      display: none; }
     .sec-after-row .best-seler .Image-choose-best .image-shop-show {
       width: 100%;
       height: 500px;
@@ -679,7 +685,8 @@ input:-internal-autofill-selected {
     .sec-after-row .best-seler .Image-choose-best .icon-heart {
       position: absolute;
       top: 20px;
-      right: 40px; }
+      right: 40px;
+      transition: visibility 0.5s; }
       .sec-after-row .best-seler .Image-choose-best .icon-heart svg {
         color: #777; }
     .sec-after-row .best-seler .Image-choose-best .same-class-icon:nth-child(3n + 1) {
@@ -694,7 +701,10 @@ input:-internal-autofill-selected {
       border-radius: 50%;
       width: 40px;
       height: 40px;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      visibility: hidden;
+      transition: visibility 0.5s;
+      display: none; }
       .sec-after-row .best-seler .Image-choose-best .same-class-icon:nth-child(3n + 1) svg {
         color: #777; }
     .sec-after-row .best-seler .Image-choose-best .same-class-icon:nth-child(3n + 2) {
@@ -709,7 +719,10 @@ input:-internal-autofill-selected {
       border-radius: 50%;
       width: 40px;
       height: 40px;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      visibility: hidden;
+      transition: visibility 0.5s;
+      display: none; }
       .sec-after-row .best-seler .Image-choose-best .same-class-icon:nth-child(3n + 2) svg {
         color: #777; }
     .sec-after-row .best-seler .Image-choose-best .same-class-icon:nth-child(3n + 3) {
@@ -724,7 +737,10 @@ input:-internal-autofill-selected {
       border-radius: 50%;
       width: 40px;
       height: 40px;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      visibility: hidden;
+      transition: visibility 0.5s;
+      display: none; }
       .sec-after-row .best-seler .Image-choose-best .same-class-icon:nth-child(3n + 3) svg {
         color: #777; }
     .sec-after-row .best-seler .Image-choose-best .content-product {
