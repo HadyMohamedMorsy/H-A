@@ -618,7 +618,6 @@ input:-internal-autofill-selected {
     .Secound-Section .icones-filter .shop-views button.active {
       opacity: 1; }
   .Secound-Section .row .Products {
-    cursor: pointer;
     display: block; }
     .Secound-Section .row .Products:hover .product-content-img img {
       -moz-transform: perspective(500px) translateZ(50px);
@@ -647,9 +646,9 @@ input:-internal-autofill-selected {
         right: 20px;
         cursor: pointer;
         color: #282828; }
-      .Secound-Section .row .Products .product-content-img .icon-heart-full {
+      .Secound-Section .row .Products .product-content-img .icon-heart-fill {
         position: absolute;
-        top: 40px;
+        top: 20px;
         right: 20px;
         cursor: pointer;
         color: #282828; }

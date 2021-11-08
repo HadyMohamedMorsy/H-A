@@ -8,25 +8,55 @@ fetch('API-Product.php')
   .then((myJson) => {
     myJson.map(item => {
         setallvaluehere = 
-        `<div  class="col-lg-3 Products">
-          <a href="#">
+        `<div class="col-lg-3 Products">
               <div class="product-content-img">
-              <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" />
-              <a href="#" class="icon-heart"> <i class="far fa-heart"></i> </a>
-              <a href="#" class="icon-heart-full"> <i class="fas fa-heart"></i> </a>
-              <a href="#" class="Add-to-cart">
-                    <p href="#"> Add To Cart </p>
-                  </a>
+               <a href="#"> <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" /> </a> 
+                <div class="icon-heart"> <i class="far fa-heart"></i> </div>
+                <a href="#" class="Add-to-cart">
+                      <p href="#"> Add To Cart </p>
+                </a>
               </div>
               <div class="product-content">
-                <h3><a href="#">${item.Product_Name}</a> </h3>
-                <p href="#">${item.Product_Price}</p>
+                  <h3><a href="#">${item.Product_Name}</a> </h3>
+                  <p href="#">${item.Product_Price}</p>
               </div>
-            </a>
         </div>`;
         SecoundSection.innerHTML += setallvaluehere;
 
     });
+
+    let iconheart = document.querySelectorAll('.icon-heart');
+    
+    iconheart.forEach((item)=>{
+
+      item.onmouseout = function(e) {
+
+        e.currentTarget.classList.remove('icon-heart');
+
+        e.currentTarget.classList.add('icon-heart-fill');
+
+    }
+
+      item.onmouseover = function(e) {
+
+        if(item.classList.contains("icon-heart")){
+
+          e.currentTarget.firstElementChild.classList.remove('far');
+
+          e.currentTarget.firstElementChild.classList.add('fas');
+
+        }else{
+
+          e.currentTarget.firstElementChild.classList.add('far');
+
+          e.currentTarget.firstElementChild.classList.remove('fas');
+
+        }
+      }
+
+
+    });
+
 
   });
   let clickfilter = document.querySelector('.click-filter');

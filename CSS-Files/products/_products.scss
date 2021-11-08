@@ -88,7 +88,6 @@
     padding-left: 2.5%;
     .row{
         .Products{
-            cursor: pointer;
             display: block;
             &:hover{
                 .product-content-img{
@@ -119,9 +118,9 @@
                     cursor: pointer;
                     color: #282828;
                 }
-                .icon-heart-full{
+                .icon-heart-fill{
                     position: absolute;
-                    top: 40px;
+                    top: 20px;
                     right: 20px;
                     cursor: pointer;
                     color: #282828;
