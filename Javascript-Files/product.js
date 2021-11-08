@@ -8,10 +8,15 @@ fetch('./json/products.json')
   .then((myJson) => {
     myJson.Product.map(item => {
         setallvaluehere = 
-        `<div class="${item.col} Products">
-            <img src=${item.IMG} alt="${item.alt}" />
-            <p>${item.name}</p>
+        `<div class="col-lg-3 Products">
+          <div class="product-content-img">
+             <img src=${item.IMG} alt="${item.alt}" />
+             <div class="icon-heart"> <i class="far fa-heart"></i> </div>
+          </div>
+          <div class="product-content">
+            <h3><a href="#">${item.name}</a> </h3>
             <span>${item.price}</span>
+          </div>
         </div>`;
         SecoundSection.innerHTML += setallvaluehere;
 
