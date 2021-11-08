@@ -618,7 +618,8 @@ input:-internal-autofill-selected {
     .Secound-Section .icones-filter .shop-views button.active {
       opacity: 1; }
   .Secound-Section .row .Products {
-    cursor: pointer; }
+    cursor: pointer;
+    display: block; }
     .Secound-Section .row .Products:hover .product-content-img img {
       -moz-transform: perspective(500px) translateZ(50px);
       -ms-transform: perspective(500px) translateZ(50px);
@@ -644,12 +645,14 @@ input:-internal-autofill-selected {
         position: absolute;
         top: 20px;
         right: 20px;
-        cursor: pointer; }
+        cursor: pointer;
+        color: #282828; }
       .Secound-Section .row .Products .product-content-img .icon-heart-full {
         position: absolute;
         top: 40px;
         right: 20px;
-        cursor: pointer; }
+        cursor: pointer;
+        color: #282828; }
       .Secound-Section .row .Products .product-content-img .Add-to-cart {
         position: absolute;
         bottom: 0px;
@@ -662,16 +665,21 @@ input:-internal-autofill-selected {
         visibility: hidden;
         transition: visibility 0.5s;
         display: none; }
+        .Secound-Section .row .Products .product-content-img .Add-to-cart p {
+          color: #282828;
+          display: inline-flex; }
     .Secound-Section .row .Products .product-content {
       padding-top: 10px; }
       .Secound-Section .row .Products .product-content h3 {
         font-size: 18px;
         margin: 0 0 5px;
         cursor: pointer; }
-        .Secound-Section .row .Products .product-content h3 a {
-          color: #282828; }
         .Secound-Section .row .Products .product-content h3:hover a {
           color: #000; }
+        .Secound-Section .row .Products .product-content h3 a {
+          color: #282828; }
+      .Secound-Section .row .Products .product-content p {
+        color: #282828; }
   .Secound-Section .button-load {
     text-align: center;
     display: block;

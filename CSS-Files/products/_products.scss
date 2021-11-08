@@ -89,6 +89,7 @@
     .row{
         .Products{
             cursor: pointer;
+            display: block;
             &:hover{
                 .product-content-img{
                     img{
@@ -116,12 +117,14 @@
                     top: 20px;
                     right: 20px;
                     cursor: pointer;
+                    color: #282828;
                 }
                 .icon-heart-full{
                     position: absolute;
                     top: 40px;
                     right: 20px;
                     cursor: pointer;
+                    color: #282828;
                 }
                 .Add-to-cart{
                     position: absolute;
@@ -135,6 +138,10 @@
                     visibility: hidden;
                     transition: visibility 0.5s;
                     display: none;
+                    p{
+                        color: #282828;
+                        display: inline-flex;
+                     }
                 }
             }
             .product-content{
@@ -143,14 +150,19 @@
                     font-size: 18px;
                     margin: 0 0 5px;
                     cursor: pointer;
-                    a{
-                        color: #282828;
-                    }
+
+
                     &:hover{
                         a{
                             color: #000;
                         }
                     }
+                    a{
+                        color: #282828;
+                    }
+                }
+                p{
+                    color: #282828; 
                 }
             }
 
