@@ -12,6 +12,10 @@ fetch('./json/products.json')
           <div class="product-content-img">
              <img src=${item.IMG} alt="${item.alt}" />
              <div class="icon-heart"> <i class="far fa-heart"></i> </div>
+             <div class="icon-heart-full"> <i class="fas fa-heart"></i> </div>
+              <div class="Add-to-cart">
+                    <p> Add To Cart </p>
+              </div>
           </div>
           <div class="product-content">
             <h3><a href="#">${item.name}</a> </h3>

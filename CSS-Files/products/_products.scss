@@ -88,10 +88,15 @@
     padding-left: 2.5%;
     .row{
         .Products{
+            cursor: pointer;
             &:hover{
                 .product-content-img{
                     img{
                         @include prefix(transform, perspective(500px) translateZ(50px) , moz ms o);
+                    }
+                    .Add-to-cart{
+                        visibility: visible;
+                        display: flex !important;
                     }
                 }
             }
@@ -110,6 +115,26 @@
                     position: absolute;
                     top: 20px;
                     right: 20px;
+                    cursor: pointer;
+                }
+                .icon-heart-full{
+                    position: absolute;
+                    top: 40px;
+                    right: 20px;
+                    cursor: pointer;
+                }
+                .Add-to-cart{
+                    position: absolute;
+                    bottom: 0px;
+                    background-color: rgba($white , 0.6);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    padding-top: 15px;
+                    visibility: hidden;
+                    transition: visibility 0.5s;
+                    display: none;
                 }
             }
             .product-content{
