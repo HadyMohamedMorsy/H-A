@@ -11,7 +11,7 @@ fetch('API-Product.php')
         `<div class="col-lg-3 Products">
               <div class="product-content-img">
                <a href="#"> <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" /> </a> 
-                <div class="icon-heart"> <i class="far fa-heart"></i> </div>
+                <div class="icon-heart" id="${item.Product_ID}" onclick="funcId(this.id)"> <i class="far fa-heart"></i> </div>
                 <a href="#" class="Add-to-cart">
                       <p href="#"> Add To Cart </p>
                 </a>
@@ -25,38 +25,7 @@ fetch('API-Product.php')
 
     });
 
-    let iconheart = document.querySelectorAll('.icon-heart');
     
-    iconheart.forEach((item)=>{
-
-      item.onmouseout = function(e) {
-
-        e.currentTarget.classList.remove('icon-heart');
-
-        e.currentTarget.classList.add('icon-heart-fill');
-
-    }
-
-      item.onmouseover = function(e) {
-
-        if(item.classList.contains("icon-heart")){
-
-          e.currentTarget.firstElementChild.classList.remove('far');
-
-          e.currentTarget.firstElementChild.classList.add('fas');
-
-        }else{
-
-          e.currentTarget.firstElementChild.classList.add('far');
-
-          e.currentTarget.firstElementChild.classList.remove('fas');
-
-        }
-      }
-
-
-    });
-
 
   });
   let clickfilter = document.querySelector('.click-filter');
@@ -77,3 +46,9 @@ fetch('API-Product.php')
     clickfilter.style.bottom = "0%";
 
   });
+
+  function funcId(id){
+
+    alert(id);
+
+}
