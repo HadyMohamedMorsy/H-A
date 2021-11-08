@@ -2,13 +2,13 @@ let SecoundSection = document.querySelector('.Secound-Section .row');
 let setallvaluehere = "";
 
 fetch('API-Product.php')
-  .then((response) => {
-    return response.json();
-  })
-  .then((myJson) => {
-    myJson.map(item => {
-        setallvaluehere = 
-        `<div class="col-lg-3 Products">
+    .then((response) => {
+        return response.json();
+    })
+    .then((myJson) => {
+        myJson.map(item => {
+            setallvaluehere =
+                `<div class="col-lg-3 Products">
               <div class="product-content-img">
                <a href="#"> <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" /> </a> 
                 <div class="icon-heart" id="${item.Product_ID}" onclick="funcId(this.id)"> <i class="far fa-heart"></i> </div>
@@ -21,34 +21,28 @@ fetch('API-Product.php')
                   <p href="#">${item.Product_Price}</p>
               </div>
         </div>`;
-        SecoundSection.innerHTML += setallvaluehere;
+            SecoundSection.innerHTML += setallvaluehere;
+
+        });
+
+
 
     });
+let clickfilter = document.querySelector('.click-filter');
 
-    
-
-  });
-  let clickfilter = document.querySelector('.click-filter');
-
-  let close = document.querySelector('.et-close');
-  close.addEventListener("click",function(){
+let close = document.querySelector('.et-close');
+close.addEventListener("click", function() {
     clickfilter.style.top = "100%";
     clickfilter.style.left = "100%";
     clickfilter.style.right = "100%";
     clickfilter.style.bottom = "100%";
-  });
-  let filterdone = document.querySelector('.filter-done');
+});
+let filterdone = document.querySelector('.filter-done');
 
-  filterdone.addEventListener("click",function(){
+filterdone.addEventListener("click", function() {
     clickfilter.style.top = "0%";
     clickfilter.style.left = "0%";
     clickfilter.style.right = "0%";
     clickfilter.style.bottom = "0%";
 
-  });
-
-  function funcId(id){
-
-    alert(id);
-
-}
+});

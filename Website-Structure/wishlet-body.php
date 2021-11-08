@@ -5,38 +5,30 @@
         <div class="list">
             <div class="content-parent row">
                 <div class="content-grid col-lg-12">
-                    <div class="content-list">
-                        <img src="./IMG/1.jpg" alt=""/>
-                        <div class="content-price">
-                            <p> Cashmere Carpenter Beanie </p>
-                            <span>$39.00</span>
-                        </div>
-                        <div class="plus-min">
-                            <span>+</span>
-                            <span>1</span>
-                            <span>-</span>
-                        </div>
-                        <div class="Total">
-                            <p>$39.00</p>
-                            <span>X</span>
-                        </div>
-                    </div>
-                    <div class="content-list">
-                        <img src="./IMG/1.jpg" alt=""/>
-                        <div class="content-price">
-                            <p> Cashmere Carpenter Beanie </p>
-                            <span>$39.00</span>
-                        </div>
-                        <div class="plus-min">
-                            <span>+</span>
-                            <span>1</span>
-                            <span>-</span>
-                        </div>
-                        <div class="Total">
-                            <p>$39.00</p>
-                            <span>X</span>
-                        </div>
-                    </div>
+                    <?php
+                        if ($Count_GET_My_Wishlist > 0 ) {
+                            while ($Rows = mysqli_fetch_array($Result_GET_My_Wishlist)) {
+                                $SQL_GET_Product_Info = 'SELECT * FROM ha_products WHERE HA_P_Status = "Active" AND HA_P_ID = "'.$Rows['HA_W_Product_ID'].'"';
+                                $Result_GET_Product_Info = mysqli_query($Connection,$SQL_GET_Product_Info);
+                                $Row_GET_Product_Info  = mysqli_fetch_array($Result_GET_Product_Info, MYSQLI_ASSOC);
+                                $Path_Folder_Cover = 'IMG/Imges-Products/P_ID-'.$Row_GET_Product_Info['HA_P_ID'].'/P_ID-'.$Row_GET_Product_Info['HA_P_ID'].'-Cover';
+                                $Cover_Img = scandir($Path_Folder_Cover); 
+                                echo '
+                                    <div class="content-list">
+                                        <img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] .'" alt=""/>
+                                        <div class="content-price">
+                                            <p> '. $Row_GET_Product_Info['HA_P_Name'].'</p>
+                                            <span>$'.number_format($Row_GET_Product_Info['HA_P_Price'],2) .'</span>
+                                        </div>
+                                        
+                                        <div class="Total">
+                                            <span>X</span>
+                                        </div>
+                                    </div>
+                                ';
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>

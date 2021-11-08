@@ -2,7 +2,7 @@
     include('Datebase/Config.php');
     include('Datebase/DB_Login.php');
     include('Datebase/DB-Sign-Up.php');
-
+    include('Datebase/DB-Wishlist.php');
 ?>
 
 <!DOCTYPE html>
