@@ -16,4 +16,47 @@ setInterval(()=>{
 
     abouttext.innerText = newstring;
 
-}, 100)
+}, 100);
+
+let counts = document.querySelectorAll('.count');
+
+let speed = 400;
+
+window.addEventListener('scroll',()=>{
+
+    counts.forEach((item)=>{
+
+        let contentPosition = item.getBoundingClientRect().top;
+
+        let screenposition = window.innerHeight;
+
+        let updatCount = ()=>{
+
+            let target =  +item.getAttribute('data-count');
+
+            let counter = +item.innerText;
+
+            let inc = target / speed;
+
+            if(counter < target){
+
+                item.innerText = counter + inc;
+
+                setTimeout(updatCount , 200);
+
+            }else{
+
+                counter.innerText = target;
+            }
+
+        }
+
+        if(contentPosition < screenposition){
+
+            updatCount();
+            
+        }
+
+    });
+});
+

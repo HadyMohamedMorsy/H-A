@@ -40,24 +40,33 @@
     padding-top: 60px;
     padding-bottom: 60px;
     .video{
-        width: 100%;
-        position: relative;
-        img{
+        .child-Video-ele{
             width: 100%;
+            position: relative;
+            overflow: hidden;
+            &:hover{
+
+                img{
+                    @include prefix(transform, perspective(500px) translateZ(50px) , moz ms o);
+                }
+            }
+            img{
+                width: 100%;
+                @include prefix(transition, all 0.5s , moz ms o);
+            }
+            svg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 60px;
+                height: 60px;
+                color: $white;
+                cursor: pointer;
+                stroke: #fff;
+                fill: #fff;
+            }
         }
-        svg{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            width: 60px;
-            height: 60px;
-            color: $white;
-            cursor: pointer;
-            stroke: #fff;
-            fill: #fff;
-        }
-        
     }
     .content-video{
         display: flex;
@@ -78,16 +87,16 @@
             display: flex;
             .number{
                 .count{
-                    span{
-                        font-size: 34px;
-                    }
-
+                        font-size: 45px;
                 }
             }
             .content-number{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                p{
+                    margin-left: 20px;
+                }
             }
         }
     }
@@ -151,8 +160,65 @@
         }
     }
     .content-person{
-        img{
-            width: 100%;
+        &:hover{
+            .founderes{
+                img{
+                    @include prefix(transform, perspective(500px) translateZ(50px) , moz ms o);
+                }
+            }
+
         }
+        .founderes{
+            width: 100%;
+            height: 325px;
+            overflow: hidden;
+            position: relative;
+            &:hover{
+                .social-media-founders{
+                    visibility: visible;
+                    display: flex !important;
+                }
+            }
+            .social-media-founders{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                background-color: rgba(#000,0.6);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                visibility: hidden;
+                @include prefix(transition, visibility 0.5s , moz ms o);
+                display: none;
+                a{
+                    color: $white;
+                }
+
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @include prefix(transition, all 0.5s , moz ms o);
+            }
+        }
+        .content-founders{
+            text-align: center;
+            width: 100%;
+            padding-top: 10px;
+            h3{
+                font-size: 19px;
+                margin: 0px;
+                margin-bottom: 3px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+
     }
 }

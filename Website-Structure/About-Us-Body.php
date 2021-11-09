@@ -18,8 +18,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 video">
+            <div class="child-Video-ele">
                 <img src="./IMG/video.jpg" alt=""/>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
             </div>
             <div class="col-lg-6 content-video">
                 <h5 class="fancy-title">Our History</h5>
@@ -27,7 +29,7 @@
                 <p>Portland meggings chartreuse plaid palo santo, gluten-free ramps iPhone etsy salvia cray kombucha copper mug single-origin coffee.</p>
                 <div class="number-off-viewers">
                     <div class="number">
-						<div class="count"> <span> 12346 </span></div>
+						<div class="count" data-count = "6000">0</div>
 						<h4>Customers</h4>
                     </div>
                     <div class="content-number">
@@ -69,7 +71,7 @@
                 <p>Thundercats art party edison bulb authentic roof party taiyaki synth gluten-free squid tumeric retro iPhone etsy.</p>
                 <div class="number-off-viewers">
                     <div class="number">
-						<div class="count"> <span> 107 </span></div>
+						<div class="count" data-count = "4000">0</div>
 						<h4>OFFICES</h4>
                     </div>
                     <div class="content-number">
@@ -78,7 +80,9 @@
                 </div>
             </div>
             <div class="col-lg-6 video">
-                <img src="./IMG/Future.jpg" alt=""/>
+                <div class="child-Video-ele">
+                    <img src="./IMG/Future.jpg" alt=""/>
+                </div>
             </div>
         </div>
     </div>
@@ -118,19 +122,46 @@
             <p>Yielding fowl their brought is own day place fruit creature our day lesser cant bring hath after.</p>
             </div>
             <div class="col-lg-3 content-person">
-                <img src="./IMG/first.jpg" alt=""/>
-                <h3>John Nicholson</h3>
-                <span>Developer</span>
+                <div class="founderes">
+                    <img src="./IMG/first.jpg" alt=""/>
+                    <div class="social-media-founders">
+                       <a href="#"> <i class="fab fa-facebook-f"></i></a> 
+                       <a href="#"> <i class="fab fa-linkedin-in"></i></a>  
+                       <a href="#"> <i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="content-founders">
+                    <h3>John Nicholson</h3>
+                    <p>Developer</p>
+                </div>
             </div>
             <div class="col-lg-3 content-person">
-                <img src="./IMG/secoound.jpg" alt=""/>
+            <div class="founderes">
+                 <img src="./IMG/secoound.jpg" alt=""/> 
+                 <div class="social-media-founders">
+                   <a href="#"><i class="fab fa-facebook-f"></i></a> 
+                   <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+                   <a href="#"><i class="fab fa-instagram"></i></a>
+                 </div>
+            </div>
+            <div class="content-founders">
                 <h3>Sandra Monroe</h3>
-                <span>Marketing</span>
+                <p>Marketing</p>
+            </div>
             </div>
             <div class="col-lg-3 content-person">
-                <img src="./IMG/thired.jpg" alt=""/>
-                <h3>Denisse MacDonnell</h3>
-                <span>CEO</span>
+            <div class="founderes">
+                 <img src="./IMG/thired.jpg" alt=""/> 
+                 <div class="social-media-founders">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                 </div>
+            </div>
+                <div class="content-founders">
+                    <h3>Denisse MacDonnell</h3>
+                    <p>CEO</p>
+                </div>
             </div>
         </div>
     </div>
