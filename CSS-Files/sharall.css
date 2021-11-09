@@ -62,4 +62,20 @@ p {
 a {
   color: #686868; }
 
+.menu-links {
+  position: relative; }
+  .menu-links:hover {
+    color: #282828; }
+    .menu-links:hover::after {
+      width: 100%; }
+  .menu-links::after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    content: "";
+    transition: all 0.5s;
+    background-color: #282828;
+    width: 0%;
+    height: 2px; }
+
 /*# sourceMappingURL=sharall.css.map */

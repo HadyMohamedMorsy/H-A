@@ -7,11 +7,28 @@
 <div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false" data-interval="false">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="IMG/ezgif.com-gif-maker.jpg" class="d-block w-100" alt="ezgif.com-gif-maker.jpg">
-
+            <img src="IMG/header-1.jpg" class="d-block w-100" alt="header-1.jpg">
+            <div class="content-slider">
+                <div class="box-content">
+                    Spring / Summer 21
+                </div>
+                <div class="content">
+                    <h2 class="header-slide">The Weekent Getaway</h2>
+                    <a class="menu-links" href="#">Shop Now</a>
+                </div>
+            </div>
         </div>
         <div class="carousel-item">
-            <img src="IMG/ezgif.com-gif-maker (1).jpg" class="d-block w-100" alt="ezgif.com-gif-maker (1).jpg">
+            <img src="IMG/header-2.jpg" class="d-block w-100" alt="header-2.jpg">
+            <div class="content-slider-even">
+                <div class="box-content">
+                    50% OFF
+                </div>
+                <div class="content">
+                <h2 class="header-slide">New Cocktail Dresses</h2>
+                    <a class="menu-links" href="#">Shop Now</a>
+                </div>
+            </div>
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControlsNoTouching" role="button" data-slide="prev">

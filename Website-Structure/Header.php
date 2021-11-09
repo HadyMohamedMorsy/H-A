@@ -111,16 +111,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">Home</a>
+                <a class="nav-link menu-links" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="About-Us.php">About Us</a>
+                <a class="nav-link menu-links" href="About-Us.php">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="ptoduct.php">Shop</a>
+                <a class="nav-link menu-links" href="ptoduct.php">Shop</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Contact-us.php">Contact Us</a>
+                <a class="nav-link menu-links" href="Contact-us.php">Contact Us</a>
             </li>
         </ul>
     </div>

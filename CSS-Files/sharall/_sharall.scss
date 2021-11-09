@@ -2,5 +2,26 @@ p{
     color: #686868;
 }
 a{
-    color: #686868; 
+    color: #686868;
+}
+.menu-links{
+    position: relative;
+    &:hover{
+        color: #282828;
+        &::after{
+            width: 100%;
+
+        } 
+    }
+    &::after{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        content: "";
+        transition: all 0.5s;
+        background-color: #282828;
+        width: 0%;
+        height: 2px;
+    }
+
 }
