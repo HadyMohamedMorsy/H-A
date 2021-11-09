@@ -110,16 +110,16 @@
     </div>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link menu-links" href="index.php">Home</a>
+            <li class="nav-item select">
+                <a class="nav-link menu-links menu-links-active" href="index.php">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item select">
                 <a class="nav-link menu-links" href="About-Us.php">About Us</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link menu-links" href="ptoduct.php">Shop</a>
+            <li class="nav-item select">
+                <a class="nav-link menu-links" href="shop.php">Shop</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item select">
                 <a class="nav-link menu-links" href="Contact-us.php">Contact Us</a>
             </li>
         </ul>

@@ -14,7 +14,6 @@
 ?>
     <!-- Start The Links Files -->
     <?php include ("Links CSS In Head Area.php"); ?>
-    <link rel="stylesheet" href="./CSS-Files/sharall.css">
     <link rel="stylesheet" href="./CSS-Files/About.css">
 
     <!-- End The Links Files -->

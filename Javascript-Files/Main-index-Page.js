@@ -88,8 +88,35 @@ $(document).ready(function(){
 
     });
 
+    $('.select a').on('click',function(e){
+
+        $(this).parent().siblings().next().removeClass('menu-links-active');
+
+        $(this).addClass('menu-links-active');
+
+    });
+
 
 });
+
+const cureentlocation = location.href;
+
+const menyItems = document.querySelectorAll('.select');
+
+const len = menyItems.length;
+
+for(let i = 0; i< len; i++){
+
+    if(menyItems[i].firstElementChild.href === cureentlocation){
+
+        menyItems[i].firstElementChild.classList.add("menu-links-active");
+
+    }else{
+
+        menyItems[i].firstElementChild.classList.remove("menu-links-active");
+    }
+}
+
 
 
 let cartlistcancel = document.querySelector('.se-cancel');
