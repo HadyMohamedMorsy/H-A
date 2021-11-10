@@ -5,13 +5,20 @@
 }
 .Login-username{
     @include fixed;
+    top: 100%;
+    right: 100%;
+    bottom: 100%;
+    left: 100%;
     z-index: 6;
     background-color: rgba(#cccbcb , 0.5);
+    transition: all 0.8s;
     .Login-user{
-        top: 50%;
-        left: 50%;
+        top: -200%;
+        left: -200%;
         transform: translate(-50%,-50%);
         width: 45%;
+        transition: all 0.8s;
+        will-change: transform;
         .login-cancel{
             @include button;
         }
@@ -50,17 +57,31 @@
 }
 .sign-username{
     @include fixed;
+    top: 100%;
+    right: 100%;
+    bottom: 100%;
+    left: 100%;
     z-index: 6;
     background-color: rgba(#cccbcb , 0.5);
+    transition: all 0.8s;
     .sign-user{
+        overflow: auto;
+        height: 100%;
+        top: -200%;
+        left: -200%;
+        transform: translate(-50%,-50%);
+        transition: all 0.8s;
+        will-change: transform;
+        width: 45%;
         .sign-cancel{
             @include button;
         }
         @include formHome;
-        top : 30%;
         .form-group{
             input{
                 @include inputfornhome;
+                margin-top: 0px;
+                margin-bottom: 0px;
             }
         }
         h2{
@@ -69,6 +90,7 @@
         .Sign-user{
             @include submitHome;
         }
+        padding: 0px 70px;
     }
     .form-check-label{
         font-size: 20px;
@@ -157,5 +179,125 @@ input:-internal-autofill-selected{
 
 
 
+// cart
+.cart{
+    position: fixed;
+    top: 100%;
+    right: 100%;
+    bottom: 100%;
+    left: 100%;
+    background: rgba(192,192,192,.6);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transition: all 0.8s;
+    .cart-list{
+        width: 400px;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        transition: all 0.8s;
+        will-change: transform;
+        header{
+            background: rgba(0,0,0,.02);
+            color: #282828;
+            padding: 0 50px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .container{
+                .panel-header-inner{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-shrink: 0;
+                    height: 70px;
+                    padding: 0;
+                }
+            }
+        }
+        .all-content-cart{
+            padding: 35px 50px 50px;
+            .product-list-cart{
+                display: flex;
+                position: relative;
+                padding: 10px 0px;
+                .img-product-cart{
+                    flex-basis: 20%;
+                    img{
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+                .content-product{
+                    margin-left: 10px;
+                    .min{
+                        margin-right: 10px;
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                            color: #777;
+                        }
+                    }
+                    .plus{
+                        margin-left: 10px;
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                            color: #777;
+                        }
 
+                    }
+                }
+                .cancel-cart{
+                    position: absolute;
+                    top: 7px;
+                    right: 0px;
+                }
+                .price-cart{
+                    position: absolute;
+                    top: 40px;
+                    right: 0px;
+                }
+            }
+            .subtotal{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 50px;
+                .sub{
+                    font-weight: bold;
+                }
+            }
+            .finish-list-cart{
+                margin-top: 20px;
+                .wc-forward{
+                    background: transparent;
+                    border: 2px solid currentColor;
+                    color: #000000;
+                    width: 100%;
+                    padding: 8px 12px;
+                    display: inline-block;
+                    text-align: center;
+                }
+                .checkout{
+                    background-color: #000000;
+                    margin-top: 10px;
+                    width: 100%;
+                    padding: 8px 12px;
+                    color: #fff;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+}
+// cart
     

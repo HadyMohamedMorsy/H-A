@@ -1,6 +1,6 @@
 <!-- bob -->
 <div class="background-when-menu"></div>
-<div class="Login-username Login-dissapered">
+<div class="Login-username">
     <form class="Login-user" action="" method="POST">
         <div class="cancel login-cancel">
             <i class="fas fa-times"></i>
@@ -30,7 +30,7 @@
     </form>
 </div>
 
-<div class="sign-username Sign-dissapered">
+<div class="sign-username">
     <form class="sign-user" action="" method="POST">
         <div class="cancel sign-cancel">
             <i class="fas fa-times"></i>
@@ -131,13 +131,13 @@
         <?php
             if (!isset($_SESSION['HA_U_ID'])) {
                 echo '
-                    <a href="#" class="login">Login</a>
-                    <a href="#" class="Sign">Sign Up</a>
+                    <a href="#" class="login menu-links">Login</a>
+                    <a href="#" class="Sign menu-links">Sign Up</a>
                 ';
             }else {
                 echo'
                 <a href="My-Profile-Setting"><i class="fas fa-user-cog"></i></a>
-                <a href="Logout.php"><i class="fas fa-sign-out-alt"></i></a>
+                <a href="Logout.php" class="menu-links"><i class="fas fa-sign-out-alt"></i></a>
                 ';
             }
         ?>
