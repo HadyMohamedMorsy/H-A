@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 02, 2021 at 07:17 PM
+-- Generation Time: Nov 10, 2021 at 05:18 AM
 -- Server version: 8.0.13-4
--- PHP Version: 7.2.24-0ubuntu0.18.04.8
+-- PHP Version: 7.2.24-0ubuntu0.18.04.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -97,26 +97,28 @@ CREATE TABLE `ha_products` (
   `HA_P_Date_Created` varchar(255) NOT NULL,
   `HA_P_Time_Created` varchar(255) NOT NULL,
   `HA_P_User_ID_Created` varchar(255) NOT NULL,
-  `HA_P_Status` varchar(255) NOT NULL
+  `HA_P_Status` varchar(255) NOT NULL,
+  `HA_P_Views` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ha_products`
 --
 
-INSERT INTO `ha_products` (`HA_P_ID`, `HA_P_Name`, `HA_P_Price`, `HA_P_Description`, `HA_P_Category_ID`, `HA_P_Qty`, `HA_P_Alert_Qty`, `HA_P_Brand`, `HA_P_Available_From_Date`, `HA_P_Date_Created`, `HA_P_Time_Created`, `HA_P_User_ID_Created`, `HA_P_Status`) VALUES
-(1, 'Pre-Owned Rolex', '23000', 'Rolex watches are symbols of excellence, performance and prestige. Throughout its history, Rolex has pioneered the development of the wristwatch for the modern era. The company is at the origin of landmark innovations in watchmaking, including the first waterproof wristwatch, the Oyster, and the Perpetual rotor self-winding mechanism. Today, Rolex is also actively involved in supporting the arts, exploration, sports and the environment through sponsoring and philanthropic programmes.', '16', '5', '3', 'Rolex', '2021/09/30 07:00:00 PM', '2021/09/30', '06:41:00 PM', '2', 'Active'),
-(2, 'TUF Gaming VG24VQ Curved Gaming', '4399', 'Asus TUF Gaming VG24VQ Curved Gaming Monitor 23.6 inch Full HD (1920 x 1080) 144Hz, Extreme Low Motion Blur, FreeSync, 1ms (MPRT), Shadow Boost', '7', '15', '5', 'Asus', '2021/10/22 06:30:22 PM', '2021/09/30', '07:57:22 PM', '2', 'Active'),
-(3, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:19:54 PM', '2021/10/03', '02:19:54 PM', '2', 'Active'),
-(4, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:21:55 PM', '2021/10/03', '02:21:55 PM', '2', 'Deactivated'),
-(5, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:25:44 PM', '2021/10/03', '02:25:44 PM', '2', 'Pending'),
-(6, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:33:13 PM', '2021/10/03', '02:33:13 PM', '2', 'Pending'),
-(7, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:37:47 PM', '2021/10/03', '02:37:47 PM', '2', 'Pending'),
-(8, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:38:43 PM', '2021/10/03', '02:38:43 PM', '2', 'Pending'),
-(9, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:39:12 PM', '2021/10/03', '02:39:12 PM', '2', 'Pending'),
-(10, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:46:23 PM', '2021/10/03', '02:46:23 PM', '2', 'Pending'),
-(11, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:48:18 PM', '2021/10/03', '02:48:18 PM', '2', 'Pending'),
-(12, 'Mouse Gaming M112', '120', 'Package Dimensions ‏ : ‎ 20.6 x 13.6 x 6.2 cm; 180 Grams\r\nDate First Available ‏ : ‎ 1 April 2021\r\nManufacturer ‏ : ‎ MARVO\r\nASIN ‏ : ‎ B091J5RW58\r\nItem model number ‏ : ‎ M112', '23', '20', '3', 'N/A', '2021/10/03 02:53:52 PM', '2021/10/03', '02:53:52 PM', '2', 'Pending');
+INSERT INTO `ha_products` (`HA_P_ID`, `HA_P_Name`, `HA_P_Price`, `HA_P_Description`, `HA_P_Category_ID`, `HA_P_Qty`, `HA_P_Alert_Qty`, `HA_P_Brand`, `HA_P_Available_From_Date`, `HA_P_Date_Created`, `HA_P_Time_Created`, `HA_P_User_ID_Created`, `HA_P_Status`, `HA_P_Views`) VALUES
+(1, 'Pre-Owned Rolex', '23000', 'Rolex watches are symbols of excellence, performance and prestige. Throughout its history, Rolex has pioneered the development of the wristwatch for the modern era. The company is at the origin of landmark innovations in watchmaking, including the first waterproof wristwatch, the Oyster, and the Perpetual rotor self-winding mechanism. Today, Rolex is also actively involved in supporting the arts, exploration, sports and the environment through sponsoring and philanthropic programmes.', '16', '0', '3', 'Rolex', '2021/09/30 07:00:00 PM', '2021/09/30', '06:41:00 PM', '2', 'Active', 150),
+(2, 'TUF Gaming VG24VQ Curved Gaming', '4399', 'Asus TUF Gaming VG24VQ Curved Gaming Monitor 23.6 inch Full HD (1920 x 1080) 144Hz, Extreme Low Motion Blur, FreeSync, 1ms (MPRT), Shadow Boost', '7', '15', '5', 'Asus', '2021/10/22 06:30:22 PM', '2021/09/30', '07:57:22 PM', '2', 'Active', 200),
+(3, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:19:54 PM', '2021/10/03', '02:19:54 PM', '2', 'Pending', 50),
+(4, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:21:55 PM', '2021/10/03', '02:21:55 PM', '2', 'Active', 300),
+(5, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:25:44 PM', '2021/10/03', '02:25:44 PM', '2', 'Pending', 2),
+(6, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:33:13 PM', '2021/10/03', '02:33:13 PM', '2', 'Pending', 3),
+(7, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:37:47 PM', '2021/10/03', '02:37:47 PM', '2', 'Pending', 4),
+(8, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:38:43 PM', '2021/10/03', '02:38:43 PM', '2', 'Pending', 5),
+(9, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:39:12 PM', '2021/10/03', '02:39:12 PM', '2', 'Pending', 6),
+(10, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:46:23 PM', '2021/10/03', '02:46:23 PM', '2', 'Pending', 7),
+(11, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:48:18 PM', '2021/10/03', '02:48:18 PM', '2', 'Pending', 8),
+(12, 'Mouse Gaming M112', '120', 'Package Dimensions ‏ : ‎ 20.6 x 13.6 x 6.2 cm; 180 Grams\r\nDate First Available ‏ : ‎ 1 April 2021\r\nManufacturer ‏ : ‎ MARVO\r\nASIN ‏ : ‎ B091J5RW58\r\nItem model number ‏ : ‎ M112', '23', '20', '3', 'N/A', '2021/10/03 02:53:52 PM', '2021/10/03', '02:53:52 PM', '2', 'Active', 1),
+(13, 'Hady mohamed', '20', 'localsdasdasdas', '30', '30', '40', 'brand', '2021-11-05T21:30', '2021/11/02', '09:30:55 PM', '1', 'Pending', 10);
 
 -- --------------------------------------------------------
 
@@ -141,7 +143,31 @@ CREATE TABLE `ha_product_status_activities` (
 
 INSERT INTO `ha_product_status_activities` (`HA_P_S_A_ID`, `HA_P_S_A_Product_ID`, `HA_P_S_A_Current_Status`, `HA_P_S_A_New_Status`, `HA_P_S_A_Action_From_User_ID`, `HA_P_S_A_Status_Reason`, `HA_P_S_A_Date_Created`, `HA_P_S_A_Time_Created`) VALUES
 (1, '3', 'Pending', 'Active', '2', 'Null', '2021/11/02', '08:02:32 PM'),
-(2, '4', 'Pending', 'Deactivated', '2', 'Null', '2021/11/02', '08:14:17 PM');
+(2, '4', 'Pending', 'Deactivated', '2', 'Null', '2021/11/02', '08:14:17 PM'),
+(3, '12', 'Pending', 'Active', '2', 'Null', '2021/11/02', '08:19:21 PM'),
+(4, '1', 'Active', 'Deactivated', '1', 'Null', '2021/11/02', '08:21:52 PM'),
+(5, '12', 'Active', 'Deactivated', '2', 'Null', '2021/11/02', '08:22:03 PM'),
+(6, '9', 'Pending', 'Active', '1', 'Null', '2021/11/02', '08:21:56 PM'),
+(7, '9', 'Active', 'Deactivated', '1', 'Null', '2021/11/02', '08:21:59 PM'),
+(8, '6', 'Pending', 'Active', '1', 'Null', '2021/11/02', '08:23:29 PM'),
+(9, '6', 'Active', 'Deactivated', '1', 'Null', '2021/11/02', '08:24:20 PM'),
+(10, '13', 'Pending', 'Active', '1', 'Null', '2021/11/02', '08:31:44 PM'),
+(11, '13', 'Active', 'Deactivated', '1', 'Null', '2021/11/02', '08:31:57 PM'),
+(12, '13', 'Pending', 'Deactivated', '1', 'Null', '2021/11/02', '08:39:33 PM'),
+(13, '12', 'Pending', 'Deactivated', '1', 'Null', '2021/11/02', '08:39:41 PM'),
+(14, '2', 'Pending', 'Active', '2', 'Null', '2021/11/03', '07:50:50 PM'),
+(15, '1', 'Pending', 'Active', '2', 'Null', '2021/11/03', '07:51:00 PM'),
+(16, '9', 'Pending', 'Deactivated', '2', 'Null', '2021/11/03', '07:51:05 PM'),
+(17, '10', 'Pending', 'Deactivated', '2', 'Null', '2021/11/03', '07:51:08 PM'),
+(18, '7', 'Pending', 'Active', '2', 'Null', '2021/11/05', '01:41:20 AM'),
+(19, '5', 'Pending', 'Active', '2', 'Null', '2021/11/05', '01:41:53 AM'),
+(20, '4', 'Pending', 'Active', '2', 'Null', '2021/11/05', '01:45:45 AM'),
+(21, '4', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '01:45:54 AM'),
+(22, '4', 'Deactivated', 'Deactivated', '2', 'Null', '2021/11/05', '01:46:30 AM'),
+(23, '5', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '01:46:40 AM'),
+(24, '7', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '01:48:41 AM'),
+(25, '12', 'Pending', 'Active', '2', 'Null', '2021/11/08', '04:07:00 PM'),
+(26, '4', 'Pending', 'Active', '1', 'Null', '2021/11/08', '07:02:55 PM');
 
 -- --------------------------------------------------------
 
@@ -158,6 +184,7 @@ CREATE TABLE `ha_users` (
   `HA_U_Second_Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `HA_U_Last_Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `HA_U_Last_Login` varchar(255) NOT NULL,
+  `HA_U_Login_From_IP` varchar(255) NOT NULL,
   `HA_U_Gender` varchar(255) NOT NULL,
   `HA_U_Birthday` varchar(255) NOT NULL,
   `HA_U_Country` varchar(255) NOT NULL,
@@ -177,38 +204,38 @@ CREATE TABLE `ha_users` (
 -- Dumping data for table `ha_users`
 --
 
-INSERT INTO `ha_users` (`HA_U_ID`, `HA_U_Username`, `HA_U_Password`, `HA_U_User_Status`, `HA_U_First_Name`, `HA_U_Second_Name`, `HA_U_Last_Name`, `HA_U_Last_Login`, `HA_U_Gender`, `HA_U_Birthday`, `HA_U_Country`, `HA_U_ZIP_Code`, `HA_U_Address`, `HA_U_Email`, `HA_U_Mobile_Number`, `HA_U_User_Type`, `HA_P_Views`, `HA_U_Sales`, `HA_U_Purchase`, `HA_U_Date_Created`, `HA_U_Time_Created`) VALUES
-(1, 'HadyMM', '123', 'Active', 'Hady', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(2, 'AbdulBasetRS', '123', 'Deactivated', 'AbdulBaset', 'Reda', 'Sayed', '2021/11/02 02:16:00 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulBasetRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(3, 'FatmaMM', '123', 'Pending', 'Fatma', 'Muhammed', 'Morsy', '2021/10/03 06:00:25 AM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'FatmaMM@Gmail.com', '01097579845', 'Seller', '3051', '5400', '0', '2021/09/15', '08:43:13 PM'),
-(4, 'SayedMM', '123', 'Suspended', 'Sayed', 'Muhammed', 'Morsy', '2021/09/29 01:44:34 PM', 'Female', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
-(5, 'hadymohamed', '123', 'Pending', 'Muhammed', 'Muhammed', 'Morsy', '2021/09/28 04:12:05 PM', 'Male', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MuhammedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
-(6, 'RedaSH', '123', 'Deactivated', 'Reda', 'Sayed', 'Hussien', '2021/09/28 04:12:05 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'RedaSH@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
-(7, 'MahmoudME', '123', 'Pending', 'Mahmoud', 'Mosad', 'El-Adawy', '2021/09/28 04:12:05 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MahmoudME@Gmail.com', '01097579845', 'Client', '', '', '1200', '2021/09/15', '08:45:58 PM'),
-(8, 'MariamMM', '123', 'Deactivated', 'Mariam', 'Muhammed', 'Morsy', '2021/09/28 04:12:05 PM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MariamMM@Gmail.com', '01097579845', 'Seller', '1516457', '78500', '0', '2021/09/18', '08:43:13 PM'),
-(9, 'ClientDemo', '123', 'Pending', 'Client', 'Demo', 'Demo', '2021/10/01 08:19:00 AM', 'Male', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Client_Demo@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
-(10, 'SellerDemo', '123', 'Pending', 'Seller', 'Demo', 'Demo', '2021/10/01 08:23:45 AM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Seller_Demo@Gmail.com', '01097579845', 'Seller', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(11, 'RamdanBM', '123', 'Pending', 'Ramdan', 'Pablo', 'Morsy', '2021/09/29 01:44:34 PM', 'Male', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(12, 'AhmedEA', '123', 'Pending', 'Ahmed', 'El-Gaml', 'Ahmed', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AhmedElGaml@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(13, 'HamzaMM', '123', 'Pending', 'Hamza', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HamzaMMMuhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(14, 'AbdulrahmanMM', '123', 'Pending', 'Abdulrahman', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulrahmanMuhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(15, 'GlalMM', '123', 'Pending', 'Glal', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Glal-Muhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(16, 'DlalMM', '123', 'Deactivated', 'Dlal', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Dlal-Muhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
-(17, 'SalmaMM', '123', 'Pending', 'Salma', 'Muhammad', 'Muhammad', '2021/11/02 02:16:00 PM', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SalmaMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(18, 'UndertaikerMM', '123', 'Pending', 'UnderTaker', 'Muhammad', 'Muhammad', '2021/11/02 02:16:00 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'UndertaikerMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(19, 'SaraMM', '123', 'Pending', 'AbdulBaset', 'Muhammad', 'Muhammad', '2021/11/02 02:16:00 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SaraMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(20, 'MernaRS', '123', 'Pending', 'Merna', 'Reda', 'Sayed', '2021/11/02 02:16:00 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MernaRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(21, 'SayedHH', '123', 'Pending', 'AbdulBaset', 'Hady', 'Hyidr', '2021/11/02 02:16:00 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedHH@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(22, 'HadyHH', '123', 'Pending', 'Hady', 'Haydir', 'Morsy', '2021/10/31 06:47:25 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(23, 'AhmedHM', '123', 'Pending', 'Hady', 'Hady', 'Morsy', '2021/10/31 06:47:25 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(24, 'TawfikHM', '123', 'Pending', 'Tawfik', 'Hady', 'Muhaamad', '2021/11/02 02:16:00 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulBasetRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(25, 'ZaabolaMM', '123', 'Pending', 'Zaabola', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(26, 'HussienMM', '123', 'Pending', 'Hussien', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(27, 'HassanMM', '123', 'Pending', 'Zaabola', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(28, 'Demo1', '123', 'Pending', 'Hady', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(29, 'Demo2', '123', 'Pending', 'Hady', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(30, 'Demo3', '123', 'Pending', 'Hady', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(31, 'Demo4', '123', 'Pending', 'Hady', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM');
+INSERT INTO `ha_users` (`HA_U_ID`, `HA_U_Username`, `HA_U_Password`, `HA_U_User_Status`, `HA_U_First_Name`, `HA_U_Second_Name`, `HA_U_Last_Name`, `HA_U_Last_Login`, `HA_U_Login_From_IP`, `HA_U_Gender`, `HA_U_Birthday`, `HA_U_Country`, `HA_U_ZIP_Code`, `HA_U_Address`, `HA_U_Email`, `HA_U_Mobile_Number`, `HA_U_User_Type`, `HA_P_Views`, `HA_U_Sales`, `HA_U_Purchase`, `HA_U_Date_Created`, `HA_U_Time_Created`) VALUES
+(1, 'HadyMM', '123', 'Active', 'Hady', 'Muhammed', 'Morsy', '2021/11/08 04:03:13 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(2, 'AbdulBasetRS', '123', 'Active', 'AbdulBaset', 'Reda', 'Sayed', '2021/11/10 05:59:39 AM', '127.0.0.1', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulBasetRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(3, 'FatmaMM', '123', 'Pending', 'Fatma', 'Muhammed', 'Morsy', '2021/10/03 06:00:25 AM', '', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'FatmaMM@Gmail.com', '01097579845', 'Seller', '3051', '5400', '0', '2021/09/15', '08:43:13 PM'),
+(4, 'SayedMM', '123', 'Suspended', 'Sayed', 'Muhammed', 'Morsy', '2021/09/29 01:44:34 PM', '', 'Female', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
+(5, 'hadymohamed', '123', 'Pending', 'Muhammed', 'Muhammed', 'Morsy', '2021/09/28 04:12:05 PM', '', 'Male', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MuhammedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
+(6, 'RedaSH', '123', 'Pending', 'Reda', 'Sayed', 'Hussien', '2021/09/28 04:12:05 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'RedaSH@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
+(7, 'MahmoudME', '123', 'Deactivated', 'Mahmoud', 'Mosad', 'El-Adawy', '2021/09/28 04:12:05 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MahmoudME@Gmail.com', '01097579845', 'Client', '', '', '1200', '2021/09/15', '08:45:58 PM'),
+(8, 'MariamMM', '123', 'Pending', 'Mariam', 'Muhammed', 'Morsy', '2021/09/28 04:12:05 PM', '', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MariamMM@Gmail.com', '01097579845', 'Seller', '1516457', '78500', '0', '2021/09/18', '08:43:13 PM'),
+(9, 'ClientDemo', '123', 'Pending', 'Client', 'Demo', 'Demo', '2021/10/01 08:19:00 AM', '', 'Male', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Client_Demo@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
+(10, 'SellerDemo', '123', 'Deactivated', 'Seller', 'Demo', 'Demo', '2021/10/01 08:23:45 AM', '', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Seller_Demo@Gmail.com', '01097579845', 'Seller', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
+(11, 'RamdanBM', '123', 'Pending', 'Ramdan', 'Pablo', 'Morsy', '2021/09/29 01:44:34 PM', '', 'Male', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
+(12, 'AhmedEA', '123', 'Active', 'Ahmed', 'El-Gaml', 'Ahmed', '2021/11/05 04:09:05 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AhmedElGaml@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
+(13, 'HamzaMM', '123', 'Pending', 'Hamza', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HamzaMMMuhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
+(14, 'AbdulrahmanMM', '123', 'Pending', 'Abdulrahman', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulrahmanMuhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
+(15, 'GlalMM', '123', 'Pending', 'Glal', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Glal-Muhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
+(16, 'DlalMM', '123', 'Pending', 'Dlal', 'Muhammad', 'Mahmoud', '2021/09/29 01:44:34 PM', '', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'Dlal-Muhammad@Gmail.com', '01097579845', 'Client', '0', '0', '0', '2021/09/15', '08:43:13 PM'),
+(17, 'SalmaMM', '123', 'Active', 'Salma', 'Muhammad', 'Muhammad', '2021/11/08 07:12:54 PM', '', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SalmaMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(18, 'UndertaikerMM', '123', 'Pending', 'UnderTaker', 'Muhammad', 'Muhammad', '2021/11/02 02:16:00 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'UndertaikerMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(19, 'SaraMM', '123', 'Pending', 'AbdulBaset', 'Muhammad', 'Muhammad', '2021/11/02 02:16:00 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SaraMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(20, 'MernaRS', '123', 'Pending', 'Merna', 'Reda', 'Sayed', '2021/11/02 02:16:00 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MernaRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(21, 'SayedHH', '123', 'Deactivated', 'AbdulBaset', 'Hady', 'Hyidr', '2021/11/02 02:16:00 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedHH@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(22, 'HadyHH', '123', 'Active', 'Hady', 'Haydir', 'Morsy', '2021/11/05 06:25:10 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(23, 'AhmedHM', '123', 'Pending', 'Hady', 'Hady', 'Morsy', '2021/10/31 06:47:25 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(24, 'TawfikHM', '123', 'Pending', 'Tawfik', 'Hady', 'Muhaamad', '2021/11/02 02:16:00 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulBasetRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(25, 'ZaabolaMM', '123', 'Pending', 'Zaabola', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(26, 'HussienMM', '123', 'Pending', 'Hussien', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(27, 'HassanMM', '123', 'Pending', 'Zaabola', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(28, 'Demo1', '123', 'Pending', 'Hady', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(29, 'Demo2', '123', 'Pending', 'Hady', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(30, 'Demo3', '123', 'Pending', 'Hady', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(31, 'Demo4', '123', 'Pending', 'Hady', 'Muhammed', 'Morsy', '2021/10/31 06:47:25 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM');
 
 -- --------------------------------------------------------
 
@@ -284,7 +311,86 @@ INSERT INTO `ha_user_status_activities` (`HA_U_S_A_ID`, `HA_U_S_A_User_ID`, `HA_
 (162, '8', 'Active', 'Deactivated', '1', 'Null', '2021/11/02', '06:24:39 PM'),
 (163, '16', 'Pending', 'Deactivated', '1', 'Null', '2021/11/02', '06:24:57 PM'),
 (164, '6', 'Pending', 'Active', '1', 'Null', '2021/11/02', '06:25:23 PM'),
-(165, '6', 'Active', 'Deactivated', '1', 'Null', '2021/11/02', '06:25:33 PM');
+(165, '6', 'Active', 'Deactivated', '1', 'Null', '2021/11/02', '06:25:33 PM'),
+(166, '5', 'Pending', 'Active', '2', 'Null', '2021/11/03', '07:49:20 PM'),
+(167, '5', 'Active', 'Deactivated', '2', 'Null', '2021/11/03', '07:49:26 PM'),
+(168, '13', 'Pending', 'Active', '2', 'Null', '2021/11/03', '07:49:30 PM'),
+(169, '10', 'Pending', 'Active', '2', 'Null', '2021/11/03', '07:49:40 PM'),
+(170, '22', 'Pending', 'Active', '2', 'Null', '2021/11/03', '07:49:52 PM'),
+(171, '17', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:10:17 AM'),
+(172, '18', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:13:06 AM'),
+(173, '19', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:13:53 AM'),
+(174, '20', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:16:20 AM'),
+(175, '23', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:25:01 AM'),
+(176, '21', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:26:04 AM'),
+(177, '28', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:27:08 AM'),
+(178, '31', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:28:27 AM'),
+(179, '29', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:28:37 AM'),
+(180, '30', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:29:31 AM'),
+(181, '27', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:29:39 AM'),
+(182, '19', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:34:49 AM'),
+(183, '30', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:35:34 AM'),
+(184, '22', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:38:41 AM'),
+(185, '31', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:38:49 AM'),
+(186, '29', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:39:13 AM'),
+(187, '28', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:39:24 AM'),
+(188, '27', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:39:29 AM'),
+(189, '26', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:41:20 AM'),
+(190, '25', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:41:31 AM'),
+(191, '24', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:43:06 AM'),
+(192, '17', 'Pending', 'Active', '2', 'Null', '2021/11/05', '12:44:10 AM'),
+(193, '28', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '12:49:09 AM'),
+(194, '24', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '12:49:27 AM'),
+(195, '31', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '12:49:44 AM'),
+(196, '7', 'Pending', 'Active', '2', 'Null', '2021/11/05', '01:17:47 AM'),
+(197, '9', 'Pending', 'Active', '2', 'Null', '2021/11/05', '01:18:30 AM'),
+(198, '11', 'Pending', 'Active', '2', 'Null', '2021/11/05', '01:21:39 AM'),
+(199, '11', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '01:22:16 AM'),
+(200, '9', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '01:22:31 AM'),
+(201, '14', 'Pending', 'Active', '2', 'Null', '2021/11/05', '01:22:40 AM'),
+(202, '8', 'Pending', 'Active', '2', 'Null', '2021/11/05', '01:24:44 AM'),
+(203, '8', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '01:24:54 AM'),
+(204, '10', 'Pending', 'Deactivated', '1', 'Null', '2021/11/05', '05:56:07 AM'),
+(205, '21', 'Pending', 'Active', '1', 'Null', '2021/11/05', '06:54:24 AM'),
+(206, '21', 'Active', 'Deactivated', '1', 'Null', '2021/11/05', '06:54:34 AM'),
+(207, '12', 'Pending', 'Active', '1', 'Null', '2021/11/05', '03:08:12 PM'),
+(208, '22', 'Pending', 'Active', '1', 'Null', '2021/11/05', '03:13:02 PM'),
+(209, '1', 'Pending', 'Active', '1', 'Null', '2021/11/05', '03:14:46 PM'),
+(210, '2', 'Pending', 'Active', '1', 'Null', '2021/11/05', '03:14:50 PM'),
+(211, '7', 'Pending', 'Active', '1', 'Null', '2021/11/05', '05:23:36 PM'),
+(212, '7', 'Active', 'Deactivated', '1', 'Null', '2021/11/05', '05:23:46 PM'),
+(213, '17', 'Pending', 'Active', '2', 'Null', '2021/11/08', '06:09:38 PM'),
+(214, '', '', 'Active', '2', 'Null', '2021/11/08', '07:03:40 PM'),
+(215, '', '', 'Active', '2', 'Null', '2021/11/08', '07:03:42 PM'),
+(216, '', '', 'Active', '2', 'Null', '2021/11/08', '07:03:42 PM');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ha_wishlist`
+--
+
+CREATE TABLE `ha_wishlist` (
+  `HA_W_ID` bigint(20) UNSIGNED NOT NULL,
+  `HA_W_Status` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_W_User_ID` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_W_Product_ID` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_W_Date_Created` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_W_Time_Created` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `ha_wishlist`
+--
+
+INSERT INTO `ha_wishlist` (`HA_W_ID`, `HA_W_Status`, `HA_W_User_ID`, `HA_W_Product_ID`, `HA_W_Date_Created`, `HA_W_Time_Created`) VALUES
+(6, 'Active', '2', '2', '2021/11/09', '11:30:12 PM'),
+(7, 'Active', '2', '12', '2021/11/08', '08:27:21 PM'),
+(8, 'Active', '2', '4', '2021/11/08', '08:27:18 PM'),
+(9, 'Active', '2', '1', '2021/11/08', '08:26:09 PM'),
+(10, 'Active', '1', '4', '2021/11/08', '08:33:56 PM'),
+(11, 'Active', '1', '12', '2021/11/08', '08:33:59 PM'),
+(12, 'Active', '', '2', '2021/11/09', '11:30:12 PM');
 
 --
 -- Indexes for dumped tables
@@ -329,6 +435,12 @@ ALTER TABLE `ha_user_status_activities`
   ADD UNIQUE KEY `HA_U_S_A_ID` (`HA_U_S_A_ID`);
 
 --
+-- Indexes for table `ha_wishlist`
+--
+ALTER TABLE `ha_wishlist`
+  ADD UNIQUE KEY `HA_W_ID` (`HA_W_ID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -342,13 +454,13 @@ ALTER TABLE `ha_category_list`
 -- AUTO_INCREMENT for table `ha_products`
 --
 ALTER TABLE `ha_products`
-  MODIFY `HA_P_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `HA_P_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `ha_product_status_activities`
 --
 ALTER TABLE `ha_product_status_activities`
-  MODIFY `HA_P_S_A_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `HA_P_S_A_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `ha_users`
@@ -366,7 +478,13 @@ ALTER TABLE `ha_user_permission`
 -- AUTO_INCREMENT for table `ha_user_status_activities`
 --
 ALTER TABLE `ha_user_status_activities`
-  MODIFY `HA_U_S_A_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=166;
+  MODIFY `HA_U_S_A_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=217;
+
+--
+-- AUTO_INCREMENT for table `ha_wishlist`
+--
+ALTER TABLE `ha_wishlist`
+  MODIFY `HA_W_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

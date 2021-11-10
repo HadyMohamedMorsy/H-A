@@ -3,6 +3,20 @@
     $Current_Time = date('h:i:s A');
     $Current_Date_And_Time = $Current_Date . ' ' . $Current_Time;
     $Alert_Message = array();
+
+    // Get The Ip Address
+    $IP_Address = '';
+    if (!empty($_SERVER['HTTP_CLIENT_IP_Address'])){
+        // Check for IP_Address address from shared Internet
+        $IP_Address = $_SERVER['HTTP_CLIENT_IP_Address'];
+    }elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+        // Check for the proxy user
+        $IP_Address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }else{
+        $IP_Address = $_SERVER['REMOTE_ADDR'];
+    }
+    //echo $IP_Address;
+
     if (isset($_POST['BTN_Login'])) {
         $Input_Username = $_POST['Input_Username'];
         $Input_Password = $_POST['Input_Password'];
@@ -54,7 +68,7 @@
                     $_SESSION['HA_U_P_Add_Product']                     = $Row_User_Permissions['HA_U_P_Add_Product'];
                     $_SESSION['HA_U_P_Products_List']                   = $Row_User_Permissions['HA_U_P_Products_List'];
                 }
-                $SQL_Update_Last_Login = 'UPDATE ha_users SET HA_U_Last_Login = "'.$Current_Date_And_Time.'" WHERE HA_U_ID = "'.$_SESSION['HA_U_ID'].'"';
+                $SQL_Update_Last_Login = 'UPDATE ha_users SET HA_U_Last_Login = "'.$Current_Date_And_Time.'", HA_U_Login_From_IP = "'.$IP_Address.'" WHERE HA_U_ID = "'.$_SESSION['HA_U_ID'].'"';
                 if (mysqli_query($Connection,$SQL_Update_Last_Login)) {
                     header("Refresh: 0;");
                 }
