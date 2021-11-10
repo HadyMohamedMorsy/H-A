@@ -5,16 +5,16 @@
 }
 .Login-username{
     @include fixed;
-    top: 100%;
-    right: 100%;
-    bottom: 100%;
-    left: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
     z-index: 6;
     background-color: rgba(#cccbcb , 0.5);
     transition: all 0.8s;
     .Login-user{
-        top: -200%;
-        left: -200%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%,-50%);
         width: 45%;
         transition: all 0.8s;
@@ -57,18 +57,18 @@
 }
 .sign-username{
     @include fixed;
-    top: 100%;
-    right: 100%;
-    bottom: 100%;
-    left: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
     z-index: 6;
     background-color: rgba(#cccbcb , 0.5);
     transition: all 0.8s;
     .sign-user{
         overflow: auto;
         height: 100%;
-        top: -200%;
-        left: -200%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%,-50%);
         transition: all 0.8s;
         will-change: transform;

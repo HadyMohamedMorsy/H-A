@@ -1,6 +1,6 @@
 <!-- bob -->
 <div class="background-when-menu"></div>
-<div class="Login-username">
+<div class="Login-username Login-dissapered">
     <form class="Login-user" action="" method="POST">
         <div class="cancel login-cancel">
             <i class="fas fa-times"></i>
@@ -30,7 +30,7 @@
     </form>
 </div>
 
-<div class="sign-username">
+<div class="sign-username Sign-dissapered">
     <form class="sign-user" action="" method="POST">
         <div class="cancel sign-cancel">
             <i class="fas fa-times"></i>
