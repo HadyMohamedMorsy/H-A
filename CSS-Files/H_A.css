@@ -801,7 +801,8 @@ tfoot tr th:first-child {
         padding-top: 15px;
         visibility: hidden;
         transition: visibility 0.5s;
-        display: none; }
+        display: none;
+        cursor: pointer; }
         .Secound-Section .row .Products .product-content-img .Add-to-cart p {
           color: #282828;
           display: inline-flex; }
