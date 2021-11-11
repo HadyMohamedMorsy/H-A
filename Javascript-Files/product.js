@@ -12,8 +12,8 @@ fetch('API-Product.php')
               <div class="product-content-img">
                <a href="#"> <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" /> </a> 
                 <div class="icon-heart" id="${item.Product_ID}" onclick="funcId(this.id)"> <i class="far fa-heart"></i> </div>
-                <a href="#" class="Add-to-cart">
-                      <p href="#"> Add To Cart </p>
+                <a class="Add-to-cart" id="${item.Product_ID}Cart" onclick="funcIdcart(this.id)">
+                      <p> Add To Cart </p>
                 </a>
               </div>
               <div class="product-content">
@@ -28,6 +28,8 @@ fetch('API-Product.php')
 
 
     });
+
+
 let clickfilter = document.querySelector('.click-filter');
 
 let close = document.querySelector('.et-close');
@@ -46,3 +48,8 @@ filterdone.addEventListener("click", function() {
     clickfilter.style.bottom = "0%";
 
 });
+
+function funcIdcart(id){
+    
+    alert(id);
+}

@@ -96,7 +96,7 @@ $(document).ready(function(){
 
 });
 
-const cureentlocation = location.href;
+let cureentlocation = location.href;
 
 const menyItems = document.querySelectorAll('.select');
 
@@ -139,54 +139,6 @@ cartlistcancel.addEventListener("click",function(){
     cartlist.style.right = "0%";
   });
 
-// let SignINclose = document.querySelector('.login-cancel');
-// let SignINopen = document.querySelector('.login');
-// let contentSign = document.querySelector('.Login-user');
-// let ParentSign = document.querySelector('.Login-username');
-
-// SignINclose.addEventListener("click",function(){
-//     ParentSign.style.top = "100%";
-//     ParentSign.style.left = "100%";
-//     ParentSign.style.right = "100%";
-//     ParentSign.style.bottom = "100%";
-
-//     contentSign.style.top = "-200%";
-//     contentSign.style.left = "-200%";
-//   });
-
-//   SignINopen.addEventListener("click",function(){
-//     ParentSign.style.top = "0%";
-//     ParentSign.style.left = "0%";
-//     ParentSign.style.right = "0%";
-//     ParentSign.style.bottom = "0%";
-    
-//     contentSign.style.top = "50%";
-//     contentSign.style.left = "50%";
-//   });
-
-// let SignINout = document.querySelector('.sign-cancel');
-// let Signoutopen = document.querySelector('.Sign');
-// let contentSignout = document.querySelector('.sign-user');
-// let ParentSignout = document.querySelector('.sign-username');
-
-// SignINout.addEventListener("click",function(){
-//     ParentSignout.style.top = "100%";
-//     ParentSignout.style.left = "100%";
-//     ParentSignout.style.right = "100%";
-//     ParentSignout.style.bottom = "100%";
-
-//     contentSignout.style.top = "-200%";
-//     contentSignout.style.left = "-200%";
-//   });
-
-//   Signoutopen.addEventListener("click",function(){
-//     ParentSignout.style.top = "0%";
-//     ParentSignout.style.left = "0%";
-//     ParentSignout.style.right = "0%";
-//     ParentSignout.style.bottom = "0%";
-    
-//     contentSignout.style.top = "50%";
-//     contentSignout.style.left = "50%";
 //   });
 
   let animationscroll = document.querySelectorAll('.animation-scroll');
