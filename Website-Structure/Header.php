@@ -43,7 +43,7 @@
             <input type="text" name="Input_First_Name" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Name">
         </div>
         <div class="form-group">
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                     <option selected>Country...</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Albania">Albania</option>
@@ -67,11 +67,11 @@
             <input type="text" name="Input_Country" class="form-control" id="exampleInputPassword3" placeholder="RE Password">
         </div>
         <div class="form-group">
-                <input type="Text" name="Input_Password" class="form-control" id="exampleInputPassword4" placeholder="Age">
+            <input type="Text" name="Input_Password" class="form-control" id="exampleInputPassword4" placeholder="Age">
         </div>
         <div class="form-group">
-                <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
-                <input type="file" name="photo" id="upload-photo" />
+            <label for="upload-photo" class="label form-control"> Upload Your Image...</label>
+            <input type="file" name="photo" id="upload-photo" />
         </div>
         <p class="p-regester">You will register ? </p>
         <div class="form-check form-check-inline">
@@ -141,9 +141,9 @@
                 ';
             }
         ?>
-        <a href="#" class="search-nav"><i class="fas fa-search"></i></a>
-        <a href="Wishlet.php"><i class="far fa-heart"></i></a>
-        <a href="#" class="open-plus-cart"><i class="fas fa-cart-plus"></i></a>
+            <a href="#" class="search-nav"><i class="fas fa-search"></i></a>
+            <a href="Wishlet.php"><i class="far fa-heart"></i></a>
+            <a href="#" class="open-plus-cart"><i class="fas fa-cart-plus"></i></a>
     </div>
     <div class="icones-items items-mobile">
         <a href="#"><i class="fas fa-cart-plus"></i></a>
@@ -174,7 +174,7 @@
             </li>
         </ul>
         <ul class="navbar-menu-burger anthoer-navbar-menu-burger Login-menu-burger">
-            
+
             <?php
                 if (!isset($_SESSION['HA_U_ID'])) {
                     echo '
@@ -196,7 +196,7 @@
                     ';
                 }
             ?>
-            <!-- <li class="nav-item">
+                <!-- <li class="nav-item">
                 <a class="nav-link" href="#"><i class="far fa-user"></i></a>
             </li> -->
         </ul>
@@ -237,74 +237,57 @@
 <!-- cart -->
 <div class="cart">
     <div class="cart-list">
-    <header>
-				<div class="container">
-					<div class="panel-header-inner">
-					<div class="side-panel-title">Cart <span class="item-counter minicart-counter">1</span></div>
+        <header>
+            <div class="container">
+                <div class="panel-header-inner">
+                    <div class="side-panel-title">Cart <span class="item-counter minicart-counter">1</span></div>
                     <div class="cancel se-cancel">
                         <i class="fas fa-times"></i>
                     </div>
-					</div>
-				</div>
-	</header>
-    <div class="all-content-cart">
-        <div class="list">
-        <div class="product-list-cart">
-            <div class="img-product-cart">
-                <img src="./IMG/1.jpg" alt="1.jpg"/>
+                </div>
             </div>
-            <div class="content-product">
-                <h6> Name of product </h6>
-                <span class="min"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span> <span> 1 </span> <span class="plus"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span>
-                <div class="cancel-cart cart-list-cancel">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div class="price-cart">
-                    <span>10$</span>
-                </div>
+        </header>
+        <div class="all-content-cart">
+                <?php
+                    $Subtotal = 0;
+                    if ($Count_Check_In_Cart > 0) {
+                        while ($Rows = mysqli_fetch_array($Result_Check_In_Cart)) {
+                            $SQL_Products_List = 'SELECT * FROM ha_products WHERE HA_P_Status = "Active" AND HA_P_ID = "'.$Rows['HA_C_Product_ID'].'"';
+                            $Result_Products_List = mysqli_query($Connection,$SQL_Products_List);
+                            $Row_Products_List  = mysqli_fetch_array($Result_Products_List, MYSQLI_ASSOC);  
+                            $Count_Products_List  = mysqli_num_rows($Result_Products_List);
+                            $Path_Folder_Cover = 'IMG/Imges-Products/P_ID-'.$Row_Products_List['HA_P_ID'].'/P_ID-'.$Row_Products_List['HA_P_ID'].'-Cover';
+                            $Cover_Img = scandir($Path_Folder_Cover); 
+                            echo '  <div class="list">
+                                        <div class="product-list-cart">
+                                            <div class="img-product-cart">
+                                                <img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" />
+                                            </div>
+                                            <div class="content-product">
+                                                <h6> '.$Row_Products_List['HA_P_Name'].' </h6>
+                                                <span class="min"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span> <span> '.$Rows['HA_C_Qty'].' </span> <span class="plus"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span>
+                                                <div class="cancel-cart cart-list-cancel">
+                                                    <i class="fas fa-times"></i>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <span>'.number_format($Rows['HA_C_Qty'] * $Rows['HA_C_Unit_Price'] , 2).'</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>';
+                            $Subtotal += ($Rows['HA_C_Qty'] * $Rows['HA_C_Unit_Price']);
+                        }
+                    }
+                ?>
+            <div class="subtotal">
+                <span class="sub"> Subtotal </span>
+                <span> <?php echo number_format($Subtotal,2)?>$</span>
+            </div>
+            <div class="finish-list-cart">
+                <a href="#" class="button wc-forward"> View cart</a>
+                <a href="#" class="button checkout wc-forward"> Checkout</a>
             </div>
         </div>
-        <div class="product-list-cart">
-            <div class="img-product-cart">
-                <img src="./IMG/1.jpg" alt="1.jpg"/>
-            </div>
-            <div class="content-product">
-                <h6> Name of product </h6>
-                <span class="min"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span> <span> 1 </span> <span class="plus"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span>
-                <div class="cancel-cart">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div class="price-cart">
-                    <span>10$</span>
-                </div>
-            </div>
-        </div>
-        <div class="product-list-cart">
-            <div class="img-product-cart">
-                <img src="./IMG/1.jpg" alt="1.jpg"/>
-            </div>
-            <div class="content-product">
-                <h6> Name of product </h6>
-                <span class="min"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span> <span> 1 </span> <span class="plus"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span>
-                <div class="cancel-cart">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div class="price-cart">
-                    <span>10$</span>
-                </div>
-            </div>
-       </div>
-        </div>
-     <div class="subtotal">
-        <span class="sub"> Subtotal </span>
-        <span> 20$</span>
-    </div>
-
-    <div class="finish-list-cart">
-        <a href="#" class="button wc-forward"> View cart</a>
-        <a href="#" class="button checkout wc-forward"> Checkout</a>
-    </div>
-    </div>
     </div>
 </div>
 <!-- cart -->

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 10, 2021 at 05:18 AM
+-- Generation Time: Nov 11, 2021 at 08:54 PM
 -- Server version: 8.0.13-4
 -- PHP Version: 7.2.24-0ubuntu0.18.04.10
 
@@ -21,6 +21,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `pXTbMHDknr`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ha_cart`
+--
+
+CREATE TABLE `ha_cart` (
+  `HA_C_ID` bigint(20) UNSIGNED NOT NULL,
+  `HA_C_User_ID` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_C_Product_ID` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_C_Qty` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_C_Unit_Price` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_C_Date_Created` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_C_Time_Created` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `HA_C_Status` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `ha_cart`
+--
+
+INSERT INTO `ha_cart` (`HA_C_ID`, `HA_C_User_ID`, `HA_C_Product_ID`, `HA_C_Qty`, `HA_C_Unit_Price`, `HA_C_Date_Created`, `HA_C_Time_Created`, `HA_C_Status`) VALUES
+(1, '2', '12', '13', '120', '2021/11/11', '10:57:00 AM', 'Pending'),
+(2, '2', '1', '17', '23000', '2021/11/11', '10:57:00 AM', 'Pending'),
+(3, '2', '2', '2', '4399', '2021/11/11', '09:01:16 PM', 'Pending'),
+(4, '2', '3', '1', '15000', '2021/11/11', '09:17:15 PM', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -108,11 +135,11 @@ CREATE TABLE `ha_products` (
 INSERT INTO `ha_products` (`HA_P_ID`, `HA_P_Name`, `HA_P_Price`, `HA_P_Description`, `HA_P_Category_ID`, `HA_P_Qty`, `HA_P_Alert_Qty`, `HA_P_Brand`, `HA_P_Available_From_Date`, `HA_P_Date_Created`, `HA_P_Time_Created`, `HA_P_User_ID_Created`, `HA_P_Status`, `HA_P_Views`) VALUES
 (1, 'Pre-Owned Rolex', '23000', 'Rolex watches are symbols of excellence, performance and prestige. Throughout its history, Rolex has pioneered the development of the wristwatch for the modern era. The company is at the origin of landmark innovations in watchmaking, including the first waterproof wristwatch, the Oyster, and the Perpetual rotor self-winding mechanism. Today, Rolex is also actively involved in supporting the arts, exploration, sports and the environment through sponsoring and philanthropic programmes.', '16', '0', '3', 'Rolex', '2021/09/30 07:00:00 PM', '2021/09/30', '06:41:00 PM', '2', 'Active', 150),
 (2, 'TUF Gaming VG24VQ Curved Gaming', '4399', 'Asus TUF Gaming VG24VQ Curved Gaming Monitor 23.6 inch Full HD (1920 x 1080) 144Hz, Extreme Low Motion Blur, FreeSync, 1ms (MPRT), Shadow Boost', '7', '15', '5', 'Asus', '2021/10/22 06:30:22 PM', '2021/09/30', '07:57:22 PM', '2', 'Active', 200),
-(3, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:19:54 PM', '2021/10/03', '02:19:54 PM', '2', 'Pending', 50),
+(3, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:19:54 PM', '2021/10/03', '02:19:54 PM', '2', 'Active', 50),
 (4, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:21:55 PM', '2021/10/03', '02:21:55 PM', '2', 'Active', 300),
-(5, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:25:44 PM', '2021/10/03', '02:25:44 PM', '2', 'Pending', 2),
+(5, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:25:44 PM', '2021/10/03', '02:25:44 PM', '2', 'Active', 2),
 (6, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:33:13 PM', '2021/10/03', '02:33:13 PM', '2', 'Pending', 3),
-(7, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:37:47 PM', '2021/10/03', '02:37:47 PM', '2', 'Pending', 4),
+(7, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:37:47 PM', '2021/10/03', '02:37:47 PM', '2', 'Active', 4),
 (8, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:38:43 PM', '2021/10/03', '02:38:43 PM', '2', 'Pending', 5),
 (9, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:39:12 PM', '2021/10/03', '02:39:12 PM', '2', 'Pending', 6),
 (10, 'Gold Rings', '15000', 'Tiffany rings are renowned for their exceptional craftsmanship and timeless style. Explore classic signet rings or create your own ring stack.', '25', '10', '3', 'Gloria', '2021/10/03 02:46:23 PM', '2021/10/03', '02:46:23 PM', '2', 'Pending', 7),
@@ -167,7 +194,10 @@ INSERT INTO `ha_product_status_activities` (`HA_P_S_A_ID`, `HA_P_S_A_Product_ID`
 (23, '5', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '01:46:40 AM'),
 (24, '7', 'Active', 'Deactivated', '2', 'Null', '2021/11/05', '01:48:41 AM'),
 (25, '12', 'Pending', 'Active', '2', 'Null', '2021/11/08', '04:07:00 PM'),
-(26, '4', 'Pending', 'Active', '1', 'Null', '2021/11/08', '07:02:55 PM');
+(26, '4', 'Pending', 'Active', '1', 'Null', '2021/11/08', '07:02:55 PM'),
+(27, '3', 'Pending', 'Active', '1', 'Null', '2021/11/10', '10:37:04 AM'),
+(28, '5', 'Pending', 'Active', '1', 'Null', '2021/11/11', '12:04:41 PM'),
+(29, '7', 'Pending', 'Active', '1', 'Null', '2021/11/11', '04:57:22 PM');
 
 -- --------------------------------------------------------
 
@@ -205,10 +235,10 @@ CREATE TABLE `ha_users` (
 --
 
 INSERT INTO `ha_users` (`HA_U_ID`, `HA_U_Username`, `HA_U_Password`, `HA_U_User_Status`, `HA_U_First_Name`, `HA_U_Second_Name`, `HA_U_Last_Name`, `HA_U_Last_Login`, `HA_U_Login_From_IP`, `HA_U_Gender`, `HA_U_Birthday`, `HA_U_Country`, `HA_U_ZIP_Code`, `HA_U_Address`, `HA_U_Email`, `HA_U_Mobile_Number`, `HA_U_User_Type`, `HA_P_Views`, `HA_U_Sales`, `HA_U_Purchase`, `HA_U_Date_Created`, `HA_U_Time_Created`) VALUES
-(1, 'HadyMM', '123', 'Active', 'Hady', 'Muhammed', 'Morsy', '2021/11/08 04:03:13 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
-(2, 'AbdulBasetRS', '123', 'Active', 'AbdulBaset', 'Reda', 'Sayed', '2021/11/10 05:59:39 AM', '127.0.0.1', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulBasetRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(1, 'HadyMM', '123', 'Active', 'Hady', 'Muhammed', 'Morsy', '2021/11/11 06:44:21 PM', '::1', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'HadyMM@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
+(2, 'AbdulBasetRS', '123', 'Active', 'AbdulBaset', 'Reda', 'Sayed', '2021/11/11 08:20:25 PM', '127.0.0.1', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'AbdulBasetRS@Gmail.com', '01097579845', 'Employee', '', '', '', '2021/09/15', '08:43:13 PM'),
 (3, 'FatmaMM', '123', 'Pending', 'Fatma', 'Muhammed', 'Morsy', '2021/10/03 06:00:25 AM', '', 'Female', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'FatmaMM@Gmail.com', '01097579845', 'Seller', '3051', '5400', '0', '2021/09/15', '08:43:13 PM'),
-(4, 'SayedMM', '123', 'Suspended', 'Sayed', 'Muhammed', 'Morsy', '2021/09/29 01:44:34 PM', '', 'Female', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
+(4, 'SayedMM', '123', 'Suspended', 'Sayed', 'Muhammed', 'Morsy', '2021/11/11 08:20:11 PM', '127.0.0.1', 'Female', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'SayedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
 (5, 'hadymohamed', '123', 'Pending', 'Muhammed', 'Muhammed', 'Morsy', '2021/09/28 04:12:05 PM', '', 'Male', '1994-12-29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MuhammedMM@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
 (6, 'RedaSH', '123', 'Pending', 'Reda', 'Sayed', 'Hussien', '2021/09/28 04:12:05 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'RedaSH@Gmail.com', '01097579845', 'Client', '', '', '', '2021/09/15', '08:43:13 PM'),
 (7, 'MahmoudME', '123', 'Deactivated', 'Mahmoud', 'Mosad', 'El-Adawy', '2021/09/28 04:12:05 PM', '', 'Male', '1994/12/29', 'Egypt', '12651', '13 st ard el hdad from imbaba', 'MahmoudME@Gmail.com', '01097579845', 'Client', '', '', '1200', '2021/09/15', '08:45:58 PM'),
@@ -384,17 +414,25 @@ CREATE TABLE `ha_wishlist` (
 --
 
 INSERT INTO `ha_wishlist` (`HA_W_ID`, `HA_W_Status`, `HA_W_User_ID`, `HA_W_Product_ID`, `HA_W_Date_Created`, `HA_W_Time_Created`) VALUES
-(6, 'Active', '2', '2', '2021/11/09', '11:30:12 PM'),
-(7, 'Active', '2', '12', '2021/11/08', '08:27:21 PM'),
+(6, 'Deleted', '2', '2', '2021/11/11', '09:10:47 PM'),
+(7, 'Deleted', '2', '12', '2021/11/10', '11:50:31 AM'),
 (8, 'Active', '2', '4', '2021/11/08', '08:27:18 PM'),
-(9, 'Active', '2', '1', '2021/11/08', '08:26:09 PM'),
+(9, 'Deleted', '2', '1', '2021/11/11', '07:23:29 PM'),
 (10, 'Active', '1', '4', '2021/11/08', '08:33:56 PM'),
-(11, 'Active', '1', '12', '2021/11/08', '08:33:59 PM'),
-(12, 'Active', '', '2', '2021/11/09', '11:30:12 PM');
+(11, 'Deleted', '1', '12', '2021/11/10', '11:50:31 AM'),
+(12, 'Deleted', '', '2', '2021/11/11', '09:10:47 PM'),
+(13, 'Deleted', '', '12', '2021/11/10', '11:50:31 AM'),
+(14, 'Deleted', '', '3', '2021/11/10', '11:51:01 AM');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `ha_cart`
+--
+ALTER TABLE `ha_cart`
+  ADD UNIQUE KEY `HA_C_ID` (`HA_C_ID`);
 
 --
 -- Indexes for table `ha_category_list`
@@ -445,6 +483,12 @@ ALTER TABLE `ha_wishlist`
 --
 
 --
+-- AUTO_INCREMENT for table `ha_cart`
+--
+ALTER TABLE `ha_cart`
+  MODIFY `HA_C_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `ha_category_list`
 --
 ALTER TABLE `ha_category_list`
@@ -460,7 +504,7 @@ ALTER TABLE `ha_products`
 -- AUTO_INCREMENT for table `ha_product_status_activities`
 --
 ALTER TABLE `ha_product_status_activities`
-  MODIFY `HA_P_S_A_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `HA_P_S_A_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `ha_users`
@@ -484,7 +528,7 @@ ALTER TABLE `ha_user_status_activities`
 -- AUTO_INCREMENT for table `ha_wishlist`
 --
 ALTER TABLE `ha_wishlist`
-  MODIFY `HA_W_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `HA_W_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

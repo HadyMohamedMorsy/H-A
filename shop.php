@@ -2,6 +2,7 @@
     include('Datebase/Config.php');
     include('Datebase/DB_Login.php');
     include('Datebase/DB-Sign-Up.php');
+    include('Datebase/DB-Product-In-Cart.php');
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +40,8 @@
 <script>
     function funcId(Product_ID_To_Wishlist){
         // alert(Product_ID_To_Wishlist);
+        // Spiner Here 
+
         $.ajax({
             url: "Datebase/Action-By-Ajax/Wishlist-Mangement/Add-Product-To-Wishlist.php",
             type: "POST",
@@ -50,15 +53,44 @@
                 console.log(JSON.parse(Data));console.log(Status);console.log(XHR);
                 if (XHR.status == 200) {
                     if (JSON.parse(Data).HA_W_Status == "Active") {
-                        alert('Status : ' + JSON.parse(Data).HA_W_Status + ' - ID : ' + Product_ID_To_Wishlist);
+                        // Toggle The Hart After Make Action
+
+                        //alert('Status : ' + JSON.parse(Data).HA_W_Status + ' - ID : ' + Product_ID_To_Wishlist);
                         //  let row = document.querySelector('#T_Row_' + user_id).children[5];
                         //  row.innerHTML = JSON.parse(Data).User_Status;
                         //  document.querySelector('#A' + user_id).remove();
                         //  $("#Alert_Message").show('slow').delay(5000).fadeOut();
                         //  document.getElementById("Alert_Message").innerHTML = '<div class="alert alert-success fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl"><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left"><span aria-hidden="true">×</span></button><h4><i class="fas fa-check-circle"></i> نجاح العمليه </h4><hr> تم تغير الحاله الى نشط , و تفعيل المستخدم بنجاح </div>';
                     }else if(JSON.parse(Data).HA_W_Status == "Deleted"){
-                        alert('Status : ' + JSON.parse(Data).HA_W_Status + ' - ID : ' + Product_ID_To_Wishlist);
+                        // Toggle The Hart After Make Action
+
+                        //alert('Status : ' + JSON.parse(Data).HA_W_Status + ' - ID : ' + Product_ID_To_Wishlist);
                     }
+                }
+            }
+        });
+    }
+    // Add To Cart
+    function funcIdcart(Product_ID_To_Cart){
+        // alert(Product_ID_To_Cart);
+        // Spiner Here Displayed The Button 
+        
+        $.ajax({
+            url: "Datebase/Action-By-Ajax/Cart-Mangement/Add-Product-To-Cart.php",
+            type: "POST",
+            data: {
+                Product_ID: Product_ID_To_Cart
+            },
+            cache: false,
+            success: function(Data ,Status ,XHR) {
+                // console.log(JSON.parse(Data));console.log(Status);console.log(XHR);
+                if (XHR.status == 200) {
+                    alert('New Qty : ' + JSON.parse(Data).HA_C_Qty);
+                    // Remove Spiner And Get Back Add To Cart 
+
+                    // Open Cart 
+
+                    //Insert In Array in Cart
                 }
             }
         });

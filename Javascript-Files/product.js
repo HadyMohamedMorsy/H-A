@@ -12,7 +12,7 @@ fetch('API-Product.php')
               <div class="product-content-img">
                <a href="#"> <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" /> </a> 
                 <div class="icon-heart" id="${item.Product_ID}" onclick="funcId(this.id)"> <i class="far fa-heart"></i> </div>
-                <a class="Add-to-cart" id="${item.Product_ID}Cart" onclick="funcIdcart(this.id)">
+                <a class="Add-to-cart" id="${item.Product_ID}" onclick="funcIdcart(this.id)">
                       <p> Add To Cart </p>
                 </a>
               </div>
@@ -49,8 +49,8 @@ filterdone.addEventListener("click", function() {
 
 });
 
-function funcIdcart(id){
+// function funcIdcart(id){
     
-    alert(id);
-}
+//     alert(id);
+// }
 
