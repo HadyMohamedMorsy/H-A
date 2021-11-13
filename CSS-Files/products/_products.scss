@@ -145,19 +145,12 @@
                         width: 100%;
                         height: 100%;
                         @include prefix(transition, all 0.5s , moz ms o);
-                        &.disactive{
-                            opacity: 1;
-                        }
                     }
                     .Image-secound{
                         object-fit: cover;
                         width: 100%;
                         height: 100%;
                         @include prefix(transition, all 0.5s , moz ms o);
-                        &.active{
-                            opacity: 0;
-                            transform: translateY(0%);
-                        }
                     }
                 }
                 .Add-to-cart{

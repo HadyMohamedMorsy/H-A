@@ -688,8 +688,6 @@ input:-internal-autofill-selected {
         -ms-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s; }
-        .Secound-Section .row .Products .product-content-img .not-hover-image .Image-cover.disactive {
-          opacity: 1; }
       .Secound-Section .row .Products .product-content-img .not-hover-image .Image-secound {
         object-fit: cover;
         width: 100%;
@@ -698,9 +696,6 @@ input:-internal-autofill-selected {
         -ms-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s; }
-        .Secound-Section .row .Products .product-content-img .not-hover-image .Image-secound.active {
-          opacity: 0;
-          transform: translateY(0%); }
       .Secound-Section .row .Products .product-content-img .Add-to-cart {
         position: absolute;
         bottom: 0px;

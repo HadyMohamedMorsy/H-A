@@ -1,13 +1,6 @@
 let SecoundSection = document.querySelector('.Secound-Section .row');
 let setallvaluehere = "";
 let drawprotectes;
-let gridicon = document.querySelector('.grid-icon');
-let smallicon = document.querySelector('.small-icon');
-let listicon = document.querySelector('.list-icon');
-
-if(listicon.classList.contains('active')){
-    console.log('sara')
-}
 
 fetch('API-Product.php')
     .then((response) => {
@@ -17,7 +10,6 @@ fetch('API-Product.php')
 
     (drawprotectes = function (protectes = []) {
         let protecteshtml = protectes.map((item)=>{
-            if(gridicon.classList.contains('active')){
                 return `
                     <div class="col-lg-3 Products">
                     <div class="product-content-img">
@@ -43,7 +35,7 @@ fetch('API-Product.php')
                     </div>
                 </div>
             `;
-            }
+
         });
         if(!protectes.length > 0){
 
@@ -132,18 +124,20 @@ function heartfull(x) {
 
  });
 
- function changeclass(change){
-     let Products = document.querySelectorAll('.Products');
-    if(change.getAttribute('data-display') == ".small"){
-        Products.forEach((item)=>{
 
-            item.classList.remove('col-lg-3');
 
-            item.classList.add('col-lg-4');
-
-        })
-
+    function changeclass(change){
+        let Products = document.querySelectorAll('.Products');
+        if(change.getAttribute('data-display') == ".small"){
+            Products.forEach((item)=>{
+                item.classList.remove('col-lg-3');
+                item.classList.add(`col-lg-4`);
+            });
+            
+        }else{
+            Products.forEach((item)=>{
+                item.classList.add('col-lg-3');
+                item.classList.remove(`col-lg-4`);
+            });
+        }
     }
- }
-
-
