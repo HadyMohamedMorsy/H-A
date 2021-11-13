@@ -195,6 +195,9 @@
                                         <hr> تم رفع المنتج الى الاداره بنجاح وبأنتظار الموافقه. 
                                     </div>';
             }else {
+                // foreach ($Alert_Message as $value) {
+                //     echo $value .'<br>';
+                // }
                 $Alert_Message[] = 'Error Cant Insert Data ';
             }
         }

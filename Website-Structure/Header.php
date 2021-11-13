@@ -281,7 +281,12 @@
                 ?>
             <div class="subtotal">
                 <span class="sub"> Subtotal </span>
-                <span> <?php echo number_format($Subtotal,2)?>$</span>
+                <span> 
+                <?php 
+                echo number_format($Subtotal,2)
+                ?>
+                $
+                </span>
             </div>
             <div class="finish-list-cart">
                 <a href="#" class="button wc-forward"> View cart</a>

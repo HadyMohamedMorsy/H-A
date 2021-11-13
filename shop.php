@@ -38,10 +38,11 @@
 </html>
 
 <script>
-    function funcId(Product_ID_To_Wishlist){
+    function funcId(Product_ID_To_Wishlist,ele){
         // alert(Product_ID_To_Wishlist);
         // Spiner Here 
-
+        let spinnergrow = ele.parentElement.querySelector('.spinner-grow');
+        spinnergrow.classList.add('visible');
         $.ajax({
             url: "Datebase/Action-By-Ajax/Wishlist-Mangement/Add-Product-To-Wishlist.php",
             type: "POST",
@@ -54,7 +55,8 @@
                 if (XHR.status == 200) {
                     if (JSON.parse(Data).HA_W_Status == "Active") {
                         // Toggle The Hart After Make Action
-
+                        spinnergrow.classList.remove('visible');
+                        ele.firstElementChild.innerHTML = "<i class='fas fa-heart'></i>";
                         //alert('Status : ' + JSON.parse(Data).HA_W_Status + ' - ID : ' + Product_ID_To_Wishlist);
                         //  let row = document.querySelector('#T_Row_' + user_id).children[5];
                         //  row.innerHTML = JSON.parse(Data).User_Status;
@@ -63,7 +65,8 @@
                         //  document.getElementById("Alert_Message").innerHTML = '<div class="alert alert-success fade show" role="alert" style="font-family: Kufi Normal;text-align: right;" dir="rtl"><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="text-align: left;float:left"><span aria-hidden="true">×</span></button><h4><i class="fas fa-check-circle"></i> نجاح العمليه </h4><hr> تم تغير الحاله الى نشط , و تفعيل المستخدم بنجاح </div>';
                     }else if(JSON.parse(Data).HA_W_Status == "Deleted"){
                         // Toggle The Hart After Make Action
-
+                        spinnergrow.classList.remove('visible');
+                        ele.firstElementChild.innerHTML = "<i class='far fa-heart'></i>";
                         //alert('Status : ' + JSON.parse(Data).HA_W_Status + ' - ID : ' + Product_ID_To_Wishlist);
                     }
                 }
