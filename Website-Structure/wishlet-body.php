@@ -1,4 +1,4 @@
-<div class="cart-items animation-scroll">
+<div class="cart-items">
     <h1 class="page-title" itemprop="name headline">Wishlist</h1>
 </div>
 <div class="cheack-price container animation-scroll">
