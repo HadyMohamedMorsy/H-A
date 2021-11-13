@@ -58,48 +58,6 @@ fetch('API-Product.php')
     })(myJson|| protectes);
     
 
-    changedom(myJson);
-    
-    function changedom(address){
-        let protecteshtml = protectes.map((item)=>{
-                return `
-                    <div class="col-lg-5 Products grid show">
-                    <div class="product-content-img">
-                    <a href="#" class="hover-image"> 
-                            <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" class="Image-cover"/>
-                            ${item.Product_Imges ? `<img src=${item.Product_Path_Imges + item.Product_Imges[0]} alt='${item.Product_Name}' class='Image-secound'/>`: ""}
-                        </a> 
-                        <a class="Add-to-cart" id="${item.Product_ID}" onclick="funcIdcart(this.id)">
-                            <p> Add To Cart </p>
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <div class="chiled">
-                            <h3><a href="#">${item.Product_Name}</a> </h3>
-                            <p href="#">${item.Product_Price}</p>
-                        </div>
-                        <div class="icon-here" onmouseleave="nullheart(this)" onmouseenter="heartfull(this)">
-                            <div class="heart"  id="${item.Product_ID}" onclick="funcId(this.id,this)"> <i class="far fa-heart"></i> </div>
-                            <div class="spinner-grow" role="status">
-                                <span class="sr-only">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-    
-        });
-        if(!protectes.length > 0){
-    
-            SecoundSection.innerHTML = `<div class="product-empty"> Sorry We dont have Items on Our Website </div>`;
-    
-        }else{
-            SecoundSection.innerHTML = protecteshtml.join("");
-        }
-    
-    }
-      
-
         let Imagesecounds = document.querySelectorAll('.hover-image');
 
 
