@@ -7,7 +7,6 @@ fetch('API-Product.php')
         return response.json();
     })
     .then((myJson) => {
-
     (drawprotectes = function (protectes = []) {
         let protecteshtml = protectes.map((item)=>{
                 return `

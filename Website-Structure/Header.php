@@ -289,8 +289,7 @@
                 </span>
             </div>
             <div class="finish-list-cart">
-                <a href="#" class="button wc-forward"> View cart</a>
-                <a href="#" class="button checkout wc-forward"> Checkout</a>
+                <a href="cart.php" class="button checkout wc-forward"> Checkout</a>
             </div>
         </div>
     </div>

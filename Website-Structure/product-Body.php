@@ -29,6 +29,23 @@
 						</div>
         </div>
     <div class="row">
+      <div class="text-center w-100">
+        <div class="spinner-grow spinner-grow-sm text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow spinner-grow-sm text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow spinner-grow-sm text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow spinner-grow-sm text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow spinner-grow-sm text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+      </div>
     </div>
     <div class="button-load">
 				<a href="#" class="et-infload-btn et-shop-infload-btn button outlined">Load More</a>
