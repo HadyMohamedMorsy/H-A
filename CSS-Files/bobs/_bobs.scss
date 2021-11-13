@@ -193,6 +193,7 @@ input:-internal-autofill-selected{
     transition: all 0.8s;
     .cart-list{
         width: 400px;
+        height: 100%;
         background-color: $white;
         display: flex;
         flex-direction: column;
@@ -202,6 +203,10 @@ input:-internal-autofill-selected{
         height: 100%;
         transition: all 0.8s;
         will-change: transform;
+        overflow-y: auto;
+        &.actioncartlist{
+            right: 0%;
+        }
         header{
             background: rgba(0,0,0,.02);
             color: #282828;
@@ -300,4 +305,13 @@ input:-internal-autofill-selected{
     }
 }
 // cart
+// actioncart
+
+.actioncart{
+    top: 0% ;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+
     

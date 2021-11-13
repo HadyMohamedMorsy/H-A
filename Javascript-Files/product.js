@@ -12,18 +12,18 @@ fetch('API-Product.php')
                 return `
                     <div class="col-lg-3 Products">
                     <div class="product-content-img">
-                    <a href="#" class="not-hover-image hover-image"> 
+                    <a href="products-show.php" class="not-hover-image hover-image"> 
                             <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" class="Image-cover ${item.Product_Imges ? "disactive" : ""}"/>
                             ${item.Product_Imges ? `<img src=${item.Product_Path_Imges + item.Product_Imges[0]} alt='${item.Product_Name}' class='Image-secound active'/>`: ""}
-                        </a> 
-                        <a class="Add-to-cart" id="${item.Product_ID}" onclick="funcIdcart(this.id)">
+                    </a> 
+                        <a class="Add-to-cart" id="${item.Product_ID}" onclick="funcIdcart(this.id , this)">
                             <p> Add To Cart </p>
                         </a>
                     </div>
                     <div class="product-content">
                         <div class="chiled">
-                            <h3><a href="#">${item.Product_Name}</a> </h3>
-                            <p href="#">${item.Product_Price}</p>
+                            <h3><a href="products-show.php">${item.Product_Name}</a> </h3>
+                            <p>${item.Product_Price}</p>
                         </div>
                         <div class="icon-here" onmouseleave="nullheart(this)" onmouseenter="heartfull(this)">
                             <div class="heart"  id="${item.Product_ID}" onclick="funcId(this.id,this)"> <i class="far fa-heart"></i> </div>

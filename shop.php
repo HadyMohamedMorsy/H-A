@@ -73,10 +73,15 @@
             }
         });
     }
+let cartlisthere = document.querySelector('.cart-list');
+
+let cartaction = document.querySelector('.cart');
     // Add To Cart
-    function funcIdcart(Product_ID_To_Cart){
+    function funcIdcart(Product_ID_To_Cart,ele){
         // alert(Product_ID_To_Cart);
         // Spiner Here Displayed The Button 
+        // class.firstElementChild.innerHTML
+        ele.firstElementChild.innerHTML = `<div class="spinner-border text-primary" role="status"> <span class="sr-only">Loading...</span>  </div>`;
         
         $.ajax({
             url: "Datebase/Action-By-Ajax/Cart-Mangement/Add-Product-To-Cart.php",
@@ -88,7 +93,14 @@
             success: function(Data ,Status ,XHR) {
                 // console.log(JSON.parse(Data));console.log(Status);console.log(XHR);
                 if (XHR.status == 200) {
-                    alert('New Qty : ' + JSON.parse(Data).HA_C_Qty);
+
+                    ele.firstElementChild.innerHTML = `Add To Cart`;
+
+                    cartaction.classList.add('actioncart');
+
+                    cartlisthere.classList.add('actioncartlist');
+
+                    console.log(cartlisthere);
                     // Remove Spiner And Get Back Add To Cart 
 
                     // Open Cart 
@@ -98,4 +110,5 @@
             }
         });
     }
+    
 </script>
