@@ -57,14 +57,13 @@ fetch('API-Product.php')
 
     })(myJson|| protectes);
     
-    let smallicon = document.querySelector('.small-icon');
 
-    smallicon.addEventListener('click',changedom(myJson)); 
+    changedom(myJson);
 
     function changedom(address){
-        let protecteshtmlsmall = address.map((item)=>{
+        let protecteshtml = protectes.map((item)=>{
                 return `
-                    <div class="col-lg-5 Products small-icon show">
+                    <div class="col-lg-5 Products grid show">
                     <div class="product-content-img">
                     <a href="#" class="hover-image"> 
                             <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" class="Image-cover"/>
@@ -90,12 +89,12 @@ fetch('API-Product.php')
             `;
     
         });
-        if(!address.length > 0){
+        if(!protectes.length > 0){
     
             SecoundSection.innerHTML = `<div class="product-empty"> Sorry We dont have Items on Our Website </div>`;
     
         }else{
-            SecoundSection.innerHTML = protecteshtmlsmall.join("");
+            SecoundSection.innerHTML = protecteshtml.join("");
         }
     
     }
