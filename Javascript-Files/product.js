@@ -132,4 +132,18 @@ function heartfull(x) {
 
  });
 
+ function changeclass(change){
+     let Products = document.querySelectorAll('.Products');
+    if(change.getAttribute('data-display') == ".small"){
+        Products.forEach((item)=>{
+
+            item.classList.remove('col-lg-3');
+
+            item.classList.add('col-lg-4');
+
+        })
+
+    }
+ }
+
 
