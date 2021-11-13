@@ -139,7 +139,8 @@
                                                             HA_P_Date_Created,
                                                             HA_P_Time_Created,
                                                             HA_P_User_ID_Created,
-                                                            HA_P_Status
+                                                            HA_P_Status,
+                                                            HA_P_Views
                                                             )
                                                 VALUES (    "'.$Input_Product_Name.'",
                                                             "'.$Input_Product_Price.'",
@@ -152,7 +153,8 @@
                                                             "'.$Current_Date.'",
                                                             "'.$Current_Time.'",
                                                             "'.$_SESSION['HA_U_ID'].'",
-                                                            "Pending"
+                                                            "Pending",
+                                                            "0"
                                                         )';
             if (empty($Alert_Message) AND mysqli_query($Connection,$SQL_Add_Product)) {
                 if ( !is_dir( $Path_Dir.$Folder_Name.'/'.$Cover_Folder_Creat ) AND !is_dir( $Path_Dir.$Folder_Name.'/'.$IMGS_Folder_Creat)) {
