@@ -17,13 +17,13 @@ fetch('API-Product.php')
 
     (drawprotectes = function (protectes = []) {
         let protecteshtml = protectes.map((item)=>{
-
+            if(gridicon.classList.contains('active')){
                 return `
-                    <div class="col-lg-3 Products grid show">
+                    <div class="col-lg-3 Products">
                     <div class="product-content-img">
                     <a href="#" class="hover-image"> 
-                            <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" class="Image-cover"/>
-                            ${item.Product_Imges ? `<img src=${item.Product_Path_Imges + item.Product_Imges[0]} alt='${item.Product_Name}' class='Image-secound'/>`: ""}
+                            <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" class="Image-cover disactive"/>
+                            ${item.Product_Imges ? `<img src=${item.Product_Path_Imges + item.Product_Imges[0]} alt='${item.Product_Name}' class='Image-secound active'/>`: ""}
                         </a> 
                         <a class="Add-to-cart" id="${item.Product_ID}" onclick="funcIdcart(this.id)">
                             <p> Add To Cart </p>
@@ -43,7 +43,7 @@ fetch('API-Product.php')
                     </div>
                 </div>
             `;
-
+            }
         });
         if(!protectes.length > 0){
 
@@ -59,7 +59,7 @@ fetch('API-Product.php')
     
 
     changedom(myJson);
-
+    
     function changedom(address){
         let protecteshtml = protectes.map((item)=>{
                 return `
@@ -168,10 +168,6 @@ function heartfull(x) {
         $(this).siblings().removeClass('active');
 
         $(this).addClass('active');
-
-        $('.Products').siblings().removeClass('active');
-
-        $($(this).attr('data-display')).addClass('show');
 
     });
 
