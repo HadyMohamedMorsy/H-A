@@ -252,13 +252,14 @@
                     $Subtotal = 0;
                     if ($Count_Check_In_Cart > 0) {
                         while ($Rows = mysqli_fetch_array($Result_Check_In_Cart)) {
-                            $SQL_Products_List = 'SELECT * FROM ha_products WHERE HA_P_Status = "Active" AND HA_P_ID = "'.$Rows['HA_C_Product_ID'].'"';
+                            $SQL_Products_List = 'SELECT * FROM ha_products WHERE HA_P_ID = "'.$Rows['HA_C_Product_ID'].'"';
                             $Result_Products_List = mysqli_query($Connection,$SQL_Products_List);
-                            $Row_Products_List  = mysqli_fetch_array($Result_Products_List, MYSQLI_ASSOC);  
-                            $Count_Products_List  = mysqli_num_rows($Result_Products_List);
-                            $Path_Folder_Cover = 'IMG/Imges-Products/P_ID-'.$Row_Products_List['HA_P_ID'].'/P_ID-'.$Row_Products_List['HA_P_ID'].'-Cover';
-                            $Cover_Img = scandir($Path_Folder_Cover); 
-                            echo '  <div class="list">
+                            $Row_Products_List  = mysqli_fetch_array($Result_Products_List, MYSQLI_ASSOC);
+                            if ($Row_Products_List['HA_P_Status'] == 'Active') {
+                                $Count_Products_List  = mysqli_num_rows($Result_Products_List);
+                                $Path_Folder_Cover = 'IMG/Imges-Products/P_ID-'.$Row_Products_List['HA_P_ID'].'/P_ID-'.$Row_Products_List['HA_P_ID'].'-Cover';
+                                $Cover_Img = scandir($Path_Folder_Cover);
+                                echo '  <div class="list">
                                         <div class="product-list-cart">
                                             <div class="img-product-cart">
                                                 <img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" />
@@ -275,7 +276,8 @@
                                             </div>
                                         </div>
                                     </div>';
-                            $Subtotal += ($Rows['HA_C_Qty'] * $Rows['HA_C_Unit_Price']);
+                                $Subtotal += ($Rows['HA_C_Qty'] * $Rows['HA_C_Unit_Price']);
+                            }
                         }
                     }
                 ?>
