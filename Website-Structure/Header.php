@@ -250,35 +250,39 @@
         <div class="all-content-cart">
                 <?php
                     $Subtotal = 0;
-                    if ($Count_Check_In_Cart > 0) {
-                        while ($Rows = mysqli_fetch_array($Result_Check_In_Cart)) {
-                            $SQL_Products_List = 'SELECT * FROM ha_products WHERE HA_P_ID = "'.$Rows['HA_C_Product_ID'].'"';
-                            $Result_Products_List = mysqli_query($Connection,$SQL_Products_List);
-                            $Row_Products_List  = mysqli_fetch_array($Result_Products_List, MYSQLI_ASSOC);
-                            if ($Row_Products_List['HA_P_Status'] == 'Active') {
-                                $Count_Products_List  = mysqli_num_rows($Result_Products_List);
-                                $Path_Folder_Cover = 'IMG/Imges-Products/P_ID-'.$Row_Products_List['HA_P_ID'].'/P_ID-'.$Row_Products_List['HA_P_ID'].'-Cover';
-                                $Cover_Img = scandir($Path_Folder_Cover);
-                                echo '  <div class="list">
-                                        <div class="product-list-cart">
-                                            <div class="img-product-cart">
-                                                <img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" />
-                                            </div>
-                                            <div class="content-product">
-                                                <h6> '.$Row_Products_List['HA_P_Name'].' </h6>
-                                                <span class="min"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span> <span> '.$Rows['HA_C_Qty'].' </span> <span class="plus"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span>
-                                                <div class="cancel-cart cart-list-cancel">
-                                                    <i class="fas fa-times"></i>
+                    if (isset($_SESSION['HA_U_ID'])) {
+                        if ($Count_Check_In_Cart > 0) {
+                            while ($Rows = mysqli_fetch_array($Result_Check_In_Cart)) {
+                                $SQL_Products_List = 'SELECT * FROM ha_products WHERE HA_P_ID = "'.$Rows['HA_C_Product_ID'].'"';
+                                $Result_Products_List = mysqli_query($Connection,$SQL_Products_List);
+                                $Row_Products_List  = mysqli_fetch_array($Result_Products_List, MYSQLI_ASSOC);
+                                if ($Row_Products_List['HA_P_Status'] == 'Active') {
+                                    $Count_Products_List  = mysqli_num_rows($Result_Products_List);
+                                    $Path_Folder_Cover = 'IMG/Imges-Products/P_ID-'.$Row_Products_List['HA_P_ID'].'/P_ID-'.$Row_Products_List['HA_P_ID'].'-Cover';
+                                    $Cover_Img = scandir($Path_Folder_Cover);
+                                    echo '  <div class="list">
+                                            <div class="product-list-cart">
+                                                <div class="img-product-cart">
+                                                    <img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" />
                                                 </div>
-                                                <div class="price-cart">
-                                                    <span>'.number_format($Rows['HA_C_Qty'] * $Rows['HA_C_Unit_Price'] , 2).'</span>
+                                                <div class="content-product">
+                                                    <h6> '.$Row_Products_List['HA_P_Name'].' </h6>
+                                                    <span class="min"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span> <span> '.$Rows['HA_C_Qty'].' </span> <span class="plus"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> </span>
+                                                    <div class="cancel-cart cart-list-cancel">
+                                                        <i class="fas fa-times"></i>
+                                                    </div>
+                                                    <div class="price-cart">
+                                                        <span>'.number_format($Rows['HA_C_Qty'] * $Rows['HA_C_Unit_Price'] , 2).'</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>';
-                                $Subtotal += ($Rows['HA_C_Qty'] * $Rows['HA_C_Unit_Price']);
+                                        </div>';
+                                    $Subtotal += ($Rows['HA_C_Qty'] * $Rows['HA_C_Unit_Price']);
+                                }
                             }
                         }
+                    }else {
+                        echo 'You Must Be Login First..';
                     }
                 ?>
             <div class="subtotal">

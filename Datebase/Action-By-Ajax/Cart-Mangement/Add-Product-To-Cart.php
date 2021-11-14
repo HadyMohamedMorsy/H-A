@@ -12,14 +12,12 @@
     $Result_Products_List = mysqli_query($Connection,$SQL_Products_List);
     $Row_Products_List  = mysqli_fetch_array($Result_Products_List, MYSQLI_ASSOC);
     $Count_Products_List  = mysqli_num_rows($Result_Products_List);
-
     if ($Count_Products_List > 0) {
         // Get All Product In Cart
         $SQL_Check_In_Cart = 'SELECT * FROM ha_cart WHERE HA_C_User_ID = "'.$_SESSION['HA_U_ID'].'" AND HA_C_Product_ID = "'.$Product_ID.'" AND HA_C_Status != "Purchased"';
         $Result_Check_In_Cart = mysqli_query($Connection,$SQL_Check_In_Cart);
         $Row_Check_In_Cart  = mysqli_fetch_array($Result_Check_In_Cart, MYSQLI_ASSOC);
         $Count_Check_In_Cart  = mysqli_num_rows($Result_Check_In_Cart);
-
         if (!empty($Row_Check_In_Cart)) {
             $SQL_Add_One_More_To_Qty = '  UPDATE ha_cart
                                                     SET HA_C_Qty = "'.($Row_Check_In_Cart['HA_C_Qty'] + 1).'"
