@@ -78,6 +78,7 @@ let cartlisthere = document.querySelector('.cart-list');
 let cartaction = document.querySelector('.cart');
     // Add To Cart
     function funcIdcart(Product_ID_To_Cart,ele){
+        
         // alert(Product_ID_To_Cart);
         // Spiner Here Displayed The Button 
         // class.firstElementChild.innerHTML
@@ -100,7 +101,7 @@ let cartaction = document.querySelector('.cart');
 
                     cartlisthere.classList.add('actioncartlist');
 
-                    console.log(cartlisthere);
+                    console.log(JSON.parse(Data));
                     // Remove Spiner And Get Back Add To Cart 
 
                     // Open Cart 
