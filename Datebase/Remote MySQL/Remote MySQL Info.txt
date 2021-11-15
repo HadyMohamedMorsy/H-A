@@ -8,3 +8,16 @@ Server: remotemysql.com
 
 Port: 3306
 
+=============================================
+Socend Database From Hady 
+
+Username: eKrZvvTFCA
+
+Database name: eKrZvvTFCA
+
+Password: cg6PpNpa1Q
+
+Server: remotemysql.com
+
+Port: 3306
+
