@@ -272,7 +272,7 @@
                                                         <i class="fas fa-times"></i>
                                                     </div>
                                                     <div class="price-cart">
-                                                        <span>'.number_format($Rows['HA_C_Qty'] * $Rows['HA_C_Unit_Price'] , 2).'</span>
+                                                        <span class="Number-format">'.number_format($Rows['HA_C_Qty'] * $Rows['HA_C_Unit_Price'] , 2).'</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -289,7 +289,7 @@
         <div class="parent-total">
             <div class="subtotal">
                         <span class="sub"> Subtotal </span>
-                        <span> 
+                        <span class="sub-number"> 
                         <?php 
                         echo number_format($Subtotal,2)
                         ?>
