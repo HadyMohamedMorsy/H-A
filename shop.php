@@ -131,24 +131,43 @@ let protecte = "sorry u dont have Items";
                         item.id === Product_ID_To_Cart
 
                     );
+                    let isprotectincart = arrayCart.some((i)=> i.id === protect.id);
+
+                    if(isprotectincart){
+                        
+                        arrayCart = arrayCart.map((p) =>{
+
+                        if(p.id === protect.id) p.qty += 1;
+
+                        return p;
+
+                        });
+                    }
 
                     for(let i =0; i< arrayCart.length; i++){
 
-                        if(arrayCart[i].id === protect.id){
+                        if(arrayCart[i].qty > 1){
 
-                            arrayCart[i].qty += 1
+                            arrayCart.pop();
+
+                            arrayCart.push(protect);
 
                             
                         }
 
                     }
+                    function getUniqueListBy(arr, key) {
 
+                        return [...new Map(arr.map(item => [item[key], item])).values()]
+                    }
 
-
+                    const arr1 = getUniqueListBy(arrayCart, 'id')
 
                         console.log(arrayCart);
 
                         console.log(protect);
+
+                        console.log(arr1);
 
 
 
@@ -189,7 +208,7 @@ let protecte = "sorry u dont have Items";
 
                         }
 
-                    })(arrayCart|| protecte);
+                    })(arr1|| protecte);
 
 
                   
