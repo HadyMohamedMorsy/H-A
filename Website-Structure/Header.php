@@ -285,18 +285,20 @@
                         echo 'You Must Be Login First..';
                     }
                 ?>
+        </div>
+        <div class="parent-total">
             <div class="subtotal">
-                <span class="sub"> Subtotal </span>
-                <span> 
-                <?php 
-                echo number_format($Subtotal,2)
-                ?>
-                $
-                </span>
-            </div>
-            <div class="finish-list-cart">
-                <a href="cart.php" class="button checkout wc-forward"> Checkout</a>
-            </div>
+                        <span class="sub"> Subtotal </span>
+                        <span> 
+                        <?php 
+                        echo number_format($Subtotal,2)
+                        ?>
+                        $
+                        </span>
+                </div>
+                <div class="finish-list-cart">
+                    <a href="cart.php" class="button checkout wc-forward"> Checkout</a>
+                </div>
         </div>
     </div>
 </div>

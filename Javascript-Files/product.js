@@ -73,6 +73,7 @@ fetch('API-Product.php')
                 secoundchild.classList.add('active');
 
                 item.firstElementChild.classList.add('.disactive');
+
             
 
             }
