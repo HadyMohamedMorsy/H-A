@@ -110,9 +110,7 @@ let protecte = "sorry u dont have Items";
 
                     cartlisthere.classList.add('actioncartlist');
 
-
-
-                    function products (id,productName,price,Image, qty){
+                    function products (id,productName,price,Image, qty = 0){
 
                         this.id = Product_ID_To_Cart;
 
@@ -123,7 +121,6 @@ let protecte = "sorry u dont have Items";
                         this.Image = Image;
 
                         this.qty = qty;
-
                         }
 
 
@@ -134,10 +131,47 @@ let protecte = "sorry u dont have Items";
                         item.id === Product_ID_To_Cart
 
                     );
+                    let isprotectincart = arrayCart.some((i)=> i.id === protect.id);
 
+                    if(isprotectincart){
+                        
+                        arrayCart = arrayCart.map((p) =>{
+
+                        if(p.id === protect.id) p.qty = JSON.parse(Data).HA_C_Qty;
+
+                        return p;
+
+                        });
+                    }
+
+                    for(let i =0; i< arrayCart.length; i++){
+
+                        if(arrayCart[i].qty > 1){
+
+                            arrayCart.pop();
+
+                            arrayCart.push(protect);
+
+                            
+                        }
+
+                    }
+                    function getUniqueListBy(arr, key) {
+
+                        return [...new Map(arr.map(item => [item[key], item])).values()]
+                    }
+
+                    const arr1 = getUniqueListBy(arrayCart, 'id')
 
                         console.log(arrayCart);
+
+                        console.log(arr1);
+
                         console.log(protect);
+
+
+
+
 
                     (Addtocart = function (Carts = []) {
                         let protectCart = Carts.map((item)=>{
@@ -175,7 +209,7 @@ let protecte = "sorry u dont have Items";
 
                         }
 
-                    })(arrayCart|| protecte);
+                    })(arr1|| protecte);
 
 
                   
