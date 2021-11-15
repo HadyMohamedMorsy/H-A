@@ -110,7 +110,9 @@ let protecte = "sorry u dont have Items";
 
                     cartlisthere.classList.add('actioncartlist');
 
-                    function products (id,productName,price,Image, qty = 0){
+
+
+                    function products (id,productName,price,Image, qty){
 
                         this.id = Product_ID_To_Cart;
 
@@ -121,56 +123,21 @@ let protecte = "sorry u dont have Items";
                         this.Image = Image;
 
                         this.qty = qty;
+
                         }
 
 
-                    arrayCart.push(new products(Product_ID_To_Cart ,NamePrdouct, JSON.parse(Data).HA_C_Unit_Price,Image));
+                    arrayCart.push(new products(Product_ID_To_Cart ,NamePrdouct, JSON.parse(Data).HA_C_Unit_Price,Image,JSON.parse(Data).HA_C_Qty));
 
                     let protect = arrayCart.find((item)=>
 
                         item.id === Product_ID_To_Cart
 
                     );
-                    let isprotectincart = arrayCart.some((i)=> i.id === protect.id);
 
-                    if(isprotectincart){
-                        
-                        arrayCart = arrayCart.map((p) =>{
-
-                        if(p.id === protect.id) p.qty += 1;
-
-                        return p;
-
-                        });
-                    }
-
-                    for(let i =0; i< arrayCart.length; i++){
-
-                        if(arrayCart[i].qty > 1){
-
-                            arrayCart.pop();
-
-                            arrayCart.push(protect);
-
-                            
-                        }
-
-                    }
-                    function getUniqueListBy(arr, key) {
-
-                        return [...new Map(arr.map(item => [item[key], item])).values()]
-                    }
-
-                    const arr1 = getUniqueListBy(arrayCart, 'id')
 
                         console.log(arrayCart);
-
                         console.log(protect);
-
-                        console.log(arr1);
-
-
-
 
                     (Addtocart = function (Carts = []) {
                         let protectCart = Carts.map((item)=>{
@@ -208,7 +175,7 @@ let protecte = "sorry u dont have Items";
 
                         }
 
-                    })(arr1|| protecte);
+                    })(arrayCart|| protecte);
 
 
                   
