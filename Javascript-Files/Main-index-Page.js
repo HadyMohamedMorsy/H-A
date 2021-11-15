@@ -122,21 +122,16 @@ let cartlist = document.querySelector('.cart-list');
 let cart = document.querySelector('.cart');
 
 cartlistcancel.addEventListener("click",function(){
-    cart.style.top = "100%";
-    cart.style.left = "100%";
-    cart.style.right = "100%";
-    cart.style.bottom = "100%";
 
-    cartlist.style.right = "-100%";
+    cart.classList.remove('actioncart');
+
+    cartlist.classList.remove('actioncartlist');
   });
 
   openpluscart.addEventListener("click",function(){
-    cart.style.top = "0%";
-    cart.style.left = "0%";
-    cart.style.right = "0%";
-    cart.style.bottom = "0%";
-    
-    cartlist.style.right = "0%";
+    cart.classList.add('actioncart');
+
+    cartlist.classList.add('actioncartlist');
   });
 
 //   });
