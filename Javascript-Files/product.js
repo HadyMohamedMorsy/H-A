@@ -12,10 +12,10 @@ fetch('API-Product.php')
                 return `
                     <div class="col-lg-3 Products">
                     <div class="product-content-img">
-                    <a href="products-show.php" class="not-hover-image hover-image"> 
-                            <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" class="Image-cover ${item.Product_Imges ? "disactive" : ""}"/>
-                            ${item.Product_Imges ? `<img src=${item.Product_Path_Imges + item.Product_Imges[0]} alt='${item.Product_Name}' class='Image-secound active'/>`: ""}
-                    </a> 
+                        <a href="products-show.php" class="not-hover-image hover-image"> 
+                                <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" class="Image-cover ${item.Product_Imges ? "disactive" : ""}"/>
+                                ${item.Product_Imges ? `<img src=${item.Product_Path_Imges + item.Product_Imges[0]} alt='${item.Product_Name}' class='Image-secound active'/>`: ""}
+                        </a> 
                         <a class="Add-to-cart" id="${item.Product_ID}" onclick="funcIdcart(this.id , this)">
                             <p> Add To Cart </p>
                         </a>
@@ -73,6 +73,7 @@ fetch('API-Product.php')
                 secoundchild.classList.add('active');
 
                 item.firstElementChild.classList.add('.disactive');
+            
 
             }
 
