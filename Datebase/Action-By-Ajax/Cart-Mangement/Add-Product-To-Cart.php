@@ -28,7 +28,13 @@
                 $Result_GET_Product_Info_After_Action = mysqli_query($Connection,$SQL_GET_Product_Info_After_Action);
                 $Row_GET_Product_Info_After_Action  = mysqli_fetch_array($Result_GET_Product_Info_After_Action, MYSQLI_ASSOC);
                 // echo '<pre>';
-                echo (json_encode($Row_GET_Product_Info_After_Action));
+                $Products_Details_JSON = array();
+                $i = 0;
+                $Products_Details_JSON[] = $Row_GET_Product_Info_After_Action;
+                while ($Rows = mysqli_fetch_assoc($Result_GET_Product_Info_After_Action)) {
+                    $Products_Details_JSON[] = $Rows;
+                }
+                echo (json_encode($Products_Details_JSON,JSON_PRETTY_PRINT));
                 // echo '<pre>';
             }
         }elseif (empty($Row_Check_In_Cart)) {
@@ -51,7 +57,13 @@
                 $Result_GET_Product_Info_After_Action = mysqli_query($Connection,$SQL_GET_Product_Info_After_Action);
                 $Row_GET_Product_Info_After_Action  = mysqli_fetch_array($Result_GET_Product_Info_After_Action, MYSQLI_ASSOC);
                 // echo '<pre>';
-                echo (json_encode($Row_GET_Product_Info_After_Action));
+                $Products_Details_JSON = array();
+                $i = 0;
+                $Products_Details_JSON[] = $Row_GET_Product_Info_After_Action;
+                while ($Rows = mysqli_fetch_assoc($Result_GET_Product_Info_After_Action)) {
+                    $Products_Details_JSON[] = $Rows;
+                }
+                echo (json_encode($Products_Details_JSON,JSON_PRETTY_PRINT));
                 // echo '<pre>';
             }
         }
