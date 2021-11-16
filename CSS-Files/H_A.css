@@ -1064,7 +1064,11 @@ tfoot tr th:first-child {
           width: 109px;
           height: 90px;
           cursor: pointer;
-          object-fit: cover; }
+          object-fit: cover;
+          opacity: 0.6; }
+          .slider-product .Images-slider .slider-img .img-slider img.active {
+            opacity: 1;
+            border: 1px solid #000; }
   .slider-product .right-arrow {
     position: absolute;
     right: 5%;
@@ -1093,6 +1097,43 @@ tfoot tr th:first-child {
       align-items: center; }
     .slider-product .left-arrow svg {
       font-size: 25px; }
+
+.catagroy-product {
+  color: #999999;
+  font-size: 18px;
+  padding: 100px 0px; }
+  .catagroy-product .description-two {
+    margin-bottom: 20px; }
+  .catagroy-product .sizes span {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    border: 1px solid #000;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+    .catagroy-product .sizes span.active {
+      color: #000;
+      font-weight: bold; }
+  .catagroy-product .add-action {
+    margin-top: 40px;
+    position: absolute;
+    bottom: 20px; }
+    .catagroy-product .add-action .Add-Cart {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 40px;
+      border: none;
+      outline: none; }
+    .catagroy-product .add-action .Add-Wishlet {
+      background-color: #d1d1d1;
+      color: #fff;
+      padding: 10px 40px;
+      color: #fff;
+      border: none;
+      outline: none;
+      color: #000; }
 
 .content-description {
   margin-top: 45px;

@@ -21,6 +21,12 @@
                     height: 90px;
                     cursor: pointer;
                     object-fit: cover;
+                    opacity: 0.6;
+                    &.active{
+                        opacity: 1;
+                        border: 1px solid #000;
+                    }
+                    
                 }
             }
         }
@@ -61,6 +67,52 @@
         }
     }
 
+}
+.catagroy-product{
+    color: #999999;
+    font-size: 18px;
+    padding: 100px 0px;
+    .description-two{
+        margin-bottom: 20px;
+    }
+    .sizes{
+        span{
+            display: inline-flex;
+            width: 20px;
+            height: 20px;
+            padding: 20px;
+            border: 1px solid #000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &.active{
+                color: #000;
+                font-weight: bold;
+            }
+        }
+    }
+    .add-action{
+        margin-top: 40px;
+        position: absolute;
+        bottom: 20px;
+        .Add-Cart{
+            background-color: #000;
+            color: $white;
+            padding: 10px 40px;
+            border: none;
+            outline: none;
+        }
+        .Add-Wishlet{
+            background-color: rgb(209, 209, 209);
+            color: $white;
+            padding: 10px 40px; 
+            color: $white;
+            border: none;
+            outline: none;
+            color: #000;
+        }
+    }
 }
 .content-description{
     margin-top: 45px;

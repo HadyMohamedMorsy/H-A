@@ -7,13 +7,36 @@
             <div class="left-arrow">  <i class="fas fa-chevron-left"></i> </div>
 
             <div class="slider-img">
-                <div class="img-slider"> <img src="./IMG/5.jpg" alt="5" /> </div>
+                <div class="img-slider"> <img src="./IMG/5.jpg" class="active" alt="5" /> </div>
                 <div class="img-slider"> <img src="./IMG/6.jpg" alt="6" /> </div>
                 <div class="img-slider"> <img src="./IMG/7.jpg" alt="7" /> </div>
             </div>
         </div>
-        <div class="col-lg-4">
-            Hello
+        <div class="col-lg-4 position-relative">
+            <div class="pt-sm-2">
+                <div class="catagroy-product">
+                     <span class="ml-sm-2"> Wonman</span> <span class="ml-sm-2"> Men</span> 
+                     <h2 class="heading-Name-product mt-sm-3">
+                        Basic Micro Rib Turtleneck
+                     </h2>
+                     <p class="price-product">
+                        $79.00
+                     </p>
+                     <div class="description-two">
+                        Extra-fine ribbed pima cotton that’s stretchy, fitted, and just a touch sexy.
+                     </div>
+                     <div class="sizes">
+                         <span class="active">LG</span>
+                         <span>M</span>
+                         <span>S</span>
+                     </div>
+                     <div class="add-action">
+                         <button class="Add-Cart"> Add Cart </button>
+                         <button class="Add-Wishlet"> Add Wishlet </button>
+                     </div>
+                </div>
+                
+            </div>
         </div>
     </div>
 </div>
