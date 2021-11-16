@@ -81,11 +81,9 @@ let Addtocart;
 let protecte = "sorry u dont have Items";
     // Add To Cart
     function funcIdcart(Product_ID_To_Cart,ele){
-
         let Image = ele.parentElement.firstElementChild.firstElementChild.getAttribute('src');
         let NamePrdouct = ele.parentElement.nextElementSibling.firstElementChild.firstElementChild.firstElementChild.innerHTML;
         ele.firstElementChild.innerHTML = `<div class="spinner-border text-primary" role="status"> <span class="sr-only">Loading...</span>  </div>`;
-        
         $.ajax({
             url: "Datebase/Action-By-Ajax/Cart-Mangement/Add-Product-To-Cart.php",
             type: "POST",
@@ -96,18 +94,11 @@ let protecte = "sorry u dont have Items";
             success: function(Data ,Status ,XHR) {
                 // console.log(JSON.parse(Data));console.log(Status);console.log(XHR);
                 if (XHR.status == 200) {
-
                     ele.firstElementChild.innerHTML = `Add To Cart`;
-
                     cartaction.classList.add('actioncart');
-
                     cartlisthere.classList.add('actioncartlist')
-
-                    
                 }
-
             }
         });
     }
-    
 </script>

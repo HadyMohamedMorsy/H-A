@@ -13,6 +13,7 @@
     $Row_Products_List  = mysqli_fetch_array($Result_Products_List, MYSQLI_ASSOC);
     $Count_Products_List  = mysqli_num_rows($Result_Products_List);
     if ($Count_Products_List > 0) {
+        $SQL_Check_In_Cart_After_Action = 'SELECT * FROM ha_cart WHERE HA_C_User_ID = "'.$_SESSION['HA_U_ID'].'" AND HA_C_Status != "Purchased"';
         // Get All Product In Cart
         $SQL_Check_In_Cart = 'SELECT * FROM ha_cart WHERE HA_C_User_ID = "'.$_SESSION['HA_U_ID'].'" AND HA_C_Product_ID = "'.$Product_ID.'" AND HA_C_Status != "Purchased"';
         $Result_Check_In_Cart = mysqli_query($Connection,$SQL_Check_In_Cart);
@@ -23,7 +24,7 @@
                                                     SET HA_C_Qty = "'.($Row_Check_In_Cart['HA_C_Qty'] + 1).'"
                                                     WHERE HA_C_ID = "'.$Row_Check_In_Cart['HA_C_ID'].'"';
             if (mysqli_query($Connection,$SQL_Add_One_More_To_Qty)) {
-                $SQL_GET_Product_Info_After_Action = $SQL_Check_In_Cart;
+                $SQL_GET_Product_Info_After_Action = $SQL_Check_In_Cart_After_Action;
                 $Result_GET_Product_Info_After_Action = mysqli_query($Connection,$SQL_GET_Product_Info_After_Action);
                 $Row_GET_Product_Info_After_Action  = mysqli_fetch_array($Result_GET_Product_Info_After_Action, MYSQLI_ASSOC);
                 // echo '<pre>';
@@ -46,7 +47,7 @@
                                                     "'.$Current_Time.'",
                                                     "Pending")';
             if (mysqli_query($Connection,$SQL_Insert_Activities_Status_Active)) {
-                $SQL_GET_Product_Info_After_Action = $SQL_Check_In_Cart;
+                $SQL_GET_Product_Info_After_Action = $SQL_Check_In_Cart_After_Action;
                 $Result_GET_Product_Info_After_Action = mysqli_query($Connection,$SQL_GET_Product_Info_After_Action);
                 $Row_GET_Product_Info_After_Action  = mysqli_fetch_array($Result_GET_Product_Info_After_Action, MYSQLI_ASSOC);
                 // echo '<pre>';
