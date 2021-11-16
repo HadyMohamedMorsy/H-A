@@ -260,7 +260,7 @@
                                     $Count_Products_List  = mysqli_num_rows($Result_Products_List);
                                     $Path_Folder_Cover = 'IMG/Imges-Products/P_ID-'.$Row_Products_List['HA_P_ID'].'/P_ID-'.$Row_Products_List['HA_P_ID'].'-Cover';
                                     $Cover_Img = scandir($Path_Folder_Cover);
-                                    echo '  <div class="list">
+                                    echo '  <div class="list" id="'.$Rows['HA_C_Product_ID'].'">
                                             <div class="product-list-cart">
                                                 <div class="img-product-cart">
                                                     <img src="'.$Path_Folder_Cover . '/' . $Cover_Img[2] . '" />
@@ -284,6 +284,8 @@
                     }else {
                         echo 'You Must Be Login First..';
                     }
+                    
+
                 ?>
         </div>
         <div class="parent-total">

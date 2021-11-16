@@ -42,6 +42,7 @@ fetch('API-Product.php')
 
         }else{
             SecoundSection.innerHTML = protecteshtml.join("");
+
         }
 
 
