@@ -5,7 +5,6 @@
             <img src="./IMG/21.jpg" alt="21.jpg"/>
             <div class="right-arrow">  <i class="fas fa-chevron-right"></i> </div>
             <div class="left-arrow">  <i class="fas fa-chevron-left"></i> </div>
-
             <div class="slider-img">
                 <div class="img-slider"> <img src="./IMG/5.jpg" class="active" alt="5" /> </div>
                 <div class="img-slider"> <img src="./IMG/6.jpg" alt="6" /> </div>
