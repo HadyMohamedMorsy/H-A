@@ -1,14 +1,24 @@
+<div class="container">
 <div class="slider-product">
-    <div class="overlay"></div>
-    <img src="./IMG/21.jpg" alt="21.jpg"/>
-    <div class="right-arrow">  <i class="fas fa-chevron-right"></i> </div>
-    <div class="left-arrow">  <i class="fas fa-chevron-left"></i> </div>
-    <div class="slider-img">
-        <div class="img-slider"> <img src="./IMG/5.jpg" alt="5" /> </div>
-        <div class="img-slider"> <img src="./IMG/6.jpg" alt="6" /> </div>
-        <div class="img-slider"> <img src="./IMG/7.jpg" alt="7" /> </div>
+    <div class="row">
+        <div class="col-lg-8 Images-slider">
+            <img src="./IMG/21.jpg" alt="21.jpg"/>
+            <div class="right-arrow">  <i class="fas fa-chevron-right"></i> </div>
+            <div class="left-arrow">  <i class="fas fa-chevron-left"></i> </div>
+
+            <div class="slider-img">
+                <div class="img-slider"> <img src="./IMG/5.jpg" alt="5" /> </div>
+                <div class="img-slider"> <img src="./IMG/6.jpg" alt="6" /> </div>
+                <div class="img-slider"> <img src="./IMG/7.jpg" alt="7" /> </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            Hello
+        </div>
     </div>
 </div>
+</div>
+
 <div class="content-description">
     <div class="container">
         <div class="row justify-content-md-center">
