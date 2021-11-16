@@ -284,8 +284,6 @@
                     }else {
                         echo 'You Must Be Login First..';
                     }
-                    
-
                 ?>
         </div>
         <div class="parent-total">
