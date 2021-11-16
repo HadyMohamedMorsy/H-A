@@ -12,7 +12,7 @@ fetch('API-Product.php')
                 return `
                     <div class="col-lg-3 Products">
                     <div class="product-content-img">
-                        <a href="products-show.php" class="not-hover-image hover-image"> 
+                        <a href="products-show.php?Link=${item.Product_ID}" class="not-hover-image hover-image"> 
                                 <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" class="Image-cover ${item.Product_Imges.length == 0 ? `` : `disactive`}"/>
                                 ${item.Product_Imges.length == 0 ? `` : `<img src=${item.Product_Path_Imges + item.Product_Imges[0]} alt='${item.Product_Name}' class='Image-secound active'/>`}
                         </a> 
