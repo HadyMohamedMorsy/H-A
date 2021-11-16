@@ -3,7 +3,7 @@
     include('Datebase/DB_Login.php');
     include('Datebase/DB-Sign-Up.php');
     include('Datebase/DB-Product-In-Cart.php');
-
+    include('Datebase/DB-Product-Details.php');
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
     <?php include ("Website-Structure/Header.php"); ?>
     <!-- End The Header-->
 
-    <?php include ("Website-Structure/product-show.php"); ?>
+    <?php include ("Website-Structure/Product-Details.php"); ?>
 
     <!-- Start The Footer -->
     <?php include ("Website-Structure/Footer.php"); ?>

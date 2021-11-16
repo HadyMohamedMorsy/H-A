@@ -7,12 +7,12 @@ fetch('API-Product.php')
         return response.json();
     })
     .then((myJson) => {
-    (drawprotectes = function (protectes = []) {
-        let protecteshtml = protectes.map((item)=>{
-                return `
+            (drawprotectes = function(protectes = []) {
+                    let protecteshtml = protectes.map((item) => {
+                                return `
                     <div class="col-lg-3 Products">
                     <div class="product-content-img">
-                        <a href="products-show.php?Link=${item.Product_ID}" class="not-hover-image hover-image"> 
+                        <a href="Product-Details.php?Product_ID=${item.Product_ID}" class="not-hover-image hover-image"> 
                                 <img src=${item.Product_Path_Cover_Img + item.Product_Cover} alt="${item.Product_Name}" class="Image-cover ${item.Product_Imges.length == 0 ? `` : `disactive`}"/>
                                 ${item.Product_Imges.length == 0 ? `` : `<img src=${item.Product_Path_Imges + item.Product_Imges[0]} alt='${item.Product_Name}' class='Image-secound active'/>`}
                         </a> 
@@ -34,22 +34,13 @@ fetch('API-Product.php')
                     </div>
                 </div>
             `;
-
         });
         if(!protectes.length > 0){
-
             SecoundSection.innerHTML = `<div class="product-empty"> Sorry We dont have Items on Our Website </div>`;
-
         }else{
             SecoundSection.innerHTML = protecteshtml.join("");
-
         }
-
-
-
     })(myJson|| protectes);
-    
-
         let Imagesecounds = document.querySelectorAll('.hover-image');
 
 
