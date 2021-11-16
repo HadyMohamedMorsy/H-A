@@ -92,8 +92,11 @@ let protecte = "sorry u dont have Items";
             },
             cache: false,
             success: function(Data ,Status ,XHR) {
-                // console.log(JSON.parse(Data));console.log(Status);console.log(XHR);
+
                 if (XHR.status == 200) {
+
+                    console.log(JSON.parse(Data));
+                    
                     ele.firstElementChild.innerHTML = `Add To Cart`;
                     cartaction.classList.add('actioncart');
                     cartlisthere.classList.add('actioncartlist')
