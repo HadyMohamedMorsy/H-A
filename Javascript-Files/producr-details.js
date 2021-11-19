@@ -109,3 +109,47 @@ if(sliderimg.childElementCount == 1){
 
 }
 
+let refallcontent = document.querySelector('.catagroy-js');
+
+let chiledCatagroy = refallcontent.querySelectorAll('.ref-all-content');
+
+
+if(refallcontent.childElementCount == 1){
+
+    chiledCatagroy.forEach((item)=>{
+
+        if(item.classList.contains("col-3")){
+
+            item.classList.remove('col-3');
+
+            item.classList.add('col-12');
+        }
+    })
+}
+
+if(refallcontent.childElementCount == 2){
+
+    chiledCatagroy.forEach((item)=>{
+
+        if(item.classList.contains("col-3")){
+
+            item.classList.remove('col-3');
+
+            item.classList.add('col-6');
+        }
+    })
+}
+
+if(refallcontent.childElementCount == 3){
+
+    chiledCatagroy.forEach((item)=>{
+
+        if(item.classList.contains("col-3")){
+
+            item.classList.remove('col-3');
+
+            item.classList.add('col-4');
+        }
+    })
+}
+

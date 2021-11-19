@@ -132,10 +132,10 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="refrend-cattgroy">
             <h2> Related products </h2>
-            <div class="row">
+            <div class="row catagroy-js">
                 <?php
                     while ($Rows = mysqli_fetch_array($Result_Related_Products)) {
                         $Path_Cover_Related = 'IMG/Imges-Products/P_ID-' . $Rows['HA_P_ID'] . '/' . 'P_ID-' . $Rows['HA_P_ID'] . '-Cover';
@@ -144,13 +144,15 @@
                         $Imgs_Product_Related = scandir($Path_Imgs_Related);
                         echo '
                             <div class="col-3 ref-all-content mx-auto">
-                                <div class="img-ref-img">
-                                    <img src="'.$Path_Cover_Related . '/' . $Cover_Product_Related[2] . '" alt="" />
-                                </div>
-                                <div class="content-ref">
-                                    <p>'.$Rows['HA_P_Name'].'</p>
-                                    <p>'.number_format( $Rows['HA_P_Price'] , 2).'</p>
-                                </div>
+                                <a href="#">
+                                    <div class="img-ref-img">
+                                        <img src="'.$Path_Cover_Related . '/' . $Cover_Product_Related[2] . '" alt="" />
+                                    </div>
+                                    <div class="content-ref">
+                                        <p>'.$Rows['HA_P_Name'].'</p>
+                                        <p>'.number_format( $Rows['HA_P_Price'] , 2).'</p>
+                                    </div>
+                                </a>
                             </div>
                         ';
                     }
