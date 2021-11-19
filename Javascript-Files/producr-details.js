@@ -43,10 +43,10 @@ if(sliderimg.childElementCount > 0){
     });
 
     
-    if(changeImage == parentImage.getAttribute('src')){
+    // if(changeImage == parentImage.getAttribute('src')){
 
-        sliderimg.firstElementChild.firstElementChild.setAttribute('src',parentImage.getAttribute('src'));
-    }
+    //     sliderimg.firstElementChild.firstElementChild.setAttribute('src',parentImage.getAttribute('src'));
+    // }
 
     rightarrow.addEventListener('click',()=>{
 
