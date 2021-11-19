@@ -7,11 +7,10 @@
                 <div class="left-arrow"> <i class="fas fa-chevron-left"></i> </div>
                 <div class="slider-img">
                     <?php
-                    
-                    for ($i=2; $i < count($Imgs_Product) ; $i++) { 
-                            echo '<div class="img-slider"> <img src="' . $Path_Imgs . '/' . $Imgs_Product[$i] .'"  alt="5" /> </div>';
-                    }
-
+                        echo '<div class="img-slider"> <img src="' . $Path_Cover . '/' . $Cover_Product[2] .'"  alt="5" /> </div>';
+                        for ($i=2; $i < count($Imgs_Product) ; $i++) { 
+                                echo '<div class="img-slider"> <img src="' . $Path_Imgs . '/' . $Imgs_Product[$i] .'"  alt="5" /> </div>';
+                        }
                     ?>
                     <!-- <div class="img-slider"> <img src="./IMG/5.jpg" class="active" alt="5" /> </div>
                     <div class="img-slider"> <img src="./IMG/6.jpg" alt="6" /> </div>
