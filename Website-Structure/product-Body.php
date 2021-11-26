@@ -28,7 +28,7 @@
               </button>
 						</div>
         </div>
-    <div class="row">
+    <div class="row parent-products">
       <div class="text-center w-100">
         <div class="spinner-grow spinner-grow-sm text-dark" role="status">
             <span class="sr-only">Loading...</span>

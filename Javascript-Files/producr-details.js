@@ -2,7 +2,6 @@ let sliderimg = document.querySelector('.slider-img');
 
 let parentImage = document.querySelector('.Images-slider img');
 
-
 let changeImage = document.querySelector('.Images-slider img').getAttribute('src');
 
 let rightarrow = document.querySelector('.right-arrow');

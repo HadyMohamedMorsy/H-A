@@ -35,12 +35,67 @@ fetch('API-Product.php')
                 </div>
             `;
         });
+
         if(!protectes.length > 0){
+
             SecoundSection.innerHTML = `<div class="product-empty"> Sorry We dont have Items on Our Website </div>`;
+
         }else{
+
             SecoundSection.innerHTML = protecteshtml.join("");
         }
+
     })(myJson|| protectes);
+
+    let prdoucts = document.querySelectorAll('.Products');
+
+    
+    function hideen(){
+
+        for(let x = 0; x < 8; x++){
+
+            prdoucts[x].classList.add('show-item')
+
+        }
+
+        for(let y = 0; y < prdoucts.length; y++){
+
+            if(!prdoucts[y].classList.contains('show-item')){
+
+                prdoucts[y].style.display = 'none';
+
+            }
+        }
+    
+    }
+
+    hideen();
+
+    
+
+    let buttonload = document.querySelector('.button-load');
+
+    buttonload.addEventListener('click', condetionload);
+
+
+    function condetionload(e){
+
+        e.preventDefault();
+
+        for(let z = 0; z < prdoucts.length; z++){
+
+            if(!prdoucts[z].classList.contains('show-item')){
+
+                prdoucts[z].style.display = 'block';
+
+            }
+        }
+
+        buttonload.style.display = "none";
+
+    }
+
+    
         let Imagesecounds = document.querySelectorAll('.hover-image');
 
 
@@ -135,3 +190,5 @@ function heartfull(x) {
             });
         }
     }
+
+
