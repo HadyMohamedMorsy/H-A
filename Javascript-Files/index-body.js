@@ -34,7 +34,14 @@ plus.forEach((item)=>{
 
     let qty = item.parentElement.querySelector('.Qty');
 
+    let Total = item.parentElement.querySelector('.price-cart .Number-format');
+
     qty.innerHTML = +qty.innerHTML + 1;
+
+    let totalprice = parseInt(Total.innerHTML) * parseInt(qty.innerHTML);
+
+    Total.innerHTML = totalprice;
+
 
     });
 
@@ -45,8 +52,18 @@ min.forEach((item)=>{
     item.addEventListener('click',function(){
 
     let qty = item.parentElement.querySelector('.Qty');
+    
+    let Total = item.parentElement.querySelector('.price-cart');
 
     qty.innerHTML = +qty.innerHTML - 1;
+
+    Total.innerHTML = +Total.innerHTML * qty.innerHTML;
+
+    if(qty.innerHTML < 1){
+
+        qty.innerHTML  = 1
+
+    }
 
     });
 
