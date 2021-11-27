@@ -51,13 +51,13 @@
                     <option value="Andorra">Andorra</option>
                     <option value="Angola">Angola</option>
                     <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                   <option value="Argentina"> Argentina</option>
-                   <option value="Armenia"> Armenia</option>
-                   <option value="Australia"> Australia</option>
-                   <option value="Austria"> Austria</option>
-                   <option value="Austrian Empire"> Austrian Empire*</option>
-                   <option value="Austrian Empire"> Egypt</option>
-                   <option value="Azerbaijan"> Azerbaijan</option>
+                    <option value="Argentina"> Argentina</option>
+                    <option value="Armenia"> Armenia</option>
+                    <option value="Australia"> Australia</option>
+                    <option value="Austria"> Austria</option>
+                    <option value="Austrian Empire"> Austrian Empire*</option>
+                    <option value="Austrian Empire"> Egypt</option>
+                    <option value="Azerbaijan"> Azerbaijan</option>
                 </select>
         </div>
         <div class="form-group">
