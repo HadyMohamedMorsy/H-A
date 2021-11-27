@@ -517,10 +517,9 @@ input:-internal-autofill-selected {
   color: #777;
 }
 
-.cart .cart-list .all-content-cart .product-list-cart .cancel-cart {
-  position: absolute;
-  top: 7px;
+.cart .cart-list .all-content-cart .product-list-cart .cancel {
   right: 0px;
+  top: 0px;
 }
 
 .cart .cart-list .all-content-cart .product-list-cart .price-cart {
@@ -851,7 +850,7 @@ input:-internal-autofill-selected {
   margin-left: 15px;
 }
 
-.cart-items {
+.Whislist {
   padding-top: 140px;
   padding-bottom: 60px;
   display: -webkit-box;
@@ -865,15 +864,17 @@ input:-internal-autofill-selected {
           align-items: center;
 }
 
-.cart-items h1 {
+.Whislist h1 {
   font-size: 3rem;
 }
 
-.cheack-price {
-  width: 100%;
+@media (min-width: 1490px) {
+  .cheack-Whishlist {
+    max-width: 1125px;
+  }
 }
 
-.cheack-price .list .content-parent .content-list {
+.cheack-Whishlist .list .content-parent .content-list {
   border-top: 1px solid #ddd;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -885,153 +886,57 @@ input:-internal-autofill-selected {
   width: 100%;
 }
 
-.cheack-price .list .content-parent .content-list:last-of-type {
+.cheack-Whishlist .list .content-parent .content-list:last-of-type {
   border-bottom: 1px solid #ddd;
 }
 
-.cheack-price .list .content-parent .content-list img {
+.cheack-Whishlist .list .content-parent .content-list img {
   width: 95px;
   height: 95px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.cheack-price .list .content-parent .code-discound {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-top: 20px;
+.cheack-Whishlist .list .content-parent .content-list .content-price {
+  -webkit-box-flex: 0.5;
+      -ms-flex-positive: 0.5;
+          flex-grow: 0.5;
 }
 
-.cheack-price .list .content-parent .code-discound input {
-  padding: 0.575rem  1.25rem;
-  font-size: .875em;
-  margin-right: 5px;
-}
-
-.cheack-price .list .content-parent .code-discound button {
-  background-color: #282828;
-  color: #fff;
-  outline: none;
-  border: none;
-  padding: 0.575rem  1.25rem;
-}
-
-.cheack-price .list .content-parent .cheackout-prent {
-  padding-bottom: 20px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment {
-  border: 1px solid currentColor;
-  padding: 40px 40px 40px 40px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .total {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid #d9d9d9;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .total h2 {
-  font-size: 20px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .shipping {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.cheack-Whishlist .list .content-parent .button-cart {
   position: relative;
 }
 
-.cheack-price .list .content-parent .cheackout-prent .payment .shipping .price-subtotal {
+.cheack-Whishlist .list .content-parent .button-cart .Add-to-cart {
+  width: 200px;
   position: absolute;
-  right: 0px;
-  top: 6%;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .shipping .changer-address {
-  margin-top: 10px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .shipping .changer-address .change {
-  border-bottom: 1px solid #d9d9d9;
-  padding-bottom: 20px;
-  display: none;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .shipping .changer-address span span svg {
-  margin-left: 5px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .shipping .changer-address span svg {
-  margin-right: 5px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .shipping .changer-address .change {
-  margin-top: 10px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .shipping .changer-address .change select {
-  margin-bottom: 10px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .shipping .changer-address .change input {
-  margin-bottom: 10px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .payment .shipping .changer-address .change button {
-  background: none;
-  border: 2px solid currentColor;
-  padding: 5px 10px;
-  color: #282828;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .total-all {
+  bottom: 10px;
+  right: 0;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15px;
+  cursor: pointer;
 }
 
-.cheack-price .list .content-parent .cheackout-prent .total-all h2 {
-  font-size: 20px;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .choose-payment {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  border: 1px solid #aaa;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .choose-payment .paybal-link a {
-  color: #282828;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .choose-payment li {
-  padding: 14px 19px;
-  list-style: none;
-  border-bottom: 1px solid #ddd;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .choose-payment li:last-child {
-  border-bottom: 0 none;
-}
-
-.cheack-price .list .content-parent .cheackout-prent .submit-price button {
-  background-color: #282828;
+.cheack-Whishlist .list .content-parent .button-cart .Add-to-cart p {
   color: #fff;
+  font-weight: bold;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.cheack-Whishlist .list .content-parent .button-cart .cancel {
+  top: -14px;
+  right: 0;
 }
 
 .footer {

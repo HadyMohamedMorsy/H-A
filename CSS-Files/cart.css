@@ -517,10 +517,9 @@ input:-internal-autofill-selected {
   color: #777;
 }
 
-.cart .cart-list .all-content-cart .product-list-cart .cancel-cart {
-  position: absolute;
-  top: 7px;
+.cart .cart-list .all-content-cart .product-list-cart .cancel {
   right: 0px;
+  top: 0px;
 }
 
 .cart .cart-list .all-content-cart .product-list-cart .price-cart {

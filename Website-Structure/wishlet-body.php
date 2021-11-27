@@ -1,7 +1,7 @@
-<div class="cart-items">
+<div class="Whislist">
     <h1 class="page-title" itemprop="name headline">Wishlist</h1>
 </div>
-<div class="cheack-price container animation-scroll">
+<div class="cheack-Whishlist container">
         <div class="list">
             <div class="content-parent row">
                 <div class="content-grid col-lg-12">
@@ -21,8 +21,13 @@
                                             <p> '. $Row_GET_Product_Info['HA_P_Name'].'</p>
                                             <span>$'.number_format($Row_GET_Product_Info['HA_P_Price'],2) .'</span>
                                         </div>
-                                        <div class="Total">
-                                            <span>X</span>
+                                        <div class="button-cart">
+                                            <div class="cancel">
+                                                <i class="fas fa-times"></i>
+                                            </div>
+                                            <a class="Add-to-cart" id="${item.Product_ID}" onclick="funcIdcart(this.id , this)">
+                                                <p> Add To Cart </p>
+                                            </a>
                                         </div>
                                     </div>
                                 ';
