@@ -33,6 +33,7 @@
     <!-- Start The Links Files -->
     <?php include ("Links Javascript In Footer Area.php"); ?>
     <script src="./Javascript-Files/About.js"></script>
+    <script src="./Javascript-Files/index-body.js"></script>
     <!-- <script type="text/javascript" src="Javascript-Files/Main-index-Page.js"></script> -->
     <!-- End The Links Files -->
 </body>

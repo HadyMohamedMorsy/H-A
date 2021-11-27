@@ -39,3 +39,13 @@ a{
     }
 
 }
+
+.no-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
