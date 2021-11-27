@@ -499,6 +499,7 @@ input:-internal-autofill-selected {
 
 .cart .cart-list .all-content-cart .product-list-cart .content-product .min {
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .cart .cart-list .all-content-cart .product-list-cart .content-product .min svg {
@@ -509,6 +510,7 @@ input:-internal-autofill-selected {
 
 .cart .cart-list .all-content-cart .product-list-cart .content-product .plus {
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .cart .cart-list .all-content-cart .product-list-cart .content-product .plus svg {

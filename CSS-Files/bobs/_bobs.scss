@@ -243,6 +243,7 @@ input:-internal-autofill-selected{
                     margin-left: 10px;
                     .min{
                         margin-right: 10px;
+                        cursor: pointer;
                         svg{
                             width: 20px;
                             height: 20px;
@@ -251,6 +252,7 @@ input:-internal-autofill-selected{
                     }
                     .plus{
                         margin-left: 10px;
+                        cursor: pointer;
                         svg{
                             width: 20px;
                             height: 20px;

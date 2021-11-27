@@ -20,6 +20,34 @@ if(allcontentcart.childElementCount == 0){
    created.appendChild(contentcreated);
 
    allcontentcart.appendChild(created);
+   
 
 }
 
+let plus = allcontentcart.querySelectorAll('.plus');
+
+let min = allcontentcart.querySelectorAll('.min');
+
+plus.forEach((item)=>{
+
+    item.addEventListener('click',function(){
+
+    let qty = item.parentElement.querySelector('.Qty');
+
+    qty.innerHTML = +qty.innerHTML + 1;
+
+    });
+
+})
+
+min.forEach((item)=>{
+
+    item.addEventListener('click',function(){
+
+    let qty = item.parentElement.querySelector('.Qty');
+
+    qty.innerHTML = +qty.innerHTML - 1;
+
+    });
+
+})
